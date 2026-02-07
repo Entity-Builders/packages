@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-native",
+    "outDir": "./dist",
+    "paths": {
+      "@eb-packages/logic": ["../logic/src/index.ts"]
+    },
+    "types": ["nativewind/types", "node"],
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*", "../logic/src/**/*"]
+}
