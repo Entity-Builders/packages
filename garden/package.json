@@ -1,0 +1,13 @@
+{
+  "name": "@eb-packages/garden",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@eb-packages/core": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "private": true
+}
