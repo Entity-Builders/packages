@@ -182,13 +182,42 @@ export async function updatePot(
  */
 export async function deletePot(potId: string): Promise<boolean> {
   try {
-    const { error } = await supabase.from('pots').delete().eq('id', potId);
-
-    if (error) {
-      console.error('Error deleting pot:', error);
+    // Verify user is authenticated
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
+    if (authError || !user) {
+      console.error('Error getting user for delete:', authError);
       return false;
     }
 
+    console.log('Attempting to delete pot:', potId, 'for user:', user.id);
+
+    // Delete the pot (RLS will ensure user owns it)
+    const { data, error } = await supabase
+      .from('pots')
+      .delete()
+      .eq('id', potId)
+      .select(); // Add select to see what was deleted
+
+    if (error) {
+      console.error('Error deleting pot:', error);
+      console.error('Error details:', JSON.stringify(error, null, 2));
+      return false;
+    }
+
+    console.log('Delete result:', data);
+
+    // Check if anything was actually deleted
+    if (!data || data.length === 0) {
+      console.error(
+        'No pot was deleted. Pot may not exist or user does not own it.',
+      );
+      return false;
+    }
+
+    console.log('Successfully deleted pot:', potId);
     return true;
   } catch (error) {
     console.error('Error in deletePot:', error);
