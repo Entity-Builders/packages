@@ -9,3 +9,4 @@ export * from './components/FinancialOverviewCard';
 export * from './components/DashboardHeader';
 export * from './components/FixedExpensesManager';
 export * from './components/Auth';
+export * from './components/AuthScreen';
