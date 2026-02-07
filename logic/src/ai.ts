@@ -1,0 +1,92 @@
+import type { PotFormData } from '@eb-packages/garden';
+
+import { supabase } from './supabase';
+
+/**
+ * Extract metadata from a voice transcript using Supabase Edge Function (Gemini).
+ */
+export async function extractPotMetadata(
+  transcript: string,
+): Promise<Partial<PotFormData>> {
+  try {
+    console.log('Calling Edge Function extract-pot-metadata...');
+    const { data, error } = await supabase.functions.invoke(
+      'extract-pot-metadata',
+      {
+        body: { transcript },
+      },
+    );
+
+    if (error) {
+      console.warn('Edge Function error:', error);
+      throw error;
+    }
+
+    console.log('Extracted metadata (Edge Function):', data);
+    return data as Partial<PotFormData>;
+  } catch (error) {
+    console.error(
+      'Error calling Edge Function, falling back to keyword parser:',
+      error,
+    );
+    return extractPotMetadataKeyword(transcript);
+  }
+}
+
+/**
+ * Fallback keyword parser
+ */
+function extractPotMetadataKeyword(transcript: string): Partial<PotFormData> {
+  const metadata: Partial<PotFormData> = {};
+  const lowerTranscript = transcript.toLowerCase();
+
+  // Extract Name: "se llama [X]" or "nombre [X]"
+  const nameMatch =
+    lowerTranscript.match(/se llama\s+([a-z0-9\s]+)/i) ||
+    lowerTranscript.match(/nombre\s+([a-z0-9\s]+)/i);
+  if (nameMatch && nameMatch[1]) {
+    // Take up to the next keyword or end of string
+    const rawName = nameMatch[1].trim();
+    const cleanName = rawName.split(/\s+(y|e|la|el|es)\s+/)[0]; // Simple stop condition
+    metadata.name = capitalize(cleanName);
+  }
+
+  // Extract Species: "es un [X]" or "planta [X]" or "especie [X]"
+  const speciesMatch =
+    lowerTranscript.match(/es un\s+([a-z0-9\s]+)/i) ||
+    lowerTranscript.match(/es una\s+([a-z0-9\s]+)/i) ||
+    lowerTranscript.match(/planta\s+([a-z0-9\s]+)/i) ||
+    lowerTranscript.match(/especie\s+([a-z0-9\s]+)/i);
+
+  if (speciesMatch && speciesMatch[1]) {
+    const rawSpecies = speciesMatch[1].trim();
+    const cleanSpecies = rawSpecies.split(/\s+(y|e|la|el|se|con)\s+/)[0];
+    metadata.species = capitalize(cleanSpecies);
+  }
+
+  // Extract Seed Type: "semilla [X]" or "tipo [X]"
+  const seedMatch =
+    lowerTranscript.match(
+      /semilla\s+(?:es\s+)?(?:de\s+)?(?:tipo\s+)?([a-z0-9\s]+)/i,
+    ) || lowerTranscript.match(/tipo\s+([a-z0-9\s]+)/i);
+
+  if (seedMatch && seedMatch[1]) {
+    const rawSeed = seedMatch[1].trim();
+    const cleanSeed = rawSeed.split(/\s+(y|e|la|el)\s+/)[0];
+    metadata.seed_type = capitalize(cleanSeed);
+  }
+
+  // Add the full transcript as notes for context IF not redundant?
+  // actually, for fallback, it's good to keep it.
+  if (!metadata.notes) {
+    metadata.notes = `Voice note search: "${transcript}"`;
+  }
+
+  console.log('Extracted metadata (keyword):', metadata);
+  return metadata;
+}
+
+function capitalize(str: string): string {
+  if (!str) return '';
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}

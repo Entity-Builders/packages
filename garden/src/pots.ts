@@ -3,6 +3,8 @@ export interface Pot {
   user_id: string;
   name: string;
   species: string;
+  seed_type?: string;
+  notes?: string;
   photo_url?: string;
 
   // Registration metadata
@@ -44,9 +46,11 @@ export type PotInput = Omit<
 export type PotFormData = {
   name: string;
   species: string;
+  seed_type?: string;
   initial_state: 'seeds' | 'seedling' | 'young' | 'mature';
   moisture_threshold: number;
   photo_uri?: string;
+  notes?: string;
   // Location & climate (optional)
   latitude?: number;
   longitude?: number;
