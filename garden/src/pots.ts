@@ -16,6 +16,17 @@ export interface Pot {
   moisture_threshold: number;
   sensor_id?: string;
 
+  // Location data (optional)
+  latitude?: number;
+  longitude?: number;
+  address?: string;
+
+  // Climate snapshot at registration
+  temperature?: number; // Celsius
+  humidity?: number; // Percentage
+  weather_condition?: string; // e.g., "Clear", "Cloudy", "Rainy"
+  weather_description?: string; // e.g., "clear sky"
+
   created_at: Date;
   updated_at: Date;
 }
@@ -36,4 +47,12 @@ export type PotFormData = {
   initial_state: 'seeds' | 'seedling' | 'young' | 'mature';
   moisture_threshold: number;
   photo_uri?: string;
+  // Location & climate (optional)
+  latitude?: number;
+  longitude?: number;
+  address?: string;
+  temperature?: number;
+  humidity?: number;
+  weather_condition?: string;
+  weather_description?: string;
 };
