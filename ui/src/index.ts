@@ -11,3 +11,4 @@ export * from './components/FixedExpensesManager';
 export * from './components/Auth';
 export * from './components/AuthScreen';
 export * from './components/FloatingLogoutButton';
+export * from './components/VoiceInput';
