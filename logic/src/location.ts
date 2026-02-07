@@ -2,6 +2,8 @@
  * Location services for GPS and reverse geocoding
  */
 
+import * as Location from 'expo-location';
+
 export interface LocationData {
   latitude: number;
   longitude: number;
@@ -9,45 +11,36 @@ export interface LocationData {
 }
 
 /**
- * Get current GPS coordinates using browser Geolocation API
- * Note: This is a placeholder for mobile implementation
- * In React Native, use expo-location instead
+ * Get current GPS coordinates using Expo Location API
+ * Works on both iOS and Android
  */
 export async function getCurrentLocation(): Promise<LocationData | null> {
   try {
-    // For web, use browser geolocation
-    if (typeof navigator !== 'undefined' && navigator.geolocation) {
-      return new Promise((resolve) => {
-        navigator.geolocation.getCurrentPosition(
-          async (position) => {
-            const { latitude, longitude } = position.coords;
+    // Request foreground location permissions
+    const { status } = await Location.requestForegroundPermissionsAsync();
 
-            // Try to get address via reverse geocoding
-            const address = await reverseGeocode(latitude, longitude);
-
-            resolve({
-              latitude,
-              longitude,
-              address: address || undefined,
-            });
-          },
-          (error) => {
-            console.error('Error getting location:', error);
-            resolve(null);
-          },
-          {
-            enableHighAccuracy: true,
-            timeout: 10000,
-            maximumAge: 0,
-          },
-        );
-      });
+    if (status !== 'granted') {
+      console.warn('Location permission denied');
+      return null;
     }
 
-    console.warn('Geolocation not available');
-    return null;
+    // Get current position with balanced accuracy
+    const location = await Location.getCurrentPositionAsync({
+      accuracy: Location.Accuracy.Balanced,
+    });
+
+    const { latitude, longitude } = location.coords;
+
+    // Try to get address via reverse geocoding
+    const address = await reverseGeocode(latitude, longitude);
+
+    return {
+      latitude,
+      longitude,
+      address: address || undefined,
+    };
   } catch (error) {
-    console.error('Error in getCurrentLocation:', error);
+    console.error('Error getting location:', error);
     return null;
   }
 }
