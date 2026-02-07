@@ -1,5 +1,7 @@
 import { supabase } from './supabase';
 import type { Pot, PotFormData } from '@eb-packages/garden';
+import { getCurrentLocation } from './location';
+import { getCurrentWeather } from './weather';
 
 /**
  * Calculate day of year (1-365/366)
@@ -68,6 +70,26 @@ export async function createPot(potData: PotFormData): Promise<Pot | null> {
       photoUrl = await uploadPotPhoto(user.id, potData.photo_uri);
     }
 
+    // Capture location and weather data
+    let locationData = null;
+    let weatherData = null;
+
+    try {
+      // Get current location
+      locationData = await getCurrentLocation();
+
+      // If we have location, get weather for those coordinates
+      if (locationData) {
+        weatherData = await getCurrentWeather(
+          locationData.latitude,
+          locationData.longitude,
+        );
+      }
+    } catch (error) {
+      // Location/weather capture is optional - don't fail pot creation if it fails
+      console.warn('Could not capture location/weather data:', error);
+    }
+
     // Prepare pot data
     const now = new Date();
     const potRecord = {
@@ -78,6 +100,15 @@ export async function createPot(potData: PotFormData): Promise<Pot | null> {
       moisture_threshold: potData.moisture_threshold,
       photo_url: photoUrl,
       registered_day_of_year: getDayOfYear(now),
+      // Location data (if available)
+      latitude: locationData?.latitude,
+      longitude: locationData?.longitude,
+      address: locationData?.address,
+      // Weather data (if available)
+      temperature: weatherData?.temperature,
+      humidity: weatherData?.humidity,
+      weather_condition: weatherData?.weather_condition,
+      weather_description: weatherData?.weather_description,
     };
 
     // Insert into database
