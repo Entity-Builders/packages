@@ -6,3 +6,4 @@ export * from './pots';
 export * from './location';
 export * from './weather';
 export * from './ai';
+export * from './care';
