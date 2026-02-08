@@ -2,6 +2,7 @@ import { supabase } from './supabase';
 import type { Pot, PotFormData } from '@eb-packages/garden';
 import { getCurrentLocation } from './location';
 import { getCurrentWeather } from './weather';
+import * as FileSystem from 'expo-file-system/legacy';
 
 /**
  * Calculate day of year (1-365/366)
@@ -16,9 +17,6 @@ function getDayOfYear(date: Date = new Date()): number {
 /**
  * Upload pot photo to Supabase Storage
  */
-/**
- * Upload pot photo to Supabase Storage
- */
 export async function uploadPotPhoto(
   userId: string,
   photoUri: string,
@@ -28,33 +26,64 @@ export async function uploadPotPhoto(
       `Starting photo upload for user ${userId} from URI: ${photoUri}`,
     );
 
-    // Convert photo URI to blob
-    const response = await fetch(photoUri);
-    const blob = await response.blob();
+    // Determine content type from URI extension
+    let contentType = 'image/jpeg';
+    const uriLower = photoUri.toLowerCase();
 
-    if (!blob) {
-      console.error('Failed to create blob from photo URI');
+    if (uriLower.endsWith('.png')) {
+      contentType = 'image/png';
+    } else if (uriLower.endsWith('.jpg') || uriLower.endsWith('.jpeg')) {
+      contentType = 'image/jpeg';
+    } else if (uriLower.endsWith('.webp')) {
+      contentType = 'image/webp';
+    } else if (uriLower.endsWith('.heic')) {
+      contentType = 'image/heic';
+    }
+
+    console.log(`Determined content type: ${contentType}`);
+
+    // Read file as base64 using expo-file-system
+    const base64 = await FileSystem.readAsStringAsync(photoUri, {
+      encoding: 'base64',
+    });
+
+    if (!base64) {
+      console.error('Failed to read file as base64');
       return null;
     }
 
     console.log(
-      `Blob created successfully. Size: ${blob.size}, Type: ${blob.type}`,
+      `File read successfully. Base64 length: ${base64.length} chars`,
     );
+
+    // Convert base64 to Uint8Array for upload
+    const binaryString = atob(base64);
+    const bytes = new Uint8Array(binaryString.length);
+    for (let i = 0; i < binaryString.length; i++) {
+      bytes[i] = binaryString.charCodeAt(i);
+    }
+
+    console.log(`Binary data created. Size: ${bytes.length} bytes`);
+
+    if (bytes.length === 0) {
+      console.error('Binary data is empty after conversion');
+      return null;
+    }
 
     // Generate unique filename with correct extension
     const timestamp = Date.now();
-    // Default to jpg, but try to get from blob if possible
-    const extension = blob.type === 'image/png' ? 'png' : 'jpg';
+    const extension = contentType === 'image/png' ? 'png' : 'jpg';
     const filename = `${userId}/${timestamp}.${extension}`;
 
     console.log(`Uploading to pot-photos/${filename}...`);
 
-    // Upload to storage
+    // Upload to storage with binary data (Uint8Array)
     const { data, error } = await supabase.storage
       .from('pot-photos')
-      .upload(filename, blob, {
-        contentType: blob.type || 'image/jpeg',
+      .upload(filename, bytes, {
+        contentType: contentType,
         upsert: false,
+        cacheControl: '3600',
       });
 
     if (error) {
