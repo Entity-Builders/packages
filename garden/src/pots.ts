@@ -6,6 +6,7 @@ export interface Pot {
   seed_type?: string;
   notes?: string;
   photo_url?: string;
+  variety?: string; // e.g., "Cherry Tomato", "San Marzano"
 
   // Registration metadata
   registered_at: Date;
@@ -50,6 +51,7 @@ export type PotFormData = {
   initial_state: 'seeds' | 'seedling' | 'young' | 'mature';
   moisture_threshold: number;
   photo_uri?: string;
+  variety?: string;
   notes?: string;
   // Location & climate (optional)
   latitude?: number;

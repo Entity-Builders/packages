@@ -154,6 +154,7 @@ export async function createPot(potData: PotFormData): Promise<Pot | null> {
       user_id: user.id,
       name: potData.name,
       species: potData.species,
+      variety: potData.variety,
       seed_type: potData.seed_type,
       notes: potData.notes,
       initial_state: potData.initial_state,

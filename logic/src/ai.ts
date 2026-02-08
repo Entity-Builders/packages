@@ -34,6 +34,59 @@ export async function extractPotMetadata(
 }
 
 /**
+ * Identify plant species and variety from image using Gemini Vision
+ */
+export async function identifyPlant(base64Image: string): Promise<{
+  species?: string;
+  variety?: string;
+  confidence?: string;
+  description?: string;
+}> {
+  try {
+    console.log('Calling Edge Function identify-plant...');
+
+    // Use direct fetch to avoid JWT verification bug in local Edge Runtime
+    const supabaseUrl =
+      process.env.EXPO_PUBLIC_SUPABASE_URL || 'http://127.0.0.1:54321';
+    const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '';
+
+    const response = await fetch(`${supabaseUrl}/functions/v1/identify-plant`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${supabaseAnonKey}`,
+      },
+      body: JSON.stringify({ image: base64Image }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Edge Function HTTP error:', response.status, errorText);
+      throw new Error(`HTTP ${response.status}: ${errorText}`);
+    }
+
+    const data = await response.json();
+    console.log('Plant identified:', data);
+
+    return data as {
+      species?: string;
+      variety?: string;
+      confidence?: string;
+      description?: string;
+    };
+  } catch (error) {
+    console.error('Error calling identify-plant Edge Function:', error);
+    // Return empty object on error
+    return {
+      species: undefined,
+      variety: undefined,
+      confidence: 'low',
+      description: 'No se pudo identificar la planta',
+    };
+  }
+}
+
+/**
  * Fallback keyword parser
  */
 function extractPotMetadataKeyword(transcript: string): Partial<PotFormData> {
