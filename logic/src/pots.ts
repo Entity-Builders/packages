@@ -16,40 +16,69 @@ function getDayOfYear(date: Date = new Date()): number {
 /**
  * Upload pot photo to Supabase Storage
  */
+/**
+ * Upload pot photo to Supabase Storage
+ */
 export async function uploadPotPhoto(
   userId: string,
   photoUri: string,
 ): Promise<string | null> {
   try {
+    console.log(
+      `Starting photo upload for user ${userId} from URI: ${photoUri}`,
+    );
+
     // Convert photo URI to blob
     const response = await fetch(photoUri);
     const blob = await response.blob();
 
-    // Generate unique filename
+    if (!blob) {
+      console.error('Failed to create blob from photo URI');
+      return null;
+    }
+
+    console.log(
+      `Blob created successfully. Size: ${blob.size}, Type: ${blob.type}`,
+    );
+
+    // Generate unique filename with correct extension
     const timestamp = Date.now();
-    const filename = `${userId}/${timestamp}.jpg`;
+    // Default to jpg, but try to get from blob if possible
+    const extension = blob.type === 'image/png' ? 'png' : 'jpg';
+    const filename = `${userId}/${timestamp}.${extension}`;
+
+    console.log(`Uploading to pot-photos/${filename}...`);
 
     // Upload to storage
     const { data, error } = await supabase.storage
       .from('pot-photos')
       .upload(filename, blob, {
-        contentType: 'image/jpeg',
+        contentType: blob.type || 'image/jpeg',
         upsert: false,
       });
 
     if (error) {
-      console.error('Error uploading photo:', error);
+      console.error('Error uploading photo to Supabase:', error);
+      console.error('Error details:', JSON.stringify(error, null, 2));
       return null;
     }
+
+    if (!data?.path) {
+      console.error('Upload successful but no path returned');
+      return null;
+    }
+
+    console.log('Upload successful. Path:', data.path);
 
     // Get public URL
     const {
       data: { publicUrl },
     } = supabase.storage.from('pot-photos').getPublicUrl(data.path);
 
+    console.log('Generated public URL:', publicUrl);
     return publicUrl;
   } catch (error) {
-    console.error('Error in uploadPotPhoto:', error);
+    console.error('Unexpected error in uploadPotPhoto:', error);
     return null;
   }
 }
