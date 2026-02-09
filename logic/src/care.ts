@@ -219,3 +219,65 @@ export async function getCareHistory(potId: string): Promise<CareLog[]> {
     return [];
   }
 }
+
+/**
+ * Get all care schedules for the current user across all pots
+ */
+export async function getAllUserCareSchedules(): Promise<
+  (CareSchedule & { pot: { name: string; photo_url?: string } })[]
+> {
+  try {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+    if (!session) return [];
+
+    // 1. Get all pots for user
+    const { data: pots, error: potsError } = await supabase
+      .from('pots')
+      .select('id, name, photo_url')
+      .eq('user_id', session.user.id);
+
+    if (potsError || !pots || pots.length === 0) return [];
+
+    const potIds = pots.map((p) => p.id);
+    const potsMap = pots.reduce(
+      (acc, pot) => {
+        acc[pot.id] = pot;
+        return acc;
+      },
+      {} as Record<string, { id: string; name: string; photo_url?: string }>,
+    );
+
+    // 2. Get all schedules for these pots
+    const { data: schedules, error: schedError } = await supabase
+      .from('care_schedules')
+      .select('*')
+      .in('pot_id', potIds)
+      .order('next_care_date', { ascending: true });
+
+    if (schedError) {
+      console.error('Error fetching all schedules:', schedError);
+      return [];
+    }
+
+    // 3. Merge pot data into schedules
+    return (schedules || []).map((schedule) => ({
+      ...schedule,
+      last_care_date: schedule.last_care_date
+        ? new Date(schedule.last_care_date)
+        : null,
+      next_care_date: schedule.next_care_date
+        ? new Date(schedule.next_care_date)
+        : null,
+      created_at: new Date(schedule.created_at),
+      updated_at: new Date(schedule.updated_at),
+      pot: potsMap[schedule.pot_id],
+    })) as (CareSchedule & {
+      pot: { name: string; photo_url?: string };
+    })[];
+  } catch (error) {
+    console.error('Error in getAllUserCareSchedules:', error);
+    return [];
+  }
+}
