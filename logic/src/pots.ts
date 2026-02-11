@@ -286,7 +286,32 @@ export async function deletePot(potId: string): Promise<boolean> {
 
     console.log('Attempting to delete pot:', potId, 'for user:', user.id);
 
-    // Delete the pot (RLS will ensure user owns it)
+    // 1. Delete care logs first (they reference pot)
+    const { error: logsError } = await supabase
+      .from('care_logs')
+      .delete()
+      .eq('pot_id', potId);
+
+    if (logsError) {
+      console.error('Error deleting care logs:', logsError);
+      // We continue even if this fails? Or stop?
+      // If we stop, we can't delete the pot. But if logs exist, pot delete will fail anyway.
+      // So we should probably return false or try to proceed if the error is "not found" (which shouldn't happen with delete).
+      return false;
+    }
+
+    // 2. Delete care schedules (they reference pot)
+    const { error: schedulesError } = await supabase
+      .from('care_schedules')
+      .delete()
+      .eq('pot_id', potId);
+
+    if (schedulesError) {
+      console.error('Error deleting care schedules:', schedulesError);
+      return false;
+    }
+
+    // 3. Delete the pot (RLS will ensure user owns it)
     const { data, error } = await supabase
       .from('pots')
       .delete()
@@ -309,7 +334,7 @@ export async function deletePot(potId: string): Promise<boolean> {
       return false;
     }
 
-    console.log('Successfully deleted pot:', potId);
+    console.log('Successfully deleted pot and related data:', potId);
     return true;
   } catch (error) {
     console.error('Error in deletePot:', error);
