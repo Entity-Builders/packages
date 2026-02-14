@@ -5,6 +5,21 @@ export interface Plant {
   moistureThreshold: number; // percentage (0-100)
 }
 
+export interface SpeciesCareGuide {
+  id: number; // BigInt in SQL usually maps to number/string in JS, checking usage
+  species_name: string;
+  variety?: string;
+  care_level?: string;
+  climate?: string;
+  watering_frequency?: string;
+  fertilizer_frequency?: string;
+  pruning_info?: string;
+  companions?: string;
+  common_pests?: string; // It was not in the seed but might be there, checking seed again... actually seed has limited columns but let's stick to what's in seed and general usefulness.
+  // Checking seed.sql again: species_name, variety, care_level, climate, watering_frequency, fertilizer_frequency, pruning_info, companions
+  created_at?: string;
+}
+
 export interface SensorReading {
   sensorId: string;
   value: number;

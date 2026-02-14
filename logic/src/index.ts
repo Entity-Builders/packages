@@ -12,4 +12,5 @@ export {
   logCare,
   getCareHistory,
   getAllUserCareSchedules,
+  getSpeciesCareGuide,
 } from './care';

@@ -4,6 +4,7 @@ import type {
   CareLog,
   CareLogInput,
   CareScheduleInput,
+  SpeciesCareGuide,
 } from '@eb-packages/garden';
 import { uploadPotPhoto } from './pots';
 
@@ -279,5 +280,34 @@ export async function getAllUserCareSchedules(): Promise<
   } catch (error) {
     console.error('Error in getAllUserCareSchedules:', error);
     return [];
+  }
+}
+
+/**
+ * Get species care guide by species name
+ */
+export async function getSpeciesCareGuide(
+  speciesName: string,
+): Promise<SpeciesCareGuide | null> {
+  try {
+    const { data, error } = await supabase
+      .from('plant_species_care_guides')
+      .select('*')
+      .ilike('species_name', speciesName)
+      .limit(1)
+      .single();
+
+    if (error) {
+      if (error.code !== 'PGRST116') {
+        // PGRST116 is "The result contains 0 rows"
+        console.error('Error fetching species care guide:', error);
+      }
+      return null;
+    }
+
+    return data as SpeciesCareGuide;
+  } catch (error) {
+    console.error('Error in getSpeciesCareGuide:', error);
+    return null;
   }
 }
