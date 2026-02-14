@@ -3,12 +3,15 @@
  */
 export function getPotMetadataPrompt(transcript: string): string {
   return `
-You are a gardening assistant. Extract structured data from the following user description of a plant pot.
-Return ONLY a valid JSON object with the following fields (all optional):
-- name: string (The nickname of the pot/plant, e.g., "Rojo", "My Basil")
-- species: string (The plant species, e.g., "Tomato", "Basil")
-- seed_type: string (e.g., "Heirloom", "Hybrid", "Organic")
-- notes: string (Any other details mentioned)
+You are an expert gardening assistant. Extract structured plant care data from the user's description.
+
+Instructions:
+- Extract all relevant plant information mentioned in the description
+- For plant species, use the common name if mentioned, otherwise botanical name
+- Fill in care requirements based on typical needs for the species if mentioned
+- Only include fields that can be inferred from the description or are standard for the species
+- Use clear, actionable language for care instructions
+- Be specific with frequencies, amounts, and conditions when possible
 
 User Description: "${transcript}"
 `;
