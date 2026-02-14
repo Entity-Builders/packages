@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Alert, StyleSheet, View } from 'react-native';
 import { supabase } from '@eb-packages/logic';
 import { Auth } from './Auth';
@@ -6,6 +6,7 @@ import { Auth } from './Auth';
 export interface AuthScreenProps {
   onLoginSuccess?: () => void;
   onRegisterSuccess?: () => void;
+  onSessionExists?: () => void;
   title?: string;
   themeColor?: string;
   // Any other props we might want to pass down to the presentation component
@@ -14,11 +15,22 @@ export interface AuthScreenProps {
 export const AuthScreen: React.FC<AuthScreenProps> = ({
   onLoginSuccess,
   onRegisterSuccess,
+  onSessionExists,
   title = 'Guita Control',
   themeColor = '#000',
 }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Check if user is already authenticated
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session && onSessionExists) {
+        // If session exists, call the callback to redirect
+        onSessionExists();
+      }
+    });
+  }, [onSessionExists]);
 
   const handleLogin = async (email: string, pass: string) => {
     setLoading(true);
