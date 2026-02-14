@@ -44,7 +44,7 @@ export const SharedHeader: React.FC<SharedHeaderProps> = ({
   logo,
   themeColor = '#007AFF',
   actions = [],
-  showUserInfo = true,
+  showUserInfo = false,
   userName,
   userAvatar,
   variant = 'light',
