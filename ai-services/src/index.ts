@@ -15,5 +15,12 @@ export {
   GeminiAPIError,
 } from './extract-pot-metadata.ts';
 
+// Export lightweight identification (use this first to save tokens!)
+export {
+  identifyPlantSpecies,
+  type PlantIdentification,
+} from './identify-plant-species.ts';
+
 // Export prompts (for customization if needed)
 export { getPotMetadataPrompt } from './prompts/pot-metadata.ts';
+export { getIdentifySpeciesPrompt } from './prompts/identify-species.ts';
