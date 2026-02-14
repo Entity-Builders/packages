@@ -13,3 +13,4 @@ export * from './components/AuthScreen';
 export * from './components/FloatingLogoutButton';
 export * from './components/VoiceInput';
 export * from './components/Screen';
+export * from './components/SharedHeader';
