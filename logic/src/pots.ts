@@ -158,6 +158,7 @@ export async function createPot(potData: PotFormData): Promise<Pot | null> {
       seed_type: potData.seed_type,
       notes: potData.notes,
       initial_state: potData.initial_state,
+      location_type: potData.location_type,
       moisture_threshold: potData.moisture_threshold,
       photo_url: photoUrl,
       registered_day_of_year: getDayOfYear(now),

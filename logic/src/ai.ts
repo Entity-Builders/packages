@@ -41,6 +41,14 @@ export async function identifyPlant(base64Image: string): Promise<{
   variety?: string;
   confidence?: string;
   description?: string;
+  care_info?: {
+    climate?: string;
+    watering_frequency?: string;
+    fertilizer_frequency?: string;
+    pruning_info?: string;
+    companions?: string;
+    care_level?: string;
+  };
 }> {
   try {
     console.log('Calling Edge Function identify-plant...');
@@ -73,6 +81,14 @@ export async function identifyPlant(base64Image: string): Promise<{
       variety?: string;
       confidence?: string;
       description?: string;
+      care_info?: {
+        climate?: string;
+        watering_frequency?: string;
+        fertilizer_frequency?: string;
+        pruning_info?: string;
+        companions?: string;
+        care_level?: string;
+      };
     };
   } catch (error) {
     console.error('Error calling identify-plant Edge Function:', error);

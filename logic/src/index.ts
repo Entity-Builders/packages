@@ -13,4 +13,5 @@ export {
   getCareHistory,
   getAllUserCareSchedules,
   getSpeciesCareGuide,
+  createDefaultCareSchedules,
 } from './care';

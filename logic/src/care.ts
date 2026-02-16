@@ -311,3 +311,111 @@ export async function getSpeciesCareGuide(
     return null;
   }
 }
+
+/**
+ * Parse a frequency text (from AI) into approximate number of days.
+ * Examples:
+ * - "Regar cada 3 días" → 3
+ * - "2-3 veces por semana" → 3
+ * - "Una vez por semana" → 7
+ * - "Cada 2 semanas" → 14
+ * - "Una vez al mes" → 30
+ * - "Cada 15 días" → 15
+ */
+function parseFrequencyDays(text: string): number | null {
+  if (!text) return null;
+  const lower = text.toLowerCase();
+
+  // "cada X días"
+  const cadaDias = lower.match(/cada\s+(\d+)\s*d[ií]as?/);
+  if (cadaDias) return parseInt(cadaDias[1], 10);
+
+  // "X veces por semana"
+  const vecesSemana = lower.match(/(\d+)\s*(?:-\d+)?\s*veces?\s+por\s+semana/);
+  if (vecesSemana) {
+    const times = parseInt(vecesSemana[1], 10);
+    return Math.round(7 / times);
+  }
+
+  // "una vez por semana" / "1 vez por semana"
+  if (
+    lower.includes('una vez por semana') ||
+    lower.includes('1 vez por semana') ||
+    lower.includes('semanalmente')
+  ) {
+    return 7;
+  }
+
+  // "cada X semanas"
+  const cadaSemanas = lower.match(/cada\s+(\d+)\s*semanas?/);
+  if (cadaSemanas) return parseInt(cadaSemanas[1], 10) * 7;
+
+  // "cada 2-3 semanas"
+  const cadaSemanasRange = lower.match(/cada\s+(\d+)\s*-\s*\d+\s*semanas?/);
+  if (cadaSemanasRange) return parseInt(cadaSemanasRange[1], 10) * 7;
+
+  // "una vez al mes" / "mensualmente" / "cada mes"
+  if (
+    lower.includes('una vez al mes') ||
+    lower.includes('mensualmente') ||
+    lower.includes('cada mes') ||
+    lower.includes('1 vez al mes')
+  ) {
+    return 30;
+  }
+
+  // "cada X meses"
+  const cadaMeses = lower.match(/cada\s+(\d+)\s*meses?/);
+  if (cadaMeses) return parseInt(cadaMeses[1], 10) * 30;
+
+  // Try to find any number as fallback
+  const anyNumber = lower.match(/(\d+)\s*d[ií]as?/);
+  if (anyNumber) return parseInt(anyNumber[1], 10);
+
+  return null;
+}
+
+/**
+ * Create default care schedules for a newly registered pot based on care guide info.
+ * This auto-creates watering and fertilizing schedules if possible.
+ */
+export async function createDefaultCareSchedules(
+  potId: string,
+  careInfo?: {
+    watering_frequency?: string;
+    fertilizer_frequency?: string;
+  },
+): Promise<void> {
+  try {
+    // Parse frequencies from AI-generated text
+    const wateringDays =
+      parseFrequencyDays(careInfo?.watering_frequency || '') || 3; // Default: every 3 days
+    const fertilizingDays =
+      parseFrequencyDays(careInfo?.fertilizer_frequency || '') || 15; // Default: every 15 days
+
+    console.log(
+      `Auto-creating schedules for pot ${potId}: watering=${wateringDays}d, fertilizing=${fertilizingDays}d`,
+    );
+
+    // Create watering schedule
+    await upsertCareSchedule({
+      pot_id: potId,
+      care_type: 'watering',
+      frequency_days: wateringDays,
+      notes: careInfo?.watering_frequency || 'Configurado automáticamente',
+    });
+
+    // Create fertilizing schedule
+    await upsertCareSchedule({
+      pot_id: potId,
+      care_type: 'fertilizing',
+      frequency_days: fertilizingDays,
+      notes: careInfo?.fertilizer_frequency || 'Configurado automáticamente',
+    });
+
+    console.log('Default care schedules created successfully');
+  } catch (error) {
+    console.error('Error creating default care schedules:', error);
+    // Don't throw — this is a best-effort enhancement, not critical
+  }
+}

@@ -15,6 +15,9 @@ export interface Pot {
   // Plant state
   initial_state: 'seeds' | 'seedling' | 'young' | 'mature';
 
+  // Location type
+  location_type: 'indoor' | 'outdoor';
+
   // Sensor configuration (from existing Plant interface)
   moisture_threshold: number;
   sensor_id?: string;
@@ -49,6 +52,7 @@ export type PotFormData = {
   species: string;
   seed_type?: string;
   initial_state: 'seeds' | 'seedling' | 'young' | 'mature';
+  location_type: 'indoor' | 'outdoor';
   moisture_threshold: number;
   photo_uri?: string;
   variety?: string;
