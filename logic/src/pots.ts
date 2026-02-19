@@ -117,6 +117,17 @@ export async function uploadPotPhoto(
  */
 export async function createPot(potData: PotFormData): Promise<Pot | null> {
   try {
+    // Ensure we have a valid session before making DB calls (fixes RLS 42501 errors)
+    const { data: sessionData } = await supabase.auth.getSession();
+    if (!sessionData.session) {
+      console.warn('[createPot] No active session, attempting refresh...');
+      const { error: refreshError } = await supabase.auth.refreshSession();
+      if (refreshError) {
+        console.error('[createPot] Session refresh failed:', refreshError);
+        throw new Error('Session expired. Please log in again.');
+      }
+    }
+
     const {
       data: { user },
     } = await supabase.auth.getUser();
