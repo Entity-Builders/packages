@@ -15,6 +15,7 @@ export interface SpeciesCareGuide {
   fertilizer_frequency?: string;
   pruning_info?: string;
   companions?: string;
+  light_requirements?: string;
   common_pests?: string; // It was not in the seed but might be there, checking seed again... actually seed has limited columns but let's stick to what's in seed and general usefulness.
   // Checking seed.sql again: species_name, variety, care_level, climate, watering_frequency, fertilizer_frequency, pruning_info, companions
   created_at?: string;

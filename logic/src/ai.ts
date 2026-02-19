@@ -48,6 +48,7 @@ export async function identifyPlant(base64Image: string): Promise<{
     pruning_info?: string;
     companions?: string;
     care_level?: string;
+    sun_exposure?: string;
   };
 }> {
   try {
@@ -88,6 +89,7 @@ export async function identifyPlant(base64Image: string): Promise<{
         pruning_info?: string;
         companions?: string;
         care_level?: string;
+        sun_exposure?: string;
       };
     };
   } catch (error) {
