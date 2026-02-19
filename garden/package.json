@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
-  "dependencies": {
-    "@eb-packages/core": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "typescript": "^5.0.0"
   },
