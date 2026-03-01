@@ -13,6 +13,8 @@ export interface AnalyticsProvider {
 export interface AnalyticsConfig {
   apiKey: string;
   apiHost?: string;
+  /** Disable tracking entirely (e.g., in dev mode) */
+  disabled?: boolean;
   /** Disable session recording (e.g., in dev) */
   disableSessionRecording?: boolean;
   /** Enable autocapture of clicks, inputs, etc. */

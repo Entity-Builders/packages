@@ -3,13 +3,13 @@ import type { AnalyticsProvider, AnalyticsConfig } from './types';
 /**
  * Analytics service — shared across all Entity Builders apps.
  *
- * Usage:
+ * Usage (React Native):
  * ```ts
- * import { Analytics, PostHogProvider } from '@eb-packages/analytics';
+ * import { Analytics, PostHogRNProvider } from '@eb-packages/analytics';
  *
- * const analytics = new Analytics(new PostHogProvider());
- * analytics.init({ apiKey: 'phc_xxx' });
- * analytics.track('app_launched', { platform: 'mac' });
+ * const analytics = new Analytics(new PostHogRNProvider());
+ * analytics.init({ apiKey: process.env.EXPO_PUBLIC_POSTHOG_API_KEY! });
+ * analytics.captureError(new Error('Something failed'), { screen: 'AuthScreen' });
  * ```
  */
 export class Analytics {
@@ -35,14 +35,46 @@ export class Analytics {
   }
 
   /**
-   * Identify a user (e.g., after license validation or API key setup).
+   * Capture an error with optional context (screen, action, etc.).
+   */
+  captureError(error: Error | unknown, context?: Record<string, unknown>): void {
+    const err = error instanceof Error ? error : new Error(String(error));
+    console.error('[Analytics] Error captured:', err.message, context);
+    this.provider.track('app_error', {
+      error_message: err.message,
+      error_name: err.name,
+      error_stack: err.stack,
+      ...context,
+    });
+  }
+
+  /**
+   * Capture a network request failure with URL, status and message.
+   */
+  captureNetworkError(
+    url: string,
+    status: number | string,
+    message: string,
+    context?: Record<string, unknown>,
+  ): void {
+    console.error(`[Analytics] Network error: ${status} ${url} — ${message}`);
+    this.provider.track('network_error', {
+      url,
+      status,
+      message,
+      ...context,
+    });
+  }
+
+  /**
+   * Identify a user (e.g., after login).
    */
   identify(userId: string, traits?: Record<string, unknown>): void {
     this.provider.identify(userId, traits);
   }
 
   /**
-   * Set persistent properties that will be sent with every event.
+   * Set persistent properties sent with every event.
    */
   setGlobalProperties(properties: Record<string, unknown>): void {
     this.provider.setGlobalProperties(properties);
