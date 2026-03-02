@@ -37,7 +37,10 @@ export class Analytics {
   /**
    * Capture an error with optional context (screen, action, etc.).
    */
-  captureError(error: Error | unknown, context?: Record<string, unknown>): void {
+  captureError(
+    error: Error | unknown,
+    context?: Record<string, unknown>,
+  ): void {
     const err = error instanceof Error ? error : new Error(String(error));
     console.error('[Analytics] Error captured:', err.message, context);
     this.provider.track('app_error', {
@@ -78,6 +81,17 @@ export class Analytics {
    */
   setGlobalProperties(properties: Record<string, unknown>): void {
     this.provider.setGlobalProperties(properties);
+  }
+
+  /**
+   * Track a screen view. Call this when a screen mounts.
+   * Shows up in PostHog as a `screen_view` event with `screen_name` property.
+   */
+  screen(name: string, properties?: Record<string, unknown>): void {
+    this.provider.track('screen_view', {
+      screen_name: name,
+      ...properties,
+    });
   }
 
   /**
