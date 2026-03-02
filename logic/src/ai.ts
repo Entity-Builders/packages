@@ -54,27 +54,15 @@ export async function identifyPlant(base64Image: string): Promise<{
   try {
     console.log('Calling Edge Function identify-plant...');
 
-    // Use direct fetch to avoid JWT verification bug in local Edge Runtime
-    const supabaseUrl =
-      process.env.EXPO_PUBLIC_SUPABASE_URL || 'http://127.0.0.1:54321';
-    const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '';
-
-    const response = await fetch(`${supabaseUrl}/functions/v1/identify-plant`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${supabaseAnonKey}`,
-      },
-      body: JSON.stringify({ image: base64Image }),
+    const { data, error } = await supabase.functions.invoke('identify-plant', {
+      body: { image: base64Image },
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Edge Function HTTP error:', response.status, errorText);
-      throw new Error(`HTTP ${response.status}: ${errorText}`);
+    if (error) {
+      console.error('Edge Function error:', error);
+      throw error;
     }
 
-    const data = await response.json();
     console.log('Plant identified:', data);
 
     return data as {
