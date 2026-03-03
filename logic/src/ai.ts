@@ -10,10 +10,16 @@ export async function extractPotMetadata(
 ): Promise<Partial<PotFormData>> {
   try {
     console.log('Calling Edge Function extract-pot-metadata...');
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
     const { data, error } = await supabase.functions.invoke(
       'extract-pot-metadata',
       {
         body: { transcript },
+        headers: session?.access_token
+          ? { Authorization: `Bearer ${session.access_token}` }
+          : undefined,
       },
     );
 
@@ -54,8 +60,14 @@ export async function identifyPlant(base64Image: string): Promise<{
   try {
     console.log('Calling Edge Function identify-plant...');
 
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
     const { data, error } = await supabase.functions.invoke('identify-plant', {
       body: { image: base64Image },
+      headers: session?.access_token
+        ? { Authorization: `Bearer ${session.access_token}` }
+        : undefined,
     });
 
     if (error) {
