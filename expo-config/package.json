@@ -1,0 +1,5 @@
+{
+  "name": "@eb-packages/expo-config",
+  "version": "1.0.0",
+  "main": "createAppConfig.js"
+}
