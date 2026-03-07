@@ -43,6 +43,7 @@ function createAppConfig(options) {
     version,
     projectId,
     plugins = [],
+    scheme,
     ios = {},
     android = {},
     web = {},
@@ -84,6 +85,7 @@ function createAppConfig(options) {
       version,
       orientation,
       newArchEnabled: true,
+      scheme: scheme || slug,
       owner: OWNER,
 
       // OTA Updates
