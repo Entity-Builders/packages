@@ -116,3 +116,48 @@ export async function getDiagnosisLogs(
 
   return data as PotDiagnosisLog[];
 }
+
+export async function sendDiagnosisChat(params: {
+  logId: string;
+  history: { role: 'user' | 'assistant'; content: string }[];
+  newMessage: string;
+  diagnosisContext: string;
+}): Promise<{ role: 'user' | 'assistant'; content: string }[]> {
+  const { logId, history, newMessage, diagnosisContext } = params;
+
+  try {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+
+    // 1. Get AI Response
+    const { data: chatResult, error: chatError } =
+      await supabase.functions.invoke('diagnose-chat', {
+        body: { history, newMessage, diagnosisContext },
+        headers: session?.access_token
+          ? { Authorization: `Bearer ${session.access_token}` }
+          : undefined,
+      });
+
+    if (chatError) throw chatError;
+
+    const newHistory = [
+      ...history,
+      { role: 'user', content: newMessage },
+      { role: 'assistant', content: chatResult.response },
+    ];
+
+    // 2. Update database record
+    const { error: dbError } = await supabase
+      .from('potlink_diagnosis_logs')
+      .update({ chat_history: newHistory })
+      .eq('id', logId);
+
+    if (dbError) throw dbError;
+
+    return newHistory as { role: 'user' | 'assistant'; content: string }[];
+  } catch (error) {
+    console.error('Error sending diagnosis chat:', error);
+    throw error;
+  }
+}

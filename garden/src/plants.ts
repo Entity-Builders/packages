@@ -15,6 +15,7 @@ export interface PotDiagnosisLog {
   ai_diagnosis: string;
   urgency: 'low' | 'medium' | 'high';
   action_plan: string[];
+  chat_history?: { role: 'user' | 'assistant'; content: string }[];
   created_at: string;
 }
 
