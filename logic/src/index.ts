@@ -6,6 +6,7 @@ export * from './pots';
 export * from './location';
 export * from './weather';
 export * from './ai';
+export * from './plantDiagnosisService';
 export {
   getCareSchedules,
   upsertCareSchedule,

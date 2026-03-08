@@ -5,6 +5,19 @@ export interface Plant {
   moistureThreshold: number; // percentage (0-100)
 }
 
+export interface PotDiagnosisLog {
+  id: string;
+  pot_id: string;
+  user_id: string;
+  general_image_url: string;
+  soil_image_url: string;
+  user_query?: string;
+  ai_diagnosis: string;
+  urgency: 'low' | 'medium' | 'high';
+  action_plan: string[];
+  created_at: string;
+}
+
 export interface SpeciesCareGuide {
   id: number; // BigInt in SQL usually maps to number/string in JS, checking usage
   species_name: string;
