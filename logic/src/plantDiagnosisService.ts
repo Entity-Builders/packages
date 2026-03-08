@@ -87,6 +87,7 @@ export async function diagnosePlant(params: {
         ai_diagnosis: diagnosisResult.diagnosis,
         urgency: diagnosisResult.urgency,
         action_plan: diagnosisResult.action_plan,
+        metadata: diagnosisResult.metadata,
       })
       .select()
       .single();

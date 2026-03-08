@@ -16,6 +16,35 @@ export interface PotDiagnosisLog {
   urgency: 'low' | 'medium' | 'high';
   action_plan: string[];
   chat_history?: { role: 'user' | 'assistant'; content: string }[];
+  metadata?: {
+    has_pests: boolean;
+    soil_condition: 'dry' | 'moist' | 'waterlogged' | 'unknown';
+    light_exposure: 'low' | 'adequate' | 'excessive' | 'unknown';
+    plant_parts_affected: string[];
+    leaf_color: 'green' | 'yellowing' | 'browning' | 'spotted' | 'unknown';
+    plant_vitality: 'healthy' | 'wilted' | 'drooping' | 'unknown';
+    suspected_disease: 'none' | 'fungal' | 'bacterial' | 'viral' | 'unknown';
+    pot_suitability?:
+      | 'too_small'
+      | 'appropriate'
+      | 'too_large'
+      | 'needs_repotting_soon'
+      | 'unknown';
+    stem_condition?: 'healthy' | 'leggy' | 'mushy' | 'woody_normal' | 'unknown';
+    pest_type?: string[];
+    leaf_density?:
+      | 'dense'
+      | 'normal'
+      | 'sparse'
+      | 'dropping_leaves'
+      | 'unknown';
+    soil_surface?:
+      | 'clean'
+      | 'moldy'
+      | 'mineral_buildup'
+      | 'moss_growth'
+      | 'unknown';
+  };
   created_at: string;
 }
 
