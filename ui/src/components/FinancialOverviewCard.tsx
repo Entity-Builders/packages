@@ -122,6 +122,7 @@ export const FinancialOverviewCard = ({
         <StyledText className='text-white font-medium mb-3 text-xs self-center'>
           Tus Gastos
         </StyledText>
+        {/* @ts-ignore - NativeWind typing issue */}
         <View className='items-center justify-center'>
           <SimpleDonut
             data={expenses.map((e) => ({ value: e.value, color: e.color }))}

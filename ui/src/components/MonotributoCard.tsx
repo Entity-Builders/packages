@@ -33,6 +33,7 @@ export const MonotributoCard = ({
   return (
     <StyledView className='bg-[#222332] p-5 rounded-[24px] shadow-sm mb-4 border border-slate-800 flex-row items-center'>
       {/* Circular Progress */}
+      {/* @ts-ignore - NativeWind typing issue */}
       <View className='mr-6'>
         <Svg
           width={radius * 2 + 20}
@@ -61,6 +62,7 @@ export const MonotributoCard = ({
             />
           </G>
         </Svg>
+        {/* @ts-ignore - NativeWind typing issue */}
         <View className='absolute inset-0 items-center justify-center'>
           <StyledText className='text-[#FACC15] font-bold text-xl'>
             {percentage.toFixed(1)}%
