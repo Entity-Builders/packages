@@ -81,3 +81,38 @@ export async function getLinkedAccounts(): Promise<LinkedAccount[]> {
     return [];
   }
 }
+
+/**
+ * Unlinks the current user's account from the specified linked user.
+ * @param linkedUserId The user ID of the account to unlink
+ * @returns {Promise<{success: boolean; error?: string}>} An object containing the success status and an optional error message.
+ */
+export async function unlinkAccount(
+  linkedUserId: string,
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) return { success: false, error: 'User not authenticated' };
+
+    const { error } = await supabase
+      .from('potlink_account_links')
+      .delete()
+      .eq('user_id', user.id)
+      .eq('linked_user_id', linkedUserId);
+
+    if (error) {
+      console.error('Error unlinking account:', error);
+      return { success: false, error: error.message };
+    }
+
+    return { success: true };
+  } catch (err: any) {
+    console.error('Exception in unlinkAccount:', err);
+    return {
+      success: false,
+      error: err.message || 'Error al desvincular cuenta.',
+    };
+  }
+}
