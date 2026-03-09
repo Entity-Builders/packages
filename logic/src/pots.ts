@@ -215,7 +215,7 @@ export async function getUserPots(): Promise<Pot[]> {
 
     const { data, error } = await supabase
       .from('pots')
-      .select('*')
+      .select('*, potlink_diagnosis_logs(created_at)')
       .eq('user_id', user.id)
       .order('created_at', { ascending: false });
 
@@ -224,7 +224,30 @@ export async function getUserPots(): Promise<Pot[]> {
       return [];
     }
 
-    return (data || []) as Pot[];
+    // Map the returned data to extract the most recent diagnosis date
+    const potsWithDiagnosis = data?.map((pot: any) => {
+      // potlink_diagnosis_logs is an array of objects since it's a 1-to-many relationship
+      const logs = pot.potlink_diagnosis_logs || [];
+
+      // Sort to get the most recent date if there are multiple logs
+      // Note: We could also order the select in PostgREST, but sorting locally is fine for small arrays
+      const sortedLogs = logs.sort(
+        (a: any, b: any) =>
+          new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
+      );
+
+      const lastDate = sortedLogs.length > 0 ? sortedLogs[0].created_at : null;
+
+      // Clean up the object to match the expected Pot interface
+      const { potlink_diagnosis_logs, ...potData } = pot;
+
+      return {
+        ...potData,
+        last_diagnosis_date: lastDate,
+      } as Pot;
+    });
+
+    return (potsWithDiagnosis || []) as Pot[];
   } catch (error) {
     console.error('Error in getUserPots:', error);
     return [];

@@ -35,6 +35,9 @@ export interface Pot {
 
   created_at: Date;
   updated_at: Date;
+
+  // Enriched frontend fields
+  last_diagnosis_date?: string | null;
 }
 
 export type PotInput = Omit<
