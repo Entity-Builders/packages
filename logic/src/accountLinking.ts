@@ -48,32 +48,34 @@ export async function linkAccount(
   }
 }
 
+export interface LinkedAccount {
+  linked_user_id: string;
+  email: string | null;
+  name: string | null;
+  created_at: string;
+}
+
 /**
- * Retrieves the list of currently linked accounts for the user.
- * We fetch the links where the user_id is the current user.
- * Then we can get some basic info about the linked user (we might need a view or a join with profiles later if we want the actual name).
- * For now, we will just return the linked UUIDs.
+ * Retrieves the list of currently linked accounts for the user, including name and email.
  */
-export async function getLinkedAccounts(): Promise<
-  { linked_user_id: string; created_at: string }[]
-> {
+export async function getLinkedAccounts(): Promise<LinkedAccount[]> {
   try {
     const {
       data: { user },
     } = await supabase.auth.getUser();
     if (!user) return [];
 
-    const { data, error } = await supabase
-      .from('potlink_account_links')
-      .select('linked_user_id, created_at')
-      .eq('user_id', user.id);
+    // Use RPC to securely fetch linked user details (name, email)
+    const { data, error } = await supabase.rpc(
+      'get_potlink_linked_accounts_info',
+    );
 
     if (error) {
-      console.error('Error fetching linked accounts:', error);
+      console.error('Error fetching linked accounts info:', error);
       return [];
     }
 
-    return data || [];
+    return (data as LinkedAccount[]) || [];
   } catch (err) {
     console.error('Exception in getLinkedAccounts:', err);
     return [];

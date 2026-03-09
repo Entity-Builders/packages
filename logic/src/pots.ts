@@ -2,6 +2,7 @@ import { supabase } from './supabase';
 import type { Pot, PotFormData } from '@eb-packages/garden';
 import { getCurrentLocation } from './location';
 import { getCurrentWeather } from './weather';
+import { getLinkedAccounts } from './accountLinking';
 import * as FileSystem from 'expo-file-system/legacy';
 
 /**
@@ -213,10 +214,17 @@ export async function getUserPots(): Promise<Pot[]> {
     } = await supabase.auth.getUser();
     if (!user) return [];
 
+    // Fetch linked user IDs
+    const linkedAccounts = await getLinkedAccounts();
+    const userIdsToFetch = [
+      user.id,
+      ...linkedAccounts.map((a) => a.linked_user_id),
+    ];
+
     const { data, error } = await supabase
       .from('pots')
       .select('*, potlink_diagnosis_logs(created_at)')
-      .eq('user_id', user.id)
+      .in('user_id', userIdsToFetch)
       .order('created_at', { ascending: false });
 
     if (error) {
