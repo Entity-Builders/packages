@@ -10,3 +10,10 @@ export interface AIConfig {
   temperature: number;
   timeout: number;
 }
+
+export type ExperienceBlueprintVibe =
+  | 'balancer'
+  | 'nature_immersion'
+  | 'social_explorer'
+  | 'deep_focus'
+  | 'random';
