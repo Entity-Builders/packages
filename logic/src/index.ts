@@ -16,3 +16,4 @@ export {
   getSpeciesCareGuide,
   createDefaultCareSchedules,
 } from './care';
+export * from './accountLinking';
