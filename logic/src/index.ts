@@ -17,3 +17,4 @@ export {
   createDefaultCareSchedules,
 } from './care';
 export * from './accountLinking';
+export * from './hooks/useAuth';
