@@ -8,9 +8,12 @@
     "@supabase/supabase-js": "^2.93.3",
     "date-fns": "^2.30.0",
     "expo-location": "~18.0.0",
+    "hashids": "^2.3.0",
     "react-native-url-polyfill": "^3.0.0"
   },
   "devDependencies": {
+    "@types/hashids": "^2.0.1",
+    "@types/uuid-parse": "^1.0.2",
     "typescript": "^5.0.0"
   }
 }
