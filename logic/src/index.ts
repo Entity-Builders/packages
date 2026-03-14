@@ -18,3 +18,4 @@ export {
 } from './care';
 export * from './accountLinking';
 export * from './hooks/useAuth';
+export * from './hooks/useFavorites';
