@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@langchain/core": "^0.3.36",
-    "@langchain/openai": "^0.4.2",
-    "@langchain/ollama": "^0.2.3"
+    "@langchain/ollama": "^0.2.3",
+    "@langchain/openai": "^0.4.2"
   },
   "devDependencies": {
     "typescript": "^5.7.3"
