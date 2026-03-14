@@ -9,10 +9,10 @@
   },
   "peerDependencies": {
     "@react-native-async-storage/async-storage": "*",
+    "expo-speech-recognition": "*",
     "react": "*",
     "react-native": "*",
-    "react-native-svg": "*",
-    "expo-speech-recognition": "*"
+    "react-native-svg": "*"
   },
   "devDependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",
