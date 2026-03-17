@@ -1243,6 +1243,51 @@ export type Database = {
         }
         Relationships: []
       }
+      postalpeek_validations: {
+        Row: {
+          ai_reasoning: string | null
+          created_at: string | null
+          id: string
+          image_url: string | null
+          postcard_id: string
+          status: string
+          user_id: string
+        }
+        Insert: {
+          ai_reasoning?: string | null
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          postcard_id: string
+          status?: string
+          user_id: string
+        }
+        Update: {
+          ai_reasoning?: string | null
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          postcard_id?: string
+          status?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_validations_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postalpeek_postcards"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "postalpeek_validations_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       potlink_account_links: {
         Row: {
           created_at: string
@@ -1423,6 +1468,7 @@ export type Database = {
           id: string
           monthly_income: number | null
           savings_percentage: number | null
+          stamps_balance: number | null
           updated_at: string
         }
         Insert: {
@@ -1431,6 +1477,7 @@ export type Database = {
           id: string
           monthly_income?: number | null
           savings_percentage?: number | null
+          stamps_balance?: number | null
           updated_at?: string
         }
         Update: {
@@ -1439,6 +1486,7 @@ export type Database = {
           id?: string
           monthly_income?: number | null
           savings_percentage?: number | null
+          stamps_balance?: number | null
           updated_at?: string
         }
         Relationships: []
