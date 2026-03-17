@@ -1198,6 +1198,30 @@ export type Database = {
           },
         ]
       }
+      postalpeek_smart_album_rules: {
+        Row: {
+          created_at: string | null
+          creative_title: string
+          filter_type: string
+          filter_value: string
+          id: string
+        }
+        Insert: {
+          created_at?: string | null
+          creative_title: string
+          filter_type: string
+          filter_value: string
+          id?: string
+        }
+        Update: {
+          created_at?: string | null
+          creative_title?: string
+          filter_type?: string
+          filter_value?: string
+          id?: string
+        }
+        Relationships: []
+      }
       postalpeek_streetview_queries: {
         Row: {
           address: string
