@@ -58,4 +58,14 @@ export class PostHogProvider implements AnalyticsProvider {
     if (!this.initialized) return;
     posthog.onFeatureFlags(callback);
   }
+
+  captureException(error: Error, properties?: Record<string, unknown>): void {
+    if (!this.initialized) return;
+    posthog.capture('$exception', {
+      $exception_message: error.message,
+      $exception_type: error.name,
+      $exception_stack_trace_raw: error.stack,
+      ...properties,
+    });
+  }
 }

@@ -12,6 +12,8 @@ export interface AnalyticsProvider {
   getFeatureFlag(key: string): string | boolean | undefined;
   /** Register a callback for when feature flags are loaded. */
   onFeatureFlagsLoaded(callback: () => void): void;
+  /** Capture an exception for error tracking (e.g., PostHog Error Tracking). */
+  captureException?(error: Error, properties?: Record<string, unknown>): void;
 }
 
 export interface AnalyticsConfig {

@@ -36,6 +36,7 @@ export class Analytics {
 
   /**
    * Capture an error with optional context (screen, action, etc.).
+   * Uses native exception capture when available (PostHog Error Tracking).
    */
   captureError(
     error: Error | unknown,
@@ -43,12 +44,19 @@ export class Analytics {
   ): void {
     const err = error instanceof Error ? error : new Error(String(error));
     console.error('[Analytics] Error captured:', err.message, context);
-    this.provider.track('app_error', {
-      error_message: err.message,
-      error_name: err.name,
-      error_stack: err.stack,
-      ...context,
-    });
+
+    // Use native exception capture if provider supports it (shows in Error Tracking)
+    if (this.provider.captureException) {
+      this.provider.captureException(err, context);
+    } else {
+      // Fallback: regular event
+      this.provider.track('app_error', {
+        error_message: err.message,
+        error_name: err.name,
+        error_stack: err.stack,
+        ...context,
+      });
+    }
   }
 
   /**
