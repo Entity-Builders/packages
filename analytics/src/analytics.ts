@@ -100,4 +100,19 @@ export class Analytics {
   reset(): void {
     this.provider.reset();
   }
+
+  /**
+   * Read a PostHog feature flag value.
+   * Returns the variant string, a boolean, or undefined if not loaded yet.
+   */
+  getFeatureFlag(key: string): string | boolean | undefined {
+    return this.provider.getFeatureFlag(key);
+  }
+
+  /**
+   * Register a callback for when feature flags finish loading.
+   */
+  onFeatureFlagsLoaded(callback: () => void): void {
+    this.provider.onFeatureFlagsLoaded(callback);
+  }
 }

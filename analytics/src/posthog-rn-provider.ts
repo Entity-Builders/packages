@@ -75,4 +75,12 @@ export class PostHogRNProvider implements AnalyticsProvider {
   reset(): void {
     this.client?.reset();
   }
+
+  getFeatureFlag(key: string): string | boolean | undefined {
+    return this.client?.getFeatureFlag?.(key);
+  }
+
+  onFeatureFlagsLoaded(callback: () => void): void {
+    this.client?.onFeatureFlags?.(callback);
+  }
 }

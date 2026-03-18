@@ -8,6 +8,10 @@ export interface AnalyticsProvider {
   identify(userId: string, traits?: Record<string, unknown>): void;
   setGlobalProperties(properties: Record<string, unknown>): void;
   reset(): void;
+  /** Read a feature flag value. Returns undefined if not loaded yet. */
+  getFeatureFlag(key: string): string | boolean | undefined;
+  /** Register a callback for when feature flags are loaded. */
+  onFeatureFlagsLoaded(callback: () => void): void;
 }
 
 export interface AnalyticsConfig {

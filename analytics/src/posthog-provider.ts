@@ -48,4 +48,14 @@ export class PostHogProvider implements AnalyticsProvider {
     if (!this.initialized) return;
     posthog.reset();
   }
+
+  getFeatureFlag(key: string): string | boolean | undefined {
+    if (!this.initialized) return undefined;
+    return posthog.getFeatureFlag(key);
+  }
+
+  onFeatureFlagsLoaded(callback: () => void): void {
+    if (!this.initialized) return;
+    posthog.onFeatureFlags(callback);
+  }
 }
