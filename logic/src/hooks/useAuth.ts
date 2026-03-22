@@ -46,7 +46,6 @@ export function useAuth() {
   }, []);
 
   const isAdmin = ADMIN_EMAILS.includes(user?.email ?? '');
-
   const signIn = async (email: string, password: string) => {
     const { error } = await supabase.auth.signInWithPassword({
       email,
