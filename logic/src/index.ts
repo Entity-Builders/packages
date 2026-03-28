@@ -19,3 +19,4 @@ export {
 export * from './accountLinking';
 export * from './hooks/useAuth';
 export * from './hooks/useFavorites';
+export * from './hooks/useMiniGameEngine';
