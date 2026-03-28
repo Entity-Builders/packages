@@ -83,15 +83,17 @@ export function useMiniGameEngine({
   }, [userId, gameType]);
 
   // ── State Evaluation ──
-  const evaluateState = useCallback((currentMetrics: GameMetrics) => {
+  useEffect(() => {
     if (status !== 'playing') return;
     
-    if (winCondition && winCondition(currentMetrics)) {
-      handleWin(currentMetrics);
-    } else if (loseCondition && loseCondition(currentMetrics)) {
-      handleLose(currentMetrics);
+    // We must use a ref or ensure handleWin/handleLose don't cause infinite loops
+    // But since they change status to 'won'/'lost', the effect won't re-run for 'playing'
+    if (winCondition && winCondition(metrics)) {
+      handleWin(metrics);
+    } else if (loseCondition && loseCondition(metrics)) {
+      handleLose(metrics);
     }
-  }, [status, winCondition, loseCondition]);
+  }, [status, metrics, winCondition, loseCondition]); // handleWin and handleLose omitted to avoid complex circular dependencies if they change, but they are safe realistically.
 
   // ── Engine Actions ──
   const start = useCallback(() => {
@@ -102,12 +104,11 @@ export function useMiniGameEngine({
       timerRef.current = setInterval(() => {
         setMetrics(prev => {
           const next = { ...prev, elapsedSeconds: Math.round((Date.now() - startTimeRef.current) / 1000) };
-          evaluateState(next);
           return next;
         });
       }, 1000);
     }
-  }, [autoStartTimer, evaluateState]);
+  }, [autoStartTimer]);
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -120,19 +121,17 @@ export function useMiniGameEngine({
     if (status !== 'playing') return;
     setMetrics(prev => {
       const next = { ...prev, clicks: prev.clicks + 1 };
-      evaluateState(next);
       return next;
     });
-  }, [status, evaluateState]);
+  }, [status]);
 
   const useHint = useCallback(() => {
     if (status !== 'playing') return;
     setMetrics(prev => {
       const next = { ...prev, hintsUsed: prev.hintsUsed + 1 };
-      evaluateState(next);
       return next;
     });
-  }, [status, evaluateState]);
+  }, [status]);
 
   // ── Persistence ──
   const saveMetrics = useCallback(async (finalStatus: 'won' | 'lost', finalMetrics: GameMetrics) => {
@@ -214,7 +213,6 @@ export function useMiniGameEngine({
         timerRef.current = setInterval(() => {
           setMetrics(prev => {
             const next = { ...prev, elapsedSeconds: Math.round((Date.now() - startTimeRef.current) / 1000) };
-            evaluateState(next);
             return next;
           });
         }, 1000);
