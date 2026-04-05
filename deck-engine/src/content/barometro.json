@@ -1,0 +1,622 @@
+{
+  "id": "barometro-v1",
+  "edition": "barometro",
+  "name": "Barómetro",
+  "slug": "barometro",
+  "description": "Un mazo de 30 cartas diseñado como una herramienta de regulación. No son para adivinar el futuro, son para anclarte en el presente. Cada carta es una acción concreta para cuando la emoción es demasiado grande y la mente no responde.",
+  "language": "es",
+  "card_count": 30,
+  "metadata": {
+    "topic": "Regulación Emocional, DBT, TEPC",
+    "tone": "Directo, compasivo, sin rodeos",
+    "target_audience": "Personas en terapia (DBT, TEPC) y cualquiera buscando herramientas concretas para la desregulación.",
+    "player_count": "1 (Uso personal)"
+  },
+  "print_spec_id": "baraja-landscape",
+  "design_template_id": "dark-minimal-01",
+  "pricing": {
+    "amount": 1500000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "barometro-01",
+      "front": {
+        "art_prompt": "Abstract expressionism painting. Deep, cold blues and stark whites clashing violently. Visible thick impasto texture suggesting frost on a dark, rough surface. Chiaroscuro lighting emphasizing cracks and fractures in the paint. The feeling is visceral, sharp, and cold.",
+        "title": "El Hielo",
+        "number": 1,
+        "art_url": "/assets/editions/barometro/barometro-01.jpg"
+      },
+      "back": {
+        "phrase": "Tu sistema nervioso no discute con la temperatura.",
+        "when_to_use": "Para cuando la emoción es un incendio y no podés pensar.",
+        "instruction": "Sostené un hielo en la mano hasta que sea muy intenso. O llena un bol con agua fría y hielo y sumergí la cara por 15 segundos. Sentí el cambio. Respirá."
+      },
+      "tags": [
+        "crisis",
+        "regulación",
+        "DBT",
+        "TIPP"
+      ]
+    },
+    {
+      "id": "barometro-02",
+      "front": {
+        "art_prompt": "Fine art photography from a low angle, looking at the texture of an old wooden floor. The focus is sharp on the grain and imperfections. A sliver of soft, warm light cuts across the frame. The mood is grounding, stable, and calm.",
+        "title": "El Piso",
+        "number": 2,
+        "art_url": "/assets/editions/barometro/barometro-02.jpg"
+      },
+      "back": {
+        "phrase": "Estás acá. El suelo debajo tuyo es prueba suficiente.",
+        "when_to_use": "Cuando sentís que te despegás de la realidad, que estás flotando.",
+        "instruction": "Sacate los zapatos. Sentí el piso con toda la planta de tus pies. Presioná con los talones, después con los dedos. Notá la temperatura, la textura. Sos un árbol, echá raíces."
+      },
+      "tags": [
+        "grounding",
+        "disociación",
+        "mindfulness"
+      ]
+    },
+    {
+      "id": "barometro-03",
+      "front": {
+        "art_prompt": "Minimalist abstract art. A single, long, fading brushstroke of gray watercolor on a textured, off-white paper. The stroke starts thick and dark, and slowly becomes lighter and more transparent until it disappears. Evokes a sense of release and calm.",
+        "title": "La Exhalación",
+        "number": 3,
+        "art_url": "/assets/editions/barometro/barometro-03.jpg"
+      },
+      "back": {
+        "phrase": "No tenés que controlar tu respiración. Solo hacé que la salida sea más larga que la entrada.",
+        "when_to_use": "Para cuando el pánico te acelera el corazón y te corta el aire.",
+        "instruction": "Inhalá contando hasta cuatro. No te apures. Ahora exhalá, muy lento, contando hasta seis u ocho. Repetilo tres veces. Solo tres. Tu cuerpo sabe qué hacer con esa señal."
+      },
+      "tags": [
+        "ansiedad",
+        "pánico",
+        "respiración",
+        "regulación"
+      ]
+    },
+    {
+      "id": "barometro-04",
+      "front": {
+        "art_prompt": "Expressionist charcoal drawing of tense, interwoven lines suggesting muscular contraction. High contrast, deep blacks against a stark white background. The energy is kinetic, powerful, and contained. Abstract representation of physical exertion.",
+        "title": "El Músculo",
+        "number": 4,
+        "art_url": "/assets/editions/barometro/barometro-04.jpg"
+      },
+      "back": {
+        "phrase": "La energía del pánico necesita una salida física, no un argumento lógico.",
+        "when_to_use": "Cuando sentís que vas a explotar de ansiedad o rabia.",
+        "instruction": "Hacé 10 lagartijas, o sentadillas, o corré en el lugar lo más rápido que puedas por 30 segundos. Apoyá las manos en una pared y empujá con toda tu fuerza. Gastá esa energía."
+      },
+      "tags": [
+        "crisis",
+        "ansiedad",
+        "rabia",
+        "TIPP"
+      ]
+    },
+    {
+      "id": "barometro-05",
+      "front": {
+        "art_prompt": "Surreal digital art. A single, clear glass marble in the foreground, perfectly in focus. Through the marble, the background is distorted and blurry, a chaotic mix of colors. The distinction between what is clear and what is distorted is the central theme.",
+        "title": "La Realidad",
+        "number": 5,
+        "art_url": "/assets/editions/barometro/barometro-05.jpg"
+      },
+      "back": {
+        "phrase": "Tu interpretación no es un hecho. Repetilo.",
+        "when_to_use": "Cuando tu cabeza inventa la peor historia posible y te la creés.",
+        "instruction": "En una hoja, hacé dos columnas. Izquierda: 'Hechos'. Derecha: 'Interpretaciones'. Escribí solo lo que podrías grabar con una cámara. Compará las dos listas. Leé los hechos en voz alta."
+      },
+      "tags": [
+        "DBT",
+        "check the facts",
+        "pensamientos",
+        "distorsión"
+      ]
+    },
+    {
+      "id": "barometro-06",
+      "front": {
+        "art_prompt": "Abstract watercolor painting of a massive wave cresting. Dominated by shades of indigo, teal, and foam white. The style is loose and fluid, capturing the movement and power of water without photorealism. A feeling of immense force that will eventually pass.",
+        "title": "La Ola",
+        "number": 6,
+        "art_url": "/assets/editions/barometro/barometro-06.jpg"
+      },
+      "back": {
+        "phrase": "No podés frenar la ola. Pero podés aprender a surfearla.",
+        "when_to_use": "Cuando una emoción te abruma y tu primer instinto es luchar contra ella.",
+        "instruction": "No hagas nada. Solo sentate y sentí la emoción en tu cuerpo. ¿Dónde está? ¿Es caliente, fría, vibra, aprieta? No la juzgues. Solo observala como un científico. Durará menos de lo que creés."
+      },
+      "tags": [
+        "aceptación",
+        "mindfulness",
+        "emociones",
+        "DBT"
+      ]
+    },
+    {
+      "id": "barometro-07",
+      "front": {
+        "art_prompt": "Still life oil painting with thick, visible brushstrokes. A simple glass of water on a wooden table. The light catches the condensation on the glass. The background is dark and undefined. The focus is on this simple, essential object.",
+        "title": "El Vaso de Agua",
+        "number": 7,
+        "art_url": "/assets/editions/barometro/barometro-07.jpg"
+      },
+      "back": {
+        "phrase": "A veces, solo es sed. O hambre. O sueño.",
+        "when_to_use": "Antes de decidir que todo es una catástrofe.",
+        "instruction": "Levantate y tomate un vaso de agua entero, despacio. Comé algo, aunque sea una fruta. ¿Dormiste? Atendé lo básico. El 50% de los problemas emocionales se sienten peor por una necesidad física no cubierta."
+      },
+      "tags": [
+        "autocuidado",
+        "básico",
+        "HALT",
+        "regulación"
+      ]
+    },
+    {
+      "id": "barometro-08",
+      "front": {
+        "art_prompt": "Abstract sculpture photography. A heavy, rusted metal object, partially buried in sand. The texture of the rust and the sand is extremely detailed. The lighting is harsh, like a midday sun, creating deep shadows. It feels ancient, heavy, and unmovable.",
+        "title": "El Ancla",
+        "number": 8,
+        "art_url": "/assets/editions/barometro/barometro-08.jpg"
+      },
+      "back": {
+        "phrase": "Tus sentidos son el ancla al momento presente.",
+        "when_to_use": "Cuando la mente viaja al pasado o al futuro y te perdés.",
+        "instruction": "Nombrá, en voz alta o en tu cabeza: 5 cosas que puedas ver. 4 cosas que puedas sentir (tu ropa, el aire). 3 cosas que puedas oír. 2 cosas que puedas oler. 1 cosa que puedas saborear."
+      },
+      "tags": [
+        "grounding",
+        "ansiedad",
+        "mindfulness",
+        "54321"
+      ]
+    },
+    {
+      "id": "barometro-09",
+      "front": {
+        "art_prompt": "Atmospheric photography of clouds moving swiftly across the sky, taken with a long exposure. The clouds are blurred into soft streaks of white and grey. The image evokes a sense of detachment and constant, effortless movement.",
+        "title": "La Distancia",
+        "number": 9,
+        "art_url": "/assets/editions/barometro/barometro-09.jpg"
+      },
+      "back": {
+        "phrase": "Sos el cielo, no la nube. Los pensamientos pasan.",
+        "when_to_use": "Cuando un pensamiento negativo se queda pegado en tu mente.",
+        "instruction": "Cerrá los ojos. Imaginá que tus pensamientos son nubes en el cielo. No los empujes, no los analices. Solo miralos pasar. Algunos son oscuros, otros livianos. Vos sos el cielo que los contiene, no sos la tormenta."
+      },
+      "tags": [
+        "mindfulness",
+        "pensamientos",
+        "defusion",
+        "ACT"
+      ]
+    },
+    {
+      "id": "barometro-10",
+      "front": {
+        "art_prompt": "Macro photography of a rough, natural surface like tree bark or a stone wall. The detail is extreme, showing every crevice and imperfection. The lighting is angled to emphasize the three-dimensional texture. The color palette is earthy and muted.",
+        "title": "La Textura",
+        "number": 10,
+        "art_url": "/assets/editions/barometro/barometro-10.jpg"
+      },
+      "back": {
+        "phrase": "Tu cerebro no puede estar en pánico y concentrarse en un detalle a la vez.",
+        "when_to_use": "Para cortar un espiral de pensamientos catastróficos.",
+        "instruction": "Elegí un objeto cerca tuyo: una lapicera, la tela de tu pantalón, una hoja. Pasá un minuto entero explorando su textura con los dedos. Cerrá los ojos si te ayuda. Describí la sensación en tu mente con el mayor detalle posible."
+      },
+      "tags": [
+        "grounding",
+        "mindfulness",
+        "sentidos",
+        "foco"
+      ]
+    },
+    {
+      "id": "barometro-11",
+      "front": {
+        "art_prompt": "Abstract soundwave visualization art. A complex pattern of soft, concentric rings emanating from a central point, like ripples in water. The colors are muted and calm, like blues and soft greys. It represents the idea of listening deeply.",
+        "title": "El Sonido",
+        "number": 11,
+        "art_url": "/assets/editions/barometro/barometro-11.jpg"
+      },
+      "back": {
+        "phrase": "Escuchar es más que oír. Es un acto de presencia.",
+        "when_to_use": "Cuando el ruido de tu mente es más fuerte que el mundo exterior.",
+        "instruction": "Quedate en silencio por 60 segundos. ¿Cuál es el sonido más lejano que podés escuchar? ¿Y el más cercano? ¿Podés identificar tres sonidos diferentes? No los catalogues como 'buenos' o 'malos'. Solo escuchá."
+      },
+      "tags": [
+        "mindfulness",
+        "sentidos",
+        "presencia",
+        "ansiedad"
+      ]
+    },
+    {
+      "id": "barometro-12",
+      "front": {
+        "art_prompt": "Minimalist photograph of hands carefully performing a simple, precise task, like folding a piece of paper or sorting small stones. The lighting is soft and focused on the hands. The mood is one of quiet concentration and purpose.",
+        "title": "La Tarea",
+        "number": 12,
+        "art_url": "/assets/editions/barometro/barometro-12.jpg"
+      },
+      "back": {
+        "phrase": "Una mente ocupada en algo simple no tiene espacio para la catástrofe.",
+        "when_to_use": "Cuando necesitás una pausa de una emoción intensa pero no podés relajarte.",
+        "instruction": "Elegí una tarea simple y mecánica: doblar ropa, lavar los platos, ordenar tus libros por color. Hacela con toda tu atención, como si fuera lo más importante del mundo. Solo por cinco minutos."
+      },
+      "tags": [
+        "distracción",
+        "crisis",
+        "ansiedad",
+        "DBT"
+      ]
+    },
+    {
+      "id": "barometro-13",
+      "front": {
+        "art_prompt": "Abstract painting with a stark, thick black line dividing the canvas in two. One side is a chaotic mix of aggressive, textured red and orange strokes. The other side is a calm, flat field of cool grey. The line is absolute and unapologetic.",
+        "title": "El Límite",
+        "number": 13,
+        "art_url": "/assets/editions/barometro/barometro-13.jpg"
+      },
+      "back": {
+        "phrase": "Decir 'no' es un acto de autocuidado, no de agresión.",
+        "when_to_use": "Cuando te sentís culpable o con miedo de poner un límite.",
+        "instruction": "Parate frente a un espejo. Decí 'No' en voz alta. Sin justificaciones, sin disculpas. Solo 'No'. Sentí cómo vibra la palabra en tu pecho. Repetilo hasta que suene a verdad."
+      },
+      "tags": [
+        "límites",
+        "autocuidado",
+        "asertividad",
+        "DBT"
+      ]
+    },
+    {
+      "id": "barometro-14",
+      "front": {
+        "art_prompt": "Kintsugi-style art. A dark ceramic bowl, visibly broken but repaired with shimmering gold lacquer along the cracks. The beauty is in the repair, not the original perfection. The background is simple and dark, highlighting the object.",
+        "title": "La Aceptación",
+        "number": 14,
+        "art_url": "/assets/editions/barometro/barometro-14.jpg"
+      },
+      "back": {
+        "phrase": "Aceptar no es rendirse. Es dejar de pelear una guerra que ya terminó.",
+        "when_to_use": "Cuando te resistís a una realidad dolorosa que no podés cambiar.",
+        "instruction": "Decí en voz alta: 'Esto es lo que es, en este momento'. No tenés que decir que te gusta. No tenés que decir que es justo. Solo tenés que reconocer la realidad de la situación, aquí y ahora. Respirá en esa verdad."
+      },
+      "tags": [
+        "aceptación radical",
+        "DBT",
+        "dolor",
+        "realidad"
+      ]
+    },
+    {
+      "id": "barometro-15",
+      "front": {
+        "art_prompt": "Double exposure photography. A silhouette of a human head is filled with an image of a calm, deep forest. A second exposure overlays a geometric, glowing pattern, suggesting logic. Where they overlap, the image is clearest. It represents the integration of intuition and reason.",
+        "title": "La Brújula",
+        "number": 15,
+        "art_url": "/assets/editions/barometro/barometro-15.jpg"
+      },
+      "back": {
+        "phrase": "Tu cuerpo sabe tanto como tu mente. Escuchá a los dos.",
+        "when_to_use": "Cuando estás atrapado entre la lógica y la emoción.",
+        "instruction": "Poné una mano en tu cabeza y otra en tu abdomen. Preguntate: '¿Qué me dice mi mente racional?'. Después, preguntate: '¿Qué me dice mi intuición, mi cuerpo?'. Buscá la respuesta que integre ambas. No es una o la otra, es el punto medio."
+      },
+      "tags": [
+        "wise mind",
+        "DBT",
+        "decisiones",
+        "intuición"
+      ]
+    },
+    {
+      "id": "barometro-16",
+      "front": {
+        "art_prompt": "Abstract image featuring a large, solid red circle, representing 'STOP'. The background is a blurred motion of chaotic lines and colors, suggesting a fast-paced, overwhelming environment. The red circle is the only point of stillness and clarity.",
+        "title": "La Pausa",
+        "number": 16,
+        "art_url": "/assets/editions/barometro/barometro-16.jpg"
+      },
+      "back": {
+        "phrase": "Reaccionar es automático. Responder es una elección.",
+        "when_to_use": "En el segundo antes de decir o hacer algo de lo que te vas a arrepentir.",
+        "instruction": "STOP. 1. Pará, no hagas nada. 2. Da un paso atrás, físico o mental. 3. Observá qué está pasando adentro y afuera tuyo. 4. Procedé, tomando una decisión consciente, no una reacción."
+      },
+      "tags": [
+        "impulsividad",
+        "crisis",
+        "DBT",
+        "STOP skill"
+      ]
+    },
+    {
+      "id": "barometro-17",
+      "front": {
+        "art_prompt": "Surreal art. A figure is walking resolutely forward into a gentle, warm light, while their shadow stretches long and dark behind them, pulling in the opposite direction. The tension between the forward movement and the backward pull is the focus.",
+        "title": "La Acción Opuesta",
+        "number": 17,
+        "art_url": "/assets/editions/barometro/barometro-17.jpg"
+      },
+      "back": {
+        "phrase": "Si querés cambiar cómo te sentís, a veces tenés que actuar primero.",
+        "when_to_use": "Cuando la emoción (miedo, tristeza, enojo) te empuja a hacer justo lo que te hace peor.",
+        "instruction": "Identificá la emoción y el impulso (ej. Tristeza -> aislarme). ¿Cuál es la acción opuesta? (ej. Llamar a un amigo). Hacé esa acción, aunque sea por cinco minutos. Con toda la resistencia, hacelo."
+      },
+      "tags": [
+        "opposite action",
+        "DBT",
+        "depresión",
+        "evitación"
+      ]
+    },
+    {
+      "id": "barometro-18",
+      "front": {
+        "art_prompt": "Abstract aerial photography of a complex landscape, like a river delta or city grid, from very high up. The patterns are visible, but the individual details are lost. It gives a sense of looking at a problem from a great, detached distance.",
+        "title": "La Perspectiva",
+        "number": 18,
+        "art_url": "/assets/editions/barometro/barometro-18.jpg"
+      },
+      "back": {
+        "phrase": "No sos el centro del universo. Y eso es un alivio.",
+        "when_to_use": "Cuando un problema se siente gigante, insuperable y personal.",
+        "instruction": "¿Qué le dirías a un buen amigo que estuviera en tu misma situación? Decilo en voz alta. Usá un tono amable. Dale el mismo consejo y compasión que le darías a otro."
+      },
+      "tags": [
+        "perspectiva",
+        "pensamientos",
+        "autocrítica",
+        "compasión"
+      ]
+    },
+    {
+      "id": "barometro-19",
+      "front": {
+        "art_prompt": "A soft-focus photograph of an open hand, palm up, held in a gentle light. It's not asking for anything, nor is it giving. It is simply open and accepting. The mood is one of quiet self-compassion and allowance.",
+        "title": "El Permiso",
+        "number": 19,
+        "art_url": "/assets/editions/barometro/barometro-19.jpg"
+      },
+      "back": {
+        "phrase": "Sentir no es una falla moral. Es una función biológica.",
+        "when_to_use": "Cuando te estás juzgando por sentir lo que sentís.",
+        "instruction": "Decí en voz alta: 'Tengo permiso para sentir [nombrar la emoción]'. No significa que tengas permiso para actuar destructivamente. Significa que el sentimiento en sí mismo es válido. Dale espacio."
+      },
+      "tags": [
+        "validación",
+        "autocompasión",
+        "DBT",
+        "emociones"
+      ]
+    },
+    {
+      "id": "barometro-20",
+      "front": {
+        "art_prompt": "Minimalist digital art. A heavy, dark grey metal safe door, closed. There is a complex locking mechanism in the center. The background is neutral. The image conveys security, containment, and control.",
+        "title": "La Caja Fuerte",
+        "number": 20,
+        "art_url": "/assets/editions/barometro/barometro-20.jpg"
+      },
+      "back": {
+        "phrase": "No tenés que resolver todo ahora. Podés guardarlo para después.",
+        "when_to_use": "Cuando un pensamiento o recuerdo intrusivo aparece en un momento en que no podés lidiar con él.",
+        "instruction": "Visualizá una caja fuerte. Poné el pensamiento o la imagen adentro. Cerrá la puerta. Girá la cerradura. Sabés que está ahí, a salvo, y que podés volver a abrirla después, en un momento seguro, quizás con tu terapeuta."
+      },
+      "tags": [
+        "TEPC",
+        "trauma",
+        "intrusiones",
+        "grounding"
+      ]
+    },
+    {
+      "id": "barometro-21",
+      "front": {
+        "art_prompt": "Abstract anatomical illustration, done in soft watercolors. It shows the outline of a human form, filled not with organs, but with different textures and muted colors, suggesting areas of sensation. It's clinical but also deeply human.",
+        "title": "El Inventario",
+        "number": 21,
+        "art_url": "/assets/editions/barometro/barometro-21.jpg"
+      },
+      "back": {
+        "phrase": "Tu cuerpo te habla constantemente. Solo tenés que aprender su idioma.",
+        "when_to_use": "Cuando te sentís desconectado de tu cuerpo o abrumado por sensaciones físicas.",
+        "instruction": "Sentate o acostate. Empezá por los pies y subí lentamente. ¿Qué sentís en cada parte? ¿Hormigueo, tensión, calor, nada? No cambies nada. Solo hacé un inventario mental de tus sensaciones físicas, sin juicio."
+      },
+      "tags": [
+        "body scan",
+        "mindfulness",
+        "disociación",
+        "interocepción"
+      ]
+    },
+    {
+      "id": "barometro-22",
+      "front": {
+        "art_prompt": "Typographic art. A single word, like 'FEAR' or 'ANGER', is rendered in a beautiful, complex, but slightly distorted font. The word itself is the entire piece of art, inviting the viewer to look at it objectively, as a shape and a concept.",
+        "title": "El Nombre",
+        "number": 22,
+        "art_url": "/assets/editions/barometro/barometro-22.jpg"
+      },
+      "back": {
+        "phrase": "Nombrar la emoción le quita su poder anónimo.",
+        "when_to_use": "Cuando sentís un malestar general, una 'nube negra', pero no sabés qué es.",
+        "instruction": "Detenete y preguntate: 'Si esta sensación tuviera un nombre, ¿cuál sería?'. Probá varios: ¿es tristeza? ¿miedo? ¿frustración? ¿soledad? Encontrá la palabra que mejor encaje. Decí 'Estoy sintiendo [nombre de la emoción]'."
+      },
+      "tags": [
+        "emociones",
+        "mindfulness",
+        "claridad",
+        "regulación"
+      ]
+    },
+    {
+      "id": "barometro-23",
+      "front": {
+        "art_prompt": "Abstract photography looking through a glass pane covered in flowing water and steam. The shapes and colors on the other side are distorted and soft. The feeling is one of cleansing, renewal, and shifting states.",
+        "title": "La Ducha",
+        "number": 23,
+        "art_url": "/assets/editions/barometro/barometro-23.jpg"
+      },
+      "back": {
+        "phrase": "Un cambio de estado físico puede forzar un cambio de estado mental.",
+        "when_to_use": "Cuando estás estancado en un bucle de pensamientos o en una emoción pegajosa.",
+        "instruction": "Tomá una ducha. Concentrate por completo en las sensaciones: el calor del agua en tu piel, el olor del jabón, el sonido. Imaginá que el agua se lleva la emoción. Si no podés ducharte, solo lavate las manos y la cara con agua fría."
+      },
+      "tags": [
+        "reset",
+        "sensorial",
+        "grounding",
+        "regulación"
+      ]
+    },
+    {
+      "id": "barometro-24",
+      "front": {
+        "art_prompt": "A minimalist, 'knolling' style photograph. A few simple objects (a book, a cup, a pen) are arranged in perfect parallel lines on a clean, wooden surface. The composition is satisfying, calm, and orderly.",
+        "title": "El Orden",
+        "number": 24,
+        "art_url": "/assets/editions/barometro/barometro-24.jpg"
+      },
+      "back": {
+        "phrase": "El caos interno se siente más manejable cuando hay orden afuera.",
+        "when_to_use": "Cuando te sentís abrumado por el caos de tu vida o de tu mente.",
+        "instruction": "Elegí una superficie pequeña: tu mesa de noche, un estante, el asiento del auto. Sacá todo. Limpialo. Volvé a poner solo lo esencial, de forma ordenada. Admirá ese pequeño espacio de control y calma."
+      },
+      "tags": [
+        "control",
+        "ansiedad",
+        "orden",
+        "distracción"
+      ]
+    },
+    {
+      "id": "barometro-25",
+      "front": {
+        "art_prompt": "Abstract drawing in charcoal and earth-toned pastels. Suggests the form of ancient tree roots spreading deep into the ground. The lines are strong, textured, and convey a sense of stability and deep connection to something unseen.",
+        "title": "La Raíz",
+        "number": 25,
+        "art_url": "/assets/editions/barometro/barometro-25.jpg"
+      },
+      "back": {
+        "phrase": "Tu postura le manda señales a tu cerebro. Ponete de pie como si tuvieras derecho a estar acá.",
+        "when_to_use": "Cuando te sentís chico, inseguro o invisible.",
+        "instruction": "Parate con los pies separados al ancho de las caderas. Flexioná un poco las rodillas. Sentí el peso de tu cuerpo distribuido por igual. Imaginá que de tus pies crecen raíces que se hunden en la tierra. Sos estable. Sos inamovible."
+      },
+      "tags": [
+        "grounding",
+        "postura",
+        "seguridad",
+        "embodiment"
+      ]
+    },
+    {
+      "id": "barometro-26",
+      "front": {
+        "art_prompt": "Dreamlike, surreal painting of an impossible, cozy interior space. Perhaps a small room inside a giant, ancient tree, or a library under the sea. The lighting is warm and soft. It feels safe, magical, and completely isolated from any outside threat.",
+        "title": "El Refugio",
+        "number": 26,
+        "art_url": "/assets/editions/barometro/barometro-26.jpg"
+      },
+      "back": {
+        "phrase": "Podés construir un lugar seguro en tu mente al que nadie más puede entrar.",
+        "when_to_use": "Cuando el mundo exterior se siente amenazante y necesitás un escape.",
+        "instruction": "Cerrá los ojos. Imaginá un lugar, real o fantástico, donde te sientas 100% seguro y en calma. ¿Cómo es? ¿Qué olores hay? ¿Qué sonidos? ¿Qué temperatura? Pasá uno o dos minutos ahí, explorando los detalles. Podés volver cuando quieras."
+      },
+      "tags": [
+        "seguridad",
+        "visualización",
+        "trauma",
+        "DBT"
+      ]
+    },
+    {
+      "id": "barometro-27",
+      "front": {
+        "art_prompt": "Close-up, fine art photograph of the corner of a mouth, slightly upturned in a serene, subtle smile, like an ancient statue of Buddha. The lighting is soft and creates gentle shadows, emphasizing the calm expression. The mood is peaceful and accepting.",
+        "title": "La Media Sonrisa",
+        "number": 27,
+        "art_url": "/assets/editions/barometro/barometro-27.jpg"
+      },
+      "back": {
+        "phrase": "Tu cara le puede mentir a tu cerebro hasta que se lo crea.",
+        "when_to_use": "Cuando sentís amargura, enojo o tristeza y querés cambiar de canal.",
+        "instruction": "Relajá tu cara. Ahora, levantá levemente las comisuras de tus labios. No es una sonrisa falsa, es una expresión de serenidad. Mantenela por un minuto. Es una señal física de aceptación al momento presente."
+      },
+      "tags": [
+        "DBT",
+        "half-smile",
+        "regulación",
+        "aceptación"
+      ]
+    },
+    {
+      "id": "barometro-28",
+      "front": {
+        "art_prompt": "A warm, textured photograph of hands wrapping around a steaming ceramic mug. The focus is on the comfort and warmth. The background is soft and out of focus. The color palette is warm and inviting, with browns, creams, and oranges.",
+        "title": "El Cuidado",
+        "number": 28,
+        "art_url": "/assets/editions/barometro/barometro-28.jpg"
+      },
+      "back": {
+        "phrase": "La compasión no es un sentimiento, es una acción.",
+        "when_to_use": "Cuando te sentís herido, solo o abrumado y necesitás consuelo.",
+        "instruction": "Hacé una acción que te reconforte. Preparate un té, ponete una manta pesada, escuchá una canción tranquila, acariciá a tu mascota. Hacelo con la intención de cuidarte, como lo harías con un niño enfermo."
+      },
+      "tags": [
+        "self-soothe",
+        "DBT",
+        "autocuidado",
+        "compasión"
+      ]
+    },
+    {
+      "id": "barometro-29",
+      "front": {
+        "art_prompt": "Abstract macro photograph of a water droplet on a complex surface, like a feather or a leaf. The droplet reflects and refracts the world in a distorted, interesting way. The image invites the viewer to look closer and examine the detail with a sense of wonder.",
+        "title": "La Curiosidad",
+        "number": 29,
+        "art_url": "/assets/editions/barometro/barometro-29.jpg"
+      },
+      "back": {
+        "phrase": "El miedo dice '¡No!'. La curiosidad pregunta '¿Hmm?'.",
+        "when_to_use": "Cuando una emoción te asusta y tu instinto es rechazarla.",
+        "instruction": "En lugar de pensar 'odio sentir esto', probá a preguntar 'qué interesante, ¿qué es esta sensación?'. Acercate a la emoción con la curiosidad de un explorador. Sin juzgar, solo observando un fenómeno nuevo."
+      },
+      "tags": [
+        "mindfulness",
+        "curiosidad",
+        "aceptación",
+        "miedo"
+      ]
+    },
+    {
+      "id": "barometro-30",
+      "front": {
+        "art_prompt": "Minimalist landscape photography. A faint, soft light of dawn just beginning to break over a dark, misty horizon. The image is mostly dark and atmospheric, but the promise of the coming light is undeniable. It's about hope, but in a quiet, non-dramatic way.",
+        "title": "El Mañana",
+        "number": 30,
+        "art_url": "/assets/editions/barometro/barometro-30.jpg"
+      },
+      "back": {
+        "phrase": "No tenés que solucionar tu vida. Solo tenés que pasar esta noche.",
+        "when_to_use": "Cuando el futuro se siente imposible y la desesperanza es total.",
+        "instruction": "Tu única tarea en este momento es sobrevivir los próximos 10 minutos. Después, los siguientes 10. No pienses en mañana o la semana que viene. Enfocate en la tarea más pequeña que tengas enfrente. Solo una cosa. Eso es todo."
+      },
+      "tags": [
+        "crisis",
+        "esperanza",
+        "depresión",
+        "suicidio"
+      ]
+    }
+  ]
+}

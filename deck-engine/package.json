@@ -1,0 +1,22 @@
+{
+  "name": "@eb-packages/deck-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "sync": "npx tsx src/scripts/sync-decks.ts",
+    "generate": "npx tsx src/scripts/create-edition.ts && npm run sync",
+    "art": "npx tsx src/scripts/generate-art.ts"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.0",
+    "typescript": "~5.9.3"
+  },
+  "dependencies": {
+    "@google/genai": "^1.48.0",
+    "zod": "^4.3.6"
+  }
+}

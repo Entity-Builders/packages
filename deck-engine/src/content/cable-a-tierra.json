@@ -1,0 +1,564 @@
+{
+  "id": "cable-a-tierra-v1",
+  "edition": "cable-a-tierra",
+  "name": "Cable a Tierra",
+  "slug": "cable-a-tierra",
+  "description": "30 afirmaciones honestas para volver a vos. Sin frases vacías, sin pastel. Una carta por día.",
+  "language": "es",
+  "card_count": 30,
+  "metadata": {
+    "topic": "Groundedness, reflection, anxiety relief",
+    "tone": "Honest, calm, earthy",
+    "target_audience": "Overworked adults seeking grounding",
+    "player_count": "1"
+  },
+  "print_spec_id": "baraja-landscape",
+  "design_template_id": "earthy-minimal-01",
+  "pricing": {
+    "amount": 1200000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "cat-01",
+      "front": {
+        "title": "La Vuelta",
+        "number": 1,
+        "art_prompt": "Abstract dark earth tones, tangled roots slowly untangling, warm amber light emerging from below dark soil, textural expressionist style, premium card artwork, no text",
+        "art_url": "/assets/editions/cable-a-tierra/cat-01.jpg?v=1775420642591"
+      },
+      "back": {
+        "phrase": "Ya hiciste cosas difíciles antes.",
+        "when_to_use": "Para cuando todo parece demasiado.",
+        "instruction": "Pensá en algo que creías que no ibas a poder. Lo pudiste. Escribiló. Eso también sos vos."
+      },
+      "tags": [
+        "dificultad",
+        "memoria",
+        "fuerza"
+      ]
+    },
+    {
+      "id": "cat-02",
+      "front": {
+        "title": "El Inicio",
+        "number": 2,
+        "art_prompt": "Abstract dark composition, a single crack of light breaking through a solid dark surface, minimalist expressionist style, deep blacks and warm gold, no text"
+      },
+      "back": {
+        "phrase": "No tenés que empezar bien. Tenés que empezar.",
+        "when_to_use": "Para cuando la parálisis te frena antes de arrancar.",
+        "instruction": "Hacé la versión más pequeña posible de lo que querés comenzar. Hoy. Cinco minutos."
+      },
+      "tags": [
+        "parálisis",
+        "acción",
+        "inicio"
+      ]
+    },
+    {
+      "id": "cat-03",
+      "front": {
+        "title": "La Pausa",
+        "number": 3,
+        "art_prompt": "Abstract dark wave frozen mid-motion, deep navy and charcoal, still water reflecting a single light source, textured oil paint style, no text"
+      },
+      "back": {
+        "phrase": "Parar también es avanzar.",
+        "when_to_use": "Para cuando sentís que no podés frenar.",
+        "instruction": "Tomá tres respiraciones largas. No tres rápidas — tres de las que se sienten en el cuerpo. Recién ahí seguís."
+      },
+      "tags": [
+        "descanso",
+        "pausa",
+        "cuerpo"
+      ]
+    },
+    {
+      "id": "cat-04",
+      "front": {
+        "title": "El Peso",
+        "number": 4,
+        "art_prompt": "Abstract figure beneath heavy dark geometric shapes, single beam of light cutting through the weight, expressionist style, deep charcoals and raw sienna, no text"
+      },
+      "back": {
+        "phrase": "No tenés que cargar todo al mismo tiempo.",
+        "when_to_use": "Para cuando sentís que estás sosteniendo demasiado.",
+        "instruction": "Hacé una lista de todo lo que estás cargando. Marcá qué es realmente tuyo. El resto, escribiló y cerrá la lista."
+      },
+      "tags": [
+        "carga",
+        "límites",
+        "claridad"
+      ]
+    },
+    {
+      "id": "cat-05",
+      "front": {
+        "title": "La Duda",
+        "number": 5,
+        "art_prompt": "Abstract two paths diverging in dark fog, subtle warm light at both ends, charcoal and smoke textures, fine art expressionist, no text"
+      },
+      "back": {
+        "phrase": "La duda no es una señal de que estás equivocado.",
+        "when_to_use": "Para cuando no te creés lo que estás haciendo.",
+        "instruction": "¿Cuántas veces dudaste antes de algo que salió bien? No hace falta la respuesta en voz alta. Solo acordate."
+      },
+      "tags": [
+        "duda",
+        "confianza",
+        "decisión"
+      ]
+    },
+    {
+      "id": "cat-06",
+      "front": {
+        "title": "El Miedo",
+        "number": 6,
+        "art_prompt": "Abstract dark storm clouds with a single figure facing forward, amber lightning in the distance, textured expressionist style, dramatic chiaroscuro, no text"
+      },
+      "back": {
+        "phrase": "El miedo y el coraje no se excluyen.",
+        "when_to_use": "Para cuando el miedo te paraliza.",
+        "instruction": "¿Qué es lo más pequeño que podrías hacer hoy a pesar del miedo? Hacelo antes de que termines de leer esto."
+      },
+      "tags": [
+        "miedo",
+        "coraje",
+        "acción"
+      ]
+    },
+    {
+      "id": "cat-07",
+      "front": {
+        "title": "La Rabia",
+        "number": 7,
+        "art_prompt": "Abstract dark brushstroke explosion in deep reds and blacks, controlled chaos, expressive fine art painting style, no text"
+      },
+      "back": {
+        "phrase": "Tu enojo te está diciendo algo. Escuchalo antes de actuar.",
+        "when_to_use": "Para cuando la rabia te tiene encendido.",
+        "instruction": "Escribí qué es lo que realmente te molesta. No la excusa superficial — lo de fondo. Después decidís qué hacer."
+      },
+      "tags": [
+        "enojo",
+        "emociones",
+        "consciencia"
+      ]
+    },
+    {
+      "id": "cat-08",
+      "front": {
+        "title": "El Duelo",
+        "number": 8,
+        "art_prompt": "Abstract dark composition with single dried leaf resting on dark textured ground, minimal, melancholic, fine art illustration style, no text"
+      },
+      "back": {
+        "phrase": "El duelo no tiene cronograma.",
+        "when_to_use": "Para cuando sentís que tendrías que estar mejor ya.",
+        "instruction": "Hoy no tenés que estar mejor. Solo tenés que estar. No hay un tiempo correcto para sanar."
+      },
+      "tags": [
+        "duelo",
+        "pérdida",
+        "tiempo"
+      ]
+    },
+    {
+      "id": "cat-09",
+      "front": {
+        "title": "La Soledad",
+        "number": 9,
+        "art_prompt": "Abstract single warm light in vast dark space, textured void surrounding it, deep space and earth tones, expressionist fine art, no text"
+      },
+      "back": {
+        "phrase": "Estar solo no es lo mismo que estar abandonado.",
+        "when_to_use": "Para cuando la soledad pesa.",
+        "instruction": "¿Hay alguien que no te escribe hace tiempo y te importa? Escribile hoy. Un mensaje corto cuenta."
+      },
+      "tags": [
+        "soledad",
+        "conexión",
+        "vínculo"
+      ]
+    },
+    {
+      "id": "cat-10",
+      "front": {
+        "title": "El Cansancio",
+        "number": 10,
+        "art_prompt": "Abstract dark landscape at dusk, soft amber horizon, still and quiet, minimal brushstrokes, textured oil painting style, no text"
+      },
+      "back": {
+        "phrase": "El descanso no se gana. Es una necesidad.",
+        "when_to_use": "Para cuando te sentís culpable por parar.",
+        "instruction": "Hoy descansás sin justificarte. No hace falta merecerlo. El cuerpo lo necesita y eso alcanza."
+      },
+      "tags": [
+        "descanso",
+        "culpa",
+        "cuerpo"
+      ]
+    },
+    {
+      "id": "cat-11",
+      "front": {
+        "title": "El Caos",
+        "number": 11,
+        "art_prompt": "Abstract swirling dark chaos with one still center point of warm amber light, expressionist oil style, deep texture and movement, no text"
+      },
+      "back": {
+        "phrase": "No todo tiene que estar resuelto hoy.",
+        "when_to_use": "Para cuando el caos te abruma.",
+        "instruction": "Elegí una sola cosa — la más pequeña posible — que puedas resolver hoy. Solo una. El resto puede esperar."
+      },
+      "tags": [
+        "caos",
+        "abrumación",
+        "foco"
+      ]
+    },
+    {
+      "id": "cat-12",
+      "front": {
+        "title": "La Comparación",
+        "number": 12,
+        "art_prompt": "Abstract single path illuminated in dark forest, other paths barely visible in shadows, warm light ahead, fine art illustration style, no text"
+      },
+      "back": {
+        "phrase": "Estás en tu propia carrera. No sabés en qué kilómetro está el otro.",
+        "when_to_use": "Para cuando el progreso ajeno baja el tuyo.",
+        "instruction": "Cerrá las redes. Abrí un cuaderno. Escribí tres cosas que avanzaste en el último mes. Solo lo tuyo."
+      },
+      "tags": [
+        "comparación",
+        "redes",
+        "propio camino"
+      ]
+    },
+    {
+      "id": "cat-13",
+      "front": {
+        "title": "El Pasado",
+        "number": 13,
+        "art_prompt": "Abstract dark composition showing faded impressions in stone, excavation revealing layers of warm earth tones, fine art style, no text"
+      },
+      "back": {
+        "phrase": "Lo que pasó ya pasó. Pero lo que aprendiste sigue con vos.",
+        "when_to_use": "Para cuando el pasado te pesa más de lo que debería.",
+        "instruction": "¿Qué te enseñó algo que te arrepentís? No lo que pasó — lo que aprendiste. Quedate con eso."
+      },
+      "tags": [
+        "pasado",
+        "arrepentimiento",
+        "aprendizaje"
+      ]
+    },
+    {
+      "id": "cat-14",
+      "front": {
+        "title": "El Futuro",
+        "number": 14,
+        "art_prompt": "Abstract dark fog with a single footstep illuminated ahead, warm amber groundlight, minimal expressionist style, no text"
+      },
+      "back": {
+        "phrase": "No tenés que saber cómo termina para dar el siguiente paso.",
+        "when_to_use": "Para cuando la incertidumbre te bloquea.",
+        "instruction": "¿Qué es lo próximo — solo lo próximo — que podés hacer? No el plan entero. Un paso."
+      },
+      "tags": [
+        "futuro",
+        "incertidumbre",
+        "acción"
+      ]
+    },
+    {
+      "id": "cat-15",
+      "front": {
+        "title": "La Decisión",
+        "number": 15,
+        "art_prompt": "Abstract dark scales balanced on a thin line, warm glow below, deep charcoal and amber, minimalist fine art, no text"
+      },
+      "back": {
+        "phrase": "No existe la decisión perfecta. Existe la que tomás y trabajás.",
+        "when_to_use": "Para cuando no podés decidir.",
+        "instruction": "Escribí las dos opciones. Leelas en voz alta. Tu cuerpo ya sabe cuál. Prestale atención."
+      },
+      "tags": [
+        "decisión",
+        "parálisis",
+        "intuición"
+      ]
+    },
+    {
+      "id": "cat-16",
+      "front": {
+        "title": "El Cuerpo",
+        "number": 16,
+        "art_prompt": "Abstract dark organic form, warm amber veins of light running through dark stone texture, vital and grounded, fine art expressionist, no text"
+      },
+      "back": {
+        "phrase": "Tu cuerpo cargó todo esto con vos. Trátalo como merece.",
+        "when_to_use": "Para cuando te olvidás de que tenés un cuerpo.",
+        "instruction": "Tomá agua. Comé algo. Salí cinco minutos al aire. No como castigo — como cuidado."
+      },
+      "tags": [
+        "cuerpo",
+        "cuidado",
+        "presente"
+      ]
+    },
+    {
+      "id": "cat-17",
+      "front": {
+        "title": "El Trabajo",
+        "number": 17,
+        "art_prompt": "Abstract dark urban texture, single light in a window at dusk, deep charcoal and warm amber, contemplative fine art illustration, no text"
+      },
+      "back": {
+        "phrase": "Sos mucho más que lo que producís.",
+        "when_to_use": "Para cuando tu valor se mide solo por resultados.",
+        "instruction": "¿Quién sos cuando no estás trabajando? Escribí tres cosas. Si tardás en responder, eso también es información."
+      },
+      "tags": [
+        "trabajo",
+        "identidad",
+        "valor"
+      ]
+    },
+    {
+      "id": "cat-18",
+      "front": {
+        "title": "Las Ganas",
+        "number": 18,
+        "art_prompt": "Abstract dark composition showing a gear beginning to turn, warm amber mechanism emerging from shadow, texture and motion, fine art style, no text"
+      },
+      "back": {
+        "phrase": "La motivación no siempre llega primero. A veces el movimiento la trae.",
+        "when_to_use": "Para cuando esperás tener ganas antes de empezar.",
+        "instruction": "Hacé dos minutos de lo que estás postergando. Solo dos. Tu cerebro hace el resto."
+      },
+      "tags": [
+        "motivación",
+        "procrastinación",
+        "acción"
+      ]
+    },
+    {
+      "id": "cat-19",
+      "front": {
+        "title": "El Mérito",
+        "number": 19,
+        "art_prompt": "Abstract dark closed door with warm amber light seeping from within, inviting and intimate, expressionist fine art, no text"
+      },
+      "back": {
+        "phrase": "No tenés que merecerlo. Ya es tuyo.",
+        "when_to_use": "Para cuando esperás que alguien te dé permiso.",
+        "instruction": "¿De qué te estás privando esperando merecerlo? El descanso, el cuidado, el logro. Escribiló. No es un regalo — es tuyo."
+      },
+      "tags": [
+        "mérito",
+        "permiso",
+        "autoestima"
+      ]
+    },
+    {
+      "id": "cat-20",
+      "front": {
+        "title": "La Constancia",
+        "number": 20,
+        "art_prompt": "Abstract dark repeated pattern with slight imperfection embraced, warm amber thread weaving through dark texture, fine art expressionist, no text"
+      },
+      "back": {
+        "phrase": "No hace falta ser perfecto. Hace falta aparecer.",
+        "when_to_use": "Para cuando un tropiezo te hace querer abandonar todo.",
+        "instruction": "Un día malo no borra todo lo anterior. ¿Cuántos días seguiste a pesar de todo? Contá esos."
+      },
+      "tags": [
+        "constancia",
+        "perfeccionismo",
+        "continuidad"
+      ]
+    },
+    {
+      "id": "cat-21",
+      "front": {
+        "title": "El Error",
+        "number": 21,
+        "art_prompt": "Abstract dark cracked surface with warm amber light glowing from the cracks, kintsugi inspired, fine art expressionist, no text"
+      },
+      "back": {
+        "phrase": "Erraste. Eso significa que intentaste.",
+        "when_to_use": "Para cuando un error te cae encima.",
+        "instruction": "¿Qué podés hacer diferente la próxima vez? Una sola cosa. Guardala. Seguí."
+      },
+      "tags": [
+        "error",
+        "aprendizaje",
+        "resiliencia"
+      ]
+    },
+    {
+      "id": "cat-22",
+      "front": {
+        "title": "La Ayuda",
+        "number": 22,
+        "art_prompt": "Abstract dark composition of two forms supporting each other, warm amber light between them, expressionist fine art, no text"
+      },
+      "back": {
+        "phrase": "Pedir ayuda no es debilidad. Es inteligencia.",
+        "when_to_use": "Para cuando querés resolverlo todo solo.",
+        "instruction": "¿Hay algo que estás cargando solo y no tenés que hacerlo? ¿A quién podrías pedirle una mano hoy?"
+      },
+      "tags": [
+        "ayuda",
+        "vulnerabilidad",
+        "conexión"
+      ]
+    },
+    {
+      "id": "cat-23",
+      "front": {
+        "title": "El Silencio",
+        "number": 23,
+        "art_prompt": "Abstract dark still lake surface reflecting minimal stars, deep silence and depth, charcoal and silver fine art, no text"
+      },
+      "back": {
+        "phrase": "No todo necesita una respuesta inmediata.",
+        "when_to_use": "Para cuando la urgencia te come la cabeza.",
+        "instruction": "¿Lo que te está esperando una respuesta tiene que ser hoy? Si no es urgente, dejalo para mañana."
+      },
+      "tags": [
+        "urgencia",
+        "silencio",
+        "calma"
+      ]
+    },
+    {
+      "id": "cat-24",
+      "front": {
+        "title": "El Presente",
+        "number": 24,
+        "art_prompt": "Abstract dark composition with single sharp focus point of warm amber light, everything else soft and blurred, fine art photography illustration style, no text"
+      },
+      "back": {
+        "phrase": "Lo único que tenés seguro es esto. Ahora.",
+        "when_to_use": "Para cuando tu cabeza está en todos lados menos acá.",
+        "instruction": "Tres cosas que podés ver. Dos que podés tocar. Una que podés escuchar. Acá estás."
+      },
+      "tags": [
+        "presente",
+        "ansiedad",
+        "grounding"
+      ]
+    },
+    {
+      "id": "cat-25",
+      "front": {
+        "title": "La Espera",
+        "number": 25,
+        "art_prompt": "Abstract dark slow dawn breaking, patient amber horizon, deep stillness, minimal expressionist fine art, no text"
+      },
+      "back": {
+        "phrase": "Algunas cosas necesitan tiempo. No todo tiene que ser ya.",
+        "when_to_use": "Para cuando la impaciencia te saca el piso.",
+        "instruction": "¿Qué estás apresurando que necesita su tiempo? Escribiló. Poné una fecha real — no urgente."
+      },
+      "tags": [
+        "paciencia",
+        "tiempo",
+        "impaciencia"
+      ]
+    },
+    {
+      "id": "cat-26",
+      "front": {
+        "title": "El Vínculo",
+        "number": 26,
+        "art_prompt": "Abstract dark tangle of threads slowly separating with care, warm amber light on individual threads, fine art expressionist, no text"
+      },
+      "back": {
+        "phrase": "No podés controlar cómo te quieren, pero sí cómo te tratás.",
+        "when_to_use": "Para cuando alguien importante te dolió.",
+        "instruction": "¿Qué necesitás ahora mismo, de vos mismo? No del otro — de vos. Dátelo."
+      },
+      "tags": [
+        "vínculos",
+        "amor propio",
+        "control"
+      ]
+    },
+    {
+      "id": "cat-27",
+      "front": {
+        "title": "La Verdad",
+        "number": 27,
+        "art_prompt": "Abstract dark mirror slowly clearing to reveal truth, warm amber glow emerging, deep charcoal and gold, fine art style, no text"
+      },
+      "back": {
+        "phrase": "Saber algo y no actuar también tiene un costo.",
+        "when_to_use": "Para cuando te estás mintiendo a vos mismo.",
+        "instruction": "¿Qué es lo que sabés pero no querés saber? Escribiló aunque duela. La negación cansa más que la verdad."
+      },
+      "tags": [
+        "honestidad",
+        "negación",
+        "claridad"
+      ]
+    },
+    {
+      "id": "cat-28",
+      "front": {
+        "title": "El Límite",
+        "number": 28,
+        "art_prompt": "Abstract dark clear line dividing two spaces, warm amber on one side, deep shadow on the other, clean and decisive, fine art illustration, no text"
+      },
+      "back": {
+        "phrase": "Un límite no es un rechazo. Es una dirección.",
+        "when_to_use": "Para cuando decir que no te genera culpa.",
+        "instruction": "¿Qué le dirías que no hoy, si pudieras? Practicá decirlo en voz alta, solo. El cuerpo necesita escucharse."
+      },
+      "tags": [
+        "límites",
+        "culpa",
+        "autorespeto"
+      ]
+    },
+    {
+      "id": "cat-29",
+      "front": {
+        "title": "La Gratitud",
+        "number": 29,
+        "art_prompt": "Abstract dark composition with single small warm amber ember glowing in vast darkness, minimal and intimate, fine art expressionist, no text"
+      },
+      "back": {
+        "phrase": "Algo hoy estuvo bien. No hace falta que sea grande.",
+        "when_to_use": "Para cuando todo parece gris.",
+        "instruction": "Una cosa. Solo una que hoy estuvo bien o no estuvo mal. No hace falta más que eso."
+      },
+      "tags": [
+        "gratitud",
+        "perspectiva",
+        "cotidiano"
+      ]
+    },
+    {
+      "id": "cat-30",
+      "front": {
+        "title": "El Siguiente",
+        "number": 30,
+        "art_prompt": "Abstract dark path with single step illuminated in warm amber, the rest in darkness, forward motion implied, fine art expressionist style, no text"
+      },
+      "back": {
+        "phrase": "No tenés que saber todo. Solo el siguiente paso.",
+        "when_to_use": "Para cuando el camino completo te aplasta.",
+        "instruction": "¿Cuál es el siguiente paso, solo el siguiente? No el plan — el paso. Uno. Eso es todo lo que necesitás hoy."
+      },
+      "tags": [
+        "acción",
+        "incertidumbre",
+        "claridad"
+      ]
+    }
+  ]
+}

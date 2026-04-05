@@ -1,0 +1,646 @@
+{
+  "id": "mazo-sobre-futbol-de-argentina-v1",
+  "edition": "mazo-sobre-futbol-de-argentina",
+  "name": "La Redonda Sagrada",
+  "slug": "mazo-sobre-futbol-de-argentina",
+  "description": "30 cartas para cortar la discusión. Un mazo para la previa, el entretiempo o el post-partido, diseñado para que el que dice que sabe, demuestre. Esto no es un juego, es un ajuste de cuentas futboleras.",
+  "language": "es",
+  "card_count": 30,
+  "metadata": {
+    "topic": "Fútbol Argentino",
+    "tone": "Desafiante, Nostálgico, Apasionado",
+    "target_audience": "Amigos y fanáticos del fútbol argentino",
+    "player_count": "2+",
+    "art_direction": {
+      "style": "stylized-illustration",
+      "faces": "none",
+      "global_brief": "Vintage football poster art inspired by mid-century Argentine graphic design. Bold flat colors, limited palette (2-4 colors per card), strong geometric compositions, screen-print texture with visible grain. Think retro match-day programmes, 1960s-70s sports posters, and Soviet-era athletic propaganda art. NO photorealism, NO recognizable faces. Use silhouettes, back views, dramatic angles, and symbolic compositions. Each card should feel like a collectible print you would frame on a wall."
+    }
+  },
+  "print_spec_id": "baraja-landscape",
+  "design_template_id": "dark-minimal-01",
+  "pricing": {
+    "amount": 1500000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "lrs-01",
+      "front": {
+        "art_prompt": "Vintage poster art of a silhouetted footballer mid-dribble, weaving through 5 geometric defender shapes on a vibrant green field. Light blue and white striped jersey suggested by bold color blocks. Mexican sun as a massive orange circle above. Screen-print texture, 3-color palette: green, sky blue, orange gold. 1986 retro aesthetic.",
+        "title": "El Barrilete Cósmico",
+        "number": 1,
+        "subject_hint": "Diego Maradona, Gol del Siglo vs Inglaterra, Mundial México 1986, Estadio Azteca",
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01_v2026-04-05T17-26-04.jpg",
+        "art_versions": [
+          "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01.jpg",
+          "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "La pelota no se mancha.",
+        "when_to_use": "Para empezar el juego, como se debe.",
+        "instruction": "En el partido contra Inglaterra en el '86, sin contar al arquero Peter Shilton, ¿a cuántos jugadores de campo eludió Maradona en el Gol del Siglo?",
+        "answer": "5 jugadores"
+      },
+      "tags": [
+        "Maradona",
+        "Mundial '86",
+        "Selección Argentina"
+      ]
+    },
+    {
+      "id": "lrs-02",
+      "front": {
+        "art_prompt": "Retro illustration of a footballer seen from behind, performing a backheel nutmeg. Blue and yellow (Boca Juniors) color scheme. The ball traces a dotted arc between the defender legs. Night scene with geometric floodlight beams cutting through. Bold linocut style, 2-color: deep blue and bright yellow on dark background.",
+        "title": "La Pausa",
+        "number": 2,
+        "subject_hint": "Juan Román Riquelme, caño de espaldas, Boca Juniors, Copa Libertadores 2000",
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-02.jpg"
+      },
+      "back": {
+        "phrase": "Correr, corre cualquiera. Pensar, es más difícil.",
+        "when_to_use": "Para el que prefiere la magia al sudor.",
+        "instruction": "¿Contra qué equipo Juan Román Riquelme tiró su famoso caño de espaldas a Mario Yepes en la Copa Libertadores del 2000?",
+        "answer": "River Plate"
+      },
+      "tags": [
+        "Riquelme",
+        "Boca Juniors",
+        "Copa Libertadores"
+      ]
+    },
+    {
+      "id": "lrs-03",
+      "front": {
+        "art_prompt": "Split poster design: left half shows clean geometric tactical lines in cool blue; right half shows explosive chaotic brushstrokes in warm red. A thin vertical gold line divides them. Text-free. Represents two opposing football philosophies. Minimalist Swiss poster design meets Argentine passion. 3-color: blue, red, gold.",
+        "title": "Las Dos Escuelas",
+        "number": 3,
+        "subject_hint": "Menotti vs Bilardo, dos filosofías del fútbol argentino, 1978 vs 1986",
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-03.jpg"
+      },
+      "back": {
+        "phrase": "Ganar no es lo más importante, es lo único.",
+        "when_to_use": "Para abrir el debate eterno.",
+        "instruction": "César Luis Menotti fue campeón del mundo en 1978 y Carlos Salvador Bilardo en 1986. Nombra al único jugador que formó parte de ambos planteles campeones del mundo.",
+        "answer": "Daniel Passarella"
+      },
+      "tags": [
+        "Bilardo",
+        "Menotti",
+        "Filosofía",
+        "Selección Argentina"
+      ]
+    },
+    {
+      "id": "lrs-04",
+      "front": {
+        "art_prompt": "Art deco style poster of a solitary figure in a long dark coat standing at the edge of a football pitch at night. Rain depicted as diagonal white lines. Behind him, a massive trophy silhouette glows golden. Elegant, symmetrical composition. Color palette: black, dark green, gold. Vintage 1940s noir poster feel.",
+        "title": "El Virrey",
+        "number": 4,
+        "subject_hint": "Carlos Bianchi, DT más ganador, Boca Juniors y Vélez Sarsfield, Copa Libertadores",
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-04.jpg"
+      },
+      "back": {
+        "phrase": "La suerte no existe. El éxito depende del trabajo.",
+        "when_to_use": "Cuando se habla del técnico más ganador.",
+        "instruction": "Carlos Bianchi ganó 4 Copas Libertadores como DT. Tres con Boca Juniors, ¿con qué otro equipo argentino ganó la restante?",
+        "answer": "Vélez Sarsfield"
+      },
+      "tags": [
+        "Carlos Bianchi",
+        "Boca Juniors",
+        "Vélez Sarsfield",
+        "Copa Libertadores"
+      ]
+    },
+    {
+      "id": "lrs-05",
+      "front": {
+        "art_prompt": "Dynamic retro poster of a footballer silhouette sprinting with arms raised in celebration. White jersey with bold red diagonal stripe (River Plate). Confetti particles rendered as geometric red and white shapes falling like rain. Background: architectural outline of Santiago Bernabéu. Night blue background, 3-color: red, white, midnight blue.",
+        "title": "La Gloria Eterna",
+        "number": 5,
+        "subject_hint": "Final Copa Libertadores 2018, River vs Boca en Madrid, Santiago Bernabéu, Pity Martínez",
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-05.jpg"
+      },
+      "back": {
+        "phrase": "Y va el tercero, y va el tercero...",
+        "when_to_use": "Para recordar la final más importante de la historia.",
+        "instruction": "¿Quién fue el autor del tercer gol de River Plate contra Boca Juniors en la final de la Copa Libertadores 2018 en Madrid?",
+        "answer": "Gonzalo Pity Martínez"
+      },
+      "tags": [
+        "River Plate",
+        "Copa Libertadores",
+        "Superclásico",
+        "Madrid"
+      ]
+    },
+    {
+      "id": "lrs-06",
+      "front": {
+        "art_prompt": "Vintage 1970s sports poster of a powerful striker silhouette with flowing hair, arms outstretched after scoring. Orange and white color scheme (Valencia CF). Sun rays radiating from behind the figure in a retro starburst pattern. Heavy grain texture, screen-print aesthetic. Bold serif typography space at bottom.",
+        "title": "El Matador",
+        "number": 6,
+        "subject_hint": "Mario Kempes, Mundial Argentina 1978, Valencia CF, goleador, pelo largo",
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-06.jpg"
+      },
+      "back": {
+        "phrase": "Nunca quise ser un ejemplo. Sólo un futbolista.",
+        "when_to_use": "Para el que recuerda a los héroes del '78.",
+        "instruction": "Mario Alberto Kempes fue la figura y goleador del Mundial '78. ¿En qué club europeo jugaba durante ese torneo?",
+        "answer": "Valencia CF (España)"
+      },
+      "tags": [
+        "Kempes",
+        "Mundial '78",
+        "Selección Argentina"
+      ]
+    },
+    {
+      "id": "lrs-07",
+      "front": {
+        "art_prompt": "Art nouveau style poster showing a small silhouetted figure standing at a massive illuminated stadium tunnel entrance. The tunnel is rendered as ornate architectural arches. Deep garnet and blue (Barcelona) color tones with golden light flooding from the pitch beyond. Dramatic scale contrast between tiny player and enormous stadium.",
+        "title": "El Pibe de Oro",
+        "number": 7,
+        "subject_hint": "Diego Maradona joven, debut europeo, FC Barcelona, años 80"
+      },
+      "back": {
+        "phrase": "Si yo fuera Maradona, viviría como él.",
+        "when_to_use": "Para cuando la nostalgia por los 90 ataca.",
+        "instruction": "¿Cuál fue el primer club europeo en el que jugó Diego Armando Maradona?",
+        "answer": "FC Barcelona"
+      },
+      "tags": [
+        "Maradona",
+        "Europa",
+        "Barcelona"
+      ]
+    },
+    {
+      "id": "lrs-08",
+      "front": {
+        "art_prompt": "Bold woodcut-style illustration of a striker diving horizontally for a header. Pure silhouette against a bright yellow and blue gradient sky (Boca colors). The ball is a perfect circle with motion lines. Rough, carved texture. Powerful, almost heroic socialist-realism propaganda poster composition.",
+        "title": "El Titán",
+        "number": 8,
+        "subject_hint": "Martín Palermo, goleador histórico de Boca, gol de cabeza imposible, La Bombonera"
+      },
+      "back": {
+        "phrase": "El optimismo es la base de todo.",
+        "when_to_use": "Para hablar de goleadores que no se rinden.",
+        "instruction": "Martín Palermo es el máximo goleador de la historia de Boca. ¿A qué equipo le marcó un gol de cabeza desde casi 40 metros?",
+        "answer": "Vélez Sarsfield"
+      },
+      "tags": [
+        "Palermo",
+        "Boca Juniors",
+        "Goleadores"
+      ]
+    },
+    {
+      "id": "lrs-09",
+      "front": {
+        "art_prompt": "Warm-toned retro illustration of a dusty potrero (dirt football pitch) at sunset. Two makeshift goals shown as simple geometric frames. Small silhouettes of kids playing. Golden hour palette: ochre, burnt sienna, warm cream. Gentle, nostalgic screen-print style with visible dot pattern. Buenos Aires skyline hinted in background.",
+        "title": "El Semillero del Mundo",
+        "number": 9,
+        "subject_hint": "Argentinos Juniors, semillero del mundo, canteras del fútbol argentino, potrero"
+      },
+      "back": {
+        "phrase": "De acá salieron los mejores.",
+        "when_to_use": "Cuando se discute sobre la mejor cantera.",
+        "instruction": "Argentinos Juniors es conocido como 'El Semillero del Mundo'. Nombra tres campeones del mundo con Argentina que hayan debutado profesionalmente en este club.",
+        "answer": "Maradona, Borghi, Batista, Pasculli"
+      },
+      "tags": [
+        "Argentinos Juniors",
+        "Inferiores",
+        "Cantera"
+      ]
+    },
+    {
+      "id": "lrs-10",
+      "front": {
+        "art_prompt": "Eccentric retro poster of a figure sitting on a rectangular object (cooler) at the edge of a pitch, rendered as a calm geometric shape amid a swirling chaotic vortex of action around him. Muted earth tones with one accent color: bright red. Surrealist poster art meets vintage sports illustration.",
+        "title": "El Loco",
+        "number": 10,
+        "subject_hint": "Marcelo Bielsa, El Loco, sentado en un cooler, Newell's, Vélez, Selección Argentina"
+      },
+      "back": {
+        "phrase": "Un hombre con ideas nuevas es un loco, hasta que sus ideas triunfan.",
+        "when_to_use": "Para el que cree que el método es todo.",
+        "instruction": "Marcelo Bielsa dirigió a la Selección Argentina en el Mundial 2002. ¿Qué dos equipos argentinos dirigió antes de la selección?",
+        "answer": "Newell's Old Boys y Vélez Sarsfield"
+      },
+      "tags": [
+        "Bielsa",
+        "Newell's",
+        "Vélez Sarsfield",
+        "Entrenadores"
+      ]
+    },
+    {
+      "id": "lrs-11",
+      "front": {
+        "art_prompt": "Minimalist poster art: a tiny silhouetted figure with a ball, leaving a long golden trail that curves elegantly around much larger defender silhouettes. Light blue and white palette with gold accents. Clean vector-like shapes but with analog screen-print texture. Modern meets vintage. Inspired by Saul Bass movie poster design.",
+        "title": "La Pulga",
+        "number": 11,
+        "subject_hint": "Lionel Messi, debut goleador en mundiales, Alemania 2006, Serbia y Montenegro"
+      },
+      "back": {
+        "phrase": "Ya no quiero pensar en lo que pasó. Quiero mirar para adelante.",
+        "when_to_use": "Cuando se habla del mejor de la historia.",
+        "instruction": "¿Contra qué selección nacional marcó Lionel Messi su primer gol en un Mundial, en Alemania 2006?",
+        "answer": "Serbia y Montenegro"
+      },
+      "tags": [
+        "Messi",
+        "Barcelona",
+        "Selección Argentina"
+      ]
+    },
+    {
+      "id": "lrs-12",
+      "front": {
+        "art_prompt": "Aerial view poster showing two massive stadium shapes (one red, one light blue) sitting side by side like two neighboring volcanoes, with geometric crowd patterns filling their bowls. Bird-eye perspective, flat graphic style. Color-blocked in red, white, sky blue, and dark navy. Bold, geographic, almost map-like illustration.",
+        "title": "El Clásico de Avellaneda",
+        "number": 12,
+        "subject_hint": "Clásico de Avellaneda, Independiente vs Racing, El Cilindro, Libertadores de América"
+      },
+      "back": {
+        "phrase": "El barrio define los colores.",
+        "when_to_use": "Cuando la rivalidad va más allá de la cancha.",
+        "instruction": "Independiente y Racing Club protagonizan el clásico de Avellaneda. ¿Cómo se apodan los estadios de cada uno de estos dos equipos?",
+        "answer": "El Cilindro y Libertadores de América"
+      },
+      "tags": [
+        "Racing",
+        "Independiente",
+        "Clásico de Avellaneda"
+      ]
+    },
+    {
+      "id": "lrs-13",
+      "front": {
+        "art_prompt": "Dynamic retro poster of a goalkeeper silhouette stretching horizontally across the entire frame, fingertips reaching for a ball in the corner. Dark green jersey suggested by color. Background: geometric pattern representing a packed 1978 stadium with white ticker tape as diagonal lines. Monochrome green palette with white accents.",
+        "title": "El Pato",
+        "number": 13,
+        "subject_hint": "Ubaldo Fillol, arquero campeón 1978, atajada a Deyna, El Monumental"
+      },
+      "back": {
+        "phrase": "El arquero vive en un puesto de soledad y responsabilidad.",
+        "when_to_use": "Para reivindicar al que se pone los guantes.",
+        "instruction": "Ubaldo Matildo Fillol, arquero campeón en el '78, es famoso por su atajada en el penal contra Polonia. ¿Qué jugador polaco ejecutó ese penal?",
+        "answer": "Kazimierz Deyna"
+      },
+      "tags": [
+        "Fillol",
+        "Arqueros",
+        "Mundial '78"
+      ]
+    },
+    {
+      "id": "lrs-14",
+      "front": {
+        "art_prompt": "Architectural poster showing the iconic D-shaped Bombonera stadium from above in bold blue and yellow. The steep terraces are rendered as geometric stepped patterns. Smoke and flag silhouettes rise from the stands. Screen-print style with heavy texture. 2-color: deep blue and bright gold on white.",
+        "title": "La Bombonera",
+        "number": 14,
+        "subject_hint": "La Bombonera, estadio de Boca Juniors, La Boca, forma de D, Alberto J. Armando"
+      },
+      "back": {
+        "phrase": "La Bombonera no tiembla, late.",
+        "when_to_use": "Cuando se habla de estadios con mística.",
+        "instruction": "El estadio de Boca Juniors es mundialmente famoso. ¿Cuál es el nombre oficial del estadio, que homenajea a un ex presidente del club?",
+        "answer": "Alberto J. Armando"
+      },
+      "tags": [
+        "La Bombonera",
+        "Boca Juniors",
+        "Estadios"
+      ]
+    },
+    {
+      "id": "lrs-15",
+      "front": {
+        "art_prompt": "Retro poster of a winger silhouette mid-feint, body twisted impossibly, leaving a trail of motion lines behind him. Red and black stripes (Newell is Old Boys) rendered as bold graphic bands on the jersey shape. Grass rendered as geometric green blocks. Dynamic diagonal composition. 3-color: red, black, green.",
+        "title": "El Burrito",
+        "number": 15,
+        "subject_hint": "Ariel Ortega, El Burrito, gambeteador, River Plate, Newell's Old Boys"
+      },
+      "back": {
+        "phrase": "La gambeta es la solución a todo.",
+        "when_to_use": "Para el que extraña al wing que desborda.",
+        "instruction": "Ariel Ortega es un ídolo de River Plate. Además de River, ¿en qué otro club de los 'cinco grandes' del fútbol argentino jugó?",
+        "answer": "Newell's Old Boys"
+      },
+      "tags": [
+        "Ortega",
+        "River Plate",
+        "Gambeta"
+      ]
+    },
+    {
+      "id": "lrs-16",
+      "front": {
+        "art_prompt": "Intimate poster showing a vintage radio microphone from above, with sound waves radiating outward in concentric circles that become a packed stadium bowl. The microphone is golden, the waves are light blue and white. Retro broadcast aesthetic, 1980s Argentine radio feel. 3-color: gold, sky blue, deep navy.",
+        "title": "El Gol del Siglo",
+        "number": 16,
+        "subject_hint": "Víctor Hugo Morales, relator del Gol del Siglo, cabina de relato, Azteca 1986"
+      },
+      "back": {
+        "phrase": "¡Genio! ¡Genio! ¡Genio! Ta-ta-ta-ta-ta-ta...",
+        "when_to_use": "Para recordar el momento más sublime.",
+        "instruction": "¿Quién fue el relator uruguayo cuya narración del gol de Maradona a los ingleses se volvió la más icónica de todas?",
+        "answer": "Víctor Hugo Morales"
+      },
+      "tags": [
+        "Maradona",
+        "Mundial '86",
+        "Relatores",
+        "Victor Hugo Morales"
+      ]
+    },
+    {
+      "id": "lrs-17",
+      "front": {
+        "art_prompt": "Elegant retro poster of a footballer silhouette controlling a dropping ball with perfect poise. White jersey with red diagonal stripe (River Plate). The figure is rendered with graceful Art Deco lines, like a dancer. Soft cream background with red and white accents. Clean, refined, almost fashion-illustration quality.",
+        "title": "El Príncipe",
+        "number": 17,
+        "subject_hint": "Enzo Francescoli, El Príncipe, elegancia, River Plate, ídolo de Zidane"
+      },
+      "back": {
+        "phrase": "La elegancia no es opcional.",
+        "when_to_use": "Para el que valora la clase por sobre la fuerza.",
+        "instruction": "Enzo Francescoli es un ídolo máximo de River Plate. ¿Qué famoso jugador francés confesó haber nombrado a su hijo 'Enzo' en su honor?",
+        "answer": "Zinedine Zidane"
+      },
+      "tags": [
+        "Francescoli",
+        "River Plate",
+        "Elegancia"
+      ]
+    },
+    {
+      "id": "lrs-18",
+      "front": {
+        "art_prompt": "Humorous pop-art style poster of a single bright green water bottle in the center, dramatically spot-lit against a dark background. Suspicious radiating lines emanate from it (comic book style). Small football pitch lines visible beneath. Bold palette: neon green, black, white. Tongue-in-cheek, playful composition.",
+        "title": "El Bidón de Branco",
+        "number": 18,
+        "subject_hint": "Bidón de Branco, Bilardo, Mundial Italia 90, picardía argentina, Brasil"
+      },
+      "back": {
+        "phrase": "Bilardo es el más grande.",
+        "when_to_use": "Para el que sabe que en la guerra todo vale.",
+        "instruction": "El famoso episodio del 'bidón' ocurrió en el Mundial de Italia '90, en el partido de octavos de final. ¿Contra qué selección jugaba Argentina?",
+        "answer": "Brasil"
+      },
+      "tags": [
+        "Bilardo",
+        "Mundial '90",
+        "Picaresca"
+      ]
+    },
+    {
+      "id": "lrs-19",
+      "front": {
+        "art_prompt": "Regal poster showing 7 trophy silhouettes arranged in a symmetrical formation, like a royal crest. Red background (Independiente). Trophies rendered in bold gold with slight art deco ornamentation. Crown or laurel wreath motif framing the composition. Vintage award ceremony poster aesthetic, 2-color: red and gold.",
+        "title": "El Rey de Copas",
+        "number": 19,
+        "subject_hint": "Independiente Rey de Copas, 7 Copas Libertadores, trofeos, Bochini"
+      },
+      "back": {
+        "phrase": "La historia no se compra.",
+        "when_to_use": "Para el que respeta la historia.",
+        "instruction": "Independiente es apodado el 'Rey de Copas' por su récord de 7 Copas Libertadores. ¿Quién es su máximo goleador histórico en este torneo?",
+        "answer": "Ricardo Bochini"
+      },
+      "tags": [
+        "Independiente",
+        "Copa Libertadores",
+        "Historia"
+      ]
+    },
+    {
+      "id": "lrs-20",
+      "front": {
+        "art_prompt": "Epic wide poster showing the Monumental stadium bowl from field level, rendered as bold geometric terraces filled with tiny geometric crowd shapes. White and red ticker tape rendered as diagonal slash patterns filling the sky. Retro travel poster composition, massive scale. 3-color: red, white, stadium concrete grey.",
+        "title": "El Monumental",
+        "number": 20,
+        "subject_hint": "Estadio Monumental, River Plate, Antonio Vespucio Liberti, Final 1978"
+      },
+      "back": {
+        "phrase": "El más grande, por historia y por tamaño.",
+        "when_to_use": "Cuando la localía pesa.",
+        "instruction": "El estadio de River Plate, sede de la final del Mundial '78, tiene un nombre oficial. ¿Cuál es?",
+        "answer": "Estadio Antonio Vespucio Liberti"
+      },
+      "tags": [
+        "El Monumental",
+        "River Plate",
+        "Estadios"
+      ]
+    },
+    {
+      "id": "lrs-21",
+      "front": {
+        "art_prompt": "Gritty propaganda-style poster of a powerful striker silhouette with clenched fists raised overhead. Blue and yellow jersey (Boca Juniors) rendered as bold color blocks. Behind him, a stylized barrio skyline. Raw, workers-hero aesthetic. Heavy grain, distressed edges. 3-color: blue, yellow, dark grey.",
+        "title": "El Apache",
+        "number": 21,
+        "subject_hint": "Carlos Tévez, El Apache, oro olímpico Atenas 2004, Boca Juniors, Fuerte Apache"
+      },
+      "back": {
+        "phrase": "Dejar todo en la cancha no es una opción, es una obligación.",
+        "when_to_use": "Para el que valora al jugador del pueblo.",
+        "instruction": "Carlos Tévez ganó la medalla de oro olímpica con Argentina en 2004. ¿En qué ciudad se celebraron esos Juegos Olímpicos?",
+        "answer": "Atenas (Grecia, 2004)"
+      },
+      "tags": [
+        "Tévez",
+        "Boca Juniors",
+        "Selección Argentina"
+      ]
+    },
+    {
+      "id": "lrs-22",
+      "front": {
+        "art_prompt": "Faded vintage team portrait composition: 11 identical player silhouettes arranged in classic 1950s team photo formation (two rows). Light blue and white striped jerseys as vertical line patterns. Sepia-toned with deliberate aging effects. Old newspaper halftone dot texture. Warm cream and brown palette.",
+        "title": "La Academia",
+        "number": 22,
+        "subject_hint": "Racing Club años 50, La Academia, primer equipo heptacampeón, Tucho Méndez"
+      },
+      "back": {
+        "phrase": "El primer grande.",
+        "when_to_use": "Para recordar quién fue el primer heptacampeón.",
+        "instruction": "El Racing Club de los años 1949-1951 fue el primer equipo en Argentina en ganar tres campeonatos consecutivos en la era profesional. ¿Quién era la máxima figura de ese equipo?",
+        "answer": "Tucho Méndez"
+      },
+      "tags": [
+        "Racing",
+        "Historia",
+        "Profesionalismo"
+      ]
+    },
+    {
+      "id": "lrs-23",
+      "front": {
+        "art_prompt": "Melancholic poster of a silhouetted number 10 walking alone down a dark tunnel, seen from behind, light blue and white jersey catching the light from the pitch behind him. The tunnel narrows to darkness ahead. Stark contrast, mostly dark with a bright rectangular light source. Emotional, cinematic. 2-color: sky blue and deep black.",
+        "title": "El Diego Eterno",
+        "number": 23,
+        "subject_hint": "Maradona, USA 94, doping, \"me cortaron las piernas\", último partido vs Nigeria"
+      },
+      "back": {
+        "phrase": "Me cortaron las piernas.",
+        "when_to_use": "Para el momento más triste de los mundiales.",
+        "instruction": "La famosa frase de Maradona fue pronunciada durante el Mundial de 1994. ¿Contra qué equipo jugó Diego su último partido en esa Copa del Mundo?",
+        "answer": "Nigeria"
+      },
+      "tags": [
+        "Maradona",
+        "Mundial '94",
+        "Frases"
+      ]
+    },
+    {
+      "id": "lrs-24",
+      "front": {
+        "art_prompt": "Strategic poster showing a chessboard pattern transitioning into a football pitch. A confident figure silhouette stands at the edge, arms crossed. White and red (River Plate) color scheme. Clean geometric lines suggest tactical intelligence. Modern minimalist poster with retro grain texture. 3-color: red, white, dark green.",
+        "title": "El Muñeco",
+        "number": 24,
+        "subject_hint": "Marcelo Gallardo, El Muñeco, DT de River Plate, 7 títulos internacionales"
+      },
+      "back": {
+        "phrase": "Que la gente crea, porque tiene con qué creer.",
+        "when_to_use": "Para el que cambió la historia moderna de su club.",
+        "instruction": "Marcelo Gallardo es el DT más ganador de la historia de River. ¿Cuántos títulos internacionales consiguió como entrenador del club?",
+        "answer": "7 títulos internacionales"
+      },
+      "tags": [
+        "Gallardo",
+        "River Plate",
+        "Entrenadores"
+      ]
+    },
+    {
+      "id": "lrs-25",
+      "front": {
+        "art_prompt": "Ghostly retro illustration of a midfielder silhouette in red jersey (Independiente) threading a pass. The ball path is shown as a glowing golden dotted line weaving between three frozen defender silhouettes. X-ray vision feel, like a tactical diagram come to life. Muted red background, gold and white accents.",
+        "title": "El Bocha",
+        "number": 25,
+        "subject_hint": "Ricardo Bochini, El Bocha, Independiente, ídolo de Maradona, México 1986"
+      },
+      "back": {
+        "phrase": "El maestro de mi ídolo.",
+        "when_to_use": "Para el que sabe de dónde viene la verdadera inspiración.",
+        "instruction": "Ricardo Bochini, ídolo máximo de Independiente, jugó toda su carrera en el club. Diego Maradona lo idolatraba. ¿En qué Mundial compartieron plantel?",
+        "answer": "México 1986"
+      },
+      "tags": [
+        "Bochini",
+        "Independiente",
+        "Ídolos"
+      ]
+    },
+    {
+      "id": "lrs-26",
+      "front": {
+        "art_prompt": "Aggressive split poster: left half is a wall of red and black graffiti (Newell is), right half is blue and yellow street art (Central). A jagged white lightning bolt divides them. Raw, urban, street-poster aesthetic with wheat-paste texture and torn edges. 4-color: red, black, blue, yellow.",
+        "title": "El Clásico Rosarino",
+        "number": 26,
+        "subject_hint": "Clásico Rosarino, Newell's vs Rosario Central, Leprosos vs Canallas, Rosario"
+      },
+      "back": {
+        "phrase": "En Rosario se vive distinto.",
+        "when_to_use": "Para la rivalidad más pasional del país.",
+        "instruction": "Newell's Old Boys y Rosario Central disputan uno de los clásicos más intensos. ¿Cómo se apoda a los hinchas de cada equipo?",
+        "answer": "Leprosos (Newell's) y Canallas (Central)"
+      },
+      "tags": [
+        "Newell's",
+        "Rosario Central",
+        "Clásico Rosarino"
+      ]
+    },
+    {
+      "id": "lrs-27",
+      "front": {
+        "art_prompt": "Intense retro poster of a small figure silhouette facing a much taller goalkeeper silhouette across a penalty spot. The tension is shown through radiating geometric lines between them. Light blue and white (Argentina) vs orange (Netherlands). Dramatic David vs Goliath composition. Screen-print, 3-color.",
+        "title": "El Jefecito",
+        "number": 27,
+        "subject_hint": "Javier Mascherano, El Jefecito, arenga a Romero, semifinal 2014 vs Holanda"
+      },
+      "back": {
+        "phrase": "Hoy te convertís en héroe.",
+        "when_to_use": "Para el que se pone el equipo al hombro.",
+        "instruction": "La famosa arenga de Javier Mascherano a Sergio Romero fue en la semifinal del Mundial 2014. ¿Contra qué selección se disputó esa tanda de penales?",
+        "answer": "Holanda (Países Bajos)"
+      },
+      "tags": [
+        "Mascherano",
+        "Mundial 2014",
+        "Selección Argentina"
+      ]
+    },
+    {
+      "id": "lrs-28",
+      "front": {
+        "art_prompt": "Intellectual retro poster showing a chalkboard filling the entire frame, covered in complex tactical arrow diagrams, circles and X marks in white chalk. A single tracksuit silhouette hangs on a hook in the corner. Dark green chalkboard background, white chalk, subtle yellow accent. Moody, professor-aesthetic.",
+        "title": "El Toto",
+        "number": 28,
+        "subject_hint": "Toto Lorenzo, antifútbol, Boca campeón Libertadores 1977-78, Intercontinental vs Borussia"
+      },
+      "back": {
+        "phrase": "El antifútbol también es fútbol.",
+        "when_to_use": "Para el que entiende que el pizarrón gana partidos.",
+        "instruction": "Juan Carlos 'Toto' Lorenzo llevó a Boca a ganar sus primeras dos Copas Libertadores en 1977 y 1978. ¿A qué club europeo le ganó la final de la Copa Intercontinental de 1977?",
+        "answer": "Borussia Mönchengladbach"
+      },
+      "tags": [
+        "Toto Lorenzo",
+        "Boca Juniors",
+        "Estudiantes",
+        "Antifútbol"
+      ]
+    },
+    {
+      "id": "lrs-29",
+      "front": {
+        "art_prompt": "Ultra-tense retro poster showing a boot silhouette approaching a ball on a penalty spot. Viewed from ground level. A massive crowd is suggested by tiny geometric shapes filling the top half. Starry Qatar night sky. Light blue, white, and gold (Argentina + World Cup). The most important kick in history. 3-color: sky blue, gold, deep navy.",
+        "title": "La Tercera Estrella",
+        "number": 29,
+        "subject_hint": "Gonzalo Montiel, penal decisivo, Final Qatar 2022 vs Francia, Lusail, Tercera Estrella"
+      },
+      "back": {
+        "phrase": "Muchachos, ahora nos volvimos a ilusionar.",
+        "when_to_use": "Para cerrar la herida más larga.",
+        "instruction": "Argentina ganó su tercer mundial en Qatar 2022. ¿Quién fue el jugador que metió el último y decisivo penal en la final contra Francia?",
+        "answer": "Gonzalo Montiel"
+      },
+      "tags": [
+        "Mundial 2022",
+        "Messi",
+        "Selección Argentina",
+        "Campeones"
+      ]
+    },
+    {
+      "id": "lrs-30",
+      "front": {
+        "art_prompt": "Nostalgic retro poster of a humble dirt potrero at sunset. Two goals made from sticks and rocks rendered as simple geometric frames. A single worn ball sits in the center. Long golden shadows stretch across orange-brown earth. Buenos Aires rooftops silhouetted on horizon. Warm 2-color: ochre and burnt sienna.",
+        "title": "El Potrero",
+        "number": 30,
+        "subject_hint": "El potrero argentino, fútbol de barrio, origen de todas las leyendas, tierra y piedras"
+      },
+      "back": {
+        "phrase": "Acá se aprende lo que no te enseñan en ningún lado.",
+        "when_to_use": "Para terminar, volviendo al origen de todo.",
+        "instruction": "Muchos de los más grandes jugadores argentinos se formaron en 'el potrero'. Nombra a un jugador campeón del mundo que sea famoso por su estilo de juego 'de potrero'.",
+        "answer": "Diego Maradona"
+      },
+      "tags": [
+        "Potrero",
+        "Cultura",
+        "Orígenes",
+        "Esencia"
+      ]
+    }
+  ]
+}

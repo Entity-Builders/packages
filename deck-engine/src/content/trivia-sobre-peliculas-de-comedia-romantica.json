@@ -1,0 +1,440 @@
+{
+  "id": "trivia-sobre-peliculas-de-comedia-romantica-v1",
+  "edition": "trivia-sobre-peliculas-de-comedia-romantica",
+  "name": "Acto Final",
+  "slug": "trivia-sobre-peliculas-de-comedia-romantica",
+  "description": "20 cartas para poner a prueba cuánto sabés de esas historias que te hicieron creer en el amor, o al menos, en un buen guion. Esto no es sobre fechas de estreno, es sobre los detalles, los gestos y las frases que definen una comedia romántica. Jugá y descubrí si sos un principiante o un experto en el arte del encuentro.",
+  "language": "es",
+  "card_count": 20,
+  "metadata": {
+    "topic": "Trivia sobre peliculas de comedia romantica",
+    "tone": "Nostálgico, Desafiante, Cinéfilo",
+    "target_audience": "Amantes del cine, parejas, grupos de amigos",
+    "player_count": "1+"
+  },
+  "print_spec_id": "baraja-landscape",
+  "design_template_id": "dark-minimal-01",
+  "pricing": {
+    "amount": 1500000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "acto-final-01",
+      "front": {
+        "title": "La Ópera",
+        "number": 1,
+        "art_prompt": "Cinematic shot of elegant, red velvet opera gloves resting on a program for 'La Traviata'. Moody, dramatic lighting from a single source, creating long shadows. Anamorphic lens flare, deep color saturation, and a fine layer of film grain. The setting feels like the Dorothy Chandler Pavilion, Los Angeles.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-01.jpg?v=1775416973528"
+      },
+      "back": {
+        "phrase": "Algunos tenedores son más complicados que otros.",
+        "when_to_use": "Para empezar con una pregunta fácil y reconocible.",
+        "instruction": "En 'Pretty Woman', durante la cena de negocios en el restaurante de lujo, ¿qué caracol se le escapa a Vivian Ward (Julia Roberts) y es atrapado por el mesero?",
+        "answer": "El caracol de escargot.",
+        "fun_fact": "La famosa escena del collar que se cierra en los dedos de Julia Roberts fue una improvisación de Richard Gere. La risa de ella fue tan genuina que el director Garry Marshall decidió dejarla en la película."
+      },
+      "tags": [
+        "Fácil",
+        "Pretty Woman",
+        "Años 90"
+      ]
+    },
+    {
+      "id": "acto-final-02",
+      "front": {
+        "title": "La Puerta Azul",
+        "number": 2,
+        "art_prompt": "A cinematic, wide shot of a vibrant blue door of a bookshop on a rainy London street, reminiscent of Portobello Road. The warm light from inside spills onto the wet pavement. A single person with an umbrella walks by, blurred by motion. Moody, desaturated color palette except for the door. Heavy film grain.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-02.jpg?v=1775417076722"
+      },
+      "back": {
+        "phrase": "Solo soy un chico, parado frente a una chica...",
+        "when_to_use": "Cuando la pregunta es sobre el encanto de lo cotidiano.",
+        "instruction": "En 'Notting Hill', ¿cuál es la profesión de William Thacker, el personaje interpretado por Hugh Grant?",
+        "answer": "Es dueño de una librería de viajes.",
+        "fun_fact": "La librería de la película, 'The Travel Book Co.', se inspiró en una real ubicada en Notting Hill. Tras el éxito de la película, la tienda real se convirtió en una atracción turística."
+      },
+      "tags": [
+        "Fácil",
+        "Notting Hill",
+        "Hugh Grant"
+      ]
+    },
+    {
+      "id": "acto-final-03",
+      "front": {
+        "title": "La Sopa Azul",
+        "number": 3,
+        "art_prompt": "Extreme close-up on a single blue string being pulled from a pot of soup with a wooden spoon. The background is a chaotically messy kitchen, completely out of focus. Dramatic, high-contrast lighting. The blue color is unnaturally vivid. Cinematic, anamorphic framing.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-03_v2026-04-05T20-13-03.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-03.jpg?v=1775419983061"
+      },
+      "back": {
+        "phrase": "A veces, el desastre es el ingrediente principal.",
+        "when_to_use": "Para una pregunta sobre un error culinario icónico.",
+        "instruction": "En 'El Diario de Bridget Jones', ¿qué ingrediente usa Bridget por error que tiñe su sopa de un color azul intenso?",
+        "answer": "Un cordel azul que ataba un atado de apio.",
+        "fun_fact": "Renée Zellweger ganó aproximadamente 10 kilos para el papel y trabajó de incógnito en una editorial londinense durante tres semanas para prepararse."
+      },
+      "tags": [
+        "Fácil",
+        "Bridget Jones",
+        "Comedia Británica"
+      ]
+    },
+    {
+      "id": "acto-final-04",
+      "front": {
+        "title": "El Helecho",
+        "number": 4,
+        "art_prompt": "A dying fern in a pot sits on a poker table, surrounded by beer bottles and poker chips. The lighting is low and moody, like a smoky backroom. The fern is dramatically lit, looking pathetic and neglected. Cinematic color grading with green and brown tones, wide lens.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-04.jpg?v=1775419990428"
+      },
+      "back": {
+        "phrase": "No se puede matar al amor. Pero a una planta, sí.",
+        "when_to_use": "Para recordar que el amor necesita cuidados.",
+        "instruction": "En 'Cómo Perder a un Chico en 10 Días', Andie (Kate Hudson) le regala a Ben (Matthew McConaughey) una planta para simbolizar su 'amor'. ¿Cómo la llama?",
+        "answer": "El helecho del amor (The love fern).",
+        "fun_fact": "El vestido amarillo que Kate Hudson usa en la gala fue diseñado a medida por la diseñadora de vestuario de la película y se convirtió en una pieza icónica."
+      },
+      "tags": [
+        "Fácil",
+        "How to Lose a Guy in 10 Days",
+        "Kate Hudson"
+      ]
+    },
+    {
+      "id": "acto-final-05",
+      "front": {
+        "title": "El Águila y la Serpiente",
+        "number": 5,
+        "art_prompt": "A cinematic still life of a small, fluffy Samoyedo puppy sitting next to a smartphone with a cracked screen. The scene is set in a rustic Alaskan home, with wood panels in the background. Soft, natural window light. Shallow depth of field focusing on the puppy's face.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-05.jpg?v=1775419997939"
+      },
+      "back": {
+        "phrase": "A veces, una mentira es el único camino a casa.",
+        "when_to_use": "Cuando la situación es desesperada.",
+        "instruction": "En 'La Propuesta', ¿qué le pide Margaret (Sandra Bullock) a su asistente Andrew (Ryan Reynolds) que haga para evitar ser deportada a Canadá?",
+        "answer": "Que se case con ella.",
+        "fun_fact": "La escena en la que Bullock y Reynolds chocan desnudos se filmó durante varios días con los actores usando protectores de color carne, pero aun así fue una situación muy incómoda para ambos."
+      },
+      "tags": [
+        "Fácil",
+        "The Proposal",
+        "Sandra Bullock"
+      ]
+    },
+    {
+      "id": "acto-final-06",
+      "front": {
+        "title": "El Aeropuerto",
+        "number": 6,
+        "art_prompt": "Cinematic shot from behind a young boy sitting at a drum kit on an empty stage. He's looking out into a dark, empty school auditorium. A single spotlight illuminates him. The atmosphere is melancholic and hopeful. Anamorphic lens, film grain effect.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-06.jpg?v=1775420004684"
+      },
+      "back": {
+        "phrase": "El amor te hace hacer cosas ridículas. Y maravillosas.",
+        "when_to_use": "Para recordar el primer amor.",
+        "instruction": "En 'Love Actually', para impresionar a su compañera de clase Joanna, ¿qué instrumento aprende a tocar el joven Sam?",
+        "answer": "La batería.",
+        "fun_fact": "La escena del aeropuerto al principio y al final de la película muestra llegadas reales de pasajeros en el aeropuerto de Heathrow, en Londres. El director colocó cámaras y filmó reencuentros espontáneos."
+      },
+      "tags": [
+        "Fácil",
+        "Love Actually",
+        "Navidad"
+      ]
+    },
+    {
+      "id": "acto-final-07",
+      "front": {
+        "title": "El Limpiacristales",
+        "number": 7,
+        "art_prompt": "An old, well-used spray bottle of Windex sits on a windowsill of a typical suburban American house decorated with Greek flags and statues. Golden hour sunlight streams through the window, making the blue liquid glow. Cinematic, warm color grading.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-07.jpg?v=1775420013863"
+      },
+      "back": {
+        "phrase": "La familia tiene sus propios remedios.",
+        "when_to_use": "Cuando la solución es más simple de lo que parece.",
+        "instruction": "En 'Mi Gran Boda Griega', ¿qué producto de limpieza cree el padre de Toula, Gus Portokalos, que puede curar cualquier dolencia, desde la psoriasis hasta las verrugas?",
+        "answer": "Windex.",
+        "fun_fact": "La película está basada en la vida real de la guionista y actriz principal, Nia Vardalos, y su experiencia al casarse con un hombre no griego (el actor Ian Gomez)."
+      },
+      "tags": [
+        "Fácil",
+        "My Big Fat Greek Wedding",
+        "Comedia Familiar"
+      ]
+    },
+    {
+      "id": "acto-final-08",
+      "front": {
+        "title": "Las Gradas",
+        "number": 8,
+        "art_prompt": "Wide anamorphic shot of empty high school football bleachers at sunset. A vintage microphone on a stand is left in the middle of the field below. The sky has dramatic orange and purple hues. The feeling is of the silence after a grand, public gesture. Heavy film grain.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-08.jpg?v=1775420020429"
+      },
+      "back": {
+        "phrase": "A veces, hay que cantar para que te escuchen.",
+        "when_to_use": "Para una pregunta sobre un gran gesto romántico.",
+        "instruction": "En '10 Cosas que Odio de Ti', Patrick (Heath Ledger) le canta una serenata a Kat (Julia Stiles) en las gradas del campo de deportes. ¿Qué canción interpreta?",
+        "answer": "\"Can't Take My Eyes Off You\" de Frankie Valli.",
+        "fun_fact": "La película es una adaptación moderna de 'La Fierecilla Domada' de William Shakespeare. Los nombres de las hermanas Stratford (Kat y Bianca) y el apellido de Patrick (Verona) son referencias a la obra."
+      },
+      "tags": [
+        "Fácil",
+        "10 Things I Hate About You",
+        "Heath Ledger"
+      ]
+    },
+    {
+      "id": "acto-final-09",
+      "front": {
+        "title": "El Sandwich",
+        "number": 9,
+        "art_prompt": "Extreme close-up on a classic pastrami on rye sandwich on a deli plate. The shot is so tight you can see the texture of the meat and the mustard. The background is the blurred interior of a bustling New York deli, reminiscent of Katz's Delicatessen. Moody, cinematic lighting.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-09.jpg?v=1775420028614"
+      },
+      "back": {
+        "phrase": "Algunas actuaciones merecen un Oscar. Otras, un postre.",
+        "when_to_use": "Para la pregunta del millón en cualquier trivia de cine.",
+        "instruction": "En la famosa escena del orgasmo fingido en 'Cuando Harry conoció a Sally...', ¿qué frase le dice la mujer mayor de la mesa de al lado al camarero?",
+        "answer": "\"Tomaré lo mismo que ella\". (\"I'll have what she's having.\")",
+        "fun_fact": "La mujer que dice la icónica frase es Estelle Reiner, la madre del director de la película, Rob Reiner."
+      },
+      "tags": [
+        "Medio",
+        "When Harry Met Sally",
+        "Años 80"
+      ]
+    },
+    {
+      "id": "acto-final-10",
+      "front": {
+        "title": "Expectativa vs. Realidad",
+        "number": 10,
+        "art_prompt": "A split-screen cinematic shot. The left side shows a rooftop party with warm, golden hour lighting and happy people dancing. The right side shows the same rooftop, but it's dark, empty, and lit with cold, blue tones. The architecture is distinctly modern Los Angeles. Anamorphic lens.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-10.jpg?v=1775420035444"
+      },
+      "back": {
+        "phrase": "La película que te imaginas casi nunca es la que terminas viendo.",
+        "when_to_use": "Cuando la realidad no cumple con el guion.",
+        "instruction": "En '500 Días con Ella', la famosa secuencia de pantalla dividida 'Expectativa vs. Realidad' ocurre mientras Tom asiste a un evento. ¿Qué evento es?",
+        "answer": "La fiesta en la azotea de Summer.",
+        "fun_fact": "La película no sigue un orden cronológico. Salta entre los 500 días de la relación, una estructura narrativa que refleja cómo funciona la memoria al recordar un amor pasado."
+      },
+      "tags": [
+        "Medio",
+        "500 Days of Summer",
+        "Indie"
+      ]
+    },
+    {
+      "id": "acto-final-11",
+      "front": {
+        "title": "La Tienda de la Esquina",
+        "number": 11,
+        "art_prompt": "Cinematic interior shot of a charming, small children's bookstore. Sunlight streams through the front window, creating dust motes in the air. The shelves are filled with colorful books. The atmosphere is cozy and nostalgic. Warm, soft lighting and a slight film grain.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-11.jpg?v=1775420042634"
+      },
+      "back": {
+        "phrase": "Los negocios son una guerra. El amor, también.",
+        "when_to_use": "Para recordar los pequeños lugares con grandes historias.",
+        "instruction": "En 'Tienes un e-mail', Kathleen Kelly (Meg Ryan) es la dueña de una pequeña librería infantil independiente. ¿Cuál es su nombre?",
+        "answer": "The Shop Around the Corner.",
+        "fun_fact": "El nombre de la librería es un homenaje a la película de 1940 'The Shop Around the Corner', protagonizada por James Stewart, en la que se basa 'Tienes un e-mail'."
+      },
+      "tags": [
+        "Medio",
+        "You've Got Mail",
+        "Tom Hanks"
+      ]
+    },
+    {
+      "id": "acto-final-12",
+      "front": {
+        "title": "La Radio",
+        "number": 12,
+        "art_prompt": "A vintage radio microphone in a dimly lit studio. A cup of coffee steams beside it. Outside the window, the city lights of Seattle are blurred in the background. The mood is lonely and late-night. Cinematic, cool color palette with blues and greys.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-12.jpg?v=1775420051123"
+      },
+      "back": {
+        "phrase": "A veces, una voz en la oscuridad es todo lo que necesitas.",
+        "when_to_use": "Para una pregunta sobre conexiones a distancia.",
+        "instruction": "En 'Sintonía de Amor', el hijo de Sam (Tom Hanks) llama a un programa de radio para encontrarle una nueva esposa a su padre. ¿Cómo se llama la psicóloga y presentadora del programa?",
+        "answer": "Dr. Marcia Fieldstone.",
+        "fun_fact": "Aunque gran parte de la película se desarrolla en Seattle, Tom Hanks y Meg Ryan solo comparten pantalla durante aproximadamente dos minutos en total."
+      },
+      "tags": [
+        "Medio",
+        "Sleepless in Seattle",
+        "Meg Ryan"
+      ]
+    },
+    {
+      "id": "acto-final-13",
+      "front": {
+        "title": "La Fila del Cine",
+        "number": 13,
+        "art_prompt": "A man with glasses, looking like a young Woody Allen, stands in a movie theater line, looking annoyed. Behind him, a man pontificates loudly. Suddenly, a figure resembling Marshall McLuhan steps out from behind a movie poster. The lighting is surreal and theatrical. Anamorphic lens, 1970s film stock look.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-13.jpg?v=1775420060478"
+      },
+      "back": {
+        "phrase": "Si la vida te da la razón, úsala.",
+        "when_to_use": "Cuando desearías poder callar a un sabelotodo.",
+        "instruction": "En 'Annie Hall', Alvy Singer discute con un hombre en la fila del cine sobre la obra de un teórico de la comunicación. Para zanjar la discusión, ¿a qué figura intelectual real hace aparecer de la nada?",
+        "answer": "A Marshall McLuhan.",
+        "fun_fact": "La película ganó el Oscar a la Mejor Película en 1978, venciendo a 'Star Wars'. Woody Allen no asistió a la ceremonia; estaba tocando el clarinete en su concierto semanal de jazz en Nueva York."
+      },
+      "tags": [
+        "Medio",
+        "Annie Hall",
+        "Woody Allen"
+      ]
+    },
+    {
+      "id": "acto-final-14",
+      "front": {
+        "title": "Los Anillos",
+        "number": 14,
+        "art_prompt": "A close-up shot of two wedding rings left forgotten on a wooden church pew. The church is empty and filled with soft, diffused light from stained-glass windows. The mood is quiet and slightly panicked. Shallow depth of field, cinematic color grading.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-14.jpg?v=1775420069004"
+      },
+      "back": {
+        "phrase": "Llegar tarde es una cosa. Olvidar lo más importante es otra.",
+        "when_to_use": "Para un momento de despiste monumental.",
+        "instruction": "En 'Cuatro Bodas y un Funeral', Charles (Hugh Grant) es el padrino en la primera boda. ¿Qué objeto crucial olvida traer para la ceremonia?",
+        "answer": "Los anillos de boda.",
+        "fun_fact": "Hugh Grant inicialmente odiaba el guion, considerándolo demasiado elegante, pero aceptó el papel porque su agente le convenció. Se convirtió en la película que lo lanzó al estrellato internacional."
+      },
+      "tags": [
+        "Medio",
+        "Four Weddings and a Funeral",
+        "Comedia Británica"
+      ]
+    },
+    {
+      "id": "acto-final-15",
+      "front": {
+        "title": "El Gnomo Viajero",
+        "number": 15,
+        "art_prompt": "A garden gnome is photographed in front of the pyramids of Giza. The photo has the look of a vintage Polaroid, with faded colors and light leaks. The composition is quirky and charming. The lighting suggests the hot Egyptian sun. Cinematic travelogue aesthetic."
+      },
+      "back": {
+        "phrase": "A veces, para que alguien se mueva, hay que mover su mundo.",
+        "when_to_use": "Cuando un pequeño gesto lo cambia todo.",
+        "instruction": "En 'Amélie', para animar a su padre a viajar, Amélie 'secuestra' a un objeto de su jardín y le pide a una amiga azafata que le envíe fotos desde distintas partes del mundo. ¿Qué objeto era?",
+        "answer": "Un gnomo de jardín.",
+        "fun_fact": "La paleta de colores de la película, con predominio de verdes, rojos y amarillos, fue creada digitalmente en postproducción para darle a París un aspecto mágico e idealizado."
+      },
+      "tags": [
+        "Medio",
+        "Amélie",
+        "Cine Francés"
+      ]
+    },
+    {
+      "id": "acto-final-16",
+      "front": {
+        "title": "El Secreto",
+        "number": 16,
+        "art_prompt": "A wide, cinematic shot of a windswept, grey beach in Cornwall, England. A man and an older man walk together along the shore. The mood is intimate and profound. The color palette is muted, with cool blues and greys, typical of the British coast. Overcast lighting, heavy film grain."
+      },
+      "back": {
+        "phrase": "Vivir dos veces el mismo día no es hacer trampa. Es prestar atención.",
+        "when_to_use": "Para una pregunta sobre la fórmula de la felicidad.",
+        "instruction": "En 'Cuestión de Tiempo', el padre de Tim le revela que el verdadero secreto de la felicidad no es viajar en el tiempo, sino vivir cada día dos veces. ¿Cuál es la instrucción para la segunda vez?",
+        "answer": "Vivirlo de nuevo, pero sin la tensión y la preocupación, notando lo dulce que puede ser el mundo.",
+        "fun_fact": "La película fue escrita y dirigida por Richard Curtis, el mismo guionista de 'Notting Hill', 'Love Actually' y 'Cuatro Bodas y un Funeral'."
+      },
+      "tags": [
+        "Difícil",
+        "About Time",
+        "Viajes en el tiempo"
+      ]
+    },
+    {
+      "id": "acto-final-17",
+      "front": {
+        "title": "Lacuna, Inc.",
+        "number": 17,
+        "art_prompt": "A sterile, almost clinical waiting room. A single orange hoodie is draped over a chair. The lighting is harsh and fluorescent, creating a sense of unease. The walls are a bland, institutional beige. The composition is unsettling and minimalist. Anamorphic lens with slight distortion on the edges."
+      },
+      "back": {
+        "phrase": "Felices son los olvidadizos, pues superan incluso sus errores.",
+        "when_to_use": "Para una pregunta sobre el dolor de recordar.",
+        "instruction": "En '¡Olvídate de mí!', Joel (Jim Carrey) y Clementine (Kate Winslet) deciden borrar sus recuerdos mutuos. ¿Cómo se llama la empresa que realiza este procedimiento?",
+        "answer": "Lacuna, Inc.",
+        "fun_fact": "Gran parte de la película se filmó con cámaras de mano y se fomentó la improvisación para crear una sensación de realismo y caos que reflejara el estado mental de Joel durante el borrado."
+      },
+      "tags": [
+        "Difícil",
+        "Eternal Sunshine of the Spotless Mind",
+        "Jim Carrey"
+      ]
+    },
+    {
+      "id": "acto-final-18",
+      "front": {
+        "title": "La Cita",
+        "number": 18,
+        "art_prompt": "A shot of the iconic Wiener Riesenrad Ferris wheel in Vienna at dawn. The city is quiet and the sky is a soft pink and blue. The mood is romantic, hopeful, but also fleeting. The shot has a 90s indie film aesthetic, with natural light and a slightly grainy texture."
+      },
+      "back": {
+        "phrase": "Una noche puede ser una vida entera.",
+        "when_to_use": "Cuando una promesa queda en el aire.",
+        "instruction": "En 'Antes del Amanecer', Jesse y Céline pasan una noche juntos en Viena y prometen reencontrarse seis meses después sin intercambiar datos de contacto. ¿En qué andén de la estación de tren acuerdan encontrarse?",
+        "answer": "En el andén número nueve.",
+        "fun_fact": "La película fue coescrita por el director Richard Linklater y los dos actores principales, Ethan Hawke y Julie Delpy, quienes aportaron sus propias experiencias y diálogos."
+      },
+      "tags": [
+        "Difícil",
+        "Before Sunrise",
+        "Cine Independiente"
+      ]
+    },
+    {
+      "id": "acto-final-19",
+      "front": {
+        "title": "Buenos Días, Lucy",
+        "number": 19,
+        "art_prompt": "A stack of old VHS tapes next to a VCR player. One tape has a handwritten label that is just out of focus. The scene is lit by the blue glow of a TV screen off-camera. The setting is a cozy, nautical-themed room in Hawaii. Nostalgic, cinematic lighting."
+      },
+      "back": {
+        "phrase": "Cada día es una nueva primera cita.",
+        "when_to_use": "Para una pregunta sobre el amor y la memoria.",
+        "instruction": "En '50 Primeras Citas', Henry (Adam Sandler) crea una cinta de video para que Lucy (Drew Barrymore) la vea cada mañana y recuerde su vida. ¿Cómo se titula el video?",
+        "answer": "Good Morning, Lucy.",
+        "fun_fact": "El problema de memoria de Lucy, la 'Amnesia Anterógrada de Goldfield', es una condición ficticia creada para la película, aunque se inspira en casos reales de amnesia anterógrada."
+      },
+      "tags": [
+        "Difícil",
+        "50 First Dates",
+        "Adam Sandler"
+      ]
+    },
+    {
+      "id": "acto-final-20",
+      "front": {
+        "title": "Seb's",
+        "number": 20,
+        "art_prompt": "A close-up on the keys of a piano in a dimly lit jazz club. A single spotlight illuminates the keys and a glass of whiskey sitting on top of the piano. The background is dark and filled with blurred figures. The atmosphere is melancholic, bittersweet, and full of unspoken words. Deep, rich color palette with high contrast."
+      },
+      "back": {
+        "phrase": "Brindemos por los que sueñan, por tontos que parezcan.",
+        "when_to_use": "Para la pregunta final sobre los sueños y lo que dejamos atrás.",
+        "instruction": "En la secuencia final de 'La La Land', Mia, ahora una actriz famosa, entra en un club de jazz. Descubre que el dueño es Sebastian. ¿Qué nombre le puso él al club?",
+        "answer": "Seb's.",
+        "fun_fact": "El nombre 'Seb's' fue la sugerencia original de Mia en la película, aunque a Sebastian no le gustaba. Que él finalmente lo nombre así es un guiño a la influencia que ella tuvo en su vida."
+      },
+      "tags": [
+        "Difícil",
+        "La La Land",
+        "Musical"
+      ]
+    }
+  ]
+}

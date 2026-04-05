@@ -1,0 +1,267 @@
+{
+  "id": "trivia-sobre-cine-argentino-v1",
+  "edition": "trivia-sobre-cine-argentino",
+  "name": "Rollo Argento",
+  "slug": "trivia-sobre-cine-argentino",
+  "description": "Una baraja de trivia para poner a prueba cuánto sabés realmente del cine argentino. No son datos de enciclopedia, son momentos, escenas y detalles que definen nuestras películas. Para jugar entre amigos y ver quién es el que más sabe.",
+  "language": "es",
+  "card_count": 10,
+  "metadata": {
+    "topic": "Trivia sobre cine argentino",
+    "tone": "Desafiante y cultural",
+    "target_audience": "Cinéfilos y curiosos del cine nacional",
+    "player_count": "2 o más jugadores"
+  },
+  "print_spec_id": "baraja-landscape",
+  "design_template_id": "dark-minimal-01",
+  "pricing": {
+    "amount": 1500000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "rollo-argento-01",
+      "front": {
+        "title": "La Furia",
+        "number": 1,
+        "art_prompt": "An overhead shot of a chaotic city street at night in Buenos Aires. A single car is being towed away by a yellow tow truck. The style is hyper-realistic, with the color grading of Damián Szifron's cinematography: high contrast, slightly desaturated tones with pops of yellow and red. No people visible, just the urban tension and streetlights reflecting on wet pavement.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-01.jpg?v=1775422163969",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-01_v2026-04-05T20-49-23.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-01_v2026-04-05T20-43-23.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-01_v2026-04-05T20-37-57.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-01_v2026-04-05T20-00-36.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-01.jpg?v=1775418145218",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-01_v2026-04-05T19-36-47.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Hay que saber cuándo parar. Y cuándo no.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En \"Relatos Salvajes\", ¿qué objeto icónico utiliza el personaje de Ricardo Darín, \"Bombita\", para hacer estallar la grúa que remolca su auto?",
+        "answer": "Un matafuegos."
+      },
+      "tags": [
+        "Relatos Salvajes",
+        "Darín",
+        "Szifron",
+        "Fácil"
+      ]
+    },
+    {
+      "id": "rollo-argento-02",
+      "front": {
+        "title": "La Pasión",
+        "number": 2,
+        "art_prompt": "A close-up of a stack of handwritten letters on old paper. The handwriting is messy. The atmosphere is revealing and dramatic, like a sudden realization. The lighting emphasizes the texture of the paper and ink.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-02.jpg?v=1775422168276",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-02_v2026-04-05T20-49-28.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-02_v2026-04-05T20-38-04.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "El tipo puede cambiar de todo... pero hay una cosa que no puede cambiar.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En \"El Secreto de sus Ojos\", Benjamín y Sandoval descubren una pista oculta en las cartas que el sospechoso le enviaba a su madre. ¿Qué mencionaba constantemente sin sentido aparente?",
+        "answer": "Nombres de jugadores de Racing Club."
+      },
+      "tags": [
+        "El Secreto de sus Ojos",
+        "Campanella",
+        "Misterio",
+        "Fácil"
+      ]
+    },
+    {
+      "id": "rollo-argento-03",
+      "front": {
+        "title": "El Engaño",
+        "number": 3,
+        "art_prompt": "A dimly lit, luxurious hotel lobby from the early 2000s, possibly the Hilton in Puerto Madero. The focus is on a glass display case, but its contents are blurred and indistinct. Reflections of the polished marble floor and wood-paneled walls distort the view. The atmosphere is tense and conspiratorial. The style is inspired by Fabian Bielinsky's gritty, handheld camera look.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-03.jpg?v=1775422171820",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-03_v2026-04-05T20-49-31.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-03_v2026-04-05T20-38-11.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "El truco más grande es hacerles creer que tienen el control.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En \"Nueve Reinas\", ¿cuál es el nombre de las estampillas falsificadas que Marcos y Juan intentan vender en el hotel?",
+        "answer": "Las Nueve Reinas."
+      },
+      "tags": [
+        "Nueve Reinas",
+        "Bielinsky",
+        "Estafa",
+        "Medio"
+      ]
+    },
+    {
+      "id": "rollo-argento-04",
+      "front": {
+        "title": "El Postre",
+        "number": 4,
+        "art_prompt": "A chaotic dining table from the 1980s, covered in half-eaten plates of ravioles and empty wine bottles with classic 'Pingüino' pitchers. The focus is on a single, perfectly made flan con dulce de leche, sitting innocently in the center of the mess. The color palette is warm and slightly faded, like a vintage photograph from a family album. The lighting is harsh, typical of a midday Sunday lunch in a crowded house.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-04.jpg?v=1775422175666",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-04_v2026-04-05T20-49-35.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-04_v2026-04-05T20-38-19.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "A veces, la familia es el plato más difícil de digerir.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En la icónica escena del almuerzo de \"Esperando la Carroza\", Elvira (China Zorrilla) sirve un postre que genera un caos familiar. ¿Qué le habían puesto a los flanes?",
+        "answer": "Mayonesa."
+      },
+      "tags": [
+        "Esperando la Carroza",
+        "Comedia",
+        "Clásico",
+        "Difícil"
+      ]
+    },
+    {
+      "id": "rollo-argento-05",
+      "front": {
+        "title": "La Memoria",
+        "number": 5,
+        "art_prompt": "An empty, old-fashioned church pew made of dark, polished wood. Sunlight streams through a stained-glass window, casting colorful patterns on the floor. The atmosphere is quiet and contemplative, evoking a sense of nostalgia and lost time. The style is soft-focus and warm, reflecting the emotional tone of Campanella's film.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-05.jpg?v=1775422179572",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-05_v2026-04-05T20-49-39.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Nunca es tarde para cumplir una promesa.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En \"El Hijo de la Novia\", Rafael Belvedere cumple el sueño de su madre, que sufre de Alzheimer. ¿Qué ceremonia organiza para ella y su padre en el geriátrico?",
+        "answer": "Una boda por iglesia."
+      },
+      "tags": [
+        "El Hijo de la Novia",
+        "Campanella",
+        "Drama",
+        "Fácil"
+      ]
+    },
+    {
+      "id": "rollo-argento-06",
+      "front": {
+        "title": "Lo Inesperado",
+        "number": 6,
+        "art_prompt": "A tranquil lake scene in the Chinese countryside. A small wooden boat is adrift. The sky above is vast and empty, but there's a sense of something about to happen. The water is perfectly still, reflecting the clouds. The style is painterly and serene, creating a stark contrast with the absurd event the question implies. No animals visible.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-06.jpg?v=1775422182922",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-06_v2026-04-05T20-49-42.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-06_v2026-04-05T20-38-35.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "La vida es eso que te pasa mientras estás ocupado haciendo otros planes.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En \"Un Cuento Chino\", el personaje de Darín colecciona noticias bizarras. ¿Cuál es el evento increíble y absurdo que da inicio a la trama y une a los protagonistas?",
+        "answer": "Una vaca cae del cielo."
+      },
+      "tags": [
+        "Un Cuento Chino",
+        "Borensztein",
+        "Comedia Negra",
+        "Medio"
+      ]
+    },
+    {
+      "id": "rollo-argento-07",
+      "front": {
+        "title": "El Visitante",
+        "number": 7,
+        "art_prompt": "The interior of a stark, minimalist psychiatric hospital room from the 1980s, reminiscent of the Hospital Borda. A single empty bed with neatly tucked white sheets. The only light comes from a high, barred window, casting long, geometric shadows on the tiled floor. The color palette is cold and clinical, dominated by blues and greys, reflecting the film's sterile environment.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-07.jpg?v=1775422188576",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-07_v2026-04-05T20-49-48.jpg",
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-07_v2026-04-05T20-40-49.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "La locura es solo una forma diferente de ver la realidad.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En \"Hombre Mirando al Sudeste\", el misterioso paciente Rantés afirma no ser humano. ¿De dónde dice que proviene?",
+        "answer": "De otro planeta."
+      },
+      "tags": [
+        "Hombre Mirando al Sudeste",
+        "Subiela",
+        "Cine de Culto",
+        "Difícil"
+      ]
+    },
+    {
+      "id": "rollo-argento-08",
+      "front": {
+        "title": "La Fachada",
+        "number": 8,
+        "art_prompt": "The exterior of a typical suburban house in San Isidro from the 1980s, with a small, unassuming storefront on the ground floor. A faded sign with a silhouette of a windsurfer is visible. The windows are dark. The shot is taken from across the street, creating a sense of voyeurism and hidden secrets. The aesthetic is gritty, with film grain and a desaturated color palette reminiscent of Pablo Trapero's style.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-08.jpg?v=1775422192109",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-08_v2026-04-05T20-49-52.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Detrás de cada puerta cerrada, hay una historia que nadie conoce.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "En \"El Clan\", la familia Puccio mantenía una vida aparentemente normal mientras cometía crímenes atroces. ¿Qué negocio familiar usaban como fachada en su casa de San Isidro?",
+        "answer": "Una tienda de artículos de windsurf y deportes acuáticos."
+      },
+      "tags": [
+        "El Clan",
+        "Trapero",
+        "Basado en Hechos Reales",
+        "Medio"
+      ]
+    },
+    {
+      "id": "rollo-argento-09",
+      "front": {
+        "title": "La Sentencia",
+        "number": 9,
+        "art_prompt": "A wide shot of the interior of the Palacio de Tribunales in Buenos Aires. The courtroom is empty, but the weight of history is palpable. Sunlight illuminates dust particles in the air. The focus is on the imposing, empty judges' bench and the intricate woodwork. The style is documentary photography, solemn and respectful, with a slightly warm, 1980s film stock look.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-09.jpg?v=1775422195839"
+      },
+      "back": {
+        "phrase": "Hay palabras que pueden cambiar la historia de un país.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "Al final de su alegato en el Juicio a las Juntas en \"Argentina, 1985\", ¿con qué frase icónica cierra el fiscal Julio Strassera su discurso?",
+        "answer": "Señores jueces, nunca más."
+      },
+      "tags": [
+        "Argentina 1985",
+        "Mitre",
+        "Historia",
+        "Fácil"
+      ]
+    },
+    {
+      "id": "rollo-argento-10",
+      "front": {
+        "title": "El Verano",
+        "number": 10,
+        "art_prompt": "An abandoned, dirty swimming pool filled with murky green water and dead leaves. The tiles are cracked and broken. The surrounding vegetation of the countryside of Salta is overgrown and suffocating. The air is thick and humid, captured through a hazy, desaturated lens that conveys oppressive summer heat. The style is naturalistic and unsettling, mirroring Lucrecia Martel's cinematography.",
+        "art_url": "/assets/editions/trivia-sobre-cine-argentino/rollo-argento-10.jpg?v=1775422199875"
+      },
+      "back": {
+        "phrase": "El calor y el aburrimiento pueden ser una combinación peligrosa.",
+        "when_to_use": "Para una noche de trivia con amigos.",
+        "instruction": "La trama de \"La Ciénaga\" de Lucrecia Martel transcurre durante un verano opresivo en una finca familiar en decadencia. ¿Cómo se llama esa finca?",
+        "answer": "La Mandrágora."
+      },
+      "tags": [
+        "La Ciénaga",
+        "Lucrecia Martel",
+        "Cine de Autor",
+        "Difícil"
+      ]
+    }
+  ]
+}

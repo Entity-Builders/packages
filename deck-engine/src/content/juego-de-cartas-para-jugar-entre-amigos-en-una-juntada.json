@@ -1,0 +1,564 @@
+{
+  "id": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada-v1",
+  "edition": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada",
+  "name": "Rompelo",
+  "slug": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada",
+  "description": "Una baraja para juntadas. Menos charla de ascensor y más de lo que importa. Preguntas, retos y consignas para que la noche no termine en mirar el celular. Para usar con amigos, conocidos y futuros amigos.",
+  "language": "es",
+  "card_count": 30,
+  "metadata": {
+    "topic": "Juego para fiestas y juntadas",
+    "tone": "Descontracturado, directo, divertido",
+    "target_audience": "Amigos y grupos en una reunión social",
+    "player_count": "3+"
+  },
+  "print_spec_id": "baraja-standard",
+  "design_template_id": "dark-minimal-01",
+  "pricing": {
+    "amount": 1500000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "rompelo-01",
+      "front": {
+        "title": "El Apodo Secreto",
+        "number": 1,
+        "art_prompt": "Pop art collage style. A person's face constructed from mismatched newspaper and magazine clippings, like a ransom note. One eye is from a vintage ad, the mouth is smiling from a comic book. They are whispering into an old-fashioned rotary phone. Bright, contrasting colors like cyan and magenta."
+      },
+      "back": {
+        "phrase": "Todos tenemos un nombre que no elegimos.",
+        "when_to_use": "Para romper el hielo. Para 3+ jugadores.",
+        "instruction": "Quien sacó la carta debe revelar un apodo que tuvo (o tiene) y contar la historia de cómo surgió en menos de un minuto.",
+        "fun_fact": "El estudio de los apodos se llama 'antroponimia'."
+      },
+      "tags": [
+        "pregunta",
+        "rompehielos",
+        "historia"
+      ]
+    },
+    {
+      "id": "rompelo-02",
+      "front": {
+        "title": "La Primera Impresión",
+        "number": 2,
+        "art_prompt": "Surrealist painting. Two featureless mannequins meeting. One mannequin is offering the other a floating, glowing question mark. The background is a simple, flat color gradient from dusk orange to deep indigo. Sharp shadows."
+      },
+      "back": {
+        "phrase": "Casi nunca es acertada. Casi siempre es divertida.",
+        "when_to_use": "Cuando ya hay un poco de confianza. Para 3+ jugadores.",
+        "instruction": "Elegí a una persona del grupo y decile cuál fue tu primera impresión honesta sobre ella. Después, esa persona hace lo mismo con quien quiera."
+      },
+      "tags": [
+        "pregunta",
+        "confesion",
+        "picante"
+      ]
+    },
+    {
+      "id": "rompelo-03",
+      "front": {
+        "title": "El Placer Culposo",
+        "number": 3,
+        "art_prompt": "A vintage, worn-out cassette tape labeled 'MIS PECADOS' in handwritten marker. The tape is unspooling, and the magnetic tape itself forms the shape of a musical note and a small, smiling devil. 90s nostalgia aesthetic, grainy photo."
+      },
+      "back": {
+        "phrase": "Si no te da un poco de vergüenza, no es un buen placer culposo.",
+        "when_to_use": "Para subir el nivel de las confesiones. Para 3+ jugadores.",
+        "instruction": "Poné en YouTube la canción que es tu mayor placer culposo. Sin excusas. El grupo decide si es suficientemente culposa o no."
+      },
+      "tags": [
+        "musica",
+        "confesion",
+        "rompehielos"
+      ]
+    },
+    {
+      "id": "rompelo-04",
+      "front": {
+        "title": "La Habilidad Inútil",
+        "number": 4,
+        "art_prompt": "Linocut print style. A person perfectly balancing a spoon on their nose while juggling three rubber chickens. The expression is one of intense, misplaced concentration. Simple, bold lines on a textured paper background."
+      },
+      "back": {
+        "phrase": "El talento no siempre tiene que servir para algo.",
+        "when_to_use": "Para un momento de risas. Para 3+ jugadores.",
+        "instruction": "Demostrá en vivo y en directo tu talento más inútil. El que no tiene ninguna aplicación práctica en la vida. El grupo aplaude según la inutilidad."
+      },
+      "tags": [
+        "habilidad",
+        "absurdo",
+        "performance"
+      ]
+    },
+    {
+      "id": "rompelo-05",
+      "front": {
+        "title": "La Compra Estúpida",
+        "number": 5,
+        "art_prompt": "Realistic still life photo. A dusty, unused Shake Weight sits next to a banana slicer and a singing fish mounted on a plaque ('Big Mouth Billy Bass'). The lighting is dramatic, like a museum exhibit for regrettable purchases."
+      },
+      "back": {
+        "phrase": "Alguien lo fabricó. Alguien lo publicitó. Y vos lo compraste.",
+        "when_to_use": "Para compartir errores financieros. Para 3+ jugadores.",
+        "instruction": "Contá la historia de la compra más estúpida que hiciste. Mostrá una foto si la tenés. El grupo vota si fue una inversión o un desastre."
+      },
+      "tags": [
+        "pregunta",
+        "historia",
+        "dinero"
+      ]
+    },
+    {
+      "id": "rompelo-06",
+      "front": {
+        "title": "El Mensaje Equivocado",
+        "number": 6,
+        "art_prompt": "Close-up on a smartphone screen. A text bubble with 'JAJAJA TE DIJE QUE ERA UN IDIOTA' is visible, but the contact name at the top is 'Mamá'. The screen has a slight crack. The background is blurred, focusing on the horror of the message. Cinematic, tense lighting."
+      },
+      "back": {
+        "phrase": "El terror de la doble tilde azul.",
+        "when_to_use": "Para cuando la noche pide algo picante. Para 3+ jugadores.",
+        "instruction": "Leé en voz alta (o parafraseá si es muy privado) el mensaje más vergonzoso que alguna vez mandaste a la persona equivocada. El grupo evalúa el nivel de cringe del 1 al 10."
+      },
+      "tags": [
+        "confesion",
+        "picante",
+        "tecnologia"
+      ]
+    },
+    {
+      "id": "rompelo-07",
+      "front": {
+        "title": "La Teoría Conspirativa",
+        "number": 7,
+        "art_prompt": "A diagram drawn with red string on a corkboard, connecting seemingly random photos: a picture of a pigeon, the Mona Lisa, a jar of mayonnaise, and an old Nokia phone. In the center, a big, bold question mark. Detective movie aesthetic."
+      },
+      "back": {
+        "phrase": "No digo que sea cierto, pero tampoco tengo pruebas de lo contrario.",
+        "when_to_use": "Para explorar las mentes del grupo. Para 3+ jugadores.",
+        "instruction": "Tenés 60 segundos para convencer al grupo de una teoría conspirativa en la que creés (o una que te parezca divertida). El grupo decide si se une a tu secta."
+      },
+      "tags": [
+        "pregunta",
+        "debate",
+        "absurdo"
+      ]
+    },
+    {
+      "id": "rompelo-08",
+      "front": {
+        "title": "El Superpoder Mundano",
+        "number": 8,
+        "art_prompt": "A person in a superhero costume, complete with a cape made from a dish towel, triumphantly holding up a perfectly ripe avocado. The setting is a normal supermarket aisle. The style is heroic and epic, like a movie poster, but for a boring superpower."
+      },
+      "back": {
+        "phrase": "Los grandes poderes conllevan pequeños problemas cotidianos.",
+        "when_to_use": "Para un momento creativo. Para 3+ jugadores.",
+        "instruction": "Si pudieras tener un superpoder increíblemente mundano y específico (ej: saber siempre qué fila del súper es más rápida), ¿cuál sería? El grupo vota por el más útil."
+      },
+      "tags": [
+        "creatividad",
+        "pregunta",
+        "absurdo"
+      ]
+    },
+    {
+      "id": "rompelo-09",
+      "front": {
+        "title": "La Peor Cita",
+        "number": 9,
+        "art_prompt": "A single, wilted rose lies on an empty table for two in a cheap restaurant. One chair is knocked over. A single tear drop is illustrated on the table cloth. Melodramatic, film noir style with heavy shadows."
+      },
+      "back": {
+        "phrase": "A veces, el amor de tu vida es no volver a ver a esa persona.",
+        "when_to_use": "Para compartir historias de terror romántico. Para 3+ jugadores.",
+        "instruction": "Describí tu peor cita en solo tres palabras. El resto del grupo tiene que adivinar qué pasó. Luego contás la historia completa."
+      },
+      "tags": [
+        "historia",
+        "confesion",
+        "adivinar"
+      ]
+    },
+    {
+      "id": "rompelo-10",
+      "front": {
+        "title": "El Barman",
+        "number": 10,
+        "art_prompt": "Action shot of a person in a normal living room, dramatically shaking a cocktail shaker made from a Tupperware container. They are wearing a cheap party store bowtie. Splashes of a colorful drink are frozen mid-air around them. High-speed photography, vibrant colors."
+      },
+      "back": {
+        "phrase": "La coctelería es la ciencia de mezclar cosas que tenés a mano.",
+        "when_to_use": "Cuando hay bebidas cerca. Para 3+ jugadores.",
+        "instruction": "Te convertís en el barman oficial. La persona a tu derecha te pide un trago (con o sin alcohol) y tenés que preparárselo usando un máximo de 3 ingredientes que encuentres. Ponele un nombre ridículo."
+      },
+      "tags": [
+        "reto",
+        "bebidas",
+        "accion"
+      ]
+    },
+    {
+      "id": "rompelo-11",
+      "front": {
+        "title": "El Imitador",
+        "number": 11,
+        "art_prompt": "Expressionist painting. A figure made of swirling, colorful brushstrokes stands in the center of a circle of calm, monochrome figures. The central figure is contorting its body to mimic the shape of one of the others. The style is chaotic and energetic."
+      },
+      "back": {
+        "phrase": "Somos un reflejo de los demás. A veces, un reflejo deforme.",
+        "when_to_use": "Para poner a prueba la capacidad de observación. Para 4+ jugadores.",
+        "instruction": "Elegí en secreto a alguien del grupo. Tenés que imitar su forma de hablar, sus gestos o sus muletillas hasta que alguien adivine de quién se trata. No podés decir su nombre."
+      },
+      "tags": [
+        "reto",
+        "performance",
+        "adivinar"
+      ]
+    },
+    {
+      "id": "rompelo-12",
+      "front": {
+        "title": "El Teléfono Rojo",
+        "number": 12,
+        "art_prompt": "A hand nervously offers a smartphone to another hand. The phone's screen glows with a menacing red light, projecting a devil emoji shadow on the wall behind it. Tense, cinematic lighting."
+      },
+      "back": {
+        "phrase": "La confianza es entregar tu celular desbloqueado.",
+        "when_to_use": "Solo para valientes. Para 3+ jugadores.",
+        "instruction": "Entregale tu celular desbloqueado a la persona de tu izquierda. Esa persona puede ver tus últimos 5 emojis usados y tiene que enviar uno a tu último contacto de WhatsApp. Sin dar explicaciones."
+      },
+      "tags": [
+        "reto",
+        "picante",
+        "tecnologia"
+      ]
+    },
+    {
+      "id": "rompelo-13",
+      "front": {
+        "title": "El Poeta Urbano",
+        "number": 13,
+        "art_prompt": "A microphone covered in graffiti stands alone on a stage under a single spotlight. The background is a dark, blurry audience in what looks like a living room. The style is a mix of gritty realism and concert photography."
+      },
+      "back": {
+        "phrase": "Las mejores rimas nacen de la presión.",
+        "when_to_use": "Para un estallido de creatividad. Para 3+ jugadores.",
+        "instruction": "El grupo te da una palabra. Tenés 30 segundos para improvisar una rima o un rap corto que incluya esa palabra y que hable sobre la persona que está a tu derecha."
+      },
+      "tags": [
+        "reto",
+        "creatividad",
+        "musica"
+      ]
+    },
+    {
+      "id": "rompelo-14",
+      "front": {
+        "title": "La Estatua",
+        "number": 14,
+        "art_prompt": "A person frozen mid-laugh, holding a slice of pizza, is slowly being covered in what looks like grey plaster, turning into a garden statue. The scene is a regular party, but only this person is affected. Surreal digital art."
+      },
+      "back": {
+        "phrase": "A veces, la mejor jugada es no moverse.",
+        "when_to_use": "Para un reto de resistencia. Para 3+ jugadores.",
+        "instruction": "Tenés que quedarte completamente quieto, como una estatua, en la posición exacta en la que estás ahora. No podés moverte ni hablar hasta que sea tu próximo turno. Los demás pueden intentar hacerte reír."
+      },
+      "tags": [
+        "reto",
+        "resistencia",
+        "fisico"
+      ]
+    },
+    {
+      "id": "rompelo-15",
+      "front": {
+        "title": "El Trovador",
+        "number": 15,
+        "art_prompt": "A medieval bard, but dressed in modern clothes (jeans and a hoodie), playing a lute in the middle of a kitchen during a party. The people around him look confused but amused. Renaissance painting style with modern elements."
+      },
+      "back": {
+        "phrase": "Todo suena más dramático si lo cantás.",
+        "when_to_use": "Para agregarle absurdo a la conversación. Para 3+ jugadores.",
+        "instruction": "Durante las próximas dos rondas (hasta que te vuelva a tocar), solo podés comunicarte cantando. Usá la melodía de 'Feliz Cumpleaños' para todo lo que digas."
+      },
+      "tags": [
+        "reto",
+        "absurdo",
+        "performance"
+      ]
+    },
+    {
+      "id": "rompelo-16",
+      "front": {
+        "title": "El Sacrificio",
+        "number": 16,
+        "art_prompt": "Two people are dramatically swapping a single sock and a hat under a dim light, as if exchanging state secrets. Their expressions are dead serious. The style is a high-contrast black and white photo, reminiscent of a spy movie."
+      },
+      "back": {
+        "phrase": "La amistad es compartir hasta la ropa.",
+        "when_to_use": "Para un reto físico y visual. Para 3+ jugadores.",
+        "instruction": "Elegí a una persona del grupo. Ambos tienen que intercambiar una prenda de ropa (visible) y usarla durante las próximas tres rondas. Medias, gorros y accesorios cuentan."
+      },
+      "tags": [
+        "reto",
+        "interaccion",
+        "fisico"
+      ]
+    },
+    {
+      "id": "rompelo-17",
+      "front": {
+        "title": "El Rey del Tiktok",
+        "number": 17,
+        "art_prompt": "A classical Greek statue, like the Discobolus, but frozen in the middle of a recognizable, modern TikTok dance pose. The statue is in a museum, and tourists are taking pictures with their phones. Juxtaposition of classical and modern, realistic style."
+      },
+      "back": {
+        "phrase": "El ridículo es solo un paso de baile que no te animás a hacer.",
+        "when_to_use": "Para un momento de movimiento. Para 3+ jugadores.",
+        "instruction": "Buscá en tu celular 'challenge de baile viral'. Tenés que intentar hacer los primeros 15 segundos del primer video que aparezca. No se juzga la calidad, solo el esfuerzo."
+      },
+      "tags": [
+        "reto",
+        "baile",
+        "tecnologia"
+      ]
+    },
+    {
+      "id": "rompelo-18",
+      "front": {
+        "title": "El Contacto Extraterrestre",
+        "number": 18,
+        "art_prompt": "A person stands on a suburban balcony at night, shouting towards a sky full of stars. A single, comically small UFO with a tiny green alien waving shines a spotlight on them. Sci-fi illustration with a humorous twist."
+      },
+      "back": {
+        "phrase": "Hay que llamar la atención del universo.",
+        "when_to_use": "Cuando se puede hacer un poco de ruido. Para 3+ jugadores.",
+        "instruction": "Andá a la ventana o balcón más cercano y gritá con convicción: '¡NO ESTAMOS SOLOS! ¡MANIFIÉSTENSE!'. Tenés que hacerlo lo suficientemente fuerte como para que te escuchen."
+      },
+      "tags": [
+        "reto",
+        "absurdo",
+        "ruido"
+      ]
+    },
+    {
+      "id": "rompelo-19",
+      "front": {
+        "title": "El Pitch de Venta",
+        "number": 19,
+        "art_prompt": "A slick, fast-talking salesman from a 1950s advertisement, but instead of a car, he's enthusiastically presenting a half-eaten bag of potato chips on a pedestal. The background is a burst of bright, optimistic colors. Vintage ad style."
+      },
+      "back": {
+        "phrase": "Todo se puede vender si tenés la historia correcta.",
+        "when_to_use": "Para un desafío de improvisación. Para 3+ jugadores.",
+        "instruction": "El grupo elige un objeto insignificante que esté a la vista (un corcho, una servilleta, un control remoto). Tenés 60 segundos para improvisar un comercial de TV vendiendo ese objeto como si fuera el invento del siglo."
+      },
+      "tags": [
+        "creatividad",
+        "improvisacion",
+        "performance"
+      ]
+    },
+    {
+      "id": "rompelo-20",
+      "front": {
+        "title": "El Nuevo Animal",
+        "number": 20,
+        "art_prompt": "A scientific illustration from an old biology textbook, depicting a creature with the head of a flamingo and the body of a corgi. The illustration includes anatomical notes and a latin name: 'Corgius Phoenicopterus'. Vintage scientific drawing style."
+      },
+      "back": {
+        "phrase": "La naturaleza se olvidó de crear algunas cosas.",
+        "when_to_use": "Para un momento de imaginación grupal. Para 3+ jugadores.",
+        "instruction": "Combiná dos animales para crear una nueva especie. Describí su nombre, su hábitat, qué come y, lo más importante, hacé su sonido característico. El grupo vota por el más creativo."
+      },
+      "tags": [
+        "creatividad",
+        "absurdo",
+        "imaginacion"
+      ]
+    },
+    {
+      "id": "rompelo-21",
+      "front": {
+        "title": "El Título de la Película",
+        "number": 21,
+        "art_prompt": "A huge, blank movie theatre screen illuminates an empty cinema. On the screen, in classic movie trailer font, are just three bold question marks: '???'. The atmosphere is mysterious and full of potential. Cinematic photography."
+      },
+      "back": {
+        "phrase": "Un buen título es solo el principio de cualquier historia.",
+        "when_to_use": "Para un juego de narración rápida. Para 4+ jugadores.",
+        "instruction": "Decí el título de una película real. Empezando por la persona a tu izquierda, cada uno tiene que inventar y contar una trama completamente diferente para ese título. Gana la historia más original."
+      },
+      "tags": [
+        "creatividad",
+        "narracion",
+        "improvisacion"
+      ]
+    },
+    {
+      "id": "rompelo-22",
+      "front": {
+        "title": "El Rediseño de la Bandera",
+        "number": 22,
+        "art_prompt": "A hand is shown drawing a new national flag on a napkin with a crayon. The design is childish but earnest, featuring a smiling sun, a slice of pizza, and a soccer ball. The background is a blurry cafe setting."
+      },
+      "back": {
+        "phrase": "Un país es más que sus símbolos. Pero empecemos por ahí.",
+        "when_to_use": "Para un debate creativo y divertido. Para 3+ jugadores.",
+        "instruction": "Tenés un minuto para rediseñar la bandera de tu país. No hace falta que la dibujes, solo describila y justificá el porqué de tus nuevos símbolos y colores. Preparate para defender tu diseño."
+      },
+      "tags": [
+        "creatividad",
+        "debate",
+        "diseño"
+      ]
+    },
+    {
+      "id": "rompelo-23",
+      "front": {
+        "title": "El Juicio",
+        "number": 23,
+        "art_prompt": "An empty pizza box sits on a witness stand in a grand, wood-paneled courtroom. A single crumb is highlighted by a dramatic spotlight. The style is a still from a high-stakes legal drama like 'Law & Order'."
+      },
+      "back": {
+        "phrase": "La justicia es ciega, pero el hambre no.",
+        "when_to_use": "Para un juego de roles. Para 4+ jugadores.",
+        "instruction": "Se arma un juicio. La persona a tu derecha es la acusada del 'crimen' que vos elijas (ej: 'poner ananá a la pizza'). Vos sos el fiscal. La persona a la izquierda del acusado es su abogado/a. El resto es el jurado y da el veredicto."
+      },
+      "tags": [
+        "juegoderol",
+        "debate",
+        "improvisacion"
+      ]
+    },
+    {
+      "id": "rompelo-24",
+      "front": {
+        "title": "El Himno del Grupo",
+        "number": 24,
+        "art_prompt": "A group of friends with their arms around each other, singing loudly and out of tune. Their figures are rendered as minimalist, abstract shapes of color, conveying energy and camaraderie rather than realistic detail. Abstract expressionism."
+      },
+      "back": {
+        "phrase": "Toda banda necesita su hit.",
+        "when_to_use": "Para un momento de unión. Para 3+ jugadores.",
+        "instruction": "Entre todos, tienen 3 minutos para componer un himno de cuatro líneas que represente a su grupo de amigos. Al final, tienen que cantarlo todos juntos con la mano en el corazón."
+      },
+      "tags": [
+        "creatividad",
+        "grupal",
+        "musica"
+      ]
+    },
+    {
+      "id": "rompelo-25",
+      "front": {
+        "title": "El Menú Incomible",
+        "number": 25,
+        "art_prompt": "A fancy, gourmet dish presented on a white plate. It consists of a scoop of mint chocolate chip ice cream topped with ketchup and garnished with a single sardine. The lighting and presentation are worthy of a Michelin star restaurant. Hyper-realistic food photography."
+      },
+      "back": {
+        "phrase": "La alta cocina se atreve a todo. Vos también.",
+        "when_to_use": "Para estirar la imaginación. Para 3+ jugadores.",
+        "instruction": "Inventá un menú de tres pasos (entrada, plato principal, postre) usando las combinaciones de comida más asquerosas que se te ocurran. Tenés que describirlo con lenguaje de chef profesional."
+      },
+      "tags": [
+        "creatividad",
+        "absurdo",
+        "comida"
+      ]
+    },
+    {
+      "id": "rompelo-26",
+      "front": {
+        "title": "El Objeto Parlante",
+        "number": 26,
+        "art_prompt": "A worn-out armchair with a cartoonish, expressive face drawn onto it. It sits in an empty room, under a spotlight, as if it's about to give a monologue. The style is theatrical and slightly surreal."
+      },
+      "back": {
+        "phrase": "Si las paredes hablaran... hoy les toca a los sillones.",
+        "when_to_use": "Para un ejercicio de perspectiva. Para 3+ jugadores.",
+        "instruction": "Elegí un objeto inanimado en la habitación (una lámpara, una silla, una botella). Durante los próximos 5 minutos, sos ese objeto. El resto del grupo puede hacerte preguntas y tenés que responder desde su perspectiva."
+      },
+      "tags": [
+        "juegoderol",
+        "improvisacion",
+        "perspectiva"
+      ]
+    },
+    {
+      "id": "rompelo-27",
+      "front": {
+        "title": "El Doblaje",
+        "number": 27,
+        "art_prompt": "Two people are looking intently at a muted TV screen showing a dramatic movie scene. They are speaking into banana and a bottle of water as if they were microphones. The scene is candid and full of laughter. Documentary photography style."
+      },
+      "back": {
+        "phrase": "Las palabras correctas pueden cambiar toda la historia.",
+        "when_to_use": "Cuando hay una pantalla cerca. Para 3+ jugadores.",
+        "instruction": "Poné cualquier escena de una película o serie en la tele, pero sin volumen. Vos y la persona de tu derecha tienen que doblar los diálogos en tiempo real durante un minuto."
+      },
+      "tags": [
+        "improvisacion",
+        "creatividad",
+        "performance"
+      ]
+    },
+    {
+      "id": "rompelo-28",
+      "front": {
+        "title": "La Noticia de Último Momento",
+        "number": 28,
+        "art_prompt": "A news anchor, looking extremely serious and professional, sits at a news desk. The graphic on the screen behind them reads 'ÚLTIMO MOMENTO' but the image shown is of a cat knocking over a glass of water. The style of a 24-hour news channel broadcast."
+      },
+      "back": {
+        "phrase": "Cualquier evento puede ser una noticia. Depende de cómo lo cuentes.",
+        "when_to_use": "Para transformar lo mundano en algo épico. Para 3+ jugadores.",
+        "instruction": "Observá al grupo. Lo primero que haga alguien (bostezar, mirar el celular, rascarse), tenés que narrarlo como si fueras un corresponsal de noticias cubriendo un evento histórico. Usá un tono solemne."
+      },
+      "tags": [
+        "improvisacion",
+        "performance",
+        "absurdo"
+      ]
+    },
+    {
+      "id": "rompelo-29",
+      "front": {
+        "title": "El Dios Menor",
+        "number": 29,
+        "art_prompt": "A majestic figure in a toga, looking like a Greek god, stands on a cloud. But instead of lightning bolts, they are holding a single, lonely sock. Their expression is one of mild frustration and divine responsibility. Classical painting style."
+      },
+      "back": {
+        "phrase": "No todos los dioses mueven montañas. Algunos solo esconden tus llaves.",
+        "when_to_use": "Para un ejercicio de creación de personajes. Para 3+ jugadores.",
+        "instruction": "Te convertís en el dios o diosa de una pequeña inconveniencia cotidiana (ej: el dios del wifi que se corta, la diosa de los auriculares enredados). Presentate al grupo y explicá tus poderes y dominios."
+      },
+      "tags": [
+        "creatividad",
+        "juegoderol",
+        "imaginacion"
+      ]
+    },
+    {
+      "id": "rompelo-30",
+      "front": {
+        "title": "El Discurso de Aceptación",
+        "number": 30,
+        "art_prompt": "A person stands on a chair in a living room, emotionally clutching a bottle of ketchup like it's an Oscar trophy. Confetti made from torn napkins rains down on them. The style is dramatic and celebratory, like a photo from an awards ceremony."
+      },
+      "back": {
+        "phrase": "Siempre hay que estar listo para agradecer.",
+        "when_to_use": "Para cerrar la noche con un poco de drama. Para 3+ jugadores.",
+        "instruction": "Acabás de ganar el premio a 'La persona más probable de [el grupo completa la frase]'. Tenés 30 segundos para dar un discurso de aceptación emotivo. Agradecé a tus amigos, a tu familia y a tus rivales."
+      },
+      "tags": [
+        "performance",
+        "improvisacion",
+        "grupal"
+      ]
+    }
+  ]
+}
