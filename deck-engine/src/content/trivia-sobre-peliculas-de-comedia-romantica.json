@@ -25,7 +25,10 @@
         "title": "La Ópera",
         "number": 1,
         "art_prompt": "Cinematic shot of elegant, red velvet opera gloves resting on a program for 'La Traviata'. Moody, dramatic lighting from a single source, creating long shadows. Anamorphic lens flare, deep color saturation, and a fine layer of film grain. The setting feels like the Dorothy Chandler Pavilion, Los Angeles.",
-        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-01.jpg?v=1775416973528"
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-01_v2026-04-05T21-02-58.jpg",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-01.jpg?v=1775422978015"
+        ]
       },
       "back": {
         "phrase": "Algunos tenedores son más complicados que otros.",
