@@ -446,12 +446,6 @@
       ]
     }
   ],
-  "print_specs_overrides": {
-    "dimensions": {
-      "width": 150,
-      "height": 80
-    },
-    "testProp": true
-  },
+  "print_specs_overrides": {},
   "design_template_overrides": {}
 }
