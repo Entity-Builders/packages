@@ -24,7 +24,11 @@
       "front": {
         "title": "El Apodo Secreto",
         "number": 1,
-        "art_prompt": "Pop art collage style. A person's face constructed from mismatched newspaper and magazine clippings, like a ransom note. One eye is from a vintage ad, the mouth is smiling from a comic book. They are whispering into an old-fashioned rotary phone. Bright, contrasting colors like cyan and magenta."
+        "art_prompt": "Pop art collage style. A person's face constructed from mismatched newspaper and magazine clippings, like a ransom note. One eye is from a vintage ad, the mouth is smiling from a comic book. They are whispering into an old-fashioned rotary phone. Bright, contrasting colors like cyan and magenta.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-01.jpg?v=1775423473251",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-01_v2026-04-05T21-11-13.jpg"
+        ]
       },
       "back": {
         "phrase": "Todos tenemos un nombre que no elegimos.",
@@ -43,7 +47,11 @@
       "front": {
         "title": "La Primera Impresión",
         "number": 2,
-        "art_prompt": "Surrealist painting. Two featureless mannequins meeting. One mannequin is offering the other a floating, glowing question mark. The background is a simple, flat color gradient from dusk orange to deep indigo. Sharp shadows."
+        "art_prompt": "Surrealist painting. Two featureless mannequins meeting. One mannequin is offering the other a floating, glowing question mark. The background is a simple, flat color gradient from dusk orange to deep indigo. Sharp shadows.",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-02_v2026-04-05T21-19-19.jpg"
+        ],
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-02.jpg?v=1775423959954"
       },
       "back": {
         "phrase": "Casi nunca es acertada. Casi siempre es divertida.",
@@ -61,7 +69,11 @@
       "front": {
         "title": "El Placer Culposo",
         "number": 3,
-        "art_prompt": "A vintage, worn-out cassette tape labeled 'MIS PECADOS' in handwritten marker. The tape is unspooling, and the magnetic tape itself forms the shape of a musical note and a small, smiling devil. 90s nostalgia aesthetic, grainy photo."
+        "art_prompt": "A vintage, worn-out cassette tape labeled 'MIS PECADOS' in handwritten marker. The tape is unspooling, and the magnetic tape itself forms the shape of a musical note and a small, smiling devil. 90s nostalgia aesthetic, grainy photo.",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-03_v2026-04-05T21-19-23.jpg"
+        ],
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-03.jpg?v=1775423963719"
       },
       "back": {
         "phrase": "Si no te da un poco de vergüenza, no es un buen placer culposo.",
@@ -79,7 +91,11 @@
       "front": {
         "title": "La Habilidad Inútil",
         "number": 4,
-        "art_prompt": "Linocut print style. A person perfectly balancing a spoon on their nose while juggling three rubber chickens. The expression is one of intense, misplaced concentration. Simple, bold lines on a textured paper background."
+        "art_prompt": "Linocut print style. A person perfectly balancing a spoon on their nose while juggling three rubber chickens. The expression is one of intense, misplaced concentration. Simple, bold lines on a textured paper background.",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-04_v2026-04-05T21-19-27.jpg"
+        ],
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-04.jpg?v=1775423967815"
       },
       "back": {
         "phrase": "El talento no siempre tiene que servir para algo.",
@@ -97,7 +113,11 @@
       "front": {
         "title": "La Compra Estúpida",
         "number": 5,
-        "art_prompt": "Realistic still life photo. A dusty, unused Shake Weight sits next to a banana slicer and a singing fish mounted on a plaque ('Big Mouth Billy Bass'). The lighting is dramatic, like a museum exhibit for regrettable purchases."
+        "art_prompt": "Realistic still life photo. A dusty, unused Shake Weight sits next to a banana slicer and a singing fish mounted on a plaque ('Big Mouth Billy Bass'). The lighting is dramatic, like a museum exhibit for regrettable purchases.",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-05_v2026-04-05T21-19-31.jpg"
+        ],
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-05.jpg?v=1775423971699"
       },
       "back": {
         "phrase": "Alguien lo fabricó. Alguien lo publicitó. Y vos lo compraste.",
@@ -115,7 +135,11 @@
       "front": {
         "title": "El Mensaje Equivocado",
         "number": 6,
-        "art_prompt": "Close-up on a smartphone screen. A text bubble with 'JAJAJA TE DIJE QUE ERA UN IDIOTA' is visible, but the contact name at the top is 'Mamá'. The screen has a slight crack. The background is blurred, focusing on the horror of the message. Cinematic, tense lighting."
+        "art_prompt": "Close-up on a smartphone screen. A text bubble with 'JAJAJA TE DIJE QUE ERA UN IDIOTA' is visible, but the contact name at the top is 'Mamá'. The screen has a slight crack. The background is blurred, focusing on the horror of the message. Cinematic, tense lighting.",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-06_v2026-04-05T21-19-35.jpg"
+        ],
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-06.jpg?v=1775423975112"
       },
       "back": {
         "phrase": "El terror de la doble tilde azul.",
@@ -133,7 +157,8 @@
       "front": {
         "title": "La Teoría Conspirativa",
         "number": 7,
-        "art_prompt": "A diagram drawn with red string on a corkboard, connecting seemingly random photos: a picture of a pigeon, the Mona Lisa, a jar of mayonnaise, and an old Nokia phone. In the center, a big, bold question mark. Detective movie aesthetic."
+        "art_prompt": "A diagram drawn with red string on a corkboard, connecting seemingly random photos: a picture of a pigeon, the Mona Lisa, a jar of mayonnaise, and an old Nokia phone. In the center, a big, bold question mark. Detective movie aesthetic.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-07.jpg?v=1775423979690"
       },
       "back": {
         "phrase": "No digo que sea cierto, pero tampoco tengo pruebas de lo contrario.",
@@ -151,7 +176,8 @@
       "front": {
         "title": "El Superpoder Mundano",
         "number": 8,
-        "art_prompt": "A person in a superhero costume, complete with a cape made from a dish towel, triumphantly holding up a perfectly ripe avocado. The setting is a normal supermarket aisle. The style is heroic and epic, like a movie poster, but for a boring superpower."
+        "art_prompt": "A person in a superhero costume, complete with a cape made from a dish towel, triumphantly holding up a perfectly ripe avocado. The setting is a normal supermarket aisle. The style is heroic and epic, like a movie poster, but for a boring superpower.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-08.jpg?v=1775423983437"
       },
       "back": {
         "phrase": "Los grandes poderes conllevan pequeños problemas cotidianos.",
@@ -169,7 +195,8 @@
       "front": {
         "title": "La Peor Cita",
         "number": 9,
-        "art_prompt": "A single, wilted rose lies on an empty table for two in a cheap restaurant. One chair is knocked over. A single tear drop is illustrated on the table cloth. Melodramatic, film noir style with heavy shadows."
+        "art_prompt": "A single, wilted rose lies on an empty table for two in a cheap restaurant. One chair is knocked over. A single tear drop is illustrated on the table cloth. Melodramatic, film noir style with heavy shadows.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-09.jpg?v=1775423987509"
       },
       "back": {
         "phrase": "A veces, el amor de tu vida es no volver a ver a esa persona.",
@@ -187,7 +214,11 @@
       "front": {
         "title": "El Barman",
         "number": 10,
-        "art_prompt": "Action shot of a person in a normal living room, dramatically shaking a cocktail shaker made from a Tupperware container. They are wearing a cheap party store bowtie. Splashes of a colorful drink are frozen mid-air around them. High-speed photography, vibrant colors."
+        "art_prompt": "Action shot of a person in a normal living room, dramatically shaking a cocktail shaker made from a Tupperware container. They are wearing a cheap party store bowtie. Splashes of a colorful drink are frozen mid-air around them. High-speed photography, vibrant colors.",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-10_v2026-04-05T21-19-51.jpg"
+        ],
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-10.jpg?v=1775423991648"
       },
       "back": {
         "phrase": "La coctelería es la ciencia de mezclar cosas que tenés a mano.",
@@ -205,7 +236,11 @@
       "front": {
         "title": "El Imitador",
         "number": 11,
-        "art_prompt": "Expressionist painting. A figure made of swirling, colorful brushstrokes stands in the center of a circle of calm, monochrome figures. The central figure is contorting its body to mimic the shape of one of the others. The style is chaotic and energetic."
+        "art_prompt": "Expressionist painting. A figure made of swirling, colorful brushstrokes stands in the center of a circle of calm, monochrome figures. The central figure is contorting its body to mimic the shape of one of the others. The style is chaotic and energetic.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-11.jpg?v=1775424541438",
+        "art_versions": [
+          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-11_v2026-04-05T21-29-01.jpg"
+        ]
       },
       "back": {
         "phrase": "Somos un reflejo de los demás. A veces, un reflejo deforme.",
