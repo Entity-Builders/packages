@@ -17,7 +17,7 @@
       "global_brief": "Vintage football poster art inspired by mid-century Argentine graphic design. Bold flat colors, limited palette (2-4 colors per card), strong geometric compositions, screen-print texture with visible grain. Think retro match-day programmes, 1960s-70s sports posters, and Soviet-era athletic propaganda art. NO photorealism, NO recognizable faces. Use silhouettes, back views, dramatic angles, and symbolic compositions. Each card should feel like a collectible print you would frame on a wall."
     }
   },
-  "print_spec_id": "baraja-landscape",
+  "print_spec_id": "baraja-standard",
   "design_template_id": "dark-minimal-01",
   "pricing": {
     "amount": 1500000,
@@ -31,8 +31,9 @@
         "title": "El Barrilete Cósmico",
         "number": 1,
         "subject_hint": "Diego Maradona, Gol del Siglo vs Inglaterra, Mundial México 1986, Estadio Azteca",
-        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01_v2026-04-05T17-26-04.jpg",
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01.jpg?v=1775502445551",
         "art_versions": [
+          "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01_v2026-04-06T19-07-25.jpg",
           "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01.jpg",
           "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-01.jpg"
         ]
@@ -121,7 +122,10 @@
         "title": "La Gloria Eterna",
         "number": 5,
         "subject_hint": "Final Copa Libertadores 2018, River vs Boca en Madrid, Santiago Bernabéu, Pity Martínez",
-        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-05.jpg"
+        "art_url": "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-05.jpg?v=1775502467575",
+        "art_versions": [
+          "/assets/editions/mazo-sobre-futbol-de-argentina/lrs-05_v2026-04-06T19-07-47.jpg"
+        ]
       },
       "back": {
         "phrase": "Y va el tercero, y va el tercero...",
@@ -642,5 +646,13 @@
         "Esencia"
       ]
     }
-  ]
+  ],
+  "print_specs_overrides": {
+    "dimensions": {
+      "width": 127,
+      "height": 116,
+      "unit": "mm"
+    }
+  },
+  "design_template_overrides": {}
 }

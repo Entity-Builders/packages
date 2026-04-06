@@ -446,6 +446,12 @@
       ]
     }
   ],
-  "print_specs_overrides": {},
+  "print_specs_overrides": {
+    "dimensions": {
+      "width": 127,
+      "height": 101.6,
+      "unit": "mm"
+    }
+  },
   "design_template_overrides": {}
 }
