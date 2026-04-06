@@ -16,7 +16,7 @@ import type { DeckSchema, RawDeckContent } from './types.js';
  */
 export function resolveDeck(raw: RawDeckContent): DeckSchema {
   const print_specs = PRINT_SPECS[raw.print_spec_id];
-  const design = DESIGN_TEMPLATES[raw.design_template_id];
+  let design = DESIGN_TEMPLATES[raw.design_template_id];
 
   if (!print_specs) {
     throw new Error(
@@ -26,10 +26,15 @@ export function resolveDeck(raw: RawDeckContent): DeckSchema {
   }
 
   if (!design) {
-    throw new Error(
-      `[deck-engine] Unknown design_template_id: "${raw.design_template_id}". ` +
-      `Available: ${Object.keys(DESIGN_TEMPLATES).join(', ')}`
-    );
+    // If it's not a built-in static template, it might be a DB-driven dynamic template.
+    // We provide a fallback, and rely on design_template_overrides injected at runtime.
+    design = {
+      template_id: raw.design_template_id as any,
+      primary_color: '#0c0b09',
+      accent_color: '#d4af64',
+      font_heading: 'Cormorant Garamond',
+      font_body: 'Inter',
+    };
   }
 
   const { 

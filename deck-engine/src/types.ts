@@ -114,6 +114,8 @@ export interface DeckDesign {
   background?: string;
   text_color?: string;
   surface_color?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  layout_config?: any; // Contains pdfme config if populated from DB
 }
 
 // ── Pricing ───────────────────────────────────────────────────
