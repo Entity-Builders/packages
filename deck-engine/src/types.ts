@@ -157,6 +157,12 @@ export interface RawDeckContent {
   print_spec_id: PrintSpecId;
   /** References a template in DESIGN_TEMPLATES */
   design_template_id: DesignTemplateId;
+  
+  /** Optional manual overrides for the print spec */
+  print_specs_overrides?: Partial<PrintSpecs>;
+  /** Optional manual overrides for the design template */
+  design_template_overrides?: Partial<DeckDesign>;
+
   pricing: DeckPricing;
   cards: Card[];
 }

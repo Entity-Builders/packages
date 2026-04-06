@@ -32,11 +32,21 @@ export function resolveDeck(raw: RawDeckContent): DeckSchema {
     );
   }
 
-  const { print_spec_id, design_template_id, ...rest } = raw;
+  const { 
+    print_spec_id, 
+    design_template_id, 
+    print_specs_overrides, 
+    design_template_overrides, 
+    ...rest 
+  } = raw;
   void print_spec_id;
   void design_template_id;
 
-  return { ...rest, print_specs, design };
+  return { 
+    ...rest, 
+    print_specs: { ...print_specs, ...(print_specs_overrides || {}) }, 
+    design: { ...design, ...(design_template_overrides || {}) } 
+  };
 }
 
 /**

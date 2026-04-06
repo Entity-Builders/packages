@@ -32,6 +32,9 @@ export type { DesignTemplateId } from './shared/design-templates.js';
 // Loader utilities
 export { resolveDeck, validateDeck } from './loader.js';
 
+// Repository
+export type { IDeckRepository } from './repository.js';
+
 // ── Resolved decks ────────────────────────────────────────────
 // Pre-resolved deck objects ready to consume.
 // Add new editions here as they are created.
