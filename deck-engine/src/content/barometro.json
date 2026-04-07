@@ -25,7 +25,14 @@
         "art_prompt": "Abstract expressionism painting. Deep, cold blues and stark whites clashing violently. Visible thick impasto texture suggesting frost on a dark, rough surface. Chiaroscuro lighting emphasizing cracks and fractures in the paint. The feeling is visceral, sharp, and cold.",
         "title": "El Hielo",
         "number": 1,
-        "art_url": "/assets/editions/barometro/barometro-01.jpg"
+        "art_url": "/assets/editions/barometro/barometro-01.jpg?v=1775589187023",
+        "art_versions": [
+          "/assets/editions/barometro/barometro-01_v2026-04-07T19-13-07.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-07T19-12-57.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-06T23-35-25.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-06T22-16-01.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-06T22-03-02.jpg"
+        ]
       },
       "back": {
         "phrase": "Tu sistema nervioso no discute con la temperatura.",
