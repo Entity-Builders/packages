@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "sync": "npx tsx src/scripts/sync-decks.ts",
     "generate": "npx tsx src/scripts/create-edition.ts && npm run sync",
-    "art": "npx tsx src/scripts/generate-art.ts"
+    "art": "npx tsx src/scripts/generate-art.ts",
+    "frame": "npx tsx src/scripts/generate-frame.ts"
   },
   "devDependencies": {
     "dotenv": "^17.4.0",

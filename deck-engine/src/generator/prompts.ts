@@ -230,7 +230,7 @@ function buildPartySection(opts: BuildDeckOptions): string {
 ## Party/Social Deck Rules
 - Cards must work for groups of 3+ people.
 - Mix card types: ~30% questions/icebreakers, ~30% challenges/dares, ~40% creative/absurd prompts.
-- Include a \`player_count_hint\` in the when_to_use field (e.g. "Para 4+ jugadores").
+  - Do NOT include player count in the \`when_to_use\` field. That info lives in the deck metadata.
 - Tone: descontracturado, fun, but never mean-spirited or exclusionary.
 - Include mix of intensity levels: some soft/warm-up, some spicy, some wild.
 - The \`instruction\` field should clearly describe the mechanic (who reads, who acts, how to score, etc.)

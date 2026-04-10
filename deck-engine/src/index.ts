@@ -35,9 +35,15 @@ export { resolveDeck, validateDeck } from './loader.js';
 // Repository
 export type { IDeckRepository } from './repository.js';
 
+// Generator: template prompts, layout presets, card types
+export * from './generator/template-prompts.js';
+
 // ── Resolved decks ────────────────────────────────────────────
 // Pre-resolved deck objects ready to consume.
 // Add new editions here as they are created.
 
 export { DECKS } from './decks.js';
 export type { DeckId } from './decks.js';
+
+// QR URL generation
+export { getCardQrUrl } from './qr.js';

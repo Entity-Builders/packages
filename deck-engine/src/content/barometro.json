@@ -25,8 +25,18 @@
         "art_prompt": "Abstract expressionism painting. Deep, cold blues and stark whites clashing violently. Visible thick impasto texture suggesting frost on a dark, rough surface. Chiaroscuro lighting emphasizing cracks and fractures in the paint. The feeling is visceral, sharp, and cold.",
         "title": "El Hielo",
         "number": 1,
-        "art_url": "/assets/editions/barometro/barometro-01.jpg?v=1775589187023",
+        "art_url": "/assets/editions/barometro/barometro-01.jpg?v=1775773303995",
         "art_versions": [
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-21-43.jpg",
+          "/assets/editions/barometro/barometro-01.jpg?v=1775772977697",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-16-17.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-14-40.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-14-33.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-14-15.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-14-03.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-13-44.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-10-23.jpg",
+          "/assets/editions/barometro/barometro-01_v2026-04-09T22-10-10.jpg",
           "/assets/editions/barometro/barometro-01_v2026-04-07T19-13-07.jpg",
           "/assets/editions/barometro/barometro-01_v2026-04-07T19-12-57.jpg",
           "/assets/editions/barometro/barometro-01_v2026-04-06T23-35-25.jpg",
@@ -37,7 +47,15 @@
       "back": {
         "phrase": "Tu sistema nervioso no discute con la temperatura.",
         "when_to_use": "Para cuando la emoción es un incendio y no podés pensar.",
-        "instruction": "Sostené un hielo en la mano hasta que sea muy intenso. O llena un bol con agua fría y hielo y sumergí la cara por 15 segundos. Sentí el cambio. Respirá."
+        "instruction": "Sostené un hielo en la mano hasta que sea muy intenso. O llena un bol con agua fría y hielo y sumergí la cara por 15 segundos. Sentí el cambio. Respirá.",
+        "back_image_url": "/assets/editions/barometro/barometro-01-back.png",
+        "back_image_versions": [
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png"
+        ]
       },
       "tags": [
         "crisis",
@@ -52,12 +70,19 @@
         "art_prompt": "Fine art photography from a low angle, looking at the texture of an old wooden floor. The focus is sharp on the grain and imperfections. A sliver of soft, warm light cuts across the frame. The mood is grounding, stable, and calm.",
         "title": "El Piso",
         "number": 2,
-        "art_url": "/assets/editions/barometro/barometro-02.jpg"
+        "art_url": "/assets/editions/barometro/barometro-02.jpg?v=1775773327661",
+        "art_versions": [
+          "/assets/editions/barometro/barometro-02_v2026-04-09T22-22-07.jpg"
+        ]
       },
       "back": {
         "phrase": "Estás acá. El suelo debajo tuyo es prueba suficiente.",
         "when_to_use": "Cuando sentís que te despegás de la realidad, que estás flotando.",
-        "instruction": "Sacate los zapatos. Sentí el piso con toda la planta de tus pies. Presioná con los talones, después con los dedos. Notá la temperatura, la textura. Sos un árbol, echá raíces."
+        "instruction": "Sacate los zapatos. Sentí el piso con toda la planta de tus pies. Presioná con los talones, después con los dedos. Notá la temperatura, la textura. Sos un árbol, echá raíces.",
+        "back_image_url": "/assets/editions/barometro/barometro-02-back.png",
+        "back_image_versions": [
+          "/assets/editions/barometro/barometro-02-back.png"
+        ]
       },
       "tags": [
         "grounding",
@@ -71,12 +96,20 @@
         "art_prompt": "Minimalist abstract art. A single, long, fading brushstroke of gray watercolor on a textured, off-white paper. The stroke starts thick and dark, and slowly becomes lighter and more transparent until it disappears. Evokes a sense of release and calm.",
         "title": "La Exhalación",
         "number": 3,
-        "art_url": "/assets/editions/barometro/barometro-03.jpg"
+        "art_url": "/assets/editions/barometro/barometro-03.jpg?v=1775773769214",
+        "art_versions": [
+          "/assets/editions/barometro/barometro-03_v2026-04-09T22-29-29.jpg"
+        ]
       },
       "back": {
         "phrase": "No tenés que controlar tu respiración. Solo hacé que la salida sea más larga que la entrada.",
         "when_to_use": "Para cuando el pánico te acelera el corazón y te corta el aire.",
-        "instruction": "Inhalá contando hasta cuatro. No te apures. Ahora exhalá, muy lento, contando hasta seis u ocho. Repetilo tres veces. Solo tres. Tu cuerpo sabe qué hacer con esa señal."
+        "instruction": "Inhalá contando hasta cuatro. No te apures. Ahora exhalá, muy lento, contando hasta seis u ocho. Repetilo tres veces. Solo tres. Tu cuerpo sabe qué hacer con esa señal.",
+        "back_image_url": "/assets/editions/barometro/barometro-03-back.png",
+        "back_image_versions": [
+          "/assets/editions/barometro/barometro-03-back.png",
+          "/assets/editions/barometro/barometro-03-back.png"
+        ]
       },
       "tags": [
         "ansiedad",
@@ -96,7 +129,9 @@
       "back": {
         "phrase": "La energía del pánico necesita una salida física, no un argumento lógico.",
         "when_to_use": "Cuando sentís que vas a explotar de ansiedad o rabia.",
-        "instruction": "Hacé 10 lagartijas, o sentadillas, o corré en el lugar lo más rápido que puedas por 30 segundos. Apoyá las manos en una pared y empujá con toda tu fuerza. Gastá esa energía."
+        "instruction": "Hacé 10 lagartijas, o sentadillas, o corré en el lugar lo más rápido que puedas por 30 segundos. Apoyá las manos en una pared y empujá con toda tu fuerza. Gastá esa energía.",
+        "back_image_url": "/assets/editions/barometro/barometro-04-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "crisis",
@@ -116,7 +151,9 @@
       "back": {
         "phrase": "Tu interpretación no es un hecho. Repetilo.",
         "when_to_use": "Cuando tu cabeza inventa la peor historia posible y te la creés.",
-        "instruction": "En una hoja, hacé dos columnas. Izquierda: 'Hechos'. Derecha: 'Interpretaciones'. Escribí solo lo que podrías grabar con una cámara. Compará las dos listas. Leé los hechos en voz alta."
+        "instruction": "En una hoja, hacé dos columnas. Izquierda: 'Hechos'. Derecha: 'Interpretaciones'. Escribí solo lo que podrías grabar con una cámara. Compará las dos listas. Leé los hechos en voz alta.",
+        "back_image_url": "/assets/editions/barometro/barometro-05-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "DBT",
@@ -136,7 +173,9 @@
       "back": {
         "phrase": "No podés frenar la ola. Pero podés aprender a surfearla.",
         "when_to_use": "Cuando una emoción te abruma y tu primer instinto es luchar contra ella.",
-        "instruction": "No hagas nada. Solo sentate y sentí la emoción en tu cuerpo. ¿Dónde está? ¿Es caliente, fría, vibra, aprieta? No la juzgues. Solo observala como un científico. Durará menos de lo que creés."
+        "instruction": "No hagas nada. Solo sentate y sentí la emoción en tu cuerpo. ¿Dónde está? ¿Es caliente, fría, vibra, aprieta? No la juzgues. Solo observala como un científico. Durará menos de lo que creés.",
+        "back_image_url": "/assets/editions/barometro/barometro-06-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "aceptación",
@@ -156,7 +195,9 @@
       "back": {
         "phrase": "A veces, solo es sed. O hambre. O sueño.",
         "when_to_use": "Antes de decidir que todo es una catástrofe.",
-        "instruction": "Levantate y tomate un vaso de agua entero, despacio. Comé algo, aunque sea una fruta. ¿Dormiste? Atendé lo básico. El 50% de los problemas emocionales se sienten peor por una necesidad física no cubierta."
+        "instruction": "Levantate y tomate un vaso de agua entero, despacio. Comé algo, aunque sea una fruta. ¿Dormiste? Atendé lo básico. El 50% de los problemas emocionales se sienten peor por una necesidad física no cubierta.",
+        "back_image_url": "/assets/editions/barometro/barometro-07-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "autocuidado",
@@ -176,7 +217,9 @@
       "back": {
         "phrase": "Tus sentidos son el ancla al momento presente.",
         "when_to_use": "Cuando la mente viaja al pasado o al futuro y te perdés.",
-        "instruction": "Nombrá, en voz alta o en tu cabeza: 5 cosas que puedas ver. 4 cosas que puedas sentir (tu ropa, el aire). 3 cosas que puedas oír. 2 cosas que puedas oler. 1 cosa que puedas saborear."
+        "instruction": "Nombrá, en voz alta o en tu cabeza: 5 cosas que puedas ver. 4 cosas que puedas sentir (tu ropa, el aire). 3 cosas que puedas oír. 2 cosas que puedas oler. 1 cosa que puedas saborear.",
+        "back_image_url": "/assets/editions/barometro/barometro-08-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "grounding",
@@ -196,7 +239,9 @@
       "back": {
         "phrase": "Sos el cielo, no la nube. Los pensamientos pasan.",
         "when_to_use": "Cuando un pensamiento negativo se queda pegado en tu mente.",
-        "instruction": "Cerrá los ojos. Imaginá que tus pensamientos son nubes en el cielo. No los empujes, no los analices. Solo miralos pasar. Algunos son oscuros, otros livianos. Vos sos el cielo que los contiene, no sos la tormenta."
+        "instruction": "Cerrá los ojos. Imaginá que tus pensamientos son nubes en el cielo. No los empujes, no los analices. Solo miralos pasar. Algunos son oscuros, otros livianos. Vos sos el cielo que los contiene, no sos la tormenta.",
+        "back_image_url": "/assets/editions/barometro/barometro-09-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "mindfulness",
@@ -216,7 +261,9 @@
       "back": {
         "phrase": "Tu cerebro no puede estar en pánico y concentrarse en un detalle a la vez.",
         "when_to_use": "Para cortar un espiral de pensamientos catastróficos.",
-        "instruction": "Elegí un objeto cerca tuyo: una lapicera, la tela de tu pantalón, una hoja. Pasá un minuto entero explorando su textura con los dedos. Cerrá los ojos si te ayuda. Describí la sensación en tu mente con el mayor detalle posible."
+        "instruction": "Elegí un objeto cerca tuyo: una lapicera, la tela de tu pantalón, una hoja. Pasá un minuto entero explorando su textura con los dedos. Cerrá los ojos si te ayuda. Describí la sensación en tu mente con el mayor detalle posible.",
+        "back_image_url": "/assets/editions/barometro/barometro-10-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "grounding",
@@ -236,7 +283,9 @@
       "back": {
         "phrase": "Escuchar es más que oír. Es un acto de presencia.",
         "when_to_use": "Cuando el ruido de tu mente es más fuerte que el mundo exterior.",
-        "instruction": "Quedate en silencio por 60 segundos. ¿Cuál es el sonido más lejano que podés escuchar? ¿Y el más cercano? ¿Podés identificar tres sonidos diferentes? No los catalogues como 'buenos' o 'malos'. Solo escuchá."
+        "instruction": "Quedate en silencio por 60 segundos. ¿Cuál es el sonido más lejano que podés escuchar? ¿Y el más cercano? ¿Podés identificar tres sonidos diferentes? No los catalogues como 'buenos' o 'malos'. Solo escuchá.",
+        "back_image_url": "/assets/editions/barometro/barometro-11-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "mindfulness",
@@ -256,7 +305,9 @@
       "back": {
         "phrase": "Una mente ocupada en algo simple no tiene espacio para la catástrofe.",
         "when_to_use": "Cuando necesitás una pausa de una emoción intensa pero no podés relajarte.",
-        "instruction": "Elegí una tarea simple y mecánica: doblar ropa, lavar los platos, ordenar tus libros por color. Hacela con toda tu atención, como si fuera lo más importante del mundo. Solo por cinco minutos."
+        "instruction": "Elegí una tarea simple y mecánica: doblar ropa, lavar los platos, ordenar tus libros por color. Hacela con toda tu atención, como si fuera lo más importante del mundo. Solo por cinco minutos.",
+        "back_image_url": "/assets/editions/barometro/barometro-12-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "distracción",
@@ -276,7 +327,9 @@
       "back": {
         "phrase": "Decir 'no' es un acto de autocuidado, no de agresión.",
         "when_to_use": "Cuando te sentís culpable o con miedo de poner un límite.",
-        "instruction": "Parate frente a un espejo. Decí 'No' en voz alta. Sin justificaciones, sin disculpas. Solo 'No'. Sentí cómo vibra la palabra en tu pecho. Repetilo hasta que suene a verdad."
+        "instruction": "Parate frente a un espejo. Decí 'No' en voz alta. Sin justificaciones, sin disculpas. Solo 'No'. Sentí cómo vibra la palabra en tu pecho. Repetilo hasta que suene a verdad.",
+        "back_image_url": "/assets/editions/barometro/barometro-13-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "límites",
@@ -296,7 +349,9 @@
       "back": {
         "phrase": "Aceptar no es rendirse. Es dejar de pelear una guerra que ya terminó.",
         "when_to_use": "Cuando te resistís a una realidad dolorosa que no podés cambiar.",
-        "instruction": "Decí en voz alta: 'Esto es lo que es, en este momento'. No tenés que decir que te gusta. No tenés que decir que es justo. Solo tenés que reconocer la realidad de la situación, aquí y ahora. Respirá en esa verdad."
+        "instruction": "Decí en voz alta: 'Esto es lo que es, en este momento'. No tenés que decir que te gusta. No tenés que decir que es justo. Solo tenés que reconocer la realidad de la situación, aquí y ahora. Respirá en esa verdad.",
+        "back_image_url": "/assets/editions/barometro/barometro-14-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "aceptación radical",
@@ -316,7 +371,9 @@
       "back": {
         "phrase": "Tu cuerpo sabe tanto como tu mente. Escuchá a los dos.",
         "when_to_use": "Cuando estás atrapado entre la lógica y la emoción.",
-        "instruction": "Poné una mano en tu cabeza y otra en tu abdomen. Preguntate: '¿Qué me dice mi mente racional?'. Después, preguntate: '¿Qué me dice mi intuición, mi cuerpo?'. Buscá la respuesta que integre ambas. No es una o la otra, es el punto medio."
+        "instruction": "Poné una mano en tu cabeza y otra en tu abdomen. Preguntate: '¿Qué me dice mi mente racional?'. Después, preguntate: '¿Qué me dice mi intuición, mi cuerpo?'. Buscá la respuesta que integre ambas. No es una o la otra, es el punto medio.",
+        "back_image_url": "/assets/editions/barometro/barometro-15-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "wise mind",
@@ -336,7 +393,9 @@
       "back": {
         "phrase": "Reaccionar es automático. Responder es una elección.",
         "when_to_use": "En el segundo antes de decir o hacer algo de lo que te vas a arrepentir.",
-        "instruction": "STOP. 1. Pará, no hagas nada. 2. Da un paso atrás, físico o mental. 3. Observá qué está pasando adentro y afuera tuyo. 4. Procedé, tomando una decisión consciente, no una reacción."
+        "instruction": "STOP. 1. Pará, no hagas nada. 2. Da un paso atrás, físico o mental. 3. Observá qué está pasando adentro y afuera tuyo. 4. Procedé, tomando una decisión consciente, no una reacción.",
+        "back_image_url": "/assets/editions/barometro/barometro-16-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "impulsividad",
@@ -356,7 +415,9 @@
       "back": {
         "phrase": "Si querés cambiar cómo te sentís, a veces tenés que actuar primero.",
         "when_to_use": "Cuando la emoción (miedo, tristeza, enojo) te empuja a hacer justo lo que te hace peor.",
-        "instruction": "Identificá la emoción y el impulso (ej. Tristeza -> aislarme). ¿Cuál es la acción opuesta? (ej. Llamar a un amigo). Hacé esa acción, aunque sea por cinco minutos. Con toda la resistencia, hacelo."
+        "instruction": "Identificá la emoción y el impulso (ej. Tristeza -> aislarme). ¿Cuál es la acción opuesta? (ej. Llamar a un amigo). Hacé esa acción, aunque sea por cinco minutos. Con toda la resistencia, hacelo.",
+        "back_image_url": "/assets/editions/barometro/barometro-17-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "opposite action",
@@ -376,7 +437,9 @@
       "back": {
         "phrase": "No sos el centro del universo. Y eso es un alivio.",
         "when_to_use": "Cuando un problema se siente gigante, insuperable y personal.",
-        "instruction": "¿Qué le dirías a un buen amigo que estuviera en tu misma situación? Decilo en voz alta. Usá un tono amable. Dale el mismo consejo y compasión que le darías a otro."
+        "instruction": "¿Qué le dirías a un buen amigo que estuviera en tu misma situación? Decilo en voz alta. Usá un tono amable. Dale el mismo consejo y compasión que le darías a otro.",
+        "back_image_url": "/assets/editions/barometro/barometro-18-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "perspectiva",
@@ -396,7 +459,9 @@
       "back": {
         "phrase": "Sentir no es una falla moral. Es una función biológica.",
         "when_to_use": "Cuando te estás juzgando por sentir lo que sentís.",
-        "instruction": "Decí en voz alta: 'Tengo permiso para sentir [nombrar la emoción]'. No significa que tengas permiso para actuar destructivamente. Significa que el sentimiento en sí mismo es válido. Dale espacio."
+        "instruction": "Decí en voz alta: 'Tengo permiso para sentir [nombrar la emoción]'. No significa que tengas permiso para actuar destructivamente. Significa que el sentimiento en sí mismo es válido. Dale espacio.",
+        "back_image_url": "/assets/editions/barometro/barometro-19-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "validación",
@@ -416,7 +481,9 @@
       "back": {
         "phrase": "No tenés que resolver todo ahora. Podés guardarlo para después.",
         "when_to_use": "Cuando un pensamiento o recuerdo intrusivo aparece en un momento en que no podés lidiar con él.",
-        "instruction": "Visualizá una caja fuerte. Poné el pensamiento o la imagen adentro. Cerrá la puerta. Girá la cerradura. Sabés que está ahí, a salvo, y que podés volver a abrirla después, en un momento seguro, quizás con tu terapeuta."
+        "instruction": "Visualizá una caja fuerte. Poné el pensamiento o la imagen adentro. Cerrá la puerta. Girá la cerradura. Sabés que está ahí, a salvo, y que podés volver a abrirla después, en un momento seguro, quizás con tu terapeuta.",
+        "back_image_url": "/assets/editions/barometro/barometro-20-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "TEPC",
@@ -436,7 +503,9 @@
       "back": {
         "phrase": "Tu cuerpo te habla constantemente. Solo tenés que aprender su idioma.",
         "when_to_use": "Cuando te sentís desconectado de tu cuerpo o abrumado por sensaciones físicas.",
-        "instruction": "Sentate o acostate. Empezá por los pies y subí lentamente. ¿Qué sentís en cada parte? ¿Hormigueo, tensión, calor, nada? No cambies nada. Solo hacé un inventario mental de tus sensaciones físicas, sin juicio."
+        "instruction": "Sentate o acostate. Empezá por los pies y subí lentamente. ¿Qué sentís en cada parte? ¿Hormigueo, tensión, calor, nada? No cambies nada. Solo hacé un inventario mental de tus sensaciones físicas, sin juicio.",
+        "back_image_url": "/assets/editions/barometro/barometro-21-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "body scan",
@@ -456,7 +525,9 @@
       "back": {
         "phrase": "Nombrar la emoción le quita su poder anónimo.",
         "when_to_use": "Cuando sentís un malestar general, una 'nube negra', pero no sabés qué es.",
-        "instruction": "Detenete y preguntate: 'Si esta sensación tuviera un nombre, ¿cuál sería?'. Probá varios: ¿es tristeza? ¿miedo? ¿frustración? ¿soledad? Encontrá la palabra que mejor encaje. Decí 'Estoy sintiendo [nombre de la emoción]'."
+        "instruction": "Detenete y preguntate: 'Si esta sensación tuviera un nombre, ¿cuál sería?'. Probá varios: ¿es tristeza? ¿miedo? ¿frustración? ¿soledad? Encontrá la palabra que mejor encaje. Decí 'Estoy sintiendo [nombre de la emoción]'.",
+        "back_image_url": "/assets/editions/barometro/barometro-22-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "emociones",
@@ -476,7 +547,9 @@
       "back": {
         "phrase": "Un cambio de estado físico puede forzar un cambio de estado mental.",
         "when_to_use": "Cuando estás estancado en un bucle de pensamientos o en una emoción pegajosa.",
-        "instruction": "Tomá una ducha. Concentrate por completo en las sensaciones: el calor del agua en tu piel, el olor del jabón, el sonido. Imaginá que el agua se lleva la emoción. Si no podés ducharte, solo lavate las manos y la cara con agua fría."
+        "instruction": "Tomá una ducha. Concentrate por completo en las sensaciones: el calor del agua en tu piel, el olor del jabón, el sonido. Imaginá que el agua se lleva la emoción. Si no podés ducharte, solo lavate las manos y la cara con agua fría.",
+        "back_image_url": "/assets/editions/barometro/barometro-23-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "reset",
@@ -496,7 +569,9 @@
       "back": {
         "phrase": "El caos interno se siente más manejable cuando hay orden afuera.",
         "when_to_use": "Cuando te sentís abrumado por el caos de tu vida o de tu mente.",
-        "instruction": "Elegí una superficie pequeña: tu mesa de noche, un estante, el asiento del auto. Sacá todo. Limpialo. Volvé a poner solo lo esencial, de forma ordenada. Admirá ese pequeño espacio de control y calma."
+        "instruction": "Elegí una superficie pequeña: tu mesa de noche, un estante, el asiento del auto. Sacá todo. Limpialo. Volvé a poner solo lo esencial, de forma ordenada. Admirá ese pequeño espacio de control y calma.",
+        "back_image_url": "/assets/editions/barometro/barometro-24-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "control",
@@ -516,7 +591,9 @@
       "back": {
         "phrase": "Tu postura le manda señales a tu cerebro. Ponete de pie como si tuvieras derecho a estar acá.",
         "when_to_use": "Cuando te sentís chico, inseguro o invisible.",
-        "instruction": "Parate con los pies separados al ancho de las caderas. Flexioná un poco las rodillas. Sentí el peso de tu cuerpo distribuido por igual. Imaginá que de tus pies crecen raíces que se hunden en la tierra. Sos estable. Sos inamovible."
+        "instruction": "Parate con los pies separados al ancho de las caderas. Flexioná un poco las rodillas. Sentí el peso de tu cuerpo distribuido por igual. Imaginá que de tus pies crecen raíces que se hunden en la tierra. Sos estable. Sos inamovible.",
+        "back_image_url": "/assets/editions/barometro/barometro-25-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "grounding",
@@ -536,7 +613,9 @@
       "back": {
         "phrase": "Podés construir un lugar seguro en tu mente al que nadie más puede entrar.",
         "when_to_use": "Cuando el mundo exterior se siente amenazante y necesitás un escape.",
-        "instruction": "Cerrá los ojos. Imaginá un lugar, real o fantástico, donde te sientas 100% seguro y en calma. ¿Cómo es? ¿Qué olores hay? ¿Qué sonidos? ¿Qué temperatura? Pasá uno o dos minutos ahí, explorando los detalles. Podés volver cuando quieras."
+        "instruction": "Cerrá los ojos. Imaginá un lugar, real o fantástico, donde te sientas 100% seguro y en calma. ¿Cómo es? ¿Qué olores hay? ¿Qué sonidos? ¿Qué temperatura? Pasá uno o dos minutos ahí, explorando los detalles. Podés volver cuando quieras.",
+        "back_image_url": "/assets/editions/barometro/barometro-26-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "seguridad",
@@ -556,7 +635,9 @@
       "back": {
         "phrase": "Tu cara le puede mentir a tu cerebro hasta que se lo crea.",
         "when_to_use": "Cuando sentís amargura, enojo o tristeza y querés cambiar de canal.",
-        "instruction": "Relajá tu cara. Ahora, levantá levemente las comisuras de tus labios. No es una sonrisa falsa, es una expresión de serenidad. Mantenela por un minuto. Es una señal física de aceptación al momento presente."
+        "instruction": "Relajá tu cara. Ahora, levantá levemente las comisuras de tus labios. No es una sonrisa falsa, es una expresión de serenidad. Mantenela por un minuto. Es una señal física de aceptación al momento presente.",
+        "back_image_url": "/assets/editions/barometro/barometro-27-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "DBT",
@@ -576,7 +657,9 @@
       "back": {
         "phrase": "La compasión no es un sentimiento, es una acción.",
         "when_to_use": "Cuando te sentís herido, solo o abrumado y necesitás consuelo.",
-        "instruction": "Hacé una acción que te reconforte. Preparate un té, ponete una manta pesada, escuchá una canción tranquila, acariciá a tu mascota. Hacelo con la intención de cuidarte, como lo harías con un niño enfermo."
+        "instruction": "Hacé una acción que te reconforte. Preparate un té, ponete una manta pesada, escuchá una canción tranquila, acariciá a tu mascota. Hacelo con la intención de cuidarte, como lo harías con un niño enfermo.",
+        "back_image_url": "/assets/editions/barometro/barometro-28-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "self-soothe",
@@ -596,7 +679,9 @@
       "back": {
         "phrase": "El miedo dice '¡No!'. La curiosidad pregunta '¿Hmm?'.",
         "when_to_use": "Cuando una emoción te asusta y tu instinto es rechazarla.",
-        "instruction": "En lugar de pensar 'odio sentir esto', probá a preguntar 'qué interesante, ¿qué es esta sensación?'. Acercate a la emoción con la curiosidad de un explorador. Sin juzgar, solo observando un fenómeno nuevo."
+        "instruction": "En lugar de pensar 'odio sentir esto', probá a preguntar 'qué interesante, ¿qué es esta sensación?'. Acercate a la emoción con la curiosidad de un explorador. Sin juzgar, solo observando un fenómeno nuevo.",
+        "back_image_url": "/assets/editions/barometro/barometro-29-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "mindfulness",
@@ -616,7 +701,9 @@
       "back": {
         "phrase": "No tenés que solucionar tu vida. Solo tenés que pasar esta noche.",
         "when_to_use": "Cuando el futuro se siente imposible y la desesperanza es total.",
-        "instruction": "Tu única tarea en este momento es sobrevivir los próximos 10 minutos. Después, los siguientes 10. No pienses en mañana o la semana que viene. Enfocate en la tarea más pequeña que tengas enfrente. Solo una cosa. Eso es todo."
+        "instruction": "Tu única tarea en este momento es sobrevivir los próximos 10 minutos. Después, los siguientes 10. No pienses en mañana o la semana que viene. Enfocate en la tarea más pequeña que tengas enfrente. Solo una cosa. Eso es todo.",
+        "back_image_url": "/assets/editions/barometro/barometro-30-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "crisis",

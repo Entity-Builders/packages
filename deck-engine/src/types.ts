@@ -72,6 +72,10 @@ export interface CardBack {
   fun_fact?: string;
   /** QR code destination URL — Phase 2 */
   qr_url?: string;
+  /** AI-generated full card back image (Flujo B: AI renders design+text, pdfme overlays QR only) */
+  back_image_url?: string;
+  /** History of all previously generated back image URLs (newest first) */
+  back_image_versions?: string[];
 }
 
 // ── Card ─────────────────────────────────────────────────────
@@ -145,6 +149,50 @@ export interface DeckMetadata {
   art_direction?: ArtDirection;
 }
 
+// ── Landing Configuration ─────────────────────────────────────
+
+export interface LandingReason {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface LandingFaq {
+  question: string;
+  answer: string;
+}
+
+export interface LandingHero {
+  eyebrow: string;
+  titleHtml?: string;
+  subtitle: string;
+  ctaPrimary: string;
+  ctaSecondary?: string;
+}
+
+export interface LandingShowcase {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  footer?: string;
+}
+
+export interface LandingLeadCapture {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  buttonText?: string;
+}
+
+export interface LandingConfig {
+  hero?: LandingHero;
+  showcase?: LandingShowcase;
+  reasons?: LandingReason[];
+  faqTitle?: string;
+  faq?: LandingFaq[];
+  leadCapture?: LandingLeadCapture;
+}
+
 export interface RawDeckContent {
   id: string;
   /** Which edition this deck belongs to — e.g. "cable-a-tierra" */
@@ -165,6 +213,9 @@ export interface RawDeckContent {
   /** Optional manual overrides for the design template */
   design_template_overrides?: Partial<DeckDesign>;
 
+  /** Copy and configuration for the edition's landing page */
+  landing_config?: LandingConfig;
+
   pricing: DeckPricing;
   cards: Card[];
 }
@@ -176,6 +227,7 @@ export interface RawDeckContent {
 export interface DeckSchema extends Omit<RawDeckContent, 'print_spec_id' | 'design_template_id'> {
   print_specs: PrintSpecs;
   design: DeckDesign;
+  landing_config?: LandingConfig;
 }
 
 // ── Edition ───────────────────────────────────────────────────

@@ -43,7 +43,11 @@
       "front": {
         "title": "El Inicio",
         "number": 2,
-        "art_prompt": "Abstract dark composition, a single crack of light breaking through a solid dark surface, minimalist expressionist style, deep blacks and warm gold, no text"
+        "art_prompt": "Abstract dark composition, a single crack of light breaking through a solid dark surface, minimalist expressionist style, deep blacks and warm gold, no text",
+        "art_url": "/assets/editions/cable-a-tierra/cat-02.jpg?v=1775668690571",
+        "art_versions": [
+          "/assets/editions/cable-a-tierra/cat-02_v2026-04-08T17-18-10.jpg"
+        ]
       },
       "back": {
         "phrase": "No tenés que empezar bien. Tenés que empezar.",

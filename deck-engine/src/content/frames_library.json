@@ -1,0 +1,3143 @@
+[
+  {
+    "id": "1775864142596",
+    "url": "/assets/frames/library-back-1775864142596.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: BORDERLESS full-bleed design. The background MUST fill the entire canvas edge-to-edge. No interior lines, no frames, no panels, no corner decorations.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#fdfbf7",
+        "fontFamily": "Playfair Display",
+        "fontSize": 22,
+        "lineHeight": 1.2
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Lora",
+        "fontSize": 13,
+        "lineHeight": 1.3
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Montserrat",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775864142596
+  },
+  {
+    "id": "1775854455735",
+    "url": "/assets/frames/library-back-1775854455735.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 16,
+        "widthPct": 68,
+        "color": "#2e121a",
+        "fontFamily": "Oswald",
+        "fontSize": 16,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 22,
+        "heightPct": 38,
+        "leftPct": 16,
+        "widthPct": 68,
+        "color": "#2e121a",
+        "fontFamily": "Playfair Display",
+        "fontSize": 22,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 63,
+        "heightPct": 18,
+        "leftPct": 16,
+        "widthPct": 68,
+        "color": "#2e121a",
+        "fontFamily": "Lora",
+        "fontSize": 13,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 16,
+        "widthPct": 68,
+        "color": "#2e121a",
+        "fontFamily": "Montserrat",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#2e121a"
+      },
+      "qrFgColor": "#2e121a",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775854455735
+  },
+  {
+    "id": "1775854412178",
+    "url": "/assets/frames/library-back-1775854412178.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 25,
+        "widthPct": 65,
+        "color": "#332211",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 35,
+        "leftPct": 25,
+        "widthPct": 65,
+        "color": "#332211",
+        "fontFamily": "Playfair Display",
+        "fontSize": 20,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 18,
+        "leftPct": 25,
+        "widthPct": 65,
+        "color": "#332211",
+        "fontFamily": "Lora",
+        "fontSize": 13,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 25,
+        "widthPct": 65,
+        "color": "#332211",
+        "fontFamily": "Montserrat",
+        "fontSize": 11
+      },
+      "brand": {
+        "color": "#332211"
+      },
+      "qrFgColor": "#332211",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775854412178
+  },
+  {
+    "id": "1775852547444",
+    "url": "/assets/frames/library-back-1775852547444.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 10,
+        "heightPct": 8,
+        "leftPct": 18,
+        "widthPct": 64,
+        "color": "#ecdba5",
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": 10,
+        "letterSpacing": 2
+      },
+      "phrase": {
+        "topPct": 22,
+        "heightPct": 36,
+        "leftPct": 18,
+        "widthPct": 64,
+        "color": "#fdfbf7",
+        "fontFamily": "Playfair Display",
+        "fontSize": 18,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 22,
+        "leftPct": 18,
+        "widthPct": 64,
+        "color": "#ecdba5",
+        "fontFamily": "Lora",
+        "fontSize": 12,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 84,
+        "heightPct": 6,
+        "leftPct": 18,
+        "widthPct": 64,
+        "color": "#fdfbf7",
+        "fontFamily": "Montserrat",
+        "fontSize": 9
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Plus Jakarta Sans": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU79TR_Q.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775852547444
+  },
+  {
+    "id": "1775851691552",
+    "url": "/assets/frames/library-back-1775851691552.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 6,
+        "heightPct": 8,
+        "leftPct": 12,
+        "widthPct": 76,
+        "color": "#fdfbf7",
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": 10,
+        "letterSpacing": 2
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 12,
+        "widthPct": 76,
+        "color": "#ecdba5",
+        "fontFamily": "Playfair Display",
+        "fontSize": 18,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 12,
+        "widthPct": 76,
+        "color": "#fdfbf7",
+        "fontFamily": "Lora",
+        "fontSize": 12,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 12,
+        "widthPct": 76,
+        "color": "#fdfbf7",
+        "fontFamily": "Montserrat",
+        "fontSize": 9
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Plus Jakarta Sans": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU79TR_Q.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775851691552
+  },
+  {
+    "id": "1775851631322",
+    "url": "/assets/frames/library-back-1775851631322.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 10,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": 11,
+        "letterSpacing": 1
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Playfair Display",
+        "fontSize": 22,
+        "lineHeight": 1.2
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Lora",
+        "fontSize": 13,
+        "lineHeight": 1.3
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Montserrat",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Plus Jakarta Sans": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU79TR_Q.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775851631322
+  },
+  {
+    "id": "1775847549053",
+    "url": "/assets/frames/library-back-1775847549053.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 7,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5000000000000001
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "Syne",
+        "fontSize": 24,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "Montserrat",
+        "fontSize": 13,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "Montserrat",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Syne": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6jTYo.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775847549053
+  },
+  {
+    "id": "1775847355582",
+    "url": "/assets/frames/library-back-1775847355582.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Syne",
+        "fontSize": 22,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Montserrat",
+        "fontSize": 12,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "DM Sans",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#ecdba5"
+      },
+      "qrFgColor": "#ecdba5",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Syne": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6jTYo.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf",
+        "DM Sans": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRSW3z.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775847355582
+  },
+  {
+    "id": "1775846879080",
+    "url": "/assets/frames/library-back-1775846879080.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Syne",
+        "fontSize": 24,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Montserrat",
+        "fontSize": 13,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "DM Sans",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#081224"
+      },
+      "qrFgColor": "#081224",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Syne": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6jTYo.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf",
+        "DM Sans": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRSW3z.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775846879080
+  },
+  {
+    "id": "1775845284033",
+    "url": "/assets/frames/library-back-1775845284033.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#fdfbf7",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#ecdba5",
+        "fontFamily": "Playfair Display",
+        "fontSize": 22,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#fdfbf7",
+        "fontFamily": "Lora",
+        "fontSize": 14,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#fdfbf7",
+        "fontFamily": "Montserrat",
+        "fontSize": 11
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775845284033
+  },
+  {
+    "id": "1775842584078",
+    "url": "/assets/frames/library-back-1775842584078.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: BORDERLESS full-bleed design. The background MUST fill the entire canvas edge-to-edge. No interior lines, no frames, no panels, no corner decorations.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#fdfbf7",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#ecdba5",
+        "fontFamily": "Playfair Display",
+        "fontSize": 22,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#fdfbf7",
+        "fontFamily": "Lora",
+        "fontSize": 14,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#fdfbf7",
+        "fontFamily": "Montserrat",
+        "fontSize": 11
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775842584078
+  },
+  {
+    "id": "1775841505520",
+    "url": "/assets/frames/library-back-1775841505520.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 7,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Syne",
+        "fontSize": 24,
+        "lineHeight": 1.1
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Montserrat",
+        "fontSize": 13,
+        "lineHeight": 1.3
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Montserrat",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#081224"
+      },
+      "qrFgColor": "#081224",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Syne": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6jTYo.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775841505520
+  },
+  {
+    "id": "1775840547944",
+    "url": "/assets/frames/library-back-1775840547944.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": 10,
+        "letterSpacing": 1
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Playfair Display",
+        "fontSize": 20,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Lora",
+        "fontSize": 12,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Montserrat",
+        "fontSize": 9
+      },
+      "brand": {
+        "color": "#081224"
+      },
+      "qrFgColor": "#081224",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Plus Jakarta Sans": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU79TR_Q.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775840547944
+  },
+  {
+    "id": "1775840280893",
+    "url": "/assets/frames/library-back-1775840280893.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 1
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Inter",
+        "fontSize": 9
+      },
+      "brand": {
+        "color": "#0a0a0a"
+      },
+      "qrFgColor": "#0a0a0a",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775840280893
+  },
+  {
+    "id": "1775840126154",
+    "url": "/assets/frames/library-back-1775840126154.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: BORDERLESS full-bleed design. The background MUST fill the entire canvas edge-to-edge. No interior lines, no frames, no panels, no corner decorations.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#0a0a0a",
+        "fontFamily": "Inter",
+        "fontSize": 14,
+        "letterSpacing": 0
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#0a0a0a",
+        "fontFamily": "Playfair Display",
+        "fontSize": 24,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#0a0a0a",
+        "fontFamily": "Lora",
+        "fontSize": 14,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 10,
+        "widthPct": 80,
+        "color": "#0a0a0a",
+        "fontFamily": "Inter",
+        "fontSize": 12
+      },
+      "brand": {
+        "color": "#0a0a0a"
+      },
+      "qrFgColor": "#0a0a0a",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775840126154
+  },
+  {
+    "id": "1775839973396",
+    "url": "/assets/frames/library-back-1775839973396.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#0a0a0a",
+        "fontFamily": "Inter",
+        "fontSize": 9
+      },
+      "brand": {
+        "color": "#0a0a0a"
+      },
+      "qrFgColor": "#0a0a0a",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775839973396
+  },
+  {
+    "id": "1775838046721",
+    "url": "/assets/frames/library-back-1775838046721.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: BORDERLESS full-bleed design. The background MUST fill the entire canvas edge-to-edge. No interior lines, no frames, no panels, no corner decorations.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 5,
+        "heightPct": 8,
+        "leftPct": 10,
+        "color": "#2a1405",
+        "fontFamily": "Inter",
+        "fontSize": 12,
+        "letterSpacing": 0,
+        "widthPct": 80
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 10,
+        "color": "#2a1405",
+        "fontFamily": "Playfair Display",
+        "fontSize": 24,
+        "lineHeight": 1.1,
+        "widthPct": 80
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 20,
+        "leftPct": 10,
+        "color": "#2a1405",
+        "fontFamily": "Lora",
+        "fontSize": 14,
+        "lineHeight": 1.2,
+        "widthPct": 80
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 8,
+        "leftPct": 10,
+        "color": "#2a1405",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "widthPct": 80
+      },
+      "brand": {
+        "color": "#2a1405"
+      },
+      "qrFgColor": "#2a1405",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775838046721
+  },
+  {
+    "id": "1775835929301",
+    "url": "/assets/frames/library-back-1775835929301.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, figures, silhouettes, hands, bodies, animals, or any living creature. This is a print canvas — only abstract shapes, patterns, textures, and gradients are allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775835929301
+  },
+  {
+    "id": "1775833178833",
+    "url": "/assets/frames/library-back-1775833178833.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This image is the back (content) face of a physical printed playing card — a party card. Text and game content will be overlaid on top of this image during print production.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nNEGATIVE SPACE ZONES: You MUST keep the following distinct areas completely clean, empty, and devoid of prominent shapes or textures:\n\n• TOP 15% OF CANVAS: Must remain completely clean as pure negative space. Do not draw any shapes, boxes, or lines here.\n• MIDDLE AREA (20% to 75% of height): The core negative space zone. This area MUST be the calmest, emptiest part of the design. No busy patterns, no prominent visual elements, pure breathing room.\n• BOTTOM 15% OF CANVAS: Keep this area completely clean and empty as negative space.\n\nVISUAL STRATEGY: Push ALL visual complexity, heavy textures, and decorative elements strictly toward the OUTER EDGES and CORNERS. Keep the specified zones above completely empty.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, figures, silhouettes, hands, bodies, animals, or any living creature. This is a print canvas — only abstract shapes, patterns, textures, and gradients are allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 14,
+        "letterSpacing": 0.5,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Playfair Display",
+        "fontSize": 24,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 22,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Lora",
+        "fontSize": 13,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775833178833
+  },
+  {
+    "id": "1775831436388",
+    "url": "/assets/frames/library-back-1775831436388.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775831436388
+  },
+  {
+    "id": "1775831339172",
+    "url": "/assets/frames/library-back-1775831339172.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775831339172
+  },
+  {
+    "id": "1775831194165",
+    "url": "/assets/frames/library-back-1775831194165.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#ffffff"
+      },
+      "qrFgColor": "#ffffff",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775831194165
+  },
+  {
+    "id": "1775830027259",
+    "url": "/assets/frames/library-back-1775830027259.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The background must be completely BORDERLESS and SEAMLESS. It must fill the entire canvas edge-to-edge. No interior lines, no borders, no frames, no panels, and absolutely no corner decorations.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#ffffff"
+      },
+      "qrFgColor": "#ffffff",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775830027259
+  },
+  {
+    "id": "1775823626411",
+    "url": "/assets/frames/library-back-1775823626411.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The background must be completely BORDERLESS and SEAMLESS. It must fill the entire canvas edge-to-edge. No interior lines, no borders, no frames, no panels, and absolutely no corner decorations.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#ffffff"
+      },
+      "qrFgColor": "#ffffff",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775823626411
+  },
+  {
+    "id": "1775784412431",
+    "url": "/assets/frames/library-back-1775784412431.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775784412431
+  },
+  {
+    "id": "1775784064926",
+    "url": "/assets/frames/library-back-1775784064926.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 10,
+        "heightPct": 8,
+        "leftPct": 16,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 11,
+        "letterSpacing": 1,
+        "widthPct": 68
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 35,
+        "leftPct": 16,
+        "color": "#1a0d02",
+        "fontFamily": "Playfair Display",
+        "fontSize": 22,
+        "lineHeight": 1.2,
+        "widthPct": 68
+      },
+      "instruction": {
+        "topPct": 65,
+        "heightPct": 20,
+        "leftPct": 16,
+        "color": "#1a0d02",
+        "fontFamily": "Lora",
+        "fontSize": 13,
+        "lineHeight": 1.3,
+        "widthPct": 68
+      },
+      "answer": {
+        "topPct": 87,
+        "heightPct": 6,
+        "leftPct": 16,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "widthPct": 68
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775784064926
+  },
+  {
+    "id": "1775784036217",
+    "url": "/assets/frames/library-back-1775784036217.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#ffffff"
+      },
+      "qrFgColor": "#ffffff",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775784036217
+  },
+  {
+    "id": "1775784015690",
+    "url": "/assets/frames/library-back-1775784015690.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775784015690
+  },
+  {
+    "id": "1775783201022",
+    "url": "/assets/frames/library-back-1775783201022.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#ffffff"
+      },
+      "qrFgColor": "#ffffff",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775783201022
+  },
+  {
+    "id": "1775783108761",
+    "url": "/assets/frames/library-back-1775783108761.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775783108761
+  },
+  {
+    "id": "1775783107516",
+    "url": "/assets/frames/library-back-1775783107516.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775783107516
+  },
+  {
+    "id": "1775783072380",
+    "url": "/assets/frames/library-back-1775783072380.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#1a0d02",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775783072380
+  },
+  {
+    "id": "1775782434190",
+    "url": "/assets/frames/library-back-1775782434190.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#ffffff"
+      },
+      "qrFgColor": "#ffffff",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775782434190
+  },
+  {
+    "id": "1775782377223",
+    "url": "/assets/frames/library-back-1775782377223.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 10,
+        "letterSpacing": 2,
+        "widthPct": 70
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 18,
+        "lineHeight": 1.15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Cormorant Garamond",
+        "fontSize": 12,
+        "lineHeight": 1.35,
+        "widthPct": 70
+      },
+      "answer": {
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "color": "#ffffff",
+        "fontFamily": "Inter",
+        "fontSize": 9,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#ffffff"
+      },
+      "qrFgColor": "#ffffff",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775782377223
+  },
+  {
+    "id": "1775781408358",
+    "url": "/assets/frames/library-back-1775781408358.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1,
+        "color": "#1a0d02",
+        "topPct": 8,
+        "heightPct": 7,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "phrase": {
+        "fontSize": 20,
+        "fontFamily": "Playfair Display",
+        "lineHeight": 1.15,
+        "color": "#1a0d02",
+        "topPct": 22,
+        "heightPct": 38,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "fontSize": 13,
+        "fontFamily": "Lora",
+        "lineHeight": 1.3,
+        "color": "#1a0d02",
+        "topPct": 63,
+        "heightPct": 21,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "answer": {
+        "fontSize": 10,
+        "fontFamily": "Inter",
+        "color": "#1a0d02",
+        "topPct": 86,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775781408358
+  },
+  {
+    "id": "1775781026626",
+    "url": "/assets/frames/library-back-1775781026626.jpg",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 10,
+        "fontFamily": "Inter",
+        "letterSpacing": 2,
+        "color": "#1a0d02",
+        "topPct": 8,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "phrase": {
+        "fontSize": 18,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.15,
+        "color": "#1a0d02",
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "instruction": {
+        "fontSize": 12,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.35,
+        "color": "#1a0d02",
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "answer": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "color": "#1a0d02",
+        "topPct": 85,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70
+      },
+      "brand": {
+        "color": "#1a0d02"
+      },
+      "qrFgColor": "#1a0d02",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Cormorant Garamond": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86KnTOjw.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775781026626
+  },
+  {
+    "id": "1775779927699",
+    "url": "/assets/frames/library-back-1775779927699.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 17,
+        "fontFamily": "Lora",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Adjusted font size to fit phrase within height constraint. Increased line height for readability."
+      },
+      "instruction": {
+        "fontSize": 11,
+        "fontFamily": "Lora",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 8,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark background, light text. Serif/Sans-serif pairing for contrast. Adjusted font sizes for readability and fit.",
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775779927699
+  },
+  {
+    "id": "1775779791774",
+    "url": "/assets/frames/library-back-1775779791774.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 17,
+        "fontFamily": "Playfair Display",
+        "lineHeight": 1.1,
+        "color": "#ffffff",
+        "notes": "phrase is 6 words, fits at 17pt across 2 lines"
+      },
+      "instruction": {
+        "fontSize": 11,
+        "fontFamily": "Lora",
+        "lineHeight": 1.25,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 8,
+        "fontFamily": "Inter",
+        "color": "#e8dcc0"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Content density is medium. Dark background requires light text.",
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775779791774
+  },
+  {
+    "id": "1775779582939",
+    "url": "/assets/frames/library-back-1775779582939.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Playfair Display",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Adjusted size for longer phrase, ensuring readability within the height constraint."
+      },
+      "instruction": {
+        "fontSize": 11,
+        "fontFamily": "Lora",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 8,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark background, light text. Serif/Sans-serif pairing for readability and elegance.",
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775779582939
+  },
+  {
+    "id": "1775779557104",
+    "url": "/assets/frames/library-back-1775779557104.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The background must be completely BORDERLESS and SEAMLESS. It must fill the entire canvas edge-to-edge. No interior lines, no borders, no frames, no panels, and absolutely no corner decorations.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 17,
+        "fontFamily": "Playfair Display",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is 6 words, fits at 17pt across 3 lines"
+      },
+      "instruction": {
+        "fontSize": 11,
+        "fontFamily": "Lora",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 8,
+        "fontFamily": "Inter",
+        "color": "#e8dcc0"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Content density is medium. Dark background assumed.",
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775779557104
+  },
+  {
+    "id": "1775779430339",
+    "url": "/assets/frames/library-back-1775779430339.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The background must be completely BORDERLESS and SEAMLESS. It must fill the entire canvas edge-to-edge. No interior lines, no borders, no frames, no panels, and absolutely no corner decorations.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 17,
+        "fontFamily": "Playfair Display",
+        "lineHeight": 1.1,
+        "color": "#ffffff",
+        "notes": "phrase is 6 words, fits at 17pt across 2 lines"
+      },
+      "instruction": {
+        "fontSize": 11,
+        "fontFamily": "Lora",
+        "lineHeight": 1.25,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 8,
+        "fontFamily": "Inter",
+        "color": "#e8dcc0"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Content density is medium. Dark background, light text.",
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775779430339
+  },
+  {
+    "id": "1775779016033",
+    "url": "/assets/frames/library-back-1775779016033.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The background must be completely BORDERLESS and SEAMLESS. It must fill the entire canvas edge-to-edge. No interior lines, no borders, no frames, no panels, and absolutely no corner decorations.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 17,
+        "fontFamily": "Playfair Display",
+        "lineHeight": 1.1,
+        "color": "#ffffff",
+        "notes": "phrase is 6 words, fits at 17pt across 2 lines"
+      },
+      "instruction": {
+        "fontSize": 11,
+        "fontFamily": "Lora",
+        "lineHeight": 1.25,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 8,
+        "fontFamily": "Inter",
+        "color": "#e8dcc0"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Content density is medium. Dark background, light text.",
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775779016033
+  },
+  {
+    "id": "1775778837893",
+    "url": "/assets/frames/library-back-1775778837893.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design MUST feature a DISTINCT, PROMINENT VISUAL BORDER or STRUCTURAL FRAME running along the outer edges of the entire canvas. The border should frame the interior artwork perfectly. DO NOT draw a borderless image.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "letterSpacing": 1,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 17,
+        "fontFamily": "Playfair Display",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Adjusted font size to fit the 7-word phrase within the height constraint."
+      },
+      "instruction": {
+        "fontSize": 11,
+        "fontFamily": "Lora",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark background, light text. Serif/Sans-serif pairing for readability.",
+      "ttfUrls": {
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+        "Playfair Display": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf",
+        "Lora": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775778837893
+  },
+  {
+    "id": "1775778014246",
+    "url": "/assets/frames/library-back-1775778014246.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design may include borders, framing, or edge styling if it fits the theme, but it must remain a clean background.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.1,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger font size. Light text on dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.25,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light/gold tones for contrast. Increased font size for phrase due to short length. Adjusted line height for readability."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775778014246
+  },
+  {
+    "id": "1775777769725",
+    "url": "/assets/frames/library-back-1775777769725.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design may include borders, framing, or edge styling if it fits the theme, but it must remain a clean background.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger font size. Light color for dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light/gold tones for contrast and readability. Increased phrase font size for impact."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775777769725
+  },
+  {
+    "id": "1775777768592",
+    "url": "/assets/frames/library-back-1775777768592.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design may include borders, framing, or edge styling if it fits the theme, but it must remain a clean background.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger font size. Light color for dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light/gold tones for contrast and readability. Increased phrase font size for impact."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775777768592
+  },
+  {
+    "id": "1775777767455",
+    "url": "/assets/frames/library-back-1775777767455.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design may include borders, framing, or edge styling if it fits the theme, but it must remain a clean background.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger font size. Light color for dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light/gold tones for contrast and readability. Increased phrase font size for impact."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775777767455
+  },
+  {
+    "id": "1775777710149",
+    "url": "/assets/frames/library-back-1775777710149.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The design may include borders, framing, or edge styling if it fits the theme, but it must remain a clean background.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use a larger size. Light color for dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light colors for text to ensure readability. Increased phrase size for impact."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775777710149
+  },
+  {
+    "id": "1775776589533",
+    "url": "/assets/frames/library-back-1775776589533.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The background must be completely BORDERLESS and SEAMLESS. It must fill the entire canvas edge-to-edge. No interior lines, no borders, no frames, no panels, and absolutely no corner decorations.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger size."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light colors for contrast and legibility. Increased phrase size for impact."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775776589533
+  },
+  {
+    "id": "1775776517044",
+    "url": "/assets/frames/library-back-1775776517044.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The background must be completely BORDERLESS and SEAMLESS. It must fill the entire canvas edge-to-edge. No interior lines, no borders, no frames, no panels, and absolutely no corner decorations.\n\nSTRICTLY FORBIDDEN: Do not draw any letters, numbers, symbols, or icons. The canvas must be completely free of text.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger font size. Light text on dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Light text for contrast. Increased phrase size. Sans-serif for labels and instructions, serif for phrase."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775776517044
+  },
+  {
+    "id": "1775773847874",
+    "url": "/assets/frames/library-back-1775773847874.png",
+    "prompt": "(This is the structural template — the full visual prompt is generated dynamically by Gemini Flash at generation time)\n\nCOMPOSITION: The interior must be ONE continuous atmospheric dark surface — gradient, texture, or subtle glow. No interior lines, dividers, panels, or structural separations.\n\nFORBIDDEN: Any text, letters, numbers, words, or labels. Any playing card symbols (A, K, Q, J, ♠, ♥, ♦, ♣). Splitting the inner area into separate boxed panels.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use a larger size. Light color for dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 5.5,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light/gold tones for contrast. Increased phrase size. Adjusted letter spacing for header."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775773847874
+  },
+  {
+    "id": "1775767006227",
+    "url": "/assets/frames/library-back-1775767006227.png",
+    "prompt": "Design a master layout template for a physical playing card. Theme: Rompelo. Juego para fiestas y juntadas. Ambientación: Descontracturado, directo, divertido.. The outer frame is rich, highly decorated and spectacular, natively wrapping the edges of the card. Use the color #0c0b09 as the primary glowing accent color.\n\nInside this frame:\n\nAt the top 20% mark, there MUST be a strong, beautiful horizontal thematic divider line to separate a header area.\n\nNear the bottom 15% mark, add a thick decorative horizontal divider separating a footer zone.\n\nThe rest of the inner section (the empty zones) MUST be left as a completely flat, solid, dark blank space (e.g., #111111) to allow for clean text overlay later during physical printing.\n\nCRITICAL CONSTRAINT: NO text, NO words, NO letters, and NO numbers anywhere in the image. Just the structural dividers, border art, and blank solid negative space.",
+    "typography": {
+      "header": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.1,
+        "color": "#f5edd6",
+        "notes": "Phrase is relatively short, allowing for a larger font size."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.2,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background. Using light cream/gold tones for contrast. Sans-serif for labels and instructions, serif for the phrase. QR code is gold for visibility."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775767006227
+  },
+  {
+    "id": "1775766953928",
+    "url": "/assets/frames/library-back-1775766953928.png",
+    "prompt": "Design a master layout template for a physical playing card. Theme: Rompelo. Juego para fiestas y juntadas. Ambientación: Descontracturado, directo, divertido.. The outer frame is rich, highly decorated and spectacular, natively wrapping the edges of the card. Use the color #0c0b09 as the primary glowing accent color.\n\nInside this frame:\n\nAt the top 20% mark, there MUST be a strong, beautiful horizontal thematic divider line to separate a header area.\n\nNear the bottom 15% mark, add a thick decorative horizontal divider separating a footer zone.\n\nThe rest of the inner section (the empty zones) MUST be left as a completely flat, solid, dark blank space (e.g., #111111) to allow for clean text overlay later during physical printing.\n\nCRITICAL CONSTRAINT: NO text, NO words, NO letters, and NO numbers anywhere in the image. Just the structural dividers, border art, and blank solid negative space.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#f5edd6",
+        "notes": "Phrase is short, can use larger size. Dark background, using light cream color for contrast."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.3,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark navy background, using light cream/gold tones for contrast. Sans-serif for labels and instructions, serif for the phrase."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775766953928
+  },
+  {
+    "id": "1775765732984",
+    "url": "/assets/frames/library-back-1775765732984.png",
+    "prompt": "Create a premium, print-ready card frame for the BACK face of a playing card.\nStyle: Mystical modern. Deep indigo background (#0D0B2A).\nGolden frame border (#B8960C, 1.5px) forming clean inner rectangle, inset 4mm.\nCorner ornaments: thin geometric golden starburst (4-pointed, NOT floral, like a compass rose simplified to pure geometry). Each corner ornament should be contained in a 5×5mm area.\nBackground texture: extremely faint constellation-like dot pattern (tiny dots < 0.3px in #1a1840) covering the full card. Like looking at a very dark starfield — subtle.\nCenter bottom: small golden geometric diamond ◇ symbol only.\nNO text, NO words, NO numbers whatsoever.\nCenter 62% of card: solid deep indigo — content will be placed here.\nQuality: 300 DPI print-ready, CMYK-safe indigo tones, crisp gold edges.",
+    "typography": {
+      "header": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 13,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.1,
+        "color": "#ffffff",
+        "notes": "Phrase is relatively short, allowing for a slightly larger font size. White for contrast against dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.2,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "color": "#e8dcc0"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark indigo background. Using light colors for text to ensure readability. Serif font for phrase to enhance elegance, sans-serif for other text for clarity."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 121,
+    "presetId": "deep-indigo-cosmic",
+    "timestamp": 1775765732984
+  },
+  {
+    "id": "1775764217388",
+    "url": "/assets/frames/library-back-1775764217388.png",
+    "prompt": "Create a premium, print-ready card frame for the BACK face of a playing card.\nStyle: Mystical modern. Deep indigo background (#0D0B2A).\nGolden frame border (#B8960C, 1.5px) forming clean inner rectangle, inset 4mm.\nCorner ornaments: thin geometric golden starburst (4-pointed, NOT floral, like a compass rose simplified to pure geometry). Each corner ornament should be contained in a 5×5mm area.\nBackground texture: extremely faint constellation-like dot pattern (tiny dots < 0.3px in #1a1840) covering the full card. Like looking at a very dark starfield — subtle.\nCenter bottom: small golden geometric diamond ◇ symbol only.\nNO text, NO words, NO numbers whatsoever.\nCenter 62% of card: solid deep indigo — content will be placed here.\nQuality: 300 DPI print-ready, CMYK-safe indigo tones, crisp gold edges.",
+    "typography": {
+      "header": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.1,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use a larger font size. Light color for dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.2,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark indigo background, using light/gold tones for contrast. Increased font size for phrase due to short length."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "custom",
+    "timestamp": 1775764217388
+  },
+  {
+    "id": "1775764065439",
+    "url": "/assets/frames/library-back-1775764065439.png",
+    "prompt": "Create a premium, print-ready card frame for the BACK face of a playing card.\nStyle: Mystical modern. Deep indigo background (#0D0B2A).\nGolden frame border (#B8960C, 1.5px) forming clean inner rectangle, inset 4mm.\nCorner ornaments: thin geometric golden starburst (4-pointed, NOT floral, like a compass rose simplified to pure geometry). Each corner ornament should be contained in a 5×5mm area.\nBackground texture: extremely faint constellation-like dot pattern (tiny dots < 0.3px in #1a1840) covering the full card. Like looking at a very dark starfield — subtle.\nCenter bottom: small golden geometric diamond ◇ symbol only.\nNO text, NO words, NO numbers whatsoever.\nCenter 62% of card: solid deep indigo — content will be placed here.\nQuality: 300 DPI print-ready, CMYK-safe indigo tones, crisp gold edges.",
+    "typography": {
+      "header": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.1,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use a larger size. Light color for dark background."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.2,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark indigo background. Using light/gold tones for contrast. Sans-serif for labels/instructions, serif for phrase."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "deep-indigo-cosmic",
+    "timestamp": 1775764065439
+  },
+  {
+    "id": "1775763936995",
+    "url": "/assets/frames/library-back-1775763936995.png",
+    "prompt": "Create a premium, print-ready card frame for the BACK face of a playing card.\nStyle: Mystical modern. Deep indigo background (#0D0B2A).\nGolden frame border (#B8960C, 1.5px) forming clean inner rectangle, inset 4mm.\nCorner ornaments: thin geometric golden starburst (4-pointed, NOT floral, like a compass rose simplified to pure geometry). Each corner ornament should be contained in a 5×5mm area.\nBackground texture: extremely faint constellation-like dot pattern (tiny dots < 0.3px in #1a1840) covering the full card. Like looking at a very dark starfield — subtle.\nCenter bottom: small golden geometric diamond ◇ symbol only.\nNO text, NO words, NO numbers whatsoever.\nCenter 62% of card: solid deep indigo — content will be placed here.\nQuality: 300 DPI print-ready, CMYK-safe indigo tones, crisp gold edges.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger font size."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.25,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark indigo background, using light colors for contrast. Increased phrase size. Inter for instructions for readability."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 121,
+    "presetId": "deep-indigo-cosmic",
+    "timestamp": 1775763936995
+  },
+  {
+    "id": "1775763936186",
+    "url": "/assets/frames/library-back-1775763936186.png",
+    "prompt": "Create a premium, print-ready card frame for the BACK face of a playing card.\nStyle: Mystical modern. Deep indigo background (#0D0B2A).\nGolden frame border (#B8960C, 1.5px) forming clean inner rectangle, inset 4mm.\nCorner ornaments: thin geometric golden starburst (4-pointed, NOT floral, like a compass rose simplified to pure geometry). Each corner ornament should be contained in a 5×5mm area.\nBackground texture: extremely faint constellation-like dot pattern (tiny dots < 0.3px in #1a1840) covering the full card. Like looking at a very dark starfield — subtle.\nCenter bottom: small golden geometric diamond ◇ symbol only.\nNO text, NO words, NO numbers whatsoever.\nCenter 62% of card: solid deep indigo — content will be placed here.\nQuality: 300 DPI print-ready, CMYK-safe indigo tones, crisp gold edges.",
+    "typography": {
+      "whenToUse": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "letterSpacing": 1.5,
+        "color": "#f5edd6"
+      },
+      "phrase": {
+        "fontSize": 16,
+        "fontFamily": "Cormorant Garamond",
+        "lineHeight": 1.2,
+        "color": "#ffffff",
+        "notes": "Phrase is short, can use larger font size."
+      },
+      "instruction": {
+        "fontSize": 7,
+        "fontFamily": "Inter",
+        "lineHeight": 1.25,
+        "color": "#f5edd6"
+      },
+      "answer": {
+        "fontSize": 6,
+        "fontFamily": "Inter",
+        "color": "#f5edd6"
+      },
+      "brand": {
+        "color": "#d4af64"
+      },
+      "qrFgColor": "#d4af64",
+      "qrSizeMm": 12,
+      "overallNotes": "Dark indigo background, using light colors for contrast. Increased phrase size. Inter for instructions for readability."
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 121,
+    "presetId": "deep-indigo-cosmic",
+    "timestamp": 1775763936186
+  }
+]
