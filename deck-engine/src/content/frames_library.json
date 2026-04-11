@@ -1,5 +1,303 @@
 [
   {
+    "id": "1775871023229",
+    "url": "/assets/frames/library-back-1775871023229.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\n\n⚠️ CRITICAL BACKGROUND DIRECTIVE:\nYou are generating PURE background art.\nDO NOT draw any placeholder boxes, rectangles, banners, lines, or empty containers for text. \nThe background should be a seamless, unified artistic canvas.\nText and dynamic containers will be overlaid programmatically later as separate SVG layers, so your image must remain purely textural and illustrative without any explicit layout boxes baked into the pixels.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "when_to_use": {
+        "topPct": 78,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "containerSvg": "",
+        "fontSize": 11,
+        "fontFamily": "Montserrat",
+        "fontWeight": "300",
+        "color": "#90ee90",
+        "lineHeight": 1.2
+      },
+      "phrase": {
+        "topPct": 5,
+        "heightPct": 25,
+        "leftPct": 10,
+        "widthPct": 80,
+        "containerSvg": "",
+        "fontSize": 22,
+        "fontFamily": "Syne",
+        "fontWeight": "900",
+        "color": "#ff69b4",
+        "lineHeight": 1
+      },
+      "instruction": {
+        "topPct": 33,
+        "heightPct": 35,
+        "leftPct": 10,
+        "widthPct": 80,
+        "containerSvg": "",
+        "fontSize": 14,
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "300",
+        "color": "#00ffff",
+        "lineHeight": 1.3
+      },
+      "qr": {
+        "topPct": 85,
+        "heightPct": 14,
+        "leftPct": 75,
+        "widthPct": 20,
+        "containerSvg": "",
+        "fontSize": 9,
+        "fontFamily": "Inter",
+        "fontWeight": "regular",
+        "color": "#ff69b4",
+        "lineHeight": 1.1
+      },
+      "brand": {
+        "color": "#00ffff"
+      },
+      "focalPoints": [
+        {
+          "description": "Confetti Border",
+          "xPct": 50,
+          "yPct": 50,
+          "sizePct": 50
+        }
+      ],
+      "qrFgColor": "#ff69b4",
+      "qrSizeMm": 10,
+      "ttfUrls": {
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf",
+        "Syne": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6jTYo.ttf",
+        "Space Grotesk": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMU.ttf",
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775871023229
+  },
+  {
+    "id": "1775870228330",
+    "url": "/assets/frames/library-back-1775870228330.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\n\n⚠️ CRITICAL BACKGROUND DIRECTIVE:\nYou are generating PURE background art.\nDO NOT draw any placeholder boxes, rectangles, banners, lines, or empty containers for text. \nThe background should be a seamless, unified artistic canvas.\nText and dynamic containers will be overlaid programmatically later as separate SVG layers, so your image must remain purely textural and illustrative without any explicit layout boxes baked into the pixels.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "when_to_use": {
+        "topPct": 20,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "containerSvg": "",
+        "fontSize": 12,
+        "fontFamily": "DM Sans",
+        "fontWeight": "300",
+        "color": "#e0d29a",
+        "lineHeight": 1.2
+      },
+      "phrase": {
+        "topPct": 35,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "containerSvg": "",
+        "fontSize": 22,
+        "fontFamily": "Oswald",
+        "fontWeight": "700",
+        "color": "#f0c570",
+        "lineHeight": 1.1
+      },
+      "instruction": {
+        "topPct": 65,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "containerSvg": "",
+        "fontSize": 14,
+        "fontFamily": "Montserrat",
+        "fontWeight": "400",
+        "color": "#eedfbf",
+        "lineHeight": 1.2
+      },
+      "qr": {
+        "topPct": 90,
+        "heightPct": 8,
+        "leftPct": 75,
+        "widthPct": 20,
+        "containerSvg": "",
+        "fontSize": 8,
+        "fontFamily": "Inter",
+        "fontWeight": "300",
+        "color": "#e0d29a",
+        "lineHeight": 1.2
+      },
+      "brand": {
+        "color": "#e0d29a"
+      },
+      "focalPoints": [],
+      "qrFgColor": "#e0d29a",
+      "qrSizeMm": 10,
+      "ttfUrls": {
+        "DM Sans": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRSW3z.ttf",
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf",
+        "Inter": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775870228330
+  },
+  {
+    "id": "1775868764152",
+    "url": "/assets/frames/library-back-1775868764152.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: BORDERLESS full-bleed design. The background MUST fill the entire canvas edge-to-edge. No interior lines, no frames, no panels, no corner decorations.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\n\n⚠️ CRITICAL BACKGROUND DIRECTIVE:\nYou are generating PURE background art.\nDO NOT draw any placeholder boxes, rectangles, banners, lines, or empty containers for text. \nThe background should be a seamless, unified artistic canvas.\nText and dynamic containers will be overlaid programmatically later as separate SVG layers, so your image must remain purely textural and illustrative without any explicit layout boxes baked into the pixels.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "when_to_use": {
+        "topPct": 10,
+        "heightPct": 8,
+        "leftPct": 10,
+        "widthPct": 80,
+        "containerSvg": "<rect width=\"100%\" height=\"100%\" rx=\"0\" fill=\"rgba(0,0,0,0.3)\"/>",
+        "color": "#ffcc00",
+        "fontFamily": "DM Sans",
+        "fontSize": 12,
+        "fontWeight": "300",
+        "lineHeight": 1.2
+      },
+      "ttfUrls": {
+        "DM Sans": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRSW3z.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775868764152
+  },
+  {
+    "id": "1775867328986",
+    "url": "/assets/frames/library-back-1775867328986.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• CENTER CUTOUT: Leave a soft, plain area in the very center. The surrounding illustrative elements should frame this center.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\n\n⚠️ CRITICAL ENCLOSURE DIRECTIVE / STRICTLY NO TEXT:\nYou MUST draw exactly 5 distinct, EMPTY visual containers (e.g., decorative empty boxes, banners, scrolls, or ornate frames) vertically stacked across the card.\nThese containers MUST NOT CONTAIN ANY LETTERS OR WORDS. DO NOT write the names of the fields inside them.\nThe inside of these drawn containers MUST be completely 100% empty so dynamic text can be overlaid programmatically later.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5
+      },
+      "phrase": {
+        "topPct": 20,
+        "heightPct": 40,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Syne",
+        "fontSize": 22,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 62,
+        "heightPct": 20,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "Montserrat",
+        "fontSize": 13,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "color": "#081224",
+        "fontFamily": "DM Sans",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#fdfbf7"
+      },
+      "qrFgColor": "#fdfbf7",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Syne": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6jTYo.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf",
+        "DM Sans": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRSW3z.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775867328986
+  },
+  {
+    "id": "1775866114563",
+    "url": "/assets/frames/library-back-1775866114563.png",
+    "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: FRAMED design. The image MUST feature a DISTINCT, PROMINENT border or structural frame running along all outer edges. The frame should clearly delineate the content canvas inside. Do NOT produce a borderless image.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",
+    "typography": {
+      "whenToUse": {
+        "topPct": 7,
+        "heightPct": 8,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "Oswald",
+        "fontSize": 14,
+        "letterSpacing": 0.5000000000000001
+      },
+      "phrase": {
+        "topPct": 25,
+        "heightPct": 30,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "Syne",
+        "fontSize": 24,
+        "lineHeight": 1.15
+      },
+      "instruction": {
+        "topPct": 60,
+        "heightPct": 25,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "Montserrat",
+        "fontSize": 12,
+        "lineHeight": 1.35
+      },
+      "answer": {
+        "topPct": 88,
+        "heightPct": 6,
+        "leftPct": 15,
+        "widthPct": 70,
+        "fontFamily": "DM Sans",
+        "fontSize": 10
+      },
+      "brand": {
+        "color": "#0a0a0a"
+      },
+      "qrFgColor": "#0a0a0a",
+      "qrSizeMm": 12,
+      "ttfUrls": {
+        "Oswald": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf",
+        "Syne": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6jTYo.ttf",
+        "Montserrat": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf",
+        "DM Sans": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRSW3z.ttf"
+      }
+    },
+    "face": "back",
+    "widthMm": 70,
+    "heightMm": 120,
+    "presetId": "master-builder",
+    "timestamp": 1775866114563
+  },
+  {
     "id": "1775864142596",
     "url": "/assets/frames/library-back-1775864142596.png",
     "prompt": "(Structural template — full visual prompt generated dynamically by Gemini Flash at generation time)\n\nPRINT CONTEXT: This is RAW DIGITAL ARTWORK. You are generating a flat, 2D background pattern/illustration. ABSOLUTE RULE: DO NOT generate a 3D mockup, DO NOT draw a card shape, DO NOT draw rounded corners, and DO NOT add white margins. The artwork MUST fill the entire canvas edge-to-edge as a continuous bleed.\n\nCOMPOSITION: BORDERLESS full-bleed design. The background MUST fill the entire canvas edge-to-edge. No interior lines, no frames, no panels, no corner decorations.\n\nCONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:\n\n• TOP EDGE AREA: Low detail zone. Let the background color or subtle texture flow here continuously, but do not draw any prominent shapes or lines.\n• WIDE MIDDLE AREA: The calmest part of the design. The background texture must continue smoothly through this area, but keep it extremely low-contrast and free of busy patterns or focal points. This area must breathe.\n• BOTTOM EDGE AREA: Low detail zone. Continue the background colors smoothly, but keep it very calm without decorative shapes.\n\nVISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.\n\nSTRICTLY FORBIDDEN — NO TEXT: Do not draw any letters, numbers, symbols, icons, or typography of any kind. The canvas must be 100% text-free.\n\nSTRICTLY FORBIDDEN — NO LIVING BEINGS: Do not depict any people, faces, human figures, silhouettes, hands, bodies, animals, or animated characters. This is a background canvas. Small abstract graphic elements (like stars, geometric shapes, or delicate thematic motifs) ARE allowed.",

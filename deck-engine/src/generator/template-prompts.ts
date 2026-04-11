@@ -56,8 +56,9 @@ export interface BarajaTemplateMetadata {
   hasTitleDivider?: boolean;
   /** @deprecated Use `layout.hasFooterZone` */
   hasFooterDivider?: boolean;
-  /** @deprecated Use `layout.hasCentralImageZone` */
   hasImagePortrait?: boolean;
+  /** Active text fields to frame in the background */
+  dynamicFields?: string[];
 }
 
 // ─── Card type descriptions for Art Director context ─────────────────────────
@@ -114,17 +115,25 @@ function describeLayout(layout: CardLayout): string {
     );
   }
 
-  if (activeZones.length === 0) {
-    return 'LAYOUT: This is a pure illustration. Fill the entire canvas evenly with visual art.';
-  }
-
-  return [
+  const baseInstructions = [
     'CONTENT READABILITY ZONES: You MUST adjust the background details in the following areas so text can be overlaid later:',
     '',
     ...activeZones,
     '',
     'VISUAL STRATEGY: The artwork must flow edge-to-edge as a single continuous image. However, push ALL heavy visual complexity, prominent textures, and decorative focal points strictly toward the OUTER MARGINS. Keep the readability zones listed above very calm and low-contrast.',
   ].join('\n');
+  
+  return baseInstructions;
+}
+
+function describeDynamicFields(fields: string[] | undefined): string {
+  if (!fields || fields.length === 0) return '';
+  return `
+⚠️ CRITICAL BACKGROUND DIRECTIVE:
+You are generating PURE background art.
+DO NOT draw any placeholder boxes, rectangles, banners, lines, or empty containers for text. 
+The background should be a seamless, unified artistic canvas.
+Text and dynamic containers will be overlaid programmatically later as separate SVG layers, so your image must remain purely textural and illustrative without any explicit layout boxes baked into the pixels.`;
 }
 
 // ─── Part 1: Art Director Meta-Prompt (sent to Gemini Flash) ─────────────────
@@ -227,6 +236,11 @@ export function buildStructuralConstraints(metadata: BarajaTemplateMetadata): st
   // 3. Dynamic content zone instructions
   const layoutDesc = describeLayout(layout);
   parts.push(layoutDesc);
+  
+  const dynamicFieldsDesc = describeDynamicFields(metadata.dynamicFields);
+  if (dynamicFieldsDesc) {
+     parts.push(dynamicFieldsDesc);
+  }
 
   // 4. Universal forbidden rules
   parts.push(
