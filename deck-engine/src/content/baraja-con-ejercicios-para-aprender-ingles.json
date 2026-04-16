@@ -1,0 +1,624 @@
+{
+  "id": "baraja-con-ejercicios-para-aprender-ingles-v1",
+  "edition": "baraja-con-ejercicios-para-aprender-ingles",
+  "name": "Inglés Sin Filtro",
+  "slug": "baraja-con-ejercicios-para-aprender-ingles",
+  "description": "Un mazo de 30 ejercicios prácticos para dejar de sonar como un libro de texto y empezar a usar el inglés real. Olvidate de la gramática perfecta, enfocate en la comunicación directa.",
+  "language": "es",
+  "card_count": 30,
+  "metadata": {
+    "topic": "Aprender Inglés",
+    "tone": "Directo, práctico, sin rodeos",
+    "target_audience": "Hispanohablantes con nivel intermedio de inglés que quieren ganar fluidez.",
+    "player_count": "1+"
+  },
+  "print_spec_id": "baraja-standard",
+  "design_template_id": "dark-minimal-01",
+  "pricing": {
+    "amount": 1500000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "isf-01",
+      "front": {
+        "title": "The Small Talk",
+        "number": 1,
+        "art_prompt": "Abstract expressionist painting. Two distinct, complex shapes are separated by a void. A thin, delicate, golden thread begins to form a bridge between them. The background is a muted, textured gray, suggesting a neutral space like an elevator or a waiting room."
+      },
+      "back": {
+        "phrase": "Hablar del clima no es estúpido. Es un puente.",
+        "when_to_use": "Para cuando te cruzás con un colega y el silencio se siente eterno.",
+        "instruction": "Estás en la cocina de la oficina con alguien que apenas conocés. Tenés 30 segundos. Empezá una conversación casual sobre el fin de semana. Decí tres líneas en voz alta. Ya.",
+        "answer": "Ejemplo: \"Hey, how was your weekend?\" / \"Did you do anything fun?\" / \"Mine was pretty relaxing, just what I needed.\"",
+        "fun_fact": "En culturas anglosajonas, el 'small talk' es una herramienta social clave para mostrar que sos accesible y amigable, no para tener conversaciones profundas."
+      },
+      "tags": [
+        "conversación",
+        "rompehielos",
+        "cultura"
+      ]
+    },
+    {
+      "id": "isf-02",
+      "front": {
+        "title": "The False Friend",
+        "number": 2,
+        "art_prompt": "Surrealist digital art. Two figures that look identical from a distance. Up close, one is made of solid marble and the other of crumbling sand. The lighting is dramatic, highlighting the textural difference. The background is a disorienting, repeating pattern."
+      },
+      "back": {
+        "phrase": "Confiarte de tu idioma es el primer error.",
+        "when_to_use": "Para evitar malentendidos que te dejan en ridículo.",
+        "instruction": "La palabra 'actually' es un falso amigo clásico. ¿Qué significa realmente? Usala en una frase en voz alta para corregir una suposición.",
+        "answer": "Significa 'en realidad' o 'de hecho'. Ejemplo: \"You'd think he's shy, but he's actually very outgoing.\"",
+        "fun_fact": "La palabra en inglés para 'actualmente' es 'currently'."
+      },
+      "tags": [
+        "vocabulario",
+        "errores comunes",
+        "falsos amigos"
+      ]
+    },
+    {
+      "id": "isf-03",
+      "front": {
+        "title": "The Phrasal Verb",
+        "number": 3,
+        "art_prompt": "Textured mixed media art. A common object, like a key, is visually breaking apart and reassembling into something completely new and unexpected, like a bird. The action is captured mid-transformation. Colors are earthy and grounded."
+      },
+      "back": {
+        "phrase": "Son dos palabras. Juntas, son otra cosa.",
+        "when_to_use": "Para cuando una frase no tiene sentido si la traducís literalmente.",
+        "instruction": "El phrasal verb 'to look forward to' es clave. Expresa anticipación. Nombrá algo que esperás con ganas la próxima semana. Decilo en voz alta usando la frase completa.",
+        "answer": "Ejemplo: \"I'm really looking forward to the long weekend.\"",
+        "fun_fact": "Los phrasal verbs son extremadamente comunes en el habla cotidiana, mucho más que sus sinónimos 'formales' (ej: 'find out' vs 'discover')."
+      },
+      "tags": [
+        "vocabulario",
+        "phrasal verbs",
+        "fluidez"
+      ]
+    },
+    {
+      "id": "isf-04",
+      "front": {
+        "title": "The Filler Word",
+        "number": 4,
+        "art_prompt": "Minimalist ink wash painting. A clean, straight line representing a sentence is interrupted by a soft, blurred inkblot. The blot isn't a mistake, it's an integrated part of the line's texture, giving it character."
+      },
+      "back": {
+        "phrase": "El silencio es más incómodo para vos que para ellos.",
+        "when_to_use": "Para sonar más natural y darte tiempo a pensar.",
+        "instruction": "En lugar de 'ehhh', usá 'well', 'you know', o 'like'. Respondé en voz alta a la pregunta 'What are your plans for tonight?' usando al menos un filler word.",
+        "answer": "Ejemplo: \"Well, I think I'm just going to, you know, stay in and watch a movie.\"",
+        "fun_fact": "El uso excesivo de 'like' es a menudo asociado con el habla juvenil, pero todos los hablantes nativos usan 'fillers' de algún tipo."
+      },
+      "tags": [
+        "pronunciación",
+        "fluidez",
+        "conversación"
+      ]
+    },
+    {
+      "id": "isf-05",
+      "front": {
+        "title": "The Contraction",
+        "number": 5,
+        "art_prompt": "Graphic design style. Two bold, blocky words ('DO' and 'NOT') are shown being forcefully compressed into one smaller, more efficient shape ('DON'T'). The visual implies pressure and synthesis. Stark black and white."
+      },
+      "back": {
+        "phrase": "Hablar perfecto es hablar raro.",
+        "when_to_use": "Para dejar de sonar como un robot o un noticiero antiguo.",
+        "instruction": "Decí esta frase en voz alta: 'I am not going to be able to make it.' Ahora, decila de nuevo con todas las contracciones posibles. Repetila 5 veces, cada vez más rápido.",
+        "answer": "\"I'm not gonna be able to make it.\" (o \"I won't be able...\")",
+        "fun_fact": "No usar contracciones en el habla informal puede sonar demasiado enfático o incluso enojado."
+      },
+      "tags": [
+        "pronunciación",
+        "naturalidad",
+        "conversación"
+      ]
+    },
+    {
+      "id": "isf-06",
+      "front": {
+        "title": "The Polite Request",
+        "number": 6,
+        "art_prompt": "Soft, pastel watercolor illustration. A hand is shown gently offering a key, rather than pushing it forward. The gesture is open and non-demanding. The background is clean and uncluttered."
+      },
+      "back": {
+        "phrase": "Pedir no es exigir.",
+        "when_to_use": "Para cuando necesitás algo de alguien sin sonar como un jefe autoritario.",
+        "instruction": "Necesitás que un colega revise un email antes de enviarlo. Pedíselo en voz alta usando 'Could you...' o 'Would you mind...'.",
+        "answer": "Ejemplo: \"Could you take a quick look at this email before I send it?\" o \"Would you mind taking a look at this?\"",
+        "fun_fact": "'Can you...?' es gramaticalmente correcto, pero en un contexto profesional 'Could you...?' suena considerablemente más cortés."
+      },
+      "tags": [
+        "profesional",
+        "cortesía",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "isf-07",
+      "front": {
+        "title": "The Disagreement",
+        "number": 7,
+        "art_prompt": "Abstract art with two strong, opposing diagonal lines in red and blue. They don't crash, but instead, a third, softer line in purple runs between them, showing a path of mediation. Textured, thick paint."
+      },
+      "back": {
+        "phrase": "No estar de acuerdo no es pelear.",
+        "when_to_use": "Para dar tu opinión sin generar un conflicto.",
+        "instruction": "En una reunión, alguien propone una idea que no te convence. Expresá tu desacuerdo de forma constructiva. Empezá con 'I see your point, but...'. Decí la frase completa en voz alta.",
+        "answer": "Ejemplo: \"I see your point, but I'm worried about the budget for that initiative.\"",
+        "fun_fact": "Frases como 'That's a good point' o 'I understand where you're coming from' antes de dar tu opinión, suavizan el impacto del desacuerdo."
+      },
+      "tags": [
+        "profesional",
+        "negociación",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "isf-08",
+      "front": {
+        "title": "The Idiom",
+        "number": 8,
+        "art_prompt": "Surrealist photography. A person is literally biting down on a glowing, metal bullet. The expression is not of pain, but of intense determination. The background is dark and moody. High contrast, cinematic lighting."
+      },
+      "back": {
+        "phrase": "Nadie habla como un libro de texto.",
+        "when_to_use": "Para entender el inglés que no te enseñan en clase.",
+        "instruction": "El modismo es 'to bite the bullet'. ¿Qué creés que significa? Ahora, describí en voz alta una situación reciente donde tuviste que 'bite the bullet'.",
+        "answer": "Significa 'hacer algo difícil o desagradable que has estado evitando'. Ejemplo: \"I had to bite the bullet and finally clean out the garage.\"",
+        "fun_fact": "Se cree que el origen de la frase viene de los tiempos de guerra, cuando a los soldados heridos se les daba una bala para morder durante una cirugía sin anestesia."
+      },
+      "tags": [
+        "modismos",
+        "vocabulario",
+        "cultura"
+      ]
+    },
+    {
+      "id": "isf-09",
+      "front": {
+        "title": "The Confirmation",
+        "number": 9,
+        "art_prompt": "A digital illustration of a sound wave being perfectly mirrored by another, creating a symmetrical, harmonious pattern. The colors are clear and bright, like blue and white, suggesting clarity and understanding."
+      },
+      "back": {
+        "phrase": "Asumir es el camino más rápido al error.",
+        "when_to_use": "Después de recibir instrucciones importantes, para asegurarte de que entendiste bien.",
+        "instruction": "Tu jefe te acaba de pedir que prepares una presentación para el viernes. Confirmá la tarea y la fecha límite en voz alta, reformulando la instrucción.",
+        "answer": "Ejemplo: \"Okay, so just to confirm, you need the presentation ready by this Friday. Is that right?\"",
+        "fun_fact": "Esta técnica, llamada 'active listening' o 'paraphrasing', no solo previene errores, sino que también le muestra a la otra persona que estabas prestando atención."
+      },
+      "tags": [
+        "profesional",
+        "claridad",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "isf-10",
+      "front": {
+        "title": "The Apology",
+        "number": 10,
+        "art_prompt": "A kintsugi-style artwork. A ceramic bowl is shown broken, but the cracks are being repaired with shimmering gold lacquer, making the object more beautiful and interesting than before. It represents a mistake that is acknowledged and repaired."
+      },
+      "back": {
+        "phrase": "Un 'sorry' no siempre alcanza.",
+        "when_to_use": "Cuando cometiste un error y necesitás hacerte cargo.",
+        "instruction": "Llegaste 10 minutos tarde a una reunión importante. Disculpate de manera profesional al entrar. Decilo en voz alta.",
+        "answer": "Ejemplo: \"So sorry for being late, everyone. I was held up in another meeting.\"",
+        "fun_fact": "En un contexto laboral, a veces es mejor dar una razón breve ('I was stuck in traffic') que un simple 'sorry', ya que muestra que la tardanza fue por una causa específica y no por falta de respeto."
+      },
+      "tags": [
+        "profesional",
+        "responsabilidad",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "isf-11",
+      "front": {
+        "title": "The Follow-up",
+        "number": 11,
+        "art_prompt": "Geometric abstract art. A sequence of dots leads to a larger circle. A single, arcing line connects back to one of the earlier dots, creating a loop of feedback. Clean lines, corporate blue and gray palette."
+      },
+      "back": {
+        "phrase": "La conversación no termina cuando colgás el teléfono.",
+        "when_to_use": "Después de una reunión o llamada importante, para asegurar que todos están en la misma página.",
+        "instruction": "Acabás de tener una llamada con un cliente. Simulá que le escribís un email de seguimiento muy corto resumiendo el punto clave acordado. Leé el email en voz alta.",
+        "answer": "Ejemplo: \"Hi [Name], great speaking with you. Just to recap, I'll send over the proposal by end of day tomorrow. Best, [Your Name].\"",
+        "fun_fact": "Un email de 'follow-up' es una de las herramientas de comunicación de negocios más simples y efectivas."
+      },
+      "tags": [
+        "profesional",
+        "email",
+        "organización"
+      ]
+    },
+    {
+      "id": "isf-12",
+      "front": {
+        "title": "The Interruption",
+        "number": 12,
+        "art_prompt": "Abstract painting. A smooth, flowing river of color is cleanly cut by a sharp, thin, vertical line of a contrasting bright color. The interruption is precise and intentional, not chaotic. It splits the flow but doesn't destroy it."
+      },
+      "back": {
+        "phrase": "Quedarte con la duda es tu responsabilidad.",
+        "when_to_use": "Cuando estás en una presentación y necesitás hacer una pregunta sin ser maleducado.",
+        "instruction": "Alguien está hablando y no entendiste un término que usó. Interrumpí educadamente para pedir una clarificación. Decí la frase en voz alta.",
+        "answer": "Ejemplo: \"Sorry to interrupt, but could you quickly explain what [term] means?\"",
+        "fun_fact": "Esperar hasta el final para hacer una pregunta sobre algo que no entendiste al principio puede hacer que todo el resto de la reunión sea inútil para vos."
+      },
+      "tags": [
+        "reuniones",
+        "claridad",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "isf-13",
+      "front": {
+        "title": "The Vague 'Yes'",
+        "number": 13,
+        "art_prompt": "A photograph of a path covered in thick fog. You can see the path continues, but not where it leads. The feeling is uncertain and mysterious. Muted colors, soft focus."
+      },
+      "back": {
+        "phrase": "Ser positivo no es ser concreto.",
+        "when_to_use": "Cuando alguien te da una respuesta vaga y necesitás una confirmación real.",
+        "instruction": "Le preguntaste a alguien si puede ayudarte con un proyecto y te responde 'Yeah, maybe!'. Pedí más detalles para saber si es un sí o un no. Hacelo en voz alta.",
+        "answer": "Ejemplo: \"That would be great. Do you have an idea of when you might have some time to look at it?\"",
+        "fun_fact": "En algunas culturas, decir 'no' directamente es considerado poco cortés, por lo que se usan respuestas vagas que funcionan como un 'no' suave."
+      },
+      "tags": [
+        "comunicación",
+        "claridad",
+        "cultura"
+      ]
+    },
+    {
+      "id": "isf-14",
+      "front": {
+        "title": "The Sounding Board",
+        "number": 14,
+        "art_prompt": "Minimalist illustration of a large, solid wall. A series of sound waves are shown hitting the wall and bouncing back, slightly altered and more organized. The colors are calm and analytical, like teal and charcoal."
+      },
+      "back": {
+        "phrase": "A veces, solo necesitás decirlo en voz alta.",
+        "when_to_use": "Cuando tenés una idea a medio formar y necesitás la opinión de alguien.",
+        "instruction": "Querés proponer una idea a un colega de confianza. Empezá la conversación pidiendo su opinión de manera informal. Decilo en voz alta.",
+        "answer": "Ejemplo: \"Hey, do you have a minute? I have a crazy idea and I just wanted to run it by you.\"",
+        "fun_fact": "La frase 'to run something by someone' es una forma muy común y coloquial de pedir una opinión sin presionar a la otra persona."
+      },
+      "tags": [
+        "colaboración",
+        "ideas",
+        "profesional"
+      ]
+    },
+    {
+      "id": "isf-15",
+      "front": {
+        "title": "The Compliment",
+        "number": 15,
+        "art_prompt": "A single, perfectly rendered dewdrop on a leaf, capturing and refracting the morning light. The focus is sharp and appreciative of a small detail. Macro photography style, vibrant greens and crystal clears."
+      },
+      "back": {
+        "phrase": "Reconocer el buen trabajo no cuesta nada.",
+        "when_to_use": "Cuando un colega hizo una gran presentación o un buen trabajo.",
+        "instruction": "Tu compañero acaba de terminar de presentar. Dale un cumplido específico y sincero. No solo 'Good job'. Decilo en voz alta.",
+        "answer": "Ejemplo: \"That was a great presentation. I especially liked the way you explained the data.\"",
+        "fun_fact": "Los cumplidos específicos son mucho más efectivos y memorables que los genéricos porque demuestran que realmente prestaste atención."
+      },
+      "tags": [
+        "feedback",
+        "equipo",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "isf-16",
+      "front": {
+        "title": "The 'How are you?'",
+        "number": 16,
+        "art_prompt": "Pop art style illustration. A speech bubble with 'How are you?' inside. A smaller, identical speech bubble with 'Fine, thanks. And you?' is shown immediately bouncing back, like a ping-pong ball. Bright, primary colors."
+      },
+      "back": {
+        "phrase": "No siempre es una pregunta real.",
+        "when_to_use": "Al empezar una conversación casual o un email.",
+        "instruction": "Practicá la respuesta automática y culturalmente esperada a 'How are you?'. Decí la respuesta estándar en voz alta, sin pensar.",
+        "answer": "\"Good, thanks, how are you?\" o \"I'm doing well, thank you. How about yourself?\"",
+        "fun_fact": "En el 90% de los casos, 'How are you?' es un saludo, no una pregunta sobre tu bienestar. La respuesta esperada es corta y positiva."
+      },
+      "tags": [
+        "cultura",
+        "conversación",
+        "rompehielos"
+      ]
+    },
+    {
+      "id": "isf-17",
+      "front": {
+        "title": "The Pronunciation Trap",
+        "number": 17,
+        "art_prompt": "A typography-focused design. The word 'THROUGH' is written in a clear font. Below it, the words 'THOUGH', 'TOUGH', 'THOUGHT' are shown in a more distorted, confusing script, highlighting their visual similarity but phonetic difference."
+      },
+      "back": {
+        "phrase": "Las letras mienten.",
+        "when_to_use": "Para no tropezar con las palabras más traicioneras del inglés.",
+        "instruction": "Leé estas tres palabras en voz alta: 'beach', 'sheet', 'ship'. Concentrate en la diferencia entre el sonido 'ee' largo y el 'i' corto. Repetí 5 veces.",
+        "answer": "La clave es la tensión en la mandíbula: 'ee' (largo, como en 'sheet') es una sonrisa tensa; 'i' (corto, como en 'ship') es relajado.",
+        "fun_fact": "La diferencia entre 'sheet' y 'shit' o 'beach' y 'bitch' es uno de los errores de pronunciación más comunes y peligrosos para los hispanohablantes."
+      },
+      "tags": [
+        "pronunciación",
+        "errores comunes",
+        "fonética"
+      ]
+    },
+    {
+      "id": "isf-18",
+      "front": {
+        "title": "The Educated Guess",
+        "number": 18,
+        "art_prompt": "An illustration of a person standing before a locked door with multiple keyholes. Instead of trying random keys, they are holding a single skeleton key that seems to fit the logic of the lock. The style is schematic and intelligent."
+      },
+      "back": {
+        "phrase": "No necesitás saber todas las palabras.",
+        "when_to_use": "Cuando estás leyendo y te encontrás con una palabra desconocida.",
+        "instruction": "Leé esta frase: 'The politician's speech was full of bombastic language.' Sin usar un diccionario, ¿qué te sugiere el contexto sobre la palabra 'bombastic'? Explicá tu razonamiento en voz alta (en español o inglés).",
+        "answer": "El contexto ('politician's speech') sugiere que 'bombastic' es algo negativo, probablemente 'pretencioso', 'exagerado' o 'rimbombante'.",
+        "fun_fact": "Adivinar por contexto es una habilidad crucial para la fluidez. Detenerse a buscar cada palabra interrumpe el flujo de la lectura y la comprensión."
+      },
+      "tags": [
+        "lectura",
+        "vocabulario",
+        "estrategia"
+      ]
+    },
+    {
+      "id": "isf-19",
+      "front": {
+        "title": "The Ending",
+        "number": 19,
+        "art_prompt": "A clean, graphic image of a conversation thread on a messaging app. The last message is a simple, polite closing line, and it has a definitive 'read' checkmark next to it. The rest of the conversation blurs into the background."
+      },
+      "back": {
+        "phrase": "Saber cómo irse es tan importante como saber cómo llegar.",
+        "when_to_use": "Para terminar una conversación (en persona o por teléfono) de forma natural.",
+        "instruction": "Estás hablando con un colega pero tenés que ir a una reunión. Terminá la conversación educadamente. Decí la frase de cierre en voz alta.",
+        "answer": "Ejemplo: \"Well, it was great catching up, but I've got to run to a meeting. Talk to you later!\"",
+        "fun_fact": "Frases como 'Anyway, I should let you go' o 'I'll let you get back to it' son formas corteses de terminar una conversación, poniendo la 'responsabilidad' en la otra persona."
+      },
+      "tags": [
+        "conversación",
+        "cortesía",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "isf-20",
+      "front": {
+        "title": "The Specific Question",
+        "number": 20,
+        "art_prompt": "A close-up photograph of an archer's eye, sharply focused on a distant target. The arrow is notched and ready. The image conveys precision and intent. High-speed photography, capturing a moment of intense focus."
+      },
+      "back": {
+        "phrase": "Las preguntas generales reciben respuestas generales.",
+        "when_to_use": "Cuando necesitás información útil, no un monólogo.",
+        "instruction": "En lugar de preguntar 'How was the meeting?', que invita a un 'Fine', hacé una pregunta más específica. Formulá una en voz alta.",
+        "answer": "Ejemplo: \"What were the main takeaways from the meeting?\" o \"Did you decide on the budget?\"",
+        "fun_fact": "Hacer buenas preguntas es una habilidad de comunicación subestimada. Las preguntas específicas demuestran que estás involucrado y valoras el tiempo de la otra persona."
+      },
+      "tags": [
+        "preguntas",
+        "comunicación",
+        "eficiencia"
+      ]
+    },
+    {
+      "id": "isf-21",
+      "front": {
+        "title": "The 'Going to' vs 'Will'",
+        "number": 21,
+        "art_prompt": "A split image. On the left, a detailed architectural blueprint with plans laid out, representing 'going to'. On the right, a lightning bolt striking from a clear sky, representing a spontaneous 'will'. The contrast is between planning and spontaneity."
+      },
+      "back": {
+        "phrase": "El futuro tiene matices: plan o impulso.",
+        "when_to_use": "Para hablar del futuro con la intención correcta.",
+        "instruction": "1. Tenés un ticket de avión para ir a Londres el mes que viene. Decí en voz alta a dónde vas. 2. El teléfono suena. Decí en voz alta que vas a atender. Usá 'going to' para el plan y 'will' para la decisión espontánea.",
+        "answer": "1. \"I'm going to travel to London next month.\" (Plan) 2. \"I'll get it!\" (Decisión espontánea)",
+        "fun_fact": "Aunque a veces son intercambiables, la distinción 'going to' (plan previo) y 'will' (decisión del momento, promesa) es clave para sonar natural."
+      },
+      "tags": [
+        "gramática",
+        "futuro",
+        "precisión"
+      ]
+    },
+    {
+      "id": "isf-22",
+      "front": {
+        "title": "The Anecdote",
+        "number": 22,
+        "art_prompt": "A vintage film strip showing three consecutive frames. The first shows a normal situation, the second a moment of chaos or surprise, and the third the amusing result. The style evokes storytelling and personal history."
+      },
+      "back": {
+        "phrase": "Los datos convencen, las historias conectan.",
+        "when_to_use": "Para romper el hielo o hacer un punto más memorable.",
+        "instruction": "Pensá en algo gracioso o raro que te pasó esta semana. Contalo en 3 frases cortas en inglés. Usá conectores como 'So, then, and suddenly'. Hacelo en voz alta.",
+        "answer": "Ejemplo: \"So I was walking my dog this morning. Suddenly, he saw a squirrel and started running, and then I tripped over the leash in front of everyone.\"",
+        "fun_fact": "Contar una pequeña historia personal, incluso en un contexto profesional, te hace más cercano y memorable."
+      },
+      "tags": [
+        "storytelling",
+        "conversación",
+        "conexión"
+      ]
+    },
+    {
+      "id": "isf-23",
+      "front": {
+        "title": "The Active Voice",
+        "number": 23,
+        "art_prompt": "A dynamic, energetic illustration of a hand clearly pushing a domino, causing a chain reaction. The focus is on the agent of the action, not the result. Bold lines, strong sense of cause and effect."
+      },
+      "back": {
+        "phrase": "Hacete cargo de la acción.",
+        "when_to_use": "Para que tu escritura sea más directa y clara, especialmente en emails.",
+        "instruction": "La frase 'The report was completed by John' está en voz pasiva. Re-escribila en voz activa, que es más directa. Decila en voz alta.",
+        "answer": "\"John completed the report.\"",
+        "fun_fact": "Mientras que la voz pasiva es útil en contextos científicos o para evitar culpas ('Mistakes were made'), la voz activa casi siempre es más fuerte y clara en la comunicación diaria."
+      },
+      "tags": [
+        "escritura",
+        "email",
+        "claridad",
+        "profesional"
+      ]
+    },
+    {
+      "id": "isf-24",
+      "front": {
+        "title": "The Offer to Help",
+        "number": 24,
+        "art_prompt": "An abstract image showing two gears not quite meshing. A third, smaller shape is shown moving into place to connect them, representing help and facilitation. The colors are warm and collaborative, like orange and brown."
+      },
+      "back": {
+        "phrase": "Ver a alguien en problemas y no hacer nada es una decisión.",
+        "when_to_use": "Cuando ves a un colega estresado o sobrecargado de trabajo.",
+        "instruction": "Tu compañero de equipo parece abrumado con una fecha de entrega. Ofrecele tu ayuda de manera genuina. Decí la frase en voz alta.",
+        "answer": "Ejemplo: \"You look like you have a lot on your plate. Is there anything I can do to help?\" o \"Let me know if you need a hand with anything.\"",
+        "fun_fact": "La frase 'Let me know if...' es una forma suave de ofrecer ayuda sin ser insistente, dándole a la otra persona el control para aceptar o no."
+      },
+      "tags": [
+        "trabajo en equipo",
+        "cortesía",
+        "profesional"
+      ]
+    },
+    {
+      "id": "isf-25",
+      "front": {
+        "title": "The 'What do you do?'",
+        "number": 25,
+        "art_prompt": "A collection of small, minimalist icons representing various professions (a gear, a stethoscope, a paintbrush, a line of code) arranged in a neat grid. One icon is highlighted, representing the individual's identity within the whole."
+      },
+      "back": {
+        "phrase": "Tu respuesta define la primera impresión.",
+        "when_to_use": "En una situación de networking o cuando conocés a alguien nuevo.",
+        "instruction": "Prepará tu 'elevator pitch'. En una sola frase, describí a qué te dedicás de una forma interesante. No digas solo tu cargo. Por ejemplo, en vez de 'I'm a marketer', probá algo más. Decilo en voz alta.",
+        "answer": "Ejemplo: \"I help small businesses find new customers online.\" Es más claro y genera más conversación que solo decir el cargo.",
+        "fun_fact": "En Estados Unidos, 'What do you do?' es una de las primeras preguntas que se hacen al conocer a alguien. Tener una respuesta clara y concisa es fundamental."
+      },
+      "tags": [
+        "networking",
+        "profesional",
+        "conversación"
+      ]
+    },
+    {
+      "id": "isf-26",
+      "front": {
+        "title": "The Tag Question",
+        "number": 26,
+        "art_prompt": "A simple line drawing. A statement is represented by a solid line ending in a period. A small, curved line hooks onto the period, turning it into a question mark. The visual shows a statement being converted into a question."
+      },
+      "back": {
+        "phrase": "Afirmar preguntando es una forma de conectar.",
+        "when_to_use": "Para confirmar información o para iniciar una conversación y sonar más amigable.",
+        "instruction": "Convertí esta afirmación en una pregunta de confirmación: 'It's a beautiful day.' Usá una 'tag question' al final. Decila en voz alta.",
+        "answer": "\"It's a beautiful day, isn't it?\"",
+        "fun_fact": "Los hablantes nativos usan 'tag questions' constantemente. Dominarlas es un gran paso para sonar más natural. La regla general es: afirmación positiva, tag negativo ('It is..., isn't it?'); afirmación negativa, tag positivo ('It isn't..., is it?')."
+      },
+      "tags": [
+        "gramática",
+        "fluidez",
+        "conversación"
+      ]
+    },
+    {
+      "id": "isf-27",
+      "front": {
+        "title": "The 'Used to'",
+        "number": 27,
+        "art_prompt": "A ghosted, semi-transparent image of a childhood bicycle overlaid on a crisp, clear photograph of a modern car key. The image represents a past habit that no longer exists. Sepia tones for the past, vibrant color for the present."
+      },
+      "back": {
+        "phrase": "El pasado que ya no es.",
+        "when_to_use": "Para hablar de hábitos o estados que eran ciertos en el pasado pero ya no lo son.",
+        "instruction": "Pensá en un hobby o una actividad que hacías en el pasado pero que ya no hacés (ej. tocar la guitarra, jugar al fútbol). Describilo en una frase usando 'I used to...'. Decilo en voz alta.",
+        "answer": "Ejemplo: \"I used to play the piano every day, but now I don't have time.\"",
+        "fun_fact": "No confundas 'I used to do something' (solía hacer algo) con 'I am used to doing something' (estoy acostumbrado a hacer algo). Son estructuras parecidas con significados muy diferentes."
+      },
+      "tags": [
+        "gramática",
+        "pasado",
+        "narración"
+      ]
+    },
+    {
+      "id": "isf-28",
+      "front": {
+        "title": "The Softener",
+        "number": 28,
+        "art_prompt": "Macro photograph of a drop of ink falling into clear water. The sharp, dark ink is shown diffusing at the edges, its harsh lines becoming soft and cloudy. It represents a direct statement being softened."
+      },
+      "back": {
+        "phrase": "La honestidad no tiene por qué ser brutal.",
+        "when_to_use": "Cuando tenés que dar feedback negativo o una mala noticia.",
+        "instruction": "Tenés que decirle a alguien que su idea no va a funcionar. En lugar de decir 'That's a bad idea', usá palabras que suavicen el mensaje. Empezá con 'I'm not sure that's the best approach...'. Decilo en voz alta.",
+        "answer": "Ejemplo: \"I'm not sure that's the best approach, because of [reason]. Have we considered [alternative]?\"",
+        "fun_fact": "Palabras como 'just', 'a little', 'maybe' o frases como 'I might be wrong, but...' son 'softeners' que reducen el impacto de una declaración directa."
+      },
+      "tags": [
+        "feedback",
+        "comunicación",
+        "profesional"
+      ]
+    },
+    {
+      "id": "isf-29",
+      "front": {
+        "title": "The 'What if...?'",
+        "number": 29,
+        "art_prompt": "A surrealist image of a chessboard where one of the pawns has sprouted wings and is flying off the board, breaking all the rules. It represents possibility and thinking outside the box. Dreamlike, imaginative atmosphere."
+      },
+      "back": {
+        "phrase": "Las mejores ideas nacen de una pregunta hipotética.",
+        "when_to_use": "En una sesión de brainstorming o para proponer una solución creativa.",
+        "instruction": "Están trabados en un problema. Usá la estructura 'What if we...?' para proponer una solución radical o diferente, sin importar qué tan loca suene. Formulá una pregunta hipotética en voz alta.",
+        "answer": "Ejemplo: \"What if we tried to solve the problem from the customer's perspective instead of ours?\"",
+        "fun_fact": "El 'What if...?' es una herramienta poderosa para la creatividad porque elimina las limitaciones del 'cómo' y se enfoca puramente en la posibilidad."
+      },
+      "tags": [
+        "creatividad",
+        "brainstorming",
+        "ideas"
+      ]
+    },
+    {
+      "id": "isf-30",
+      "front": {
+        "title": "The Self-Correction",
+        "number": 30,
+        "art_prompt": "A pencil drawing of a word that has been erased, but faint traces still remain. A new, more precise word is written cleanly over it. The image shows the process of refining thought, not just hiding mistakes."
+      },
+      "back": {
+        "phrase": "Equivocarse es parte de hablar. Corregirse es parte de aprender.",
+        "when_to_use": "Cuando te das cuenta a mitad de frase que usaste la palabra incorrecta.",
+        "instruction": "Es normal cometer errores. Practicá cómo corregirte. Decí en voz alta: 'We should send the email... sorry, I mean, the report.' Hacelo con naturalidad.",
+        "answer": "La clave es usar una frase corta de transición como 'I mean', 'or rather', o 'let me rephrase that'.",
+        "fun_fact": "Los hablantes nativos se autocorrigen todo el tiempo. Hacerlo no te hace ver como un mal hablante, al contrario, demuestra que tenés un buen dominio y te preocupás por la precisión."
+      },
+      "tags": [
+        "fluidez",
+        "errores",
+        "aprendizaje"
+      ]
+    }
+  ]
+}

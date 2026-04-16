@@ -1,16 +1,16 @@
 {
   "id": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada-v1",
   "edition": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada",
-  "name": "Rompelo",
+  "name": "Sobremesa",
   "slug": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada",
-  "description": "Una baraja para juntadas. Menos charla de ascensor y más de lo que importa. Preguntas, retos y consignas para que la noche no termine en mirar el celular. Para usar con amigos, conocidos y futuros amigos.",
+  "description": "Un juego de cartas para estirar la noche. 40 preguntas, retos y disparadores absurdos para cuando la conversación pide un empujón y los lazos se pueden apretar un poco más. No es para ganar, es para conectar.",
   "language": "es",
-  "card_count": 30,
+  "card_count": 40,
   "metadata": {
-    "topic": "Juego para fiestas y juntadas",
-    "tone": "Descontracturado, directo, divertido",
-    "target_audience": "Amigos y grupos en una reunión social",
-    "player_count": "3+"
+    "topic": "Juego de cartas para fiestas y juntadas",
+    "tone": "Descontracturado, divertido, absurdo",
+    "target_audience": "Amigos buscando romper el hielo y conectar",
+    "player_count": "3 o más jugadores"
   },
   "print_spec_id": "baraja-standard",
   "design_template_id": "dark-minimal-01",
@@ -20,687 +20,723 @@
   },
   "cards": [
     {
-      "id": "rompelo-01",
-      "front": {
-        "title": "El Apodo Secreto",
-        "number": 1,
-        "art_prompt": "Pop art collage style. A person's face constructed from mismatched newspaper and magazine clippings, like a ransom note. One eye is from a vintage ad, the mouth is smiling from a comic book. They are whispering into an old-fashioned rotary phone. Bright, contrasting colors like cyan and magenta.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-01.jpg?v=1775423473251",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-01_v2026-04-05T21-11-13.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "Todos tenemos un nombre que no elegimos.",
-        "when_to_use": "Para romper el hielo",
-        "instruction": "Quien sacó la carta debe revelar un apodo que tuvo (o tiene) y contar la historia de cómo surgió en menos de un minuto.",
-        "fun_fact": "El estudio de los apodos se llama 'antroponimia'.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-01-back.png",
-        "back_image_versions": []
-      },
-      "tags": [
-        "pregunta",
-        "rompehielos",
-        "historia"
-      ]
-    },
-    {
-      "id": "rompelo-02",
+      "id": "sobremesa-01",
       "front": {
         "title": "La Primera Impresión",
-        "number": 2,
-        "art_prompt": "Surrealist painting. Two featureless mannequins meeting. One mannequin is offering the other a floating, glowing question mark. The background is a simple, flat color gradient from dusk orange to deep indigo. Sharp shadows.",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-02_v2026-04-05T21-19-19.jpg"
-        ],
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-02.jpg?v=1775423959954"
+        "number": 1,
+        "art_prompt": "Abstract fine art painting of overlapping, translucent silhouettes meeting for the first time. Chiaroscuro lighting highlights anxious energy and curiosity. Thick, impasto texture suggests the weight of initial judgments."
       },
       "back": {
-        "phrase": "Casi nunca es acertada. Casi siempre es divertida.",
-        "when_to_use": "Cuando ya hay un poco de confianza",
-        "instruction": "Elegí a una persona del grupo y decile cuál fue tu primera impresión honesta sobre ella. Después, esa persona hace lo mismo con quien quiera.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-02-back.png",
-        "back_image_versions": []
+        "phrase": "Nunca hay una segunda oportunidad. O sí.",
+        "when_to_use": "Para romper el hielo con honestidad brutal (y cariño).",
+        "instruction": "Empezando por quien sacó la carta y siguiendo por la derecha, cada uno debe confesar cuál fue su primera, primerísima impresión de la persona que tiene a su izquierda. Sin filtro."
       },
       "tags": [
         "pregunta",
-        "confesion",
-        "picante"
+        "icebreaker",
+        "honestidad"
       ]
     },
     {
-      "id": "rompelo-03",
+      "id": "sobremesa-02",
       "front": {
         "title": "El Placer Culposo",
+        "number": 2,
+        "art_prompt": "Expressionist artwork depicting a single, bright, almost glowing object in a dark, muted room. The texture is a mix of smooth, seductive impasto for the object and rough, scratchy strokes for the background, evoking a secret indulgence."
+      },
+      "back": {
+        "phrase": "Lo que hacés cuando nadie te ve, te define.",
+        "when_to_use": "Para revelar los gustos que no publican en Instagram.",
+        "instruction": "Quien sacó la carta confiesa su mayor placer culposo (una canción, una película, una comida, un hábito). El resto del grupo vota en silencio si es realmente 'culposo' o perfectamente normal."
+      },
+      "tags": [
+        "pregunta",
+        "confesion",
+        "icebreaker"
+      ]
+    },
+    {
+      "id": "sobremesa-03",
+      "front": {
+        "title": "La Banda Sonora",
         "number": 3,
-        "art_prompt": "A vintage, worn-out cassette tape labeled 'MIS PECADOS' in handwritten marker. The tape is unspooling, and the magnetic tape itself forms the shape of a musical note and a small, smiling devil. 90s nostalgia aesthetic, grainy photo.",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-03_v2026-04-05T21-19-23.jpg"
-        ],
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-03.jpg?v=1775423963719"
+        "art_prompt": "Abstract fine art representation of sound waves turning into colors. Heavy impasto textures create a sense of rhythm and vibration, with a dark chiaroscuro background making the colors pop, like music in a dark room."
       },
       "back": {
-        "phrase": "Si no te da un poco de vergüenza, no es un buen placer culposo.",
-        "when_to_use": "Para subir el nivel de las confesiones",
-        "instruction": "Poné en YouTube la canción que es tu mayor placer culposo. Sin excusas. El grupo decide si es suficientemente culposa o no.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-03-back.png",
-        "back_image_versions": []
+        "phrase": "Hay una canción para cada momento. Especialmente para este.",
+        "when_to_use": "Para cambiar la energía del ambiente.",
+        "instruction": "Quien sacó la carta se convierte en el DJ. Tiene 30 segundos para encontrar y poner una canción que, según él o ella, defina el mood exacto de la juntada en este preciso instante."
       },
       "tags": [
+        "reto",
         "musica",
-        "confesion",
-        "rompehielos"
+        "creativo"
       ]
     },
     {
-      "id": "rompelo-04",
+      "id": "sobremesa-04",
       "front": {
-        "title": "La Habilidad Inútil",
+        "title": "El Superpoder Inútil",
         "number": 4,
-        "art_prompt": "Linocut print style. A person perfectly balancing a spoon on their nose while juggling three rubber chickens. The expression is one of intense, misplaced concentration. Simple, bold lines on a textured paper background.",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-04_v2026-04-05T21-19-27.jpg"
-        ],
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-04.jpg?v=1775423967815"
+        "art_prompt": "Expressionist painting of a heroic figure posing dramatically, but they are just glowing slightly. The impasto is thick on the figure, but the effect they are producing is comically small. Chiaroscuro emphasizes the anticlimax."
       },
       "back": {
-        "phrase": "El talento no siempre tiene que servir para algo.",
-        "when_to_use": "Para un momento de risas",
-        "instruction": "Demostrá en vivo y en directo tu talento más inútil. El que no tiene ninguna aplicación práctica en la vida. El grupo aplaude según la inutilidad.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-04-back.png",
-        "back_image_versions": []
+        "phrase": "Un gran poder conlleva una nula responsabilidad.",
+        "when_to_use": "Para cuando la conversación se pone demasiado seria.",
+        "instruction": "Cada jugador, en ronda, describe el superpoder más inútil que le gustaría tener. Ejemplo: 'poder saber la temperatura exacta del café con solo mirarlo'. El grupo vota por el más creativamente inútil."
       },
       "tags": [
-        "habilidad",
+        "pregunta",
         "absurdo",
-        "performance"
+        "creatividad"
       ]
     },
     {
-      "id": "rompelo-05",
+      "id": "sobremesa-05",
       "front": {
-        "title": "La Compra Estúpida",
+        "title": "La Conspiración",
         "number": 5,
-        "art_prompt": "Realistic still life photo. A dusty, unused Shake Weight sits next to a banana slicer and a singing fish mounted on a plaque ('Big Mouth Billy Bass'). The lighting is dramatic, like a museum exhibit for regrettable purchases.",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-05_v2026-04-05T21-19-31.jpg"
-        ],
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-05.jpg?v=1775423971699"
+        "art_prompt": "Abstract chiaroscuro artwork with intersecting lines and hidden shapes in deep shadows. A single point of light illuminates swirling, textured paint, suggesting a secret being revealed. Heavy, paranoid impasto strokes."
       },
       "back": {
-        "phrase": "Alguien lo fabricó. Alguien lo publicitó. Y vos lo compraste.",
-        "when_to_use": "Para compartir errores financieros",
-        "instruction": "Contá la historia de la compra más estúpida que hiciste. Mostrá una foto si la tenés. El grupo vota si fue una inversión o un desastre.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-05-back.png",
-        "back_image_versions": []
+        "phrase": "No creas todo lo que te dicen. Ni siquiera esto.",
+        "when_to_use": "Para descubrir quién es el más crédulo del grupo.",
+        "instruction": "Quien sacó la carta debe inventar una teoría conspirativa completamente ridícula pero contarla con la mayor seriedad posible. El objetivo es convencer a al menos una persona del grupo."
       },
       "tags": [
-        "pregunta",
-        "historia",
-        "dinero"
+        "creativo",
+        "absurdo",
+        "actuacion"
       ]
     },
     {
-      "id": "rompelo-06",
+      "id": "sobremesa-06",
       "front": {
-        "title": "El Mensaje Equivocado",
+        "title": "El Orador",
         "number": 6,
-        "art_prompt": "Close-up on a smartphone screen. A text bubble with 'JAJAJA TE DIJE QUE ERA UN IDIOTA' is visible, but the contact name at the top is 'Mamá'. The screen has a slight crack. The background is blurred, focusing on the horror of the message. Cinematic, tense lighting.",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-06_v2026-04-05T21-19-35.jpg"
-        ],
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-06.jpg?v=1775423975112"
+        "art_prompt": "Expressionist painting of a mouth, open, with vibrant, textured colors exploding outwards. The background is dark and indistinct, focusing all energy on the act of speaking. Impasto builds up around the lips, giving them weight."
       },
       "back": {
-        "phrase": "El terror de la doble tilde azul.",
-        "when_to_use": "Para cuando la noche pide algo picante",
-        "instruction": "Leé en voz alta (o parafraseá si es muy privado) el mensaje más vergonzoso que alguna vez mandaste a la persona equivocada. El grupo evalúa el nivel de cringe del 1 al 10.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-06-back.png",
-        "back_image_versions": []
+        "phrase": "Cualquier cosa puede ser importante si la decís con ganas.",
+        "when_to_use": "Para practicar el arte de la convicción.",
+        "instruction": "La persona a la derecha de quien sacó la carta elige un objeto mundano a la vista (ej: un salero). Quien sacó la carta tiene 60 segundos para dar un discurso épico y apasionado sobre su importancia para la humanidad."
       },
       "tags": [
-        "confesion",
-        "picante",
-        "tecnologia"
+        "reto",
+        "actuacion",
+        "creatividad"
       ]
     },
     {
-      "id": "rompelo-07",
-      "front": {
-        "title": "La Teoría Conspirativa",
-        "number": 7,
-        "art_prompt": "A diagram drawn with red string on a corkboard, connecting seemingly random photos: a picture of a pigeon, the Mona Lisa, a jar of mayonnaise, and an old Nokia phone. In the center, a big, bold question mark. Detective movie aesthetic.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-07.jpg?v=1775423979690"
-      },
-      "back": {
-        "phrase": "No digo que sea cierto, pero tampoco tengo pruebas de lo contrario.",
-        "when_to_use": "Para explorar las mentes del grupo",
-        "instruction": "Tenés 60 segundos para convencer al grupo de una teoría conspirativa en la que creés (o una que te parezca divertida). El grupo decide si se une a tu secta.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-07-back.png",
-        "back_image_versions": []
-      },
-      "tags": [
-        "pregunta",
-        "debate",
-        "absurdo"
-      ]
-    },
-    {
-      "id": "rompelo-08",
-      "front": {
-        "title": "El Superpoder Mundano",
-        "number": 8,
-        "art_prompt": "A person in a superhero costume, complete with a cape made from a dish towel, triumphantly holding up a perfectly ripe avocado. The setting is a normal supermarket aisle. The style is heroic and epic, like a movie poster, but for a boring superpower.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-08.jpg?v=1775423983437"
-      },
-      "back": {
-        "phrase": "Los grandes poderes conllevan pequeños problemas cotidianos.",
-        "when_to_use": "Para un momento creativo",
-        "instruction": "Si pudieras tener un superpoder increíblemente mundano y específico (ej: saber siempre qué fila del súper es más rápida), ¿cuál sería? El grupo vota por el más útil.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-08-back.png",
-        "back_image_versions": []
-      },
-      "tags": [
-        "creatividad",
-        "pregunta",
-        "absurdo"
-      ]
-    },
-    {
-      "id": "rompelo-09",
+      "id": "sobremesa-07",
       "front": {
         "title": "La Peor Cita",
-        "number": 9,
-        "art_prompt": "A single, wilted rose lies on an empty table for two in a cheap restaurant. One chair is knocked over. A single tear drop is illustrated on the table cloth. Melodramatic, film noir style with heavy shadows.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-09.jpg?v=1775423987509"
+        "number": 7,
+        "art_prompt": "Abstract artwork of two shapes sitting opposite each other, separated by a vast, empty space made of rough, dark impasto. Chiaroscuro lighting creates a sense of awkwardness and distance. The textures are jagged and uncomfortable."
       },
       "back": {
-        "phrase": "A veces, el amor de tu vida es no volver a ver a esa persona.",
-        "when_to_use": "Para compartir historias de terror romántico",
-        "instruction": "Describí tu peor cita en solo tres palabras. El resto del grupo tiene que adivinar qué pasó. Luego contás la historia completa.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-09-back.png",
-        "back_image_versions": []
+        "phrase": "De las malas experiencias salen las buenas anécdotas.",
+        "when_to_use": "Para agradecer no estar en esa cita ahora mismo.",
+        "instruction": "En ronda, cada persona comparte la anécdota de su peor cita (o una inventada, si no tienen). El grupo vota cuál fue la más desastrosa y entretenida. No hay ganador, solo un sobreviviente honorífico."
       },
       "tags": [
-        "historia",
-        "confesion",
-        "adivinar"
+        "pregunta",
+        "anecdota",
+        "icebreaker"
       ]
     },
     {
-      "id": "rompelo-10",
-      "front": {
-        "title": "El Barman",
-        "number": 10,
-        "art_prompt": "Action shot of a person in a normal living room, dramatically shaking a cocktail shaker made from a Tupperware container. They are wearing a cheap party store bowtie. Splashes of a colorful drink are frozen mid-air around them. High-speed photography, vibrant colors.",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-10_v2026-04-05T21-19-51.jpg"
-        ],
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-10.jpg?v=1775423991648"
-      },
-      "back": {
-        "phrase": "La coctelería es la ciencia de mezclar cosas que tenés a mano.",
-        "when_to_use": "Cuando hay bebidas cerca",
-        "instruction": "Te convertís en el barman oficial. La persona a tu derecha te pide un trago (con o sin alcohol) y tenés que preparárselo usando un máximo de 3 ingredientes que encuentres. Ponele un nombre ridículo.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-10-back.png",
-        "back_image_versions": []
-      },
-      "tags": [
-        "reto",
-        "bebidas",
-        "accion"
-      ]
-    },
-    {
-      "id": "rompelo-11",
+      "id": "sobremesa-08",
       "front": {
         "title": "El Imitador",
+        "number": 8,
+        "art_prompt": "Expressionist piece showing a face that is a blur of different features, as if trying to settle on one. Textured impasto creates a mask-like quality. Chiaroscuro highlights the shifting identity."
+      },
+      "back": {
+        "phrase": "Todos somos un poco los demás.",
+        "when_to_use": "Para cuando se conocen tan bien que ya es peligroso.",
+        "instruction": "Quien sacó la carta debe elegir a otra persona del grupo e imitarla (su forma de hablar, un gesto, una frase típica) hasta que el resto adivine de quién se trata. Prohibido decir el nombre."
+      },
+      "tags": [
+        "reto",
+        "actuacion",
+        "grupo"
+      ]
+    },
+    {
+      "id": "sobremesa-09",
+      "front": {
+        "title": "El Nuevo Feriado",
+        "number": 9,
+        "art_prompt": "Abstract fine art piece with explosive, celebratory colors and textures. Thick impasto suggests confetti and parades, while a central, calm shape represents the reason for the holiday. Chiaroscuro gives it a sense of official importance."
+      },
+      "back": {
+        "phrase": "La vida necesita más excusas para celebrar.",
+        "when_to_use": "Para solucionar la falta de fines de semana largos.",
+        "instruction": "El grupo entero debe inventar un nuevo feriado nacional. Tienen que decidir el nombre, la fecha, el motivo de la celebración y cómo se festeja. La propuesta más creativa se anota en un papel como 'ley'."
+      },
+      "tags": [
+        "creativo",
+        "absurdo",
+        "grupo"
+      ]
+    },
+    {
+      "id": "sobremesa-10",
+      "front": {
+        "title": "El Juicio",
+        "number": 10,
+        "art_prompt": "An abstract composition resembling scales of justice, but unbalanced. One side has heavy, dark impasto, the other has light, frantic brushstrokes. Chiaroscuro creates a dramatic courtroom atmosphere."
+      },
+      "back": {
+        "phrase": "Hay que tomarse las cosas triviales muy en serio.",
+        "when_to_use": "Para debatir lo que verdaderamente importa.",
+        "instruction": "Se pone a 'juicio' un debate clásico (ej: la pizza con ananá, el mate dulce vs amargo). Quien sacó la carta es el juez. Se eligen dos abogados. El resto es el jurado. Que comience el juicio."
+      },
+      "tags": [
+        "creativo",
+        "grupo",
+        "debate"
+      ]
+    },
+    {
+      "id": "sobremesa-11",
+      "front": {
+        "title": "El Mensaje Borrado",
         "number": 11,
-        "art_prompt": "Expressionist painting. A figure made of swirling, colorful brushstrokes stands in the center of a circle of calm, monochrome figures. The central figure is contorting its body to mimic the shape of one of the others. The style is chaotic and energetic.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-11.jpg?v=1775424541438",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-11_v2026-04-05T21-29-01.jpg"
-        ]
+        "art_prompt": "Expressionist artwork of a phone screen with a notification bubble that is smudged and erased. The impasto texture is thick over the erased message, conveying regret and mystery. Chiaroscuro highlights the glowing screen in the dark."
       },
       "back": {
-        "phrase": "Somos un reflejo de los demás. A veces, un reflejo deforme.",
-        "when_to_use": "Para poner a prueba la capacidad de observación",
-        "instruction": "Elegí en secreto a alguien del grupo. Tenés que imitar su forma de hablar, sus gestos o sus muletillas hasta que alguien adivine de quién se trata. No podés decir su nombre.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-11-back.png",
-        "back_image_versions": []
+        "phrase": "Lo que no se envió a veces grita más fuerte.",
+        "when_to_use": "Para especular sobre las balas que esquivamos.",
+        "instruction": "Cada persona debe contar (o inventar) la historia del último mensaje de texto importante que escribió y borró sin enviar. ¿A quién era? ¿Qué decía? ¿Por qué se arrepintió?"
       },
       "tags": [
-        "reto",
-        "performance",
-        "adivinar"
+        "pregunta",
+        "confesion",
+        "anecdota"
       ]
     },
     {
-      "id": "rompelo-12",
+      "id": "sobremesa-12",
       "front": {
-        "title": "El Teléfono Rojo",
+        "title": "El Talento Oculto",
         "number": 12,
-        "art_prompt": "A hand nervously offers a smartphone to another hand. The phone's screen glows with a menacing red light, projecting a devil emoji shadow on the wall behind it. Tense, cinematic lighting.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-12.jpg?v=1775848595794",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-12_v2026-04-10T19-16-35.jpg",
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-12_v2026-04-10T19-11-38.jpg"
-        ]
+        "art_prompt": "Abstract painting with a dark, uniform surface that has a crack in it, revealing brilliant, textured colors underneath. Heavy impasto marks the crack. Chiaroscuro emphasizes the contrast between the hidden and the revealed."
       },
       "back": {
-        "phrase": "La confianza es entregar tu celular desbloqueado.",
-        "when_to_use": "Solo para valientes",
-        "instruction": "Entregale tu celular desbloqueado a la persona de tu izquierda. Esa persona puede ver tus últimos 5 emojis usados y tiene que enviar uno a tu último contacto de WhatsApp. Sin dar explicaciones.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-12-back.png",
-        "back_image_versions": []
+        "phrase": "Todos saben hacer algo raro. Es hora de mostrarlo.",
+        "when_to_use": "Para descubrir habilidades que no figuran en LinkedIn.",
+        "instruction": "Quien sacó la carta debe demostrar un talento oculto, por más pequeño o extraño que sea. Si no se anima, debe nominar a alguien que sepa que tiene uno para que lo demuestre."
       },
       "tags": [
         "reto",
-        "picante",
-        "tecnologia"
+        "icebreaker",
+        "habilidad"
       ]
     },
     {
-      "id": "rompelo-13",
+      "id": "sobremesa-13",
       "front": {
-        "title": "El Poeta Urbano",
+        "title": "El Contacto Cero",
         "number": 13,
-        "art_prompt": "A microphone covered in graffiti stands alone on a stage under a single spotlight. The background is a dark, blurry audience in what looks like a living room. The style is a mix of gritty realism and concert photography.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-13.jpg?v=1775848600759",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-13_v2026-04-10T19-16-40.jpg"
-        ]
+        "art_prompt": "An abstract piece dominated by a central black shape with heavy, absorbing impasto texture, representing a phone. Ghostly, translucent shapes of hands float around it, unable to touch. Chiaroscuro lighting makes the phone a void."
       },
       "back": {
-        "phrase": "Las mejores rimas nacen de la presión.",
-        "when_to_use": "Para un estallido de creatividad",
-        "instruction": "El grupo te da una palabra. Tenés 30 segundos para improvisar una rima o un rap corto que incluya esa palabra y que hable sobre la persona que está a tu derecha.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-13-back.png",
-        "back_image_versions": []
+        "phrase": "A ver si te acordás cómo era el mundo antes.",
+        "when_to_use": "Para una desintoxicación digital express.",
+        "instruction": "Quien sacó la carta debe dejar su celular boca abajo en el centro de la mesa. No puede tocarlo por ningún motivo hasta que le toque su turno de nuevo. Si lo hace, debe servirle la bebida al resto por una ronda."
       },
       "tags": [
         "reto",
-        "creatividad",
+        "castigo",
+        "digitaldetox"
+      ]
+    },
+    {
+      "id": "sobremesa-14",
+      "front": {
+        "title": "El Poeta Instantáneo",
+        "number": 14,
+        "art_prompt": "Expressionist art showing fragmented words and letters floating in a chaotic, textured space. A single, clear line of color cuts through the mess, representing the structure of a poem. Chiaroscuro adds a touch of dramatic inspiration."
+      },
+      "back": {
+        "phrase": "La inspiración es para amateurs. Lo nuestro es la presión.",
+        "when_to_use": "Para encontrar la belleza en la incomodidad.",
+        "instruction": "Quien sacó la carta debe componer en 30 segundos un haiku (poema de 5, 7 y 5 sílabas) sobre la persona que tiene en frente. Debe leerlo en voz alta con la mayor solemnidad posible."
+      },
+      "tags": [
+        "reto",
+        "creativo",
+        "rapidez"
+      ]
+    },
+    {
+      "id": "sobremesa-15",
+      "front": {
+        "title": "La Startup Absurda",
+        "number": 15,
+        "art_prompt": "Abstract representation of a hockey stick growth chart, but the line goes in loops and spirals. Thick, optimistic impasto on the line contrasts with a dark, skeptical background. Chiaroscuro gives it a 'Shark Tank' vibe."
+      },
+      "back": {
+        "phrase": "Las mejores ideas suenan como un chiste al principio.",
+        "when_to_use": "Para el emprendedor que todos llevamos dentro.",
+        "instruction": "Quien sacó la carta tiene 1 minuto para 'pitchear' una idea de startup que solucione un problema ridículamente pequeño. El resto del grupo son los inversores y deciden si 'invierten' o no."
+      },
+      "tags": [
+        "creativo",
+        "absurdo",
+        "actuacion"
+      ]
+    },
+    {
+      "id": "sobremesa-16",
+      "front": {
+        "title": "El Legado",
+        "number": 16,
+        "art_prompt": "A minimalist abstract painting. A single, decisive brushstroke of thick impasto cuts across a dark, textured canvas. The stroke represents a life's summary. Chiaroscuro emphasizes the finality and importance of this single mark."
+      },
+      "back": {
+        "phrase": "Al final, todo se resume en una frase.",
+        "when_to_use": "Para una dosis de existencialismo de sobremesa.",
+        "instruction": "Cada jugador escribe en un papel la frase que le gustaría que aparezca en su lápida o en su obituario. Se mezclan los papeles y se leen en voz alta. El grupo debe adivinar quién escribió cada frase."
+      },
+      "tags": [
+        "pregunta",
+        "profundo",
+        "grupo"
+      ]
+    },
+    {
+      "id": "sobremesa-17",
+      "front": {
+        "title": "El Animal Espiritual",
+        "number": 17,
+        "art_prompt": "Expressionist artwork showing a human silhouette overlaid with the chaotic, wild textures and colors of an animal. Impasto is used to create fur-like or scale-like textures. Chiaroscuro suggests a primal, inner nature."
+      },
+      "back": {
+        "phrase": "Juzgá a tus amigos por el animal que les asignas.",
+        "when_to_use": "Para repartir identidades y ver quién se ofende.",
+        "instruction": "Quien sacó la carta debe asignarle un 'animal espiritual' a cada persona en la mesa, justificando brevemente su elección. Las justificaciones no pueden ser obvias."
+      },
+      "tags": [
+        "creativo",
+        "grupo",
+        "percepcion"
+      ]
+    },
+    {
+      "id": "sobremesa-18",
+      "front": {
+        "title": "El Objeto Parlante",
+        "number": 18,
+        "art_prompt": "Abstract fine art of an inanimate object, like a chair, with sound waves made of thick impasto emanating from it. Chiaroscuro lighting gives the object a mysterious and sentient presence."
+      },
+      "back": {
+        "phrase": "Si las paredes hablaran... o al menos la silla.",
+        "when_to_use": "Para darle voz a los que no la tienen.",
+        "instruction": "El grupo elige un objeto inanimado en la habitación. Quien sacó la carta debe ser la voz de ese objeto por 60 segundos, contando lo que ha visto y oído desde su perspectiva."
+      },
+      "tags": [
+        "creativo",
+        "actuacion",
+        "absurdo"
+      ]
+    },
+    {
+      "id": "sobremesa-19",
+      "front": {
+        "title": "La Estatua",
+        "number": 19,
+        "art_prompt": "An abstract painting of a human form frozen mid-motion. The impasto is thick and heavy, like stone or bronze, giving a sense of immobility. Chiaroscuro lighting casts long, dramatic shadows."
+      },
+      "back": {
+        "phrase": "El autocontrol es un músculo. A ver cómo está el tuyo.",
+        "when_to_use": "Para poner a prueba la paciencia de alguien.",
+        "instruction": "Quien sacó la carta debe congelarse en la posición exacta en la que está. No puede moverse ni hablar hasta que el jugador a su derecha saque una nueva carta. El resto puede intentar hacerlo reír."
+      },
+      "tags": [
+        "reto",
+        "castigo",
+        "autocontrol"
+      ]
+    },
+    {
+      "id": "sobremesa-20",
+      "front": {
+        "title": "El Idioma Inventado",
+        "number": 20,
+        "art_prompt": "Expressionist chaos of symbols, glyphs, and letters from no known alphabet. The textures are sharp and confusing, but there's a faint rhythm in their placement. Chiaroscuro suggests the difficulty and frustration of non-communication."
+      },
+      "back": {
+        "phrase": "El 90% de la comunicación es no verbal. A comprobarlo.",
+        "when_to_use": "Para cuando las palabras ya no alcanzan.",
+        "instruction": "Quien sacó la carta elige a otra persona. Ambos deben mantener una conversación de 30 segundos usando un idioma completamente inventado. Deben intentar que el resto del grupo entienda el tema de la conversación."
+      },
+      "tags": [
+        "reto",
+        "absurdo",
+        "actuacion"
+      ]
+    },
+    {
+      "id": "sobremesa-21",
+      "front": {
+        "title": "El Final Alternativo",
+        "number": 21,
+        "art_prompt": "Abstract art depicting a film reel unraveling into two different paths. One path is smooth and bright, the other is chaotic and dark, with heavy, discordant impasto. Chiaroscuro highlights the point of divergence."
+      },
+      "back": {
+        "phrase": "Ninguna historia está escrita en piedra.",
+        "when_to_use": "Para arreglar esas películas que te arruinaron el día.",
+        "instruction": "Quien sacó la carta nombra una película o serie muy conocida. Empezando por la persona a su derecha, cada uno tiene 15 segundos para proponer un final alternativo. Se vota por el mejor."
+      },
+      "tags": [
+        "creativo",
+        "grupo",
+        "cine"
+      ]
+    },
+    {
+      "id": "sobremesa-22",
+      "front": {
+        "title": "La Compra Impulsiva",
+        "number": 22,
+        "art_prompt": "Expressionist painting of a credit card swiping, leaving a trail of chaotic, colorful, and heavily textured impasto. The background is dark, emphasizing the singular, bright moment of the transaction."
+      },
+      "back": {
+        "phrase": "El dinero no compra la felicidad, pero sí buenas historias.",
+        "when_to_use": "Para compartir arrepentimientos financieros.",
+        "instruction": "Cada jugador confiesa la compra más inútil o impulsiva que ha hecho en su vida. No hay ganadores, solo un entendimiento mutuo del mal manejo del dinero."
+      },
+      "tags": [
+        "pregunta",
+        "anecdota",
+        "confesion"
+      ]
+    },
+    {
+      "id": "sobremesa-23",
+      "front": {
+        "title": "El Manifiesto",
+        "number": 23,
+        "art_prompt": "Abstract artwork resembling a revolutionary poster. Bold, declarative strokes of thick impasto form powerful, abstract shapes. Chiaroscuro gives it a clandestine, urgent feeling."
+      },
+      "back": {
+        "phrase": "Toda juntada necesita sus propias reglas.",
+        "when_to_use": "Para darle un propósito a la anarquía.",
+        "instruction": "El grupo entero debe escribir un 'Manifiesto de la Noche'. Debe contener 3 reglas o principios que gobernarán la juntada desde este momento hasta el final. Debe ser firmado por todos."
+      },
+      "tags": [
+        "creativo",
+        "grupo",
+        "reglas"
+      ]
+    },
+    {
+      "id": "sobremesa-24",
+      "front": {
+        "title": "El Dios Menor",
+        "number": 24,
+        "art_prompt": "Abstract fine art. A small, glowing point of light surrounded by vast, textured darkness. The light is made of intricate, delicate impasto, representing a small but specific domain of power. Chiaroscuro emphasizes its minor status."
+      },
+      "back": {
+        "phrase": "No todos pueden ser Zeus. Alguien tiene que ocuparse de las cosas pequeñas.",
+        "when_to_use": "Para encontrar lo divino en lo mundano.",
+        "instruction": "En ronda, cada jugador se declara el 'dios menor' de algo muy específico y trivial. Ejemplo: 'Soy el dios de los tuppers sin tapa' o 'la diosa de las canciones que se te pegan'. Deben explicar sus deberes divinos."
+      },
+      "tags": [
+        "pregunta",
+        "absurdo",
+        "creatividad"
+      ]
+    },
+    {
+      "id": "sobremesa-25",
+      "front": {
+        "title": "El Titular",
+        "number": 25,
+        "art_prompt": "Expressionist painting resembling a newspaper front page, but the text is replaced by chaotic, urgent brushstrokes. A single, bold shape made of thick impasto dominates the composition, like a shocking headline. Chiaroscuro adds drama."
+      },
+      "back": {
+        "phrase": "La realidad es aburrida. Hay que saber venderla.",
+        "when_to_use": "Para encontrarle el drama a un día cualquiera.",
+        "instruction": "Quien sacó la carta debe pensar en el evento más aburrido que le pasó hoy y convertirlo en un titular de noticia clickbait y sensacionalista. Ejemplo: 'Lo que encontré en mi heladera te sorprenderá'."
+      },
+      "tags": [
+        "creativo",
+        "absurdo",
+        "humor"
+      ]
+    },
+    {
+      "id": "sobremesa-26",
+      "front": {
+        "title": "El Sommelier de Agua",
+        "number": 26,
+        "art_prompt": "Abstract art of three glasses filled with clear liquid, but the light passing through them creates different, subtle color refractions. The impasto texture around the glasses is delicate, suggesting a refined palate. Chiaroscuro enhances the subtle differences."
+      },
+      "back": {
+        "phrase": "La sofisticación está en los detalles.",
+        "when_to_use": "Para cuando se creen muy distinguidos.",
+        "instruction": "Se sirven tres vasos de agua (de la canilla, mineral, con gas, etc.). Quien sacó la carta debe catarlos a ciegas y describirlos con la mayor sofisticación posible, como si fuera un vino caro. Debe adivinar cuál es cuál."
+      },
+      "tags": [
+        "reto",
+        "absurdo",
+        "actuacion"
+      ]
+    },
+    {
+      "id": "sobremesa-27",
+      "front": {
+        "title": "El Texto Valiente",
+        "number": 27,
+        "art_prompt": "Expressionist artwork of a thumb hovering over the 'send' button on a phone. The button glows with a dangerous energy, created with thick, vibrant impasto. The rest of the screen is dark and full of shadows, representing doubt."
+      },
+      "back": {
+        "phrase": "Un pequeño toque para vos, un gran salto para la conversación.",
+        "when_to_use": "Para generar una anécdota en tiempo real.",
+        "instruction": "Quien sacó la carta debe mandarle un mensaje de texto a la última persona con la que habló que no esté en la habitación. El mensaje es: 'Estaba pensando en la última vez que nos vimos y...'. No puede aclarar que es un juego hasta que le respondan."
+      },
+      "tags": [
+        "reto",
+        "valiente",
+        "tension"
+      ]
+    },
+    {
+      "id": "sobremesa-28",
+      "front": {
+        "title": "La Secta",
+        "number": 28,
+        "art_prompt": "Abstract fine art piece with a central, mundane object (like a spoon) painted with glowing, reverential light. Concentric circles of textured impasto radiate outwards, like followers. The chiaroscuro gives it a ritualistic, cult-like atmosphere."
+      },
+      "back": {
+        "phrase": "Todo puede ser un objeto de culto si hay suficiente gente de acuerdo.",
+        "when_to_use": "Para fundar una nueva religión que dure hasta el postre.",
+        "instruction": "El grupo elige un objeto común de la mesa. Todos juntos deben crear las bases de una secta que adore a ese objeto: nombre del culto, un mandamiento principal y un gesto de saludo secreto. Deben usar el saludo por el resto de la ronda."
+      },
+      "tags": [
+        "creativo",
+        "grupo",
+        "absurdo"
+      ]
+    },
+    {
+      "id": "sobremesa-29",
+      "front": {
+        "title": "El Famoso en la Agenda",
+        "number": 29,
+        "art_prompt": "Abstract painting of a phone contacts list, but one name is rendered in glowing, gold impasto. The other names are muted, dark textures. Chiaroscuro highlights this single, important connection."
+      },
+      "back": {
+        "phrase": "Todos estamos a seis grados de separación... o a uno.",
+        "when_to_use": "Para que alguien se sincere sobre sus contactos.",
+        "instruction": "En ronda, cada jugador dice cuál es la persona más 'famosa' o 'interesante' que tiene en su agenda de contactos del celular. Deben contar la historia de cómo consiguieron el número."
+      },
+      "tags": [
+        "pregunta",
+        "anecdota",
+        "icebreaker"
+      ]
+    },
+    {
+      "id": "sobremesa-30",
+      "front": {
+        "title": "El Himno",
+        "number": 30,
+        "art_prompt": "Expressionist artwork of sound waves coalescing into a single, unified form. The impasto textures are layered and harmonious, representing different voices coming together. Chiaroscuro adds a sense of solemnity and importance."
+      },
+      "back": {
+        "phrase": "Un grupo de amigos sin himno es solo un grupo de gente.",
+        "when_to_use": "Para inmortalizar al grupo en una canción.",
+        "instruction": "En conjunto, el grupo debe componer un breve himno para su amistad. Debe tener al menos un coro pegadizo y mencionar una anécdota interna. Deben cantarlo todos juntos al menos una vez."
+      },
+      "tags": [
+        "creativo",
+        "grupo",
         "musica"
       ]
     },
     {
-      "id": "rompelo-14",
+      "id": "sobremesa-31",
       "front": {
-        "title": "La Estatua",
-        "number": 14,
-        "art_prompt": "A person frozen mid-laugh, holding a slice of pizza, is slowly being covered in what looks like grey plaster, turning into a garden statue. The scene is a regular party, but only this person is affected. Surreal digital art.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-14.jpg?v=1775848604488",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-14_v2026-04-10T19-16-44.jpg"
-        ]
+        "title": "El Apodo Secreto",
+        "number": 31,
+        "art_prompt": "Abstract portrait where the face is obscured by a single, bold, textured word or symbol painted in thick impasto. The real features are lost in shadow, dominated by this new identity. Chiaroscuro emphasizes the secret nature of the name."
       },
       "back": {
-        "phrase": "A veces, la mejor jugada es no moverse.",
-        "when_to_use": "Para un reto de resistencia",
-        "instruction": "Tenés que quedarte completamente quieto, como una estatua, en la posición exacta en la que estás ahora. No podés moverte ni hablar hasta que sea tu próximo turno. Los demás pueden intentar hacerte reír.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-14-back.png",
-        "back_image_versions": []
+        "phrase": "El nombre que te ponen es una cosa. El que te ganás, otra.",
+        "when_to_use": "Para descubrir cómo te ven realmente.",
+        "instruction": "Cada jugador escribe en un papel el apodo que secretamente le tiene a la persona de su derecha. Se mezclan los papeles y se leen en voz alta. Hay que adivinar qué apodo es para quién y quién lo escribió."
       },
       "tags": [
-        "reto",
-        "resistencia",
-        "fisico"
+        "pregunta",
+        "secreto",
+        "percepcion"
       ]
     },
     {
-      "id": "rompelo-15",
+      "id": "sobremesa-32",
       "front": {
-        "title": "El Trovador",
-        "number": 15,
-        "art_prompt": "A medieval bard, but dressed in modern clothes (jeans and a hoodie), playing a lute in the middle of a kitchen during a party. The people around him look confused but amused. Renaissance painting style with modern elements.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-15.jpg?v=1775848608888",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-15_v2026-04-10T19-16-48.jpg"
-        ]
+        "title": "La Cápsula del Tiempo",
+        "number": 32,
+        "art_prompt": "Abstract representation of a box being buried. The box glows with a faint light, made of delicate impasto, containing memories. The surrounding earth is dark, heavy, and textured. Chiaroscuro highlights the act of preservation."
       },
       "back": {
-        "phrase": "Todo suena más dramático si lo cantás.",
-        "when_to_use": "Para agregarle absurdo a la conversación",
-        "instruction": "Durante las próximas dos rondas (hasta que te vuelva a tocar), solo podés comunicarte cantando. Usá la melodía de 'Feliz Cumpleaños' para todo lo que digas.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-15-back.png",
-        "back_image_versions": []
+        "phrase": "El 'yo' del futuro necesita saber cómo era esto.",
+        "when_to_use": "Para el final de la noche, cuando ya hay algo que recordar.",
+        "instruction": "Quien sacó la carta es el curador. Debe elegir tres objetos físicos que estén en la mesa o en la habitación para meter en una 'cápsula del tiempo' imaginaria que represente esta juntada. Debe justificar cada elección."
       },
       "tags": [
-        "reto",
+        "creativo",
+        "grupo",
+        "reflexion"
+      ]
+    },
+    {
+      "id": "sobremesa-33",
+      "front": {
+        "title": "El Rediseño",
+        "number": 33,
+        "art_prompt": "Abstract fine art piece showing a familiar shape, like a national flag, being deconstructed and reassembled with new colors and textures. The impasto is thick and rebellious. Chiaroscuro creates drama around the new design."
+      },
+      "back": {
+        "phrase": "Los símbolos solo tienen el poder que les damos.",
+        "when_to_use": "Para un ataque de creatividad patriótica.",
+        "instruction": "Quien sacó la carta debe rediseñar la bandera de su país. Tiene 1 minuto para dibujarla en una servilleta y explicar el simbolismo de los nuevos colores y formas. El grupo vota si aprueba el cambio."
+      },
+      "tags": [
+        "creativo",
         "absurdo",
-        "performance"
-      ]
-    },
-    {
-      "id": "rompelo-16",
-      "front": {
-        "title": "El Sacrificio",
-        "number": 16,
-        "art_prompt": "Two people are dramatically swapping a single sock and a hat under a dim light, as if exchanging state secrets. Their expressions are dead serious. The style is a high-contrast black and white photo, reminiscent of a spy movie.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-16.jpg?v=1775848612094",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-16_v2026-04-10T19-16-52.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "La amistad es compartir hasta la ropa.",
-        "when_to_use": "Para un reto físico y visual",
-        "instruction": "Elegí a una persona del grupo. Ambos tienen que intercambiar una prenda de ropa (visible) y usarla durante las próximas tres rondas. Medias, gorros y accesorios cuentan.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-16-back.png",
-        "back_image_versions": []
-      },
-      "tags": [
-        "reto",
-        "interaccion",
-        "fisico"
-      ]
-    },
-    {
-      "id": "rompelo-17",
-      "front": {
-        "title": "El Rey del Tiktok",
-        "number": 17,
-        "art_prompt": "A classical Greek statue, like the Discobolus, but frozen in the middle of a recognizable, modern TikTok dance pose. The statue is in a museum, and tourists are taking pictures with their phones. Juxtaposition of classical and modern, realistic style.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-17.jpg?v=1775848615594",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-17_v2026-04-10T19-16-55.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "El ridículo es solo un paso de baile que no te animás a hacer.",
-        "when_to_use": "Para un momento de movimiento",
-        "instruction": "Buscá en tu celular 'challenge de baile viral'. Tenés que intentar hacer los primeros 15 segundos del primer video que aparezca. No se juzga la calidad, solo el esfuerzo.",
-        "back_image_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-17-back.png",
-        "back_image_versions": []
-      },
-      "tags": [
-        "reto",
-        "baile",
-        "tecnologia"
-      ]
-    },
-    {
-      "id": "rompelo-18",
-      "front": {
-        "title": "El Contacto Extraterrestre",
-        "number": 18,
-        "art_prompt": "A person stands on a suburban balcony at night, shouting towards a sky full of stars. A single, comically small UFO with a tiny green alien waving shines a spotlight on them. Sci-fi illustration with a humorous twist.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-18.jpg?v=1775848626468",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-18_v2026-04-10T19-17-06.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "Hay que llamar la atención del universo.",
-        "when_to_use": "Cuando se puede hacer un poco de ruido",
-        "instruction": "Andá a la ventana o balcón más cercano y gritá con convicción: '¡NO ESTAMOS SOLOS! ¡MANIFIÉSTENSE!'. Tenés que hacerlo lo suficientemente fuerte como para que te escuchen."
-      },
-      "tags": [
-        "reto",
-        "absurdo",
-        "ruido"
-      ]
-    },
-    {
-      "id": "rompelo-19",
-      "front": {
-        "title": "El Pitch de Venta",
-        "number": 19,
-        "art_prompt": "A slick, fast-talking salesman from a 1950s advertisement, but instead of a car, he's enthusiastically presenting a half-eaten bag of potato chips on a pedestal. The background is a burst of bright, optimistic colors. Vintage ad style.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-19.jpg?v=1775848630555",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-19_v2026-04-10T19-17-10.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "Todo se puede vender si tenés la historia correcta.",
-        "when_to_use": "Para un desafío de improvisación",
-        "instruction": "El grupo elige un objeto insignificante que esté a la vista (un corcho, una servilleta, un control remoto). Tenés 60 segundos para improvisar un comercial de TV vendiendo ese objeto como si fuera el invento del siglo."
-      },
-      "tags": [
-        "creatividad",
-        "improvisacion",
-        "performance"
-      ]
-    },
-    {
-      "id": "rompelo-20",
-      "front": {
-        "title": "El Nuevo Animal",
-        "number": 20,
-        "art_prompt": "A scientific illustration from an old biology textbook, depicting a creature with the head of a flamingo and the body of a corgi. The illustration includes anatomical notes and a latin name: 'Corgius Phoenicopterus'. Vintage scientific drawing style.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-20.jpg?v=1775848635076",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-20_v2026-04-10T19-17-15.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "La naturaleza se olvidó de crear algunas cosas.",
-        "when_to_use": "Para un momento de imaginación grupal",
-        "instruction": "Combiná dos animales para crear una nueva especie. Describí su nombre, su hábitat, qué come y, lo más importante, hacé su sonido característico. El grupo vota por el más creativo."
-      },
-      "tags": [
-        "creatividad",
-        "absurdo",
-        "imaginacion"
-      ]
-    },
-    {
-      "id": "rompelo-21",
-      "front": {
-        "title": "El Título de la Película",
-        "number": 21,
-        "art_prompt": "A huge, blank movie theatre screen illuminates an empty cinema. On the screen, in classic movie trailer font, are just three bold question marks: '???'. The atmosphere is mysterious and full of potential. Cinematic photography.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-21.jpg?v=1775848640965",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-21_v2026-04-10T19-17-20.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "Un buen título es solo el principio de cualquier historia.",
-        "when_to_use": "Para un juego de narración rápida",
-        "instruction": "Decí el título de una película real. Empezando por la persona a tu izquierda, cada uno tiene que inventar y contar una trama completamente diferente para ese título. Gana la historia más original."
-      },
-      "tags": [
-        "creatividad",
-        "narracion",
-        "improvisacion"
-      ]
-    },
-    {
-      "id": "rompelo-22",
-      "front": {
-        "title": "El Rediseño de la Bandera",
-        "number": 22,
-        "art_prompt": "A hand is shown drawing a new national flag on a napkin with a crayon. The design is childish but earnest, featuring a smiling sun, a slice of pizza, and a soccer ball. The background is a blurry cafe setting.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-22.jpg?v=1775848646626",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-22_v2026-04-10T19-17-26.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "Un país es más que sus símbolos. Pero empecemos por ahí.",
-        "when_to_use": "Para un debate creativo y divertido",
-        "instruction": "Tenés un minuto para rediseñar la bandera de tu país. No hace falta que la dibujes, solo describila y justificá el porqué de tus nuevos símbolos y colores. Preparate para defender tu diseño."
-      },
-      "tags": [
-        "creatividad",
-        "debate",
         "diseño"
       ]
     },
     {
-      "id": "rompelo-23",
+      "id": "sobremesa-34",
       "front": {
-        "title": "El Juicio",
-        "number": 23,
-        "art_prompt": "An empty pizza box sits on a witness stand in a grand, wood-paneled courtroom. A single crumb is highlighted by a dramatic spotlight. The style is a still from a high-stakes legal drama like 'Law & Order'.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-23.jpg?v=1775848651923",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-23_v2026-04-10T19-17-31.jpg"
-        ]
+        "title": "El Escultor",
+        "number": 34,
+        "art_prompt": "Expressionist artwork of hands molding abstract human forms. The forms are made of soft, pliable impasto, suggesting they are being shaped. The sculptor's hands are dark and shadowy, while the sculpture is illuminated, in a classic chiaroscuro style."
       },
       "back": {
-        "phrase": "La justicia es ciega, pero el hambre no.",
-        "when_to_use": "Para un juego de roles",
-        "instruction": "Se arma un juicio. La persona a tu derecha es la acusada del 'crimen' que vos elijas (ej: 'poner ananá a la pizza'). Vos sos el fiscal. La persona a la izquierda del acusado es su abogado/a. El resto es el jurado y da el veredicto."
+        "phrase": "El cuerpo es el lienzo más obediente.",
+        "when_to_use": "Para cuando la confianza es alta y el ridículo no importa.",
+        "instruction": "Quien sacó la carta es el escultor. Elige a dos o tres personas como 'arcilla'. Debe mover sus cuerpos y extremidades para crear una escultura viviente que represente un concepto. Ejemplo: 'La Procrastinación'."
       },
       "tags": [
-        "juegoderol",
-        "debate",
-        "improvisacion"
+        "reto",
+        "creativo",
+        "grupo"
       ]
     },
     {
-      "id": "rompelo-24",
+      "id": "sobremesa-35",
       "front": {
-        "title": "El Himno del Grupo",
-        "number": 24,
-        "art_prompt": "A group of friends with their arms around each other, singing loudly and out of tune. Their figures are rendered as minimalist, abstract shapes of color, conveying energy and camaraderie rather than realistic detail. Abstract expressionism.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-24.jpg?v=1775848655631",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-24_v2026-04-10T19-17-35.jpg"
-        ]
+        "title": "El Recuerdo Desbloqueado",
+        "number": 35,
+        "art_prompt": "Abstract painting of a key turning in a lock. Light, made of vibrant impasto, pours out of the keyhole into a dark, textured space, representing a forgotten memory flooding back. Strong chiaroscuro effect."
       },
       "back": {
-        "phrase": "Toda banda necesita su hit.",
-        "when_to_use": "Para un momento de unión",
-        "instruction": "Entre todos, tienen 3 minutos para componer un himno de cuatro líneas que represente a su grupo de amigos. Al final, tienen que cantarlo todos juntos con la mano en el corazón."
+        "phrase": "La memoria es un archivo desordenado.",
+        "when_to_use": "Para buscar en el fondo del disco duro.",
+        "instruction": "Quien sacó la carta dice una palabra al azar (ej: 'bicicleta'). La primera persona del grupo que conecte esa palabra con un recuerdo personal, lo cuenta. Luego esa persona dice una nueva palabra, y así sucesivamente por 3 rondas."
       },
       "tags": [
-        "creatividad",
-        "grupal",
-        "musica"
+        "pregunta",
+        "anecdota",
+        "icebreaker"
       ]
     },
     {
-      "id": "rompelo-25",
+      "id": "sobremesa-36",
       "front": {
-        "title": "El Menú Incomible",
-        "number": 25,
-        "art_prompt": "A fancy, gourmet dish presented on a white plate. It consists of a scoop of mint chocolate chip ice cream topped with ketchup and garnished with a single sardine. The lighting and presentation are worthy of a Michelin star restaurant. Hyper-realistic food photography.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-25.jpg?v=1775848659472",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-25_v2026-04-10T19-17-39.jpg"
-        ]
+        "title": "El Apocalipsis Ridículo",
+        "number": 36,
+        "art_prompt": "Expressionist artwork of a world ending not in fire, but in something absurd, like a rain of rubber chickens. The impasto textures are bizarre and comical, contrasting with the dramatic, dark sky of a typical apocalypse scene."
       },
       "back": {
-        "phrase": "La alta cocina se atreve a todo. Vos también.",
-        "when_to_use": "Para estirar la imaginación",
-        "instruction": "Inventá un menú de tres pasos (entrada, plato principal, postre) usando las combinaciones de comida más asquerosas que se te ocurran. Tenés que describirlo con lenguaje de chef profesional."
+        "phrase": "El fin del mundo no tiene por qué ser elegante.",
+        "when_to_use": "Para planificar la supervivencia en el peor de los peores escenarios.",
+        "instruction": "Quien sacó la carta describe una forma ridícula en que el mundo se está acabando (ej: 'una invasión de caracoles gigantes lentísimos'). Cada jugador, en ronda, dice qué haría para sobrevivir."
       },
       "tags": [
-        "creatividad",
+        "creativo",
         "absurdo",
-        "comida"
+        "grupo"
       ]
     },
     {
-      "id": "rompelo-26",
+      "id": "sobremesa-37",
       "front": {
-        "title": "El Objeto Parlante",
-        "number": 26,
-        "art_prompt": "A worn-out armchair with a cartoonish, expressive face drawn onto it. It sits in an empty room, under a spotlight, as if it's about to give a monologue. The style is theatrical and slightly surreal.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-26.jpg?v=1775848662301",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-26_v2026-04-10T19-17-42.jpg"
-        ]
+        "title": "El Mensajero del Futuro",
+        "number": 37,
+        "art_prompt": "Abstract art of a figure emerging from a portal of swirling, chaotic impasto. The figure is sleek and dark, while the portal is violently bright. Chiaroscuro emphasizes the dramatic entrance from another time."
       },
       "back": {
-        "phrase": "Si las paredes hablaran... hoy les toca a los sillones.",
-        "when_to_use": "Para un ejercicio de perspectiva",
-        "instruction": "Elegí un objeto inanimado en la habitación (una lámpara, una silla, una botella). Durante los próximos 5 minutos, sos ese objeto. El resto del grupo puede hacerte preguntas y tenés que responder desde su perspectiva."
+        "phrase": "Vengo de un tiempo donde todo esto tendrá sentido. O no.",
+        "when_to_use": "Para agregarle un poco de ciencia ficción a la noche.",
+        "instruction": "Quien sacó la carta acaba de llegar del futuro (del próximo martes, para ser exactos). Debe darle una advertencia muy seria y críptica al grupo sobre algo que va a pasar. Debe mantener el personaje hasta la siguiente ronda."
       },
       "tags": [
-        "juegoderol",
-        "improvisacion",
-        "perspectiva"
-      ]
-    },
-    {
-      "id": "rompelo-27",
-      "front": {
-        "title": "El Doblaje",
-        "number": 27,
-        "art_prompt": "Two people are looking intently at a muted TV screen showing a dramatic movie scene. They are speaking into banana and a bottle of water as if they were microphones. The scene is candid and full of laughter. Documentary photography style.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-27.jpg?v=1775848665852",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-27_v2026-04-10T19-17-45.jpg"
-        ]
-      },
-      "back": {
-        "phrase": "Las palabras correctas pueden cambiar toda la historia.",
-        "when_to_use": "Cuando hay una pantalla cerca",
-        "instruction": "Poné cualquier escena de una película o serie en la tele, pero sin volumen. Vos y la persona de tu derecha tienen que doblar los diálogos en tiempo real durante un minuto."
-      },
-      "tags": [
-        "improvisacion",
-        "creatividad",
-        "performance"
-      ]
-    },
-    {
-      "id": "rompelo-28",
-      "front": {
-        "title": "La Noticia de Último Momento",
-        "number": 28,
-        "art_prompt": "A news anchor, looking extremely serious and professional, sits at a news desk. The graphic on the screen behind them reads 'ÚLTIMO MOMENTO' but the image shown is of a cat knocking over a glass of water. The style of a 24-hour news channel broadcast.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-28.jpg?v=1775848670427"
-      },
-      "back": {
-        "phrase": "Cualquier evento puede ser una noticia. Depende de cómo lo cuentes.",
-        "when_to_use": "Para transformar lo mundano en algo épico",
-        "instruction": "Observá al grupo. Lo primero que haga alguien (bostezar, mirar el celular, rascarse), tenés que narrarlo como si fueras un corresponsal de noticias cubriendo un evento histórico. Usá un tono solemne."
-      },
-      "tags": [
-        "improvisacion",
-        "performance",
+        "reto",
+        "actuacion",
         "absurdo"
       ]
     },
     {
-      "id": "rompelo-29",
+      "id": "sobremesa-38",
       "front": {
-        "title": "El Dios Menor",
-        "number": 29,
-        "art_prompt": "A majestic figure in a toga, looking like a Greek god, stands on a cloud. But instead of lightning bolts, they are holding a single, lonely sock. Their expression is one of mild frustration and divine responsibility. Classical painting style.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-29.jpg?v=1775848675836",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-29_v2026-04-10T19-17-55.jpg"
-        ]
+        "title": "La Fusión",
+        "number": 38,
+        "art_prompt": "An expressionist painting of two distinct animal forms merging into one another. The textures of fur and scales, created with thick impasto, clash and blend in the middle. Chiaroscuro highlights the monstrous and beautiful nature of the new creature."
       },
       "back": {
-        "phrase": "No todos los dioses mueven montañas. Algunos solo esconden tus llaves.",
-        "when_to_use": "Para un ejercicio de creación de personajes",
-        "instruction": "Te convertís en el dios o diosa de una pequeña inconveniencia cotidiana (ej: el dios del wifi que se corta, la diosa de los auriculares enredados). Presentate al grupo y explicá tus poderes y dominios."
+        "phrase": "La naturaleza se equivocó. Nosotros la vamos a corregir.",
+        "when_to_use": "Para jugar a ser un científico loco.",
+        "instruction": "Quien sacó la carta nombra dos animales. La persona a su derecha debe describir la criatura que resultaría de su fusión: su nombre, su hábitat, su dieta y su sonido característico. Debe hacer el sonido."
       },
       "tags": [
-        "creatividad",
-        "juegoderol",
-        "imaginacion"
+        "creativo",
+        "absurdo",
+        "sonidos"
       ]
     },
     {
-      "id": "rompelo-30",
+      "id": "sobremesa-39",
       "front": {
-        "title": "El Discurso de Aceptación",
-        "number": 30,
-        "art_prompt": "A person stands on a chair in a living room, emotionally clutching a bottle of ketchup like it's an Oscar trophy. Confetti made from torn napkins rains down on them. The style is dramatic and celebratory, like a photo from an awards ceremony.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-30.jpg?v=1775848679268",
-        "art_versions": [
-          "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/rompelo-30_v2026-04-10T19-17-59.jpg"
-        ]
+        "title": "El Barman",
+        "number": 39,
+        "art_prompt": "Abstract fine art of liquids being poured and mixed. Vibrant colors splash and swirl with energetic impasto textures against a dark background, capturing the chaotic art of cocktail making. Chiaroscuro gives it a speakeasy feel."
       },
       "back": {
-        "phrase": "Siempre hay que estar listo para agradecer.",
-        "when_to_use": "Para cerrar la noche con un poco de drama",
-        "instruction": "Acabás de ganar el premio a 'La persona más probable de [el grupo completa la frase]'. Tenés 30 segundos para dar un discurso de aceptación emotivo. Agradecé a tus amigos, a tu familia y a tus rivales."
+        "phrase": "Cualquier líquido se puede mejorar.",
+        "when_to_use": "Para el que siempre critica los tragos.",
+        "instruction": "Quien sacó la carta debe ir a la cocina y, usando al menos tres ingredientes líquidos (no alcohólicos) que encuentre, crear un 'trago de autor'. Debe ponerle un nombre y servírselo a la persona de su elección para que lo critique."
       },
       "tags": [
-        "performance",
-        "improvisacion",
-        "grupal"
+        "reto",
+        "creativo",
+        "bebidas"
+      ]
+    },
+    {
+      "id": "sobremesa-40",
+      "front": {
+        "title": "La Última Palabra",
+        "number": 40,
+        "art_prompt": "Minimalist abstract painting. A dark, heavily textured canvas representing the end of the night. In the center, a single, small, bright mark made of impasto—the last word. Chiaroscuro gives a sense of finality and quiet reflection."
+      },
+      "back": {
+        "phrase": "Todo termina. Lo importante es cómo.",
+        "when_to_use": "Para cerrar la noche o el juego.",
+        "instruction": "Esta es la última carta. Empezando por quien la sacó, cada persona describe la juntada o el juego en una sola palabra. Sin explicaciones. Es el resumen final de la experiencia."
+      },
+      "tags": [
+        "reflexion",
+        "cierre",
+        "grupo"
       ]
     }
   ]

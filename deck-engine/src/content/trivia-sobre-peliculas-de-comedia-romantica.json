@@ -409,7 +409,15 @@
         "title": "Buenos Días, Lucy",
         "number": 19,
         "art_prompt": "A stack of old VHS tapes next to a VCR player. One tape has a handwritten label that is just out of focus. The scene is lit by the blue glow of a TV screen off-camera. The setting is a cozy, nautical-themed room in Hawaii. Nostalgic, cinematic lighting.",
-        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19.jpg?v=1775494292822"
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19_v2026-04-11T15-43-01.jpg",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19.jpg?v=1775922209752",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19_v2026-04-11T15-43-29.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19_v2026-04-11T15-43-23.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19_v2026-04-11T15-43-18.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19_v2026-04-11T15-43-12.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/acto-final-19_v2026-04-11T15-43-07.jpg"
+        ]
       },
       "back": {
         "phrase": "Cada día es una nueva primera cita.",
