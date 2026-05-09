@@ -61,11 +61,10 @@ export class PostHogProvider implements AnalyticsProvider {
 
   captureException(error: Error, properties?: Record<string, unknown>): void {
     if (!this.initialized) return;
-    posthog.capture('$exception', {
-      $exception_message: error.message,
-      $exception_type: error.name,
-      $exception_stack_trace_raw: error.stack,
-      ...properties,
-    });
+    // Use the native SDK method — it correctly builds $exception_list,
+    // $exception_message, $exception_type, and $exception_stack_trace_raw.
+    // Manually calling posthog.capture('$exception', {...}) skips $exception_list
+    // and causes PostHog ingestion to fail with a serde error.
+    posthog.captureException(error, properties);
   }
 }
