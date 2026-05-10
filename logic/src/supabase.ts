@@ -45,11 +45,16 @@ const SafeStorage = {
   },
 };
 
+const supabaseSchema = process.env.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.VITE_SUPABASE_SCHEMA || 'public';
+
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     storage: SafeStorage,
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: false,
+  },
+  db: {
+    schema: supabaseSchema,
   },
 });
