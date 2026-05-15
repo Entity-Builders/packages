@@ -7,22 +7,1495 @@ export type Json =
   | Json[]
 
 export type Database = {
-  graphql_public: {
+  postalpeek: {
     Tables: {
-      [_ in never]: never
+      album_progress: {
+        Row: {
+          album_id: string
+          completed_at: string | null
+          user_id: string
+        }
+        Insert: {
+          album_id: string
+          completed_at?: string | null
+          user_id: string
+        }
+        Update: {
+          album_id?: string
+          completed_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_album_progress_album_id_fkey"
+            columns: ["album_id"]
+            isOneToOne: false
+            referencedRelation: "albums"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      album_slots: {
+        Row: {
+          album_id: string | null
+          generation_metadata_override: Json | null
+          heading: number | null
+          id: string
+          lat: number | null
+          lng: number | null
+          postcard_id: string | null
+          slot_label: string
+          slot_order: number
+          stop_description: string | null
+          stop_status: string | null
+          target_lat: number | null
+          target_lng: number | null
+        }
+        Insert: {
+          album_id?: string | null
+          generation_metadata_override?: Json | null
+          heading?: number | null
+          id?: string
+          lat?: number | null
+          lng?: number | null
+          postcard_id?: string | null
+          slot_label: string
+          slot_order: number
+          stop_description?: string | null
+          stop_status?: string | null
+          target_lat?: number | null
+          target_lng?: number | null
+        }
+        Update: {
+          album_id?: string | null
+          generation_metadata_override?: Json | null
+          heading?: number | null
+          id?: string
+          lat?: number | null
+          lng?: number | null
+          postcard_id?: string | null
+          slot_label?: string
+          slot_order?: number
+          stop_description?: string | null
+          stop_status?: string | null
+          target_lat?: number | null
+          target_lng?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_album_slots_album_id_fkey"
+            columns: ["album_id"]
+            isOneToOne: false
+            referencedRelation: "albums"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "postalpeek_album_slots_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      albums: {
+        Row: {
+          category: string | null
+          city: string | null
+          country: string | null
+          cover_image_url: string | null
+          created_at: string | null
+          description: string | null
+          description_en: string | null
+          description_es: string | null
+          destination_query: string | null
+          difficulty: string | null
+          id: string
+          is_active: boolean | null
+          itinerary_summary: string | null
+          match_rules: Json | null
+          reward_claims: number | null
+          source: string | null
+          status: string | null
+          target_slots: number | null
+          title: string
+          title_en: string | null
+          title_es: string | null
+        }
+        Insert: {
+          category?: string | null
+          city?: string | null
+          country?: string | null
+          cover_image_url?: string | null
+          created_at?: string | null
+          description?: string | null
+          description_en?: string | null
+          description_es?: string | null
+          destination_query?: string | null
+          difficulty?: string | null
+          id?: string
+          is_active?: boolean | null
+          itinerary_summary?: string | null
+          match_rules?: Json | null
+          reward_claims?: number | null
+          source?: string | null
+          status?: string | null
+          target_slots?: number | null
+          title: string
+          title_en?: string | null
+          title_es?: string | null
+        }
+        Update: {
+          category?: string | null
+          city?: string | null
+          country?: string | null
+          cover_image_url?: string | null
+          created_at?: string | null
+          description?: string | null
+          description_en?: string | null
+          description_es?: string | null
+          destination_query?: string | null
+          difficulty?: string | null
+          id?: string
+          is_active?: boolean | null
+          itinerary_summary?: string | null
+          match_rules?: Json | null
+          reward_claims?: number | null
+          source?: string | null
+          status?: string | null
+          target_slots?: number | null
+          title?: string
+          title_en?: string | null
+          title_es?: string | null
+        }
+        Relationships: []
+      }
+      business_links: {
+        Row: {
+          business_id: string
+          created_at: string | null
+          distance_m: number | null
+          id: string
+          postcard_id: string
+          prominence: string | null
+        }
+        Insert: {
+          business_id: string
+          created_at?: string | null
+          distance_m?: number | null
+          id?: string
+          postcard_id: string
+          prominence?: string | null
+        }
+        Update: {
+          business_id?: string
+          created_at?: string | null
+          distance_m?: number | null
+          id?: string
+          postcard_id?: string
+          prominence?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_business_links_business_id_fkey"
+            columns: ["business_id"]
+            isOneToOne: false
+            referencedRelation: "businesses"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "postalpeek_business_links_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      businesses: {
+        Row: {
+          business_type: string | null
+          city: string | null
+          contact: Json | null
+          country: string | null
+          created_at: string | null
+          first_seen_at: string | null
+          google_place_id: string
+          google_types: string[] | null
+          id: string
+          lat: number
+          lng: number
+          name: string
+          opening_hours: Json | null
+          outreach_status: string | null
+          postcards_count: number | null
+          price_level: number | null
+          rating: number | null
+          source: string | null
+        }
+        Insert: {
+          business_type?: string | null
+          city?: string | null
+          contact?: Json | null
+          country?: string | null
+          created_at?: string | null
+          first_seen_at?: string | null
+          google_place_id: string
+          google_types?: string[] | null
+          id?: string
+          lat: number
+          lng: number
+          name: string
+          opening_hours?: Json | null
+          outreach_status?: string | null
+          postcards_count?: number | null
+          price_level?: number | null
+          rating?: number | null
+          source?: string | null
+        }
+        Update: {
+          business_type?: string | null
+          city?: string | null
+          contact?: Json | null
+          country?: string | null
+          created_at?: string | null
+          first_seen_at?: string | null
+          google_place_id?: string
+          google_types?: string[] | null
+          id?: string
+          lat?: number
+          lng?: number
+          name?: string
+          opening_hours?: Json | null
+          outreach_status?: string | null
+          postcards_count?: number | null
+          price_level?: number | null
+          rating?: number | null
+          source?: string | null
+        }
+        Relationships: []
+      }
+      config: {
+        Row: {
+          description: string | null
+          key: string
+          updated_at: string | null
+          value: string
+        }
+        Insert: {
+          description?: string | null
+          key: string
+          updated_at?: string | null
+          value: string
+        }
+        Update: {
+          description?: string | null
+          key?: string
+          updated_at?: string | null
+          value?: string
+        }
+        Relationships: []
+      }
+      cron_log: {
+        Row: {
+          album_title: string | null
+          created_at: string
+          duration_ms: number | null
+          error_message: string | null
+          id: string
+          location_name: string | null
+          postcard_id: string | null
+          slot_id: string | null
+          status: string
+          strategy: string | null
+          triggered_by: string | null
+        }
+        Insert: {
+          album_title?: string | null
+          created_at?: string
+          duration_ms?: number | null
+          error_message?: string | null
+          id?: string
+          location_name?: string | null
+          postcard_id?: string | null
+          slot_id?: string | null
+          status: string
+          strategy?: string | null
+          triggered_by?: string | null
+        }
+        Update: {
+          album_title?: string | null
+          created_at?: string
+          duration_ms?: number | null
+          error_message?: string | null
+          id?: string
+          location_name?: string | null
+          postcard_id?: string | null
+          slot_id?: string | null
+          status?: string
+          strategy?: string | null
+          triggered_by?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_cron_log_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "postalpeek_cron_log_slot_id_fkey"
+            columns: ["slot_id"]
+            isOneToOne: false
+            referencedRelation: "album_slots"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      daily_packs: {
+        Row: {
+          id: string
+          opened_at: string
+          postcard_ids: string[]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          opened_at?: string
+          postcard_ids?: string[]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          opened_at?: string
+          postcard_ids?: string[]
+          user_id?: string
+        }
+        Relationships: []
+      }
+      daily_stamp_claims: {
+        Row: {
+          claimed_on: string
+          user_id: string
+        }
+        Insert: {
+          claimed_on?: string
+          user_id: string
+        }
+        Update: {
+          claimed_on?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      discoveries: {
+        Row: {
+          bbox: number[]
+          discovered_at: string
+          id: string
+          postcard_id: string
+          sticker_status: string
+          sticker_url: string | null
+          tag_label_en: string
+          tag_type: string
+          user_id: string
+        }
+        Insert: {
+          bbox: number[]
+          discovered_at?: string
+          id?: string
+          postcard_id: string
+          sticker_status?: string
+          sticker_url?: string | null
+          tag_label_en: string
+          tag_type: string
+          user_id: string
+        }
+        Update: {
+          bbox?: number[]
+          discovered_at?: string
+          id?: string
+          postcard_id?: string
+          sticker_status?: string
+          sticker_url?: string | null
+          tag_label_en?: string
+          tag_type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_discoveries_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      favorites: {
+        Row: {
+          created_at: string | null
+          id: string
+          postcard_id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          postcard_id: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          postcard_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_favorites_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      feed_cache: {
+        Row: {
+          country: string | null
+          id: string | null
+          sort_index: number
+        }
+        Insert: {
+          country?: string | null
+          id?: string | null
+          sort_index: number
+        }
+        Update: {
+          country?: string | null
+          id?: string | null
+          sort_index?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_feed_cache_id_fkey"
+            columns: ["id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      filter_tags: {
+        Row: {
+          created_at: string | null
+          creative_title: string
+          filter_type: string
+          filter_value: string
+          id: string
+        }
+        Insert: {
+          created_at?: string | null
+          creative_title: string
+          filter_type: string
+          filter_value: string
+          id?: string
+        }
+        Update: {
+          created_at?: string | null
+          creative_title?: string
+          filter_type?: string
+          filter_value?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      game_progress: {
+        Row: {
+          completed_at: string | null
+          game_type: string
+          postcard_id: string
+          reward_claimed: boolean
+          time_seconds: number | null
+          user_id: string
+          won: boolean | null
+        }
+        Insert: {
+          completed_at?: string | null
+          game_type: string
+          postcard_id: string
+          reward_claimed?: boolean
+          time_seconds?: number | null
+          user_id: string
+          won?: boolean | null
+        }
+        Update: {
+          completed_at?: string | null
+          game_type?: string
+          postcard_id?: string
+          reward_claimed?: boolean
+          time_seconds?: number | null
+          user_id?: string
+          won?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_game_progress_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      player_metrics: {
+        Row: {
+          best_clicks: number | null
+          best_time_s: number | null
+          created_at: string
+          game_type: string
+          games_played: number
+          id: string
+          total_wins: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          best_clicks?: number | null
+          best_time_s?: number | null
+          created_at?: string
+          game_type: string
+          games_played?: number
+          id?: string
+          total_wins?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          best_clicks?: number | null
+          best_time_s?: number | null
+          created_at?: string
+          game_type?: string
+          games_played?: number
+          id?: string
+          total_wins?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      postcard_objects: {
+        Row: {
+          created_at: string
+          height_pct: number | null
+          id: string
+          label: string
+          object_url: string
+          position_x_pct: number | null
+          position_y_pct: number | null
+          postcard_id: string
+          type: string
+          width_pct: number | null
+        }
+        Insert: {
+          created_at?: string
+          height_pct?: number | null
+          id?: string
+          label: string
+          object_url: string
+          position_x_pct?: number | null
+          position_y_pct?: number | null
+          postcard_id: string
+          type: string
+          width_pct?: number | null
+        }
+        Update: {
+          created_at?: string
+          height_pct?: number | null
+          id?: string
+          label?: string
+          object_url?: string
+          position_x_pct?: number | null
+          position_y_pct?: number | null
+          postcard_id?: string
+          type?: string
+          width_pct?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_postcard_objects_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      postcards: {
+        Row: {
+          aesthetic_vibes: string[] | null
+          album_id: string | null
+          album_sequence: number | null
+          architecture_style: string | null
+          category: Json
+          city: string
+          claimed_at: string | null
+          color_palette: string | null
+          country: string
+          created_at: string | null
+          description: Json
+          detailed_tags: Json | null
+          game_stats: Json | null
+          generation_metadata: Json | null
+          human_activity: string | null
+          id: string
+          ig_media_id: string | null
+          ig_published_at: string | null
+          illustration_tags: Json | null
+          illustration_url: string
+          imagine_task_id: string | null
+          last_played_at: string | null
+          lat: number
+          lng: number
+          location_name: string | null
+          original_image_url: string
+          owner_id: string | null
+          puzzle_url: string | null
+          rarity: string | null
+          sam2_masks: Json | null
+          scene_type: string | null
+          semantic_layers: Json | null
+          should_animate: boolean | null
+          stamp_cost: number
+          storytelling_en: Json | null
+          streetview_pov: Json | null
+          time_of_day: string | null
+          video_generation_status:
+            | Database["public"]["Enums"]["video_generation_status_enum"]
+            | null
+          video_url: string | null
+          visual_tags: Json | null
+          weather: string | null
+        }
+        Insert: {
+          aesthetic_vibes?: string[] | null
+          album_id?: string | null
+          album_sequence?: number | null
+          architecture_style?: string | null
+          category: Json
+          city: string
+          claimed_at?: string | null
+          color_palette?: string | null
+          country: string
+          created_at?: string | null
+          description: Json
+          detailed_tags?: Json | null
+          game_stats?: Json | null
+          generation_metadata?: Json | null
+          human_activity?: string | null
+          id?: string
+          ig_media_id?: string | null
+          ig_published_at?: string | null
+          illustration_tags?: Json | null
+          illustration_url: string
+          imagine_task_id?: string | null
+          last_played_at?: string | null
+          lat: number
+          lng: number
+          location_name?: string | null
+          original_image_url: string
+          owner_id?: string | null
+          puzzle_url?: string | null
+          rarity?: string | null
+          sam2_masks?: Json | null
+          scene_type?: string | null
+          semantic_layers?: Json | null
+          should_animate?: boolean | null
+          stamp_cost?: number
+          storytelling_en?: Json | null
+          streetview_pov?: Json | null
+          time_of_day?: string | null
+          video_generation_status?:
+            | Database["public"]["Enums"]["video_generation_status_enum"]
+            | null
+          video_url?: string | null
+          visual_tags?: Json | null
+          weather?: string | null
+        }
+        Update: {
+          aesthetic_vibes?: string[] | null
+          album_id?: string | null
+          album_sequence?: number | null
+          architecture_style?: string | null
+          category?: Json
+          city?: string
+          claimed_at?: string | null
+          color_palette?: string | null
+          country?: string
+          created_at?: string | null
+          description?: Json
+          detailed_tags?: Json | null
+          game_stats?: Json | null
+          generation_metadata?: Json | null
+          human_activity?: string | null
+          id?: string
+          ig_media_id?: string | null
+          ig_published_at?: string | null
+          illustration_tags?: Json | null
+          illustration_url?: string
+          imagine_task_id?: string | null
+          last_played_at?: string | null
+          lat?: number
+          lng?: number
+          location_name?: string | null
+          original_image_url?: string
+          owner_id?: string | null
+          puzzle_url?: string | null
+          rarity?: string | null
+          sam2_masks?: Json | null
+          scene_type?: string | null
+          semantic_layers?: Json | null
+          should_animate?: boolean | null
+          stamp_cost?: number
+          storytelling_en?: Json | null
+          streetview_pov?: Json | null
+          time_of_day?: string | null
+          video_generation_status?:
+            | Database["public"]["Enums"]["video_generation_status_enum"]
+            | null
+          video_url?: string | null
+          visual_tags?: Json | null
+          weather?: string | null
+        }
+        Relationships: []
+      }
+      riddles: {
+        Row: {
+          created_at: string
+          difficulty: string
+          id: string
+          object_label: string
+          postcard_id: string
+          riddle: Json
+        }
+        Insert: {
+          created_at?: string
+          difficulty?: string
+          id?: string
+          object_label: string
+          postcard_id: string
+          riddle: Json
+        }
+        Update: {
+          created_at?: string
+          difficulty?: string
+          id?: string
+          object_label?: string
+          postcard_id?: string
+          riddle?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_riddles_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      scout_progress: {
+        Row: {
+          created_at: string
+          data: Json
+          expires_at: string
+          id: string
+          session_id: string
+          type: string
+        }
+        Insert: {
+          created_at?: string
+          data?: Json
+          expires_at?: string
+          id?: string
+          session_id: string
+          type: string
+        }
+        Update: {
+          created_at?: string
+          data?: Json
+          expires_at?: string
+          id?: string
+          session_id?: string
+          type?: string
+        }
+        Relationships: []
+      }
+      shares: {
+        Row: {
+          created_at: string
+          id: string
+          is_used: boolean
+          postcard_id: string | null
+          user_postcard_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_used?: boolean
+          postcard_id?: string | null
+          user_postcard_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_used?: boolean
+          postcard_id?: string | null
+          user_postcard_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_shares_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "postalpeek_shares_user_postcard_id_fkey"
+            columns: ["user_postcard_id"]
+            isOneToOne: false
+            referencedRelation: "user_postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      stamp_balances: {
+        Row: {
+          balance: number
+          common_balance: number
+          epic_balance: number
+          legendary_balance: number
+          rare_balance: number
+          total_earned: number
+          total_spent: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          balance?: number
+          common_balance?: number
+          epic_balance?: number
+          legendary_balance?: number
+          rare_balance?: number
+          total_earned?: number
+          total_spent?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          balance?: number
+          common_balance?: number
+          epic_balance?: number
+          legendary_balance?: number
+          rare_balance?: number
+          total_earned?: number
+          total_spent?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      stamp_rarities: {
+        Row: {
+          color: string
+          cost_in_stamps: number
+          label_en: string
+          label_es: string
+          tier: string
+        }
+        Insert: {
+          color?: string
+          cost_in_stamps?: number
+          label_en: string
+          label_es: string
+          tier: string
+        }
+        Update: {
+          color?: string
+          cost_in_stamps?: number
+          label_en?: string
+          label_es?: string
+          tier?: string
+        }
+        Relationships: []
+      }
+      stamp_transactions: {
+        Row: {
+          amount: number
+          created_at: string
+          id: string
+          metadata: Json | null
+          postcard_id: string | null
+          reason: string | null
+          type: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          postcard_id?: string | null
+          reason?: string | null
+          type: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          postcard_id?: string | null
+          reason?: string | null
+          type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_stamp_transactions_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      streetview_queries: {
+        Row: {
+          address: string
+          created_at: string
+          id: string
+          image_path: string
+        }
+        Insert: {
+          address: string
+          created_at?: string
+          id?: string
+          image_path: string
+        }
+        Update: {
+          address?: string
+          created_at?: string
+          id?: string
+          image_path?: string
+        }
+        Relationships: []
+      }
+      system_config: {
+        Row: {
+          key: string
+          updated_at: string | null
+          value: Json
+        }
+        Insert: {
+          key: string
+          updated_at?: string | null
+          value?: Json
+        }
+        Update: {
+          key?: string
+          updated_at?: string | null
+          value?: Json
+        }
+        Relationships: []
+      }
+      usage_logs: {
+        Row: {
+          cost_usd: number | null
+          created_at: string
+          device_id: string | null
+          event_type: string
+          id: string
+          ip_address: unknown
+          postcard_id: string | null
+          status: string
+          style: string | null
+          user_id: string | null
+        }
+        Insert: {
+          cost_usd?: number | null
+          created_at?: string
+          device_id?: string | null
+          event_type?: string
+          id?: string
+          ip_address?: unknown
+          postcard_id?: string | null
+          status?: string
+          style?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          cost_usd?: number | null
+          created_at?: string
+          device_id?: string | null
+          event_type?: string
+          id?: string
+          ip_address?: unknown
+          postcard_id?: string | null
+          status?: string
+          style?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      user_postcards: {
+        Row: {
+          category: string | null
+          city: string | null
+          country: string | null
+          created_at: string | null
+          creator_name: string | null
+          description: string | null
+          device_id: string | null
+          fov: number
+          generation_metadata: Json | null
+          heading: number
+          id: string
+          illustration_style: string | null
+          illustration_url: string | null
+          is_public: boolean | null
+          lat: number
+          lng: number
+          location_name: string | null
+          original_image_url: string
+          pitch: number
+          rarity: string | null
+          source_postcard_id: string | null
+          status: string | null
+          title: string | null
+          user_id: string | null
+        }
+        Insert: {
+          category?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string | null
+          creator_name?: string | null
+          description?: string | null
+          device_id?: string | null
+          fov?: number
+          generation_metadata?: Json | null
+          heading: number
+          id?: string
+          illustration_style?: string | null
+          illustration_url?: string | null
+          is_public?: boolean | null
+          lat: number
+          lng: number
+          location_name?: string | null
+          original_image_url: string
+          pitch: number
+          rarity?: string | null
+          source_postcard_id?: string | null
+          status?: string | null
+          title?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          category?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string | null
+          creator_name?: string | null
+          description?: string | null
+          device_id?: string | null
+          fov?: number
+          generation_metadata?: Json | null
+          heading?: number
+          id?: string
+          illustration_style?: string | null
+          illustration_url?: string | null
+          is_public?: boolean | null
+          lat?: number
+          lng?: number
+          location_name?: string | null
+          original_image_url?: string
+          pitch?: number
+          rarity?: string | null
+          source_postcard_id?: string | null
+          status?: string | null
+          title?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_user_postcards_source_postcard_id_fkey"
+            columns: ["source_postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      validations: {
+        Row: {
+          ai_reasoning: string | null
+          created_at: string | null
+          id: string
+          image_url: string | null
+          postcard_id: string
+          status: string
+          user_id: string
+        }
+        Insert: {
+          ai_reasoning?: string | null
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          postcard_id: string
+          status?: string
+          user_id: string
+        }
+        Update: {
+          ai_reasoning?: string | null
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          postcard_id?: string
+          status?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "postalpeek_validations_postcard_id_fkey"
+            columns: ["postcard_id"]
+            isOneToOne: false
+            referencedRelation: "postcards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      graphql: {
+      admin_delete_postcard: {
+        Args: { p_postcard_id: string }
+        Returns: undefined
+      }
+      admin_grant_stamps: {
         Args: {
-          extensions?: Json
-          operationName?: string
-          query?: string
-          variables?: Json
+          p_amount?: number
+          p_reason?: string
+          p_user_email?: string
+          p_user_id?: string
         }
         Returns: Json
+      }
+      admin_manage_typed_stamps: {
+        Args: {
+          p_amount: number
+          p_rarity: string
+          p_reason?: string
+          p_user_email: string
+        }
+        Returns: undefined
+      }
+      admin_reset_claims: { Args: { p_user_id: string }; Returns: undefined }
+      admin_reset_daily_pack: {
+        Args: { p_user_id: string }
+        Returns: undefined
+      }
+      admin_unclaim_all: { Args: { p_user_id: string }; Returns: number }
+      award_stamps: {
+        Args: {
+          p_amount: number
+          p_postcard_id?: string
+          p_reason?: string
+          p_type: string
+          p_user_id: string
+        }
+        Returns: number
+      }
+      claim_daily_stamps: { Args: never; Returns: Json }
+      claim_game_reward: {
+        Args: { p_game_type: string; p_postcard_id: string }
+        Returns: Json
+      }
+      claim_postcard: { Args: { p_postcard_id: string }; Returns: Json }
+      get_album_detail: { Args: { p_album_id: string }; Returns: Json }
+      get_album_postcard_ids: { Args: never; Returns: Json }
+      get_albums_with_progress: { Args: never; Returns: Json }
+      get_claim_status: { Args: never; Returns: Json }
+      get_distinct_countries: {
+        Args: never
+        Returns: {
+          country: string
+        }[]
+      }
+      get_random_feed: {
+        Args: {
+          p_albums_only?: boolean
+          p_country?: string
+          p_exclude_ids?: string[]
+          p_limit?: number
+        }
+        Returns: {
+          aesthetic_vibes: string[] | null
+          album_id: string | null
+          album_sequence: number | null
+          architecture_style: string | null
+          category: Json
+          city: string
+          claimed_at: string | null
+          color_palette: string | null
+          country: string
+          created_at: string | null
+          description: Json
+          detailed_tags: Json | null
+          game_stats: Json | null
+          generation_metadata: Json | null
+          human_activity: string | null
+          id: string
+          ig_media_id: string | null
+          ig_published_at: string | null
+          illustration_tags: Json | null
+          illustration_url: string
+          imagine_task_id: string | null
+          last_played_at: string | null
+          lat: number
+          lng: number
+          location_name: string | null
+          original_image_url: string
+          owner_id: string | null
+          puzzle_url: string | null
+          rarity: string | null
+          sam2_masks: Json | null
+          scene_type: string | null
+          semantic_layers: Json | null
+          should_animate: boolean | null
+          stamp_cost: number
+          storytelling_en: Json | null
+          streetview_pov: Json | null
+          time_of_day: string | null
+          video_generation_status:
+            | Database["public"]["Enums"]["video_generation_status_enum"]
+            | null
+          video_url: string | null
+          visual_tags: Json | null
+          weather: string | null
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "postcards"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
+      get_random_place: {
+        Args: never
+        Returns: {
+          id: string
+          latitude: number
+          longitude: number
+          name: string
+        }[]
+      }
+      get_stamp_balance: { Args: never; Returns: Json }
+      get_user_collection: {
+        Args: { p_user_id: string }
+        Returns: {
+          aesthetic_vibes: string[] | null
+          album_id: string | null
+          album_sequence: number | null
+          architecture_style: string | null
+          category: Json
+          city: string
+          claimed_at: string | null
+          color_palette: string | null
+          country: string
+          created_at: string | null
+          description: Json
+          detailed_tags: Json | null
+          game_stats: Json | null
+          generation_metadata: Json | null
+          human_activity: string | null
+          id: string
+          ig_media_id: string | null
+          ig_published_at: string | null
+          illustration_tags: Json | null
+          illustration_url: string
+          imagine_task_id: string | null
+          last_played_at: string | null
+          lat: number
+          lng: number
+          location_name: string | null
+          original_image_url: string
+          owner_id: string | null
+          puzzle_url: string | null
+          rarity: string | null
+          sam2_masks: Json | null
+          scene_type: string | null
+          semantic_layers: Json | null
+          should_animate: boolean | null
+          stamp_cost: number
+          storytelling_en: Json | null
+          streetview_pov: Json | null
+          time_of_day: string | null
+          video_generation_status:
+            | Database["public"]["Enums"]["video_generation_status_enum"]
+            | null
+          video_url: string | null
+          visual_tags: Json | null
+          weather: string | null
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "postcards"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
+      match_postcard_albums: { Args: { p_postcard_id: string }; Returns: Json }
+      open_daily_pack: { Args: never; Returns: Json }
+      spend_stamps: {
+        Args: { p_amount: number; p_postcard_id?: string }
+        Returns: Json
+      }
+      spotlight_search: {
+        Args: {
+          p_city?: string
+          p_country?: string
+          p_free_text?: string
+          p_limit?: number
+          p_rarity?: string
+          p_require_illustration_tags?: boolean
+          p_scene_type?: string
+          p_tags?: string[]
+          p_time_of_day?: string
+          p_weather?: string
+        }
+        Returns: {
+          aesthetic_vibes: string[] | null
+          album_id: string | null
+          album_sequence: number | null
+          architecture_style: string | null
+          category: Json
+          city: string
+          claimed_at: string | null
+          color_palette: string | null
+          country: string
+          created_at: string | null
+          description: Json
+          detailed_tags: Json | null
+          game_stats: Json | null
+          generation_metadata: Json | null
+          human_activity: string | null
+          id: string
+          ig_media_id: string | null
+          ig_published_at: string | null
+          illustration_tags: Json | null
+          illustration_url: string
+          imagine_task_id: string | null
+          last_played_at: string | null
+          lat: number
+          lng: number
+          location_name: string | null
+          original_image_url: string
+          owner_id: string | null
+          puzzle_url: string | null
+          rarity: string | null
+          sam2_masks: Json | null
+          scene_type: string | null
+          semantic_layers: Json | null
+          should_animate: boolean | null
+          stamp_cost: number
+          storytelling_en: Json | null
+          streetview_pov: Json | null
+          time_of_day: string | null
+          video_generation_status:
+            | Database["public"]["Enums"]["video_generation_status_enum"]
+            | null
+          video_url: string | null
+          visual_tags: Json | null
+          weather: string | null
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "postcards"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
+      spotlight_search_v2: {
+        Args: {
+          p_city?: string
+          p_country?: string
+          p_exclude_ids?: string[]
+          p_free_text?: string
+          p_limit?: number
+          p_rarity?: string
+          p_require_illustration_tags?: boolean
+          p_scene_type?: string
+          p_tags?: string[]
+          p_time_of_day?: string
+          p_weather?: string
+        }
+        Returns: {
+          aesthetic_vibes: string[] | null
+          album_id: string | null
+          album_sequence: number | null
+          architecture_style: string | null
+          category: Json
+          city: string
+          claimed_at: string | null
+          color_palette: string | null
+          country: string
+          created_at: string | null
+          description: Json
+          detailed_tags: Json | null
+          game_stats: Json | null
+          generation_metadata: Json | null
+          human_activity: string | null
+          id: string
+          ig_media_id: string | null
+          ig_published_at: string | null
+          illustration_tags: Json | null
+          illustration_url: string
+          imagine_task_id: string | null
+          last_played_at: string | null
+          lat: number
+          lng: number
+          location_name: string | null
+          original_image_url: string
+          owner_id: string | null
+          puzzle_url: string | null
+          rarity: string | null
+          sam2_masks: Json | null
+          scene_type: string | null
+          semantic_layers: Json | null
+          should_animate: boolean | null
+          stamp_cost: number
+          storytelling_en: Json | null
+          streetview_pov: Json | null
+          time_of_day: string | null
+          video_generation_status:
+            | Database["public"]["Enums"]["video_generation_status_enum"]
+            | null
+          video_url: string | null
+          visual_tags: Json | null
+          weather: string | null
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "postcards"
+          isOneToOne: false
+          isSetofReturn: true
+        }
       }
     }
     Enums: {
@@ -32,374 +1505,28 @@ export type Database = {
       [_ in never]: never
     }
   }
-  public: {
+  potlink: {
     Tables: {
-      active_zone: {
+      account_links: {
         Row: {
-          city: string | null
-          createdAt: string
+          created_at: string
           id: string
-          last_seen_at: string
-          latitude: number
-          longitude: number
-          request_count: number
+          linked_user_id: string
+          user_id: string
         }
         Insert: {
-          city?: string | null
-          createdAt?: string
-          id: string
-          last_seen_at?: string
-          latitude: number
-          longitude: number
-          request_count?: number
+          created_at?: string
+          id?: string
+          linked_user_id: string
+          user_id: string
         }
         Update: {
-          city?: string | null
-          createdAt?: string
+          created_at?: string
           id?: string
-          last_seen_at?: string
-          latitude?: number
-          longitude?: number
-          request_count?: number
+          linked_user_id?: string
+          user_id?: string
         }
         Relationships: []
-      }
-      activity: {
-        Row: {
-          address: string | null
-          businessStatus: string | null
-          createdAt: string
-          description: string | null
-          difficulty: Database["public"]["Enums"]["Difficulty"] | null
-          duration: number | null
-          externalId: string | null
-          formattedAddress: string | null
-          geom: unknown
-          id: string
-          knownActivityTypeName: string | null
-          latitude: number | null
-          location: Json | null
-          longitude: number | null
-          maxGroupSize: number | null
-          metadata: Json | null
-          name: string
-          openingHours: Json | null
-          phoneNumber: string | null
-          photos: Json | null
-          placeId: string | null
-          price: number | null
-          priceLevel: number | null
-          rating: number | null
-          ratingCount: number | null
-          sourceId: string | null
-          type: string | null
-          updatedAt: string
-          website: string | null
-        }
-        Insert: {
-          address?: string | null
-          businessStatus?: string | null
-          createdAt?: string
-          description?: string | null
-          difficulty?: Database["public"]["Enums"]["Difficulty"] | null
-          duration?: number | null
-          externalId?: string | null
-          formattedAddress?: string | null
-          geom?: unknown
-          id: string
-          knownActivityTypeName?: string | null
-          latitude?: number | null
-          location?: Json | null
-          longitude?: number | null
-          maxGroupSize?: number | null
-          metadata?: Json | null
-          name: string
-          openingHours?: Json | null
-          phoneNumber?: string | null
-          photos?: Json | null
-          placeId?: string | null
-          price?: number | null
-          priceLevel?: number | null
-          rating?: number | null
-          ratingCount?: number | null
-          sourceId?: string | null
-          type?: string | null
-          updatedAt: string
-          website?: string | null
-        }
-        Update: {
-          address?: string | null
-          businessStatus?: string | null
-          createdAt?: string
-          description?: string | null
-          difficulty?: Database["public"]["Enums"]["Difficulty"] | null
-          duration?: number | null
-          externalId?: string | null
-          formattedAddress?: string | null
-          geom?: unknown
-          id?: string
-          knownActivityTypeName?: string | null
-          latitude?: number | null
-          location?: Json | null
-          longitude?: number | null
-          maxGroupSize?: number | null
-          metadata?: Json | null
-          name?: string
-          openingHours?: Json | null
-          phoneNumber?: string | null
-          photos?: Json | null
-          placeId?: string | null
-          price?: number | null
-          priceLevel?: number | null
-          rating?: number | null
-          ratingCount?: number | null
-          sourceId?: string | null
-          type?: string | null
-          updatedAt?: string
-          website?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "activity_knownActivityTypeName_fkey"
-            columns: ["knownActivityTypeName"]
-            isOneToOne: false
-            referencedRelation: "known_activity_types"
-            referencedColumns: ["name"]
-          },
-          {
-            foreignKeyName: "activity_placeId_fkey"
-            columns: ["placeId"]
-            isOneToOne: false
-            referencedRelation: "place"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "activity_sourceId_fkey"
-            columns: ["sourceId"]
-            isOneToOne: false
-            referencedRelation: "source"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      activity_places: {
-        Row: {
-          activity_id: string
-          place_id: string
-          position: number
-          role: string
-        }
-        Insert: {
-          activity_id: string
-          place_id: string
-          position?: number
-          role?: string
-        }
-        Update: {
-          activity_id?: string
-          place_id?: string
-          position?: number
-          role?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "activity_places_activity_id_fkey"
-            columns: ["activity_id"]
-            isOneToOne: false
-            referencedRelation: "activity"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "activity_places_place_id_fkey"
-            columns: ["place_id"]
-            isOneToOne: false
-            referencedRelation: "place"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      activity_relationship: {
-        Row: {
-          compatibilityScore: number
-          createdAt: string
-          distanceScore: number
-          id: string
-          metadata: Json | null
-          reasoning: string | null
-          relationType: Database["public"]["Enums"]["RelationType"]
-          sourceActivityId: string
-          targetActivityId: string
-          timeCompatibilityScore: number
-          timeGapRecommended: number | null
-          updatedAt: string
-          varietyScore: number
-        }
-        Insert: {
-          compatibilityScore: number
-          createdAt?: string
-          distanceScore: number
-          id: string
-          metadata?: Json | null
-          reasoning?: string | null
-          relationType: Database["public"]["Enums"]["RelationType"]
-          sourceActivityId: string
-          targetActivityId: string
-          timeCompatibilityScore: number
-          timeGapRecommended?: number | null
-          updatedAt: string
-          varietyScore: number
-        }
-        Update: {
-          compatibilityScore?: number
-          createdAt?: string
-          distanceScore?: number
-          id?: string
-          metadata?: Json | null
-          reasoning?: string | null
-          relationType?: Database["public"]["Enums"]["RelationType"]
-          sourceActivityId?: string
-          targetActivityId?: string
-          timeCompatibilityScore?: number
-          timeGapRecommended?: number | null
-          updatedAt?: string
-          varietyScore?: number
-        }
-        Relationships: [
-          {
-            foreignKeyName: "activity_relationship_sourceActivityId_fkey"
-            columns: ["sourceActivityId"]
-            isOneToOne: false
-            referencedRelation: "activity"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "activity_relationship_targetActivityId_fkey"
-            columns: ["targetActivityId"]
-            isOneToOne: false
-            referencedRelation: "activity"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      briefing_links: {
-        Row: {
-          client_summary: string | null
-          context_notes: string | null
-          created_at: string | null
-          id: string
-          is_active: boolean | null
-          mode: string
-          owner_id: string
-          profession_context: string | null
-          seed_questions: Json | null
-          slug: string
-          status: string
-          title: string
-        }
-        Insert: {
-          client_summary?: string | null
-          context_notes?: string | null
-          created_at?: string | null
-          id?: string
-          is_active?: boolean | null
-          mode?: string
-          owner_id: string
-          profession_context?: string | null
-          seed_questions?: Json | null
-          slug: string
-          status?: string
-          title: string
-        }
-        Update: {
-          client_summary?: string | null
-          context_notes?: string | null
-          created_at?: string | null
-          id?: string
-          is_active?: boolean | null
-          mode?: string
-          owner_id?: string
-          profession_context?: string | null
-          seed_questions?: Json | null
-          slug?: string
-          status?: string
-          title?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "briefing_links_owner_id_fkey"
-            columns: ["owner_id"]
-            isOneToOne: false
-            referencedRelation: "tellee_profiles"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      briefing_replies: {
-        Row: {
-          answer_text: string
-          briefing_id: string
-          created_at: string | null
-          id: string
-          question_index: number
-          question_text: string
-        }
-        Insert: {
-          answer_text: string
-          briefing_id: string
-          created_at?: string | null
-          id?: string
-          question_index: number
-          question_text: string
-        }
-        Update: {
-          answer_text?: string
-          briefing_id?: string
-          created_at?: string | null
-          id?: string
-          question_index?: number
-          question_text?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "briefing_replies_briefing_id_fkey"
-            columns: ["briefing_id"]
-            isOneToOne: false
-            referencedRelation: "briefings"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      briefings: {
-        Row: {
-          client_input: string
-          created_at: string | null
-          curated_json: Json
-          id: string
-          link_id: string
-        }
-        Insert: {
-          client_input: string
-          created_at?: string | null
-          curated_json: Json
-          id?: string
-          link_id: string
-        }
-        Update: {
-          client_input?: string
-          created_at?: string | null
-          curated_json?: Json
-          id?: string
-          link_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "briefings_link_id_fkey"
-            columns: ["link_id"]
-            isOneToOne: false
-            referencedRelation: "briefing_links"
-            referencedColumns: ["id"]
-          },
-        ]
       }
       care_logs: {
         Row: {
@@ -483,244 +1610,58 @@ export type Database = {
           },
         ]
       }
-      client_question_replies: {
+      diagnosis_logs: {
         Row: {
-          answer_text: string
-          briefing_id: string
-          created_at: string | null
+          action_plan: Json
+          ai_diagnosis: string
+          chat_history: Json
+          created_at: string
+          general_image_url: string
           id: string
-          question_index: number
-          question_text: string
+          metadata: Json | null
+          pot_id: string
+          soil_image_url: string | null
+          urgency: string
+          user_id: string
+          user_query: string | null
         }
         Insert: {
-          answer_text: string
-          briefing_id: string
-          created_at?: string | null
+          action_plan?: Json
+          ai_diagnosis: string
+          chat_history?: Json
+          created_at?: string
+          general_image_url: string
           id?: string
-          question_index: number
-          question_text: string
+          metadata?: Json | null
+          pot_id: string
+          soil_image_url?: string | null
+          urgency: string
+          user_id?: string
+          user_query?: string | null
         }
         Update: {
-          answer_text?: string
-          briefing_id?: string
-          created_at?: string | null
+          action_plan?: Json
+          ai_diagnosis?: string
+          chat_history?: Json
+          created_at?: string
+          general_image_url?: string
           id?: string
-          question_index?: number
-          question_text?: string
+          metadata?: Json | null
+          pot_id?: string
+          soil_image_url?: string | null
+          urgency?: string
+          user_id?: string
+          user_query?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "client_question_replies_briefing_id_fkey"
-            columns: ["briefing_id"]
+            foreignKeyName: "potlink_diagnosis_logs_pot_id_fkey"
+            columns: ["pot_id"]
             isOneToOne: false
-            referencedRelation: "briefings"
+            referencedRelation: "pots"
             referencedColumns: ["id"]
           },
         ]
-      }
-      crawler_search: {
-        Row: {
-          createdAt: string
-          deviceToken: string | null
-          id: string
-          latitude: number
-          longitude: number
-          updatedAt: string
-        }
-        Insert: {
-          createdAt?: string
-          deviceToken?: string | null
-          id: string
-          latitude: number
-          longitude: number
-          updatedAt: string
-        }
-        Update: {
-          createdAt?: string
-          deviceToken?: string | null
-          id?: string
-          latitude?: number
-          longitude?: number
-          updatedAt?: string
-        }
-        Relationships: []
-      }
-      expenses: {
-        Row: {
-          amount: number
-          category: string | null
-          created_at: string
-          currency: string
-          date: string | null
-          id: number
-          name: string
-          original_amount: number | null
-          user_id: string
-        }
-        Insert: {
-          amount: number
-          category?: string | null
-          created_at?: string
-          currency: string
-          date?: string | null
-          id?: number
-          name: string
-          original_amount?: number | null
-          user_id?: string
-        }
-        Update: {
-          amount?: number
-          category?: string | null
-          created_at?: string
-          currency?: string
-          date?: string | null
-          id?: number
-          name?: string
-          original_amount?: number | null
-          user_id?: string
-        }
-        Relationships: []
-      }
-      fixed_expenses: {
-        Row: {
-          amount: number
-          created_at: string
-          id: string
-          name: string
-          user_id: string
-        }
-        Insert: {
-          amount: number
-          created_at?: string
-          id?: string
-          name: string
-          user_id?: string
-        }
-        Update: {
-          amount?: number
-          created_at?: string
-          id?: string
-          name?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
-      known_activity_types: {
-        Row: {
-          category: string | null
-          createdAt: string
-          description: string | null
-          icon: string | null
-          id: string
-          name: string
-          updatedAt: string
-        }
-        Insert: {
-          category?: string | null
-          createdAt?: string
-          description?: string | null
-          icon?: string | null
-          id: string
-          name: string
-          updatedAt: string
-        }
-        Update: {
-          category?: string | null
-          createdAt?: string
-          description?: string | null
-          icon?: string | null
-          id?: string
-          name?: string
-          updatedAt?: string
-        }
-        Relationships: []
-      }
-      monthly_summaries: {
-        Row: {
-          created_at: string
-          id: number
-          month: string
-          monthly_income: number | null
-          savings_amount: number | null
-          savings_percentage: number | null
-          total_expenses: number | null
-          total_income: number | null
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: number
-          month: string
-          monthly_income?: number | null
-          savings_amount?: number | null
-          savings_percentage?: number | null
-          total_expenses?: number | null
-          total_income?: number | null
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: number
-          month?: string
-          monthly_income?: number | null
-          savings_amount?: number | null
-          savings_percentage?: number | null
-          total_expenses?: number | null
-          total_income?: number | null
-          user_id?: string
-        }
-        Relationships: []
-      }
-      place: {
-        Row: {
-          address: string | null
-          city: string | null
-          country: string | null
-          createdAt: string
-          description: string | null
-          geom: unknown
-          id: string
-          latitude: number
-          longitude: number
-          metadata: Json | null
-          name: string
-          photos: Json | null
-          type: string
-          updatedAt: string
-        }
-        Insert: {
-          address?: string | null
-          city?: string | null
-          country?: string | null
-          createdAt?: string
-          description?: string | null
-          geom?: unknown
-          id?: string
-          latitude: number
-          longitude: number
-          metadata?: Json | null
-          name: string
-          photos?: Json | null
-          type?: string
-          updatedAt?: string
-        }
-        Update: {
-          address?: string | null
-          city?: string | null
-          country?: string | null
-          createdAt?: string
-          description?: string | null
-          geom?: unknown
-          id?: string
-          latitude?: number
-          longitude?: number
-          metadata?: Json | null
-          name?: string
-          photos?: Json | null
-          type?: string
-          updatedAt?: string
-        }
-        Relationships: []
       }
       plant_species_care_guides: {
         Row: {
@@ -872,517 +1813,6 @@ export type Database = {
         }
         Relationships: []
       }
-      postalpeek_album_progress: {
-        Row: {
-          album_id: string
-          completed_at: string | null
-          user_id: string
-        }
-        Insert: {
-          album_id: string
-          completed_at?: string | null
-          user_id: string
-        }
-        Update: {
-          album_id?: string
-          completed_at?: string | null
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "postalpeek_album_progress_album_id_fkey"
-            columns: ["album_id"]
-            isOneToOne: false
-            referencedRelation: "postalpeek_albums"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      postalpeek_album_slots: {
-        Row: {
-          album_id: string | null
-          id: string
-          lat: number | null
-          lng: number | null
-          postcard_id: string | null
-          slot_label: string
-          slot_order: number
-          stop_description: string | null
-          stop_status: string | null
-        }
-        Insert: {
-          album_id?: string | null
-          id?: string
-          lat?: number | null
-          lng?: number | null
-          postcard_id?: string | null
-          slot_label: string
-          slot_order: number
-          stop_description?: string | null
-          stop_status?: string | null
-        }
-        Update: {
-          album_id?: string | null
-          id?: string
-          lat?: number | null
-          lng?: number | null
-          postcard_id?: string | null
-          slot_label?: string
-          slot_order?: number
-          stop_description?: string | null
-          stop_status?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "postalpeek_album_slots_album_id_fkey"
-            columns: ["album_id"]
-            isOneToOne: false
-            referencedRelation: "postalpeek_albums"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "postalpeek_album_slots_postcard_id_fkey"
-            columns: ["postcard_id"]
-            isOneToOne: false
-            referencedRelation: "postalpeek_postcards"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      postalpeek_albums: {
-        Row: {
-          category: string | null
-          city: string | null
-          country: string | null
-          cover_image_url: string | null
-          created_at: string | null
-          description: string | null
-          destination_query: string | null
-          difficulty: string | null
-          id: string
-          is_active: boolean | null
-          itinerary_summary: string | null
-          match_rules: Json | null
-          reward_claims: number | null
-          source: string | null
-          status: string | null
-          target_slots: number | null
-          title: string
-        }
-        Insert: {
-          category?: string | null
-          city?: string | null
-          country?: string | null
-          cover_image_url?: string | null
-          created_at?: string | null
-          description?: string | null
-          destination_query?: string | null
-          difficulty?: string | null
-          id?: string
-          is_active?: boolean | null
-          itinerary_summary?: string | null
-          match_rules?: Json | null
-          reward_claims?: number | null
-          source?: string | null
-          status?: string | null
-          target_slots?: number | null
-          title: string
-        }
-        Update: {
-          category?: string | null
-          city?: string | null
-          country?: string | null
-          cover_image_url?: string | null
-          created_at?: string | null
-          description?: string | null
-          destination_query?: string | null
-          difficulty?: string | null
-          id?: string
-          is_active?: boolean | null
-          itinerary_summary?: string | null
-          match_rules?: Json | null
-          reward_claims?: number | null
-          source?: string | null
-          status?: string | null
-          target_slots?: number | null
-          title?: string
-        }
-        Relationships: []
-      }
-      postalpeek_daily_packs: {
-        Row: {
-          id: string
-          opened_at: string
-          postcard_ids: string[]
-          user_id: string
-        }
-        Insert: {
-          id?: string
-          opened_at?: string
-          postcard_ids?: string[]
-          user_id: string
-        }
-        Update: {
-          id?: string
-          opened_at?: string
-          postcard_ids?: string[]
-          user_id?: string
-        }
-        Relationships: []
-      }
-      postalpeek_favorites: {
-        Row: {
-          created_at: string | null
-          id: string
-          postcard_id: string
-          user_id: string
-        }
-        Insert: {
-          created_at?: string | null
-          id?: string
-          postcard_id: string
-          user_id: string
-        }
-        Update: {
-          created_at?: string | null
-          id?: string
-          postcard_id?: string
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "postalpeek_favorites_postcard_id_fkey"
-            columns: ["postcard_id"]
-            isOneToOne: false
-            referencedRelation: "postalpeek_postcards"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      postalpeek_feed_cache: {
-        Row: {
-          country: string | null
-          id: string | null
-          sort_index: number
-        }
-        Insert: {
-          country?: string | null
-          id?: string | null
-          sort_index: number
-        }
-        Update: {
-          country?: string | null
-          id?: string | null
-          sort_index?: number
-        }
-        Relationships: [
-          {
-            foreignKeyName: "postalpeek_feed_cache_id_fkey"
-            columns: ["id"]
-            isOneToOne: false
-            referencedRelation: "postalpeek_postcards"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      postalpeek_postcards: {
-        Row: {
-          album_id: string | null
-          album_sequence: number | null
-          category: string
-          city: string
-          claimed_at: string | null
-          country: string
-          created_at: string | null
-          description: string
-          generation_metadata: Json | null
-          id: string
-          illustration_url: string
-          imagine_task_id: string | null
-          lat: number
-          lng: number
-          location_name: string | null
-          original_image_url: string
-          owner_id: string | null
-          rarity: string | null
-          should_animate: boolean | null
-          streetview_pov: Json | null
-          video_generation_status:
-            | Database["public"]["Enums"]["video_generation_status_enum"]
-            | null
-          video_url: string | null
-          visual_tags: Json | null
-        }
-        Insert: {
-          album_id?: string | null
-          album_sequence?: number | null
-          category: string
-          city: string
-          claimed_at?: string | null
-          country: string
-          created_at?: string | null
-          description: string
-          generation_metadata?: Json | null
-          id?: string
-          illustration_url: string
-          imagine_task_id?: string | null
-          lat: number
-          lng: number
-          location_name?: string | null
-          original_image_url: string
-          owner_id?: string | null
-          rarity?: string | null
-          should_animate?: boolean | null
-          streetview_pov?: Json | null
-          video_generation_status?:
-            | Database["public"]["Enums"]["video_generation_status_enum"]
-            | null
-          video_url?: string | null
-          visual_tags?: Json | null
-        }
-        Update: {
-          album_id?: string | null
-          album_sequence?: number | null
-          category?: string
-          city?: string
-          claimed_at?: string | null
-          country?: string
-          created_at?: string | null
-          description?: string
-          generation_metadata?: Json | null
-          id?: string
-          illustration_url?: string
-          imagine_task_id?: string | null
-          lat?: number
-          lng?: number
-          location_name?: string | null
-          original_image_url?: string
-          owner_id?: string | null
-          rarity?: string | null
-          should_animate?: boolean | null
-          streetview_pov?: Json | null
-          video_generation_status?:
-            | Database["public"]["Enums"]["video_generation_status_enum"]
-            | null
-          video_url?: string | null
-          visual_tags?: Json | null
-        }
-        Relationships: []
-      }
-      postalpeek_shares: {
-        Row: {
-          created_at: string
-          id: string
-          is_used: boolean
-          postcard_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          is_used?: boolean
-          postcard_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          is_used?: boolean
-          postcard_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "postalpeek_shares_postcard_id_fkey"
-            columns: ["postcard_id"]
-            isOneToOne: false
-            referencedRelation: "postalpeek_postcards"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      postalpeek_smart_album_rules: {
-        Row: {
-          created_at: string | null
-          creative_title: string
-          filter_type: string
-          filter_value: string
-          id: string
-        }
-        Insert: {
-          created_at?: string | null
-          creative_title: string
-          filter_type: string
-          filter_value: string
-          id?: string
-        }
-        Update: {
-          created_at?: string | null
-          creative_title?: string
-          filter_type?: string
-          filter_value?: string
-          id?: string
-        }
-        Relationships: []
-      }
-      postalpeek_streetview_queries: {
-        Row: {
-          address: string
-          created_at: string
-          id: string
-          image_path: string
-        }
-        Insert: {
-          address: string
-          created_at?: string
-          id?: string
-          image_path: string
-        }
-        Update: {
-          address?: string
-          created_at?: string
-          id?: string
-          image_path?: string
-        }
-        Relationships: []
-      }
-      postalpeek_validations: {
-        Row: {
-          ai_reasoning: string | null
-          created_at: string | null
-          id: string
-          image_url: string | null
-          postcard_id: string
-          status: string
-          user_id: string
-        }
-        Insert: {
-          ai_reasoning?: string | null
-          created_at?: string | null
-          id?: string
-          image_url?: string | null
-          postcard_id: string
-          status?: string
-          user_id: string
-        }
-        Update: {
-          ai_reasoning?: string | null
-          created_at?: string | null
-          id?: string
-          image_url?: string | null
-          postcard_id?: string
-          status?: string
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "postalpeek_validations_postcard_id_fkey"
-            columns: ["postcard_id"]
-            isOneToOne: false
-            referencedRelation: "postalpeek_postcards"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "postalpeek_validations_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      potlink_account_links: {
-        Row: {
-          created_at: string
-          id: string
-          linked_user_id: string
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          linked_user_id: string
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          linked_user_id?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
-      potlink_diagnosis_logs: {
-        Row: {
-          action_plan: Json
-          ai_diagnosis: string
-          chat_history: Json
-          created_at: string
-          general_image_url: string
-          id: string
-          metadata: Json | null
-          pot_id: string
-          soil_image_url: string | null
-          urgency: string
-          user_id: string
-          user_query: string | null
-        }
-        Insert: {
-          action_plan?: Json
-          ai_diagnosis: string
-          chat_history?: Json
-          created_at?: string
-          general_image_url: string
-          id?: string
-          metadata?: Json | null
-          pot_id: string
-          soil_image_url?: string | null
-          urgency: string
-          user_id?: string
-          user_query?: string | null
-        }
-        Update: {
-          action_plan?: Json
-          ai_diagnosis?: string
-          chat_history?: Json
-          created_at?: string
-          general_image_url?: string
-          id?: string
-          metadata?: Json | null
-          pot_id?: string
-          soil_image_url?: string | null
-          urgency?: string
-          user_id?: string
-          user_query?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "potlink_diagnosis_logs_pot_id_fkey"
-            columns: ["pot_id"]
-            isOneToOne: false
-            referencedRelation: "pots"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      potlink_share_codes: {
-        Row: {
-          code: string
-          created_at: string
-          expires_at: string
-          user_id: string
-        }
-        Insert: {
-          code: string
-          created_at?: string
-          expires_at: string
-          user_id: string
-        }
-        Update: {
-          code?: string
-          created_at?: string
-          expires_at?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
       pots: {
         Row: {
           address: string | null
@@ -1461,6 +1891,43 @@ export type Database = {
         }
         Relationships: []
       }
+      share_codes: {
+        Row: {
+          code: string
+          created_at: string
+          expires_at: string
+          user_id: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          expires_at: string
+          user_id: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          expires_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      [_ in never]: never
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
+  public: {
+    Tables: {
       profiles: {
         Row: {
           currency: string | null
@@ -1491,60 +1958,6 @@ export type Database = {
         }
         Relationships: []
       }
-      short_urls: {
-        Row: {
-          clicks: number | null
-          created_at: string | null
-          id: string
-          original_url: string
-          short_code: string
-          updated_at: string | null
-        }
-        Insert: {
-          clicks?: number | null
-          created_at?: string | null
-          id?: string
-          original_url: string
-          short_code: string
-          updated_at?: string | null
-        }
-        Update: {
-          clicks?: number | null
-          created_at?: string | null
-          id?: string
-          original_url?: string
-          short_code?: string
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      source: {
-        Row: {
-          baseUrl: string | null
-          createdAt: string
-          id: string
-          name: string
-          type: string
-          updatedAt: string
-        }
-        Insert: {
-          baseUrl?: string | null
-          createdAt?: string
-          id: string
-          name: string
-          type?: string
-          updatedAt: string
-        }
-        Update: {
-          baseUrl?: string | null
-          createdAt?: string
-          id?: string
-          name?: string
-          type?: string
-          updatedAt?: string
-        }
-        Relationships: []
-      }
       spatial_ref_sys: {
         Row: {
           auth_name: string | null
@@ -1566,459 +1979,6 @@ export type Database = {
           proj4text?: string | null
           srid?: number
           srtext?: string | null
-        }
-        Relationships: []
-      }
-      tablia_chat_sessions: {
-        Row: {
-          created_at: string
-          customer_email: string | null
-          id: string
-          menu_id: string
-          messages: Json
-          updated_at: string
-          venue_id: string
-        }
-        Insert: {
-          created_at?: string
-          customer_email?: string | null
-          id?: string
-          menu_id: string
-          messages?: Json
-          updated_at?: string
-          venue_id: string
-        }
-        Update: {
-          created_at?: string
-          customer_email?: string | null
-          id?: string
-          menu_id?: string
-          messages?: Json
-          updated_at?: string
-          venue_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "tablia_chat_sessions_menu_id_fkey"
-            columns: ["menu_id"]
-            isOneToOne: false
-            referencedRelation: "tablia_menus"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "tablia_chat_sessions_venue_id_fkey"
-            columns: ["venue_id"]
-            isOneToOne: false
-            referencedRelation: "tablia_venues"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      tablia_menu_categories: {
-        Row: {
-          description: string | null
-          icon: string | null
-          id: string
-          is_visible: boolean
-          menu_id: string
-          name: string
-          sort_order: number
-        }
-        Insert: {
-          description?: string | null
-          icon?: string | null
-          id?: string
-          is_visible?: boolean
-          menu_id: string
-          name: string
-          sort_order?: number
-        }
-        Update: {
-          description?: string | null
-          icon?: string | null
-          id?: string
-          is_visible?: boolean
-          menu_id?: string
-          name?: string
-          sort_order?: number
-        }
-        Relationships: [
-          {
-            foreignKeyName: "tablia_menu_categories_menu_id_fkey"
-            columns: ["menu_id"]
-            isOneToOne: false
-            referencedRelation: "tablia_menus"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      tablia_menu_items: {
-        Row: {
-          category_id: string
-          currency: string
-          description: string | null
-          id: string
-          image_url: string | null
-          is_available: boolean
-          menu_id: string
-          name: string
-          price: number
-          sort_order: number
-          tags: string[] | null
-        }
-        Insert: {
-          category_id: string
-          currency?: string
-          description?: string | null
-          id?: string
-          image_url?: string | null
-          is_available?: boolean
-          menu_id: string
-          name: string
-          price?: number
-          sort_order?: number
-          tags?: string[] | null
-        }
-        Update: {
-          category_id?: string
-          currency?: string
-          description?: string | null
-          id?: string
-          image_url?: string | null
-          is_available?: boolean
-          menu_id?: string
-          name?: string
-          price?: number
-          sort_order?: number
-          tags?: string[] | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "tablia_menu_items_category_id_fkey"
-            columns: ["category_id"]
-            isOneToOne: false
-            referencedRelation: "tablia_menu_categories"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "tablia_menu_items_menu_id_fkey"
-            columns: ["menu_id"]
-            isOneToOne: false
-            referencedRelation: "tablia_menus"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      tablia_menus: {
-        Row: {
-          created_at: string | null
-          id: string
-          name: string
-          parsed_json: Json | null
-          source_content: string | null
-          source_type: string
-          status: string
-          updated_at: string | null
-          venue_id: string
-        }
-        Insert: {
-          created_at?: string | null
-          id?: string
-          name?: string
-          parsed_json?: Json | null
-          source_content?: string | null
-          source_type?: string
-          status?: string
-          updated_at?: string | null
-          venue_id: string
-        }
-        Update: {
-          created_at?: string | null
-          id?: string
-          name?: string
-          parsed_json?: Json | null
-          source_content?: string | null
-          source_type?: string
-          status?: string
-          updated_at?: string | null
-          venue_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "tablia_menus_venue_id_fkey"
-            columns: ["venue_id"]
-            isOneToOne: false
-            referencedRelation: "tablia_venues"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      tablia_profiles: {
-        Row: {
-          business_name: string | null
-          created_at: string | null
-          display_name: string | null
-          id: string
-        }
-        Insert: {
-          business_name?: string | null
-          created_at?: string | null
-          display_name?: string | null
-          id: string
-        }
-        Update: {
-          business_name?: string | null
-          created_at?: string | null
-          display_name?: string | null
-          id?: string
-        }
-        Relationships: []
-      }
-      tablia_venues: {
-        Row: {
-          address: string | null
-          created_at: string | null
-          cuisine_type: string | null
-          description: string | null
-          id: string
-          logo_url: string | null
-          name: string
-          owner_id: string
-          slug: string
-          updated_at: string | null
-        }
-        Insert: {
-          address?: string | null
-          created_at?: string | null
-          cuisine_type?: string | null
-          description?: string | null
-          id?: string
-          logo_url?: string | null
-          name: string
-          owner_id: string
-          slug: string
-          updated_at?: string | null
-        }
-        Update: {
-          address?: string | null
-          created_at?: string | null
-          cuisine_type?: string | null
-          description?: string | null
-          id?: string
-          logo_url?: string | null
-          name?: string
-          owner_id?: string
-          slug?: string
-          updated_at?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "tablia_venues_owner_id_fkey"
-            columns: ["owner_id"]
-            isOneToOne: false
-            referencedRelation: "tablia_profiles"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      tellee_profiles: {
-        Row: {
-          business_description: string | null
-          business_name: string | null
-          created_at: string | null
-          default_notes: string | null
-          display_name: string | null
-          id: string
-          profession: string | null
-        }
-        Insert: {
-          business_description?: string | null
-          business_name?: string | null
-          created_at?: string | null
-          default_notes?: string | null
-          display_name?: string | null
-          id: string
-          profession?: string | null
-        }
-        Update: {
-          business_description?: string | null
-          business_name?: string | null
-          created_at?: string | null
-          default_notes?: string | null
-          display_name?: string | null
-          id?: string
-          profession?: string | null
-        }
-        Relationships: []
-      }
-      tour: {
-        Row: {
-          categories: string[] | null
-          coverImage: string | null
-          createdAt: string
-          description: string | null
-          duration: number | null
-          estimatedBudget: number | null
-          id: string
-          maxGroupSize: number | null
-          metadata: Json | null
-          name: string
-          price: number | null
-          prompt: string | null
-          query: string | null
-          recommendedGroupSize: number | null
-          startDates: string[] | null
-          totalDays: number | null
-          totalDistance: number | null
-          updatedAt: string
-          userId: string | null
-        }
-        Insert: {
-          categories?: string[] | null
-          coverImage?: string | null
-          createdAt?: string
-          description?: string | null
-          duration?: number | null
-          estimatedBudget?: number | null
-          id: string
-          maxGroupSize?: number | null
-          metadata?: Json | null
-          name: string
-          price?: number | null
-          prompt?: string | null
-          query?: string | null
-          recommendedGroupSize?: number | null
-          startDates?: string[] | null
-          totalDays?: number | null
-          totalDistance?: number | null
-          updatedAt: string
-          userId?: string | null
-        }
-        Update: {
-          categories?: string[] | null
-          coverImage?: string | null
-          createdAt?: string
-          description?: string | null
-          duration?: number | null
-          estimatedBudget?: number | null
-          id?: string
-          maxGroupSize?: number | null
-          metadata?: Json | null
-          name?: string
-          price?: number | null
-          prompt?: string | null
-          query?: string | null
-          recommendedGroupSize?: number | null
-          startDates?: string[] | null
-          totalDays?: number | null
-          totalDistance?: number | null
-          updatedAt?: string
-          userId?: string | null
-        }
-        Relationships: []
-      }
-      tour_activity: {
-        Row: {
-          actions: string[] | null
-          activityData: Json | null
-          activityId: string | null
-          activityLatitude: number | null
-          activityLongitude: number | null
-          activityName: string | null
-          activityType: string | null
-          createdAt: string
-          dayNumber: number | null
-          distanceToNext: number | null
-          duration: number | null
-          id: string
-          notes: string | null
-          order: number
-          startTime: string | null
-          tourId: string
-          transportMode: string | null
-          travelTimeToNext: number | null
-          updatedAt: string
-        }
-        Insert: {
-          actions?: string[] | null
-          activityData?: Json | null
-          activityId?: string | null
-          activityLatitude?: number | null
-          activityLongitude?: number | null
-          activityName?: string | null
-          activityType?: string | null
-          createdAt?: string
-          dayNumber?: number | null
-          distanceToNext?: number | null
-          duration?: number | null
-          id: string
-          notes?: string | null
-          order?: number
-          startTime?: string | null
-          tourId: string
-          transportMode?: string | null
-          travelTimeToNext?: number | null
-          updatedAt: string
-        }
-        Update: {
-          actions?: string[] | null
-          activityData?: Json | null
-          activityId?: string | null
-          activityLatitude?: number | null
-          activityLongitude?: number | null
-          activityName?: string | null
-          activityType?: string | null
-          createdAt?: string
-          dayNumber?: number | null
-          distanceToNext?: number | null
-          duration?: number | null
-          id?: string
-          notes?: string | null
-          order?: number
-          startTime?: string | null
-          tourId?: string
-          transportMode?: string | null
-          travelTimeToNext?: number | null
-          updatedAt?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "tour_activity_activityId_fkey"
-            columns: ["activityId"]
-            isOneToOne: false
-            referencedRelation: "activity"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "tour_activity_tourId_fkey"
-            columns: ["tourId"]
-            isOneToOne: false
-            referencedRelation: "tour"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      weather_cache: {
-        Row: {
-          data: Json
-          fetched_at: string
-          id: string
-          latitude: number
-          longitude: number
-        }
-        Insert: {
-          data: Json
-          fetched_at?: string
-          id: string
-          latitude: number
-          longitude: number
-        }
-        Update: {
-          data?: Json
-          fetched_at?: string
-          id?: string
-          latitude?: number
-          longitude?: number
         }
         Relationships: []
       }
@@ -2375,164 +2335,6 @@ export type Database = {
       populate_geometry_columns:
         | { Args: { tbl_oid: unknown; use_typmod?: boolean }; Returns: number }
         | { Args: { use_typmod?: boolean }; Returns: string }
-      postalpeek_claim_postcard: {
-        Args: { p_postcard_id: string }
-        Returns: Json
-      }
-      postalpeek_get_album_detail: {
-        Args: { p_album_id: string }
-        Returns: Json
-      }
-      postalpeek_get_album_postcard_ids: { Args: never; Returns: Json }
-      postalpeek_get_albums_with_progress: { Args: never; Returns: Json }
-      postalpeek_get_claim_status: { Args: never; Returns: Json }
-      postalpeek_get_daily_pack: {
-        Args: { p_country?: string; p_limit?: number }
-        Returns: {
-          album_id: string | null
-          album_sequence: number | null
-          category: string
-          city: string
-          claimed_at: string | null
-          country: string
-          created_at: string | null
-          description: string
-          generation_metadata: Json | null
-          id: string
-          illustration_url: string
-          imagine_task_id: string | null
-          lat: number
-          lng: number
-          location_name: string | null
-          original_image_url: string
-          owner_id: string | null
-          rarity: string | null
-          should_animate: boolean | null
-          streetview_pov: Json | null
-          video_generation_status:
-            | Database["public"]["Enums"]["video_generation_status_enum"]
-            | null
-          video_url: string | null
-          visual_tags: Json | null
-        }[]
-        SetofOptions: {
-          from: "*"
-          to: "postalpeek_postcards"
-          isOneToOne: false
-          isSetofReturn: true
-        }
-      }
-      postalpeek_get_distinct_countries: {
-        Args: never
-        Returns: {
-          country: string
-        }[]
-      }
-      postalpeek_get_random_feed: {
-        Args: {
-          p_albums_only?: boolean
-          p_country?: string
-          p_exclude_ids?: string[]
-          p_limit?: number
-        }
-        Returns: {
-          album_id: string | null
-          album_sequence: number | null
-          category: string
-          city: string
-          claimed_at: string | null
-          country: string
-          created_at: string | null
-          description: string
-          generation_metadata: Json | null
-          id: string
-          illustration_url: string
-          imagine_task_id: string | null
-          lat: number
-          lng: number
-          location_name: string | null
-          original_image_url: string
-          owner_id: string | null
-          rarity: string | null
-          should_animate: boolean | null
-          streetview_pov: Json | null
-          video_generation_status:
-            | Database["public"]["Enums"]["video_generation_status_enum"]
-            | null
-          video_url: string | null
-          visual_tags: Json | null
-        }[]
-        SetofOptions: {
-          from: "*"
-          to: "postalpeek_postcards"
-          isOneToOne: false
-          isSetofReturn: true
-        }
-      }
-      postalpeek_get_random_place: {
-        Args: never
-        Returns: {
-          id: string
-          latitude: number
-          longitude: number
-          name: string
-        }[]
-      }
-      postalpeek_get_smart_albums: {
-        Args: { p_user_id: string }
-        Returns: Database["public"]["CompositeTypes"]["postalpeek_smart_album_list"][]
-        SetofOptions: {
-          from: "*"
-          to: "postalpeek_smart_album_list"
-          isOneToOne: false
-          isSetofReturn: true
-        }
-      }
-      postalpeek_get_user_collection: {
-        Args: { p_user_id: string }
-        Returns: {
-          album_id: string | null
-          album_sequence: number | null
-          category: string
-          city: string
-          claimed_at: string | null
-          country: string
-          created_at: string | null
-          description: string
-          generation_metadata: Json | null
-          id: string
-          illustration_url: string
-          imagine_task_id: string | null
-          lat: number
-          lng: number
-          location_name: string | null
-          original_image_url: string
-          owner_id: string | null
-          rarity: string | null
-          should_animate: boolean | null
-          streetview_pov: Json | null
-          video_generation_status:
-            | Database["public"]["Enums"]["video_generation_status_enum"]
-            | null
-          video_url: string | null
-          visual_tags: Json | null
-        }[]
-        SetofOptions: {
-          from: "*"
-          to: "postalpeek_postcards"
-          isOneToOne: false
-          isSetofReturn: true
-        }
-      }
-      postalpeek_match_postcard_albums: {
-        Args: { p_postcard_id: string }
-        Returns: Json
-      }
-      postalpeek_open_daily_pack: { Args: never; Returns: Json }
-      postalpeek_remove_from_pack: {
-        Args: { p_postcard_id: string }
-        Returns: undefined
-      }
       postgis_constraint_dims: {
         Args: { geomcolumn: string; geomschema: string; geomtable: string }
         Returns: number
@@ -3178,13 +2980,6 @@ export type Database = {
         path: number[] | null
         geom: unknown
       }
-      postalpeek_smart_album_list: {
-        album_type: string | null
-        filter_value: string | null
-        title: string | null
-        postcard_count: number | null
-        cover_urls: string[] | null
-      }
       valid_detail: {
         valid: boolean | null
         reason: string | null
@@ -3312,7 +3107,10 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
-  graphql_public: {
+  postalpeek: {
+    Enums: {},
+  },
+  potlink: {
     Enums: {},
   },
   public: {

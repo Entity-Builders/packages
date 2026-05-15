@@ -3,7 +3,7 @@ import type { Pot, PotFormData } from '@eb-packages/garden';
 import { getCurrentLocation } from './location';
 import { getCurrentWeather } from './weather';
 import { getLinkedAccounts } from './accountLinking';
-import * as FileSystem from 'expo-file-system/legacy';
+import * as FileSystem from 'expo-file-system';
 
 /**
  * Calculate day of year (1-365/366)
