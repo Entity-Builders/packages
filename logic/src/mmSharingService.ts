@@ -41,7 +41,7 @@ function generateCode(): string {
 export async function generateInviteCode(batchId: string): Promise<InviteCode> {
   // Check for an existing valid code first
   const { data: existing } = await supabase
-    .from('mm_batch_invite_codes')
+    .from('batch_invite_codes')
     .select('code, expires_at')
     .eq('batch_id', batchId)
     .is('used_at', null)
@@ -61,16 +61,26 @@ export async function generateInviteCode(batchId: string): Promise<InviteCode> {
   // Generate a new unique code
   let code = generateCode();
   let attempts = 0;
+  let lastError = null;
   while (attempts < 5) {
-    const { error } = await supabase.from('mm_batch_invite_codes').insert({
+    const { error } = await supabase.from('batch_invite_codes').insert({
       batch_id: batchId,
       code,
       created_by: (await supabase.auth.getUser()).data.user?.id,
     });
-    if (!error) break;
-    // Conflict on code uniqueness — try a different code
+    if (!error) {
+      lastError = null;
+      break;
+    }
+    // Conflict on code uniqueness or RLS — try a different code
+    lastError = error;
     code = generateCode();
     attempts++;
+  }
+
+  if (lastError) {
+    console.error('Failed to insert invite code after 5 attempts:', lastError);
+    throw new Error('Failed to generate invite code. ' + lastError.message);
   }
 
   const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000);
@@ -101,7 +111,7 @@ export async function joinBatchWithCode(code: string): Promise<JoinResult> {
  */
 export async function getBatchMembers(batchId: string): Promise<BatchMember[]> {
   const { data, error } = await supabase
-    .from('mm_batch_members')
+    .from('batch_members')
     .select('user_id, role, joined_at')
     .eq('batch_id', batchId);
 
@@ -119,7 +129,7 @@ export async function getBatchMembers(batchId: string): Promise<BatchMember[]> {
  */
 export async function getBatchMemberCount(batchId: string): Promise<number> {
   const { count, error } = await supabase
-    .from('mm_batch_members')
+    .from('batch_members')
     .select('*', { count: 'exact', head: true })
     .eq('batch_id', batchId);
 
