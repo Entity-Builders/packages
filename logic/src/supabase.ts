@@ -1,9 +1,40 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'http://localhost:54321';
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || 'your-anon-key-placeholder';
+// ── Shared eb-core Database Configuration ──
+// Used as the default production fallback for all apps sharing the core monolithic DB
+const EB_CORE_URL = 'https://xfcvuzcxvdpzkqpnahyx.supabase.co';
+const EB_CORE_ANON_KEY = 'REDACTED_SUPABASE_PROD_ANON_KEY';
 
-console.log(`[SharedPackage] Initializing Supabase with URL: ${supabaseUrl}`);
+// ── Local Dev Configuration ──
+const LOCAL_URL = 'http://localhost:54321';
+const LOCAL_ANON_KEY = 'your-anon-key-placeholder'; // Usually overridden by .env.local
+
+let isProd = false;
+try {
+  // Check explicit environment variable first
+  if (process.env.EXPO_PUBLIC_APP_ENV) {
+    isProd = process.env.EXPO_PUBLIC_APP_ENV === 'production' || process.env.EXPO_PUBLIC_APP_ENV === 'preview';
+  } else {
+    // @ts-ignore - __DEV__ is injected by Metro in React Native
+    isProd = typeof __DEV__ !== 'undefined' ? !__DEV__ : process.env.NODE_ENV === 'production';
+  }
+} catch (e) {
+  isProd = process.env.NODE_ENV === 'production';
+}
+
+const defaultUrl = isProd ? EB_CORE_URL : LOCAL_URL;
+const defaultAnonKey = isProd ? EB_CORE_ANON_KEY : LOCAL_ANON_KEY;
+
+const getValidEnv = (val: string | undefined) => {
+  if (!val || val === 'undefined' || val === 'null' || val === '') return undefined;
+  return val;
+};
+
+// Allow explicit env vars (for graduated apps), fallback to shared eb-core, fallback to local
+export const supabaseUrl = getValidEnv(process.env.EXPO_PUBLIC_SUPABASE_URL) || getValidEnv(process.env.VITE_SUPABASE_URL) || defaultUrl;
+export const supabaseAnonKey = getValidEnv(process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY) || getValidEnv(process.env.VITE_SUPABASE_ANON_KEY) || defaultAnonKey;
+
+console.log(`[SharedPackage] Initializing Supabase (Prod: ${isProd}) with URL: ${supabaseUrl}`);
 
 const isReactNative = typeof navigator !== 'undefined' && navigator.product === 'ReactNative';
 let AsyncStorage: any = null;
