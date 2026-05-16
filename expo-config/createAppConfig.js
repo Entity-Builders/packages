@@ -54,7 +54,8 @@ function createAppConfig(options) {
     bundleIdentifier: customBundleId,
   } = options;
 
-  const appEnv = process.env.APP_ENV || 'development';
+  // Read EXPO_PUBLIC_APP_ENV (Expo/RN standard) with fallback to APP_ENV for legacy usage
+  const appEnv = process.env.EXPO_PUBLIC_APP_ENV || process.env.APP_ENV || 'development';
   const isProduction = appEnv === 'production';
 
   // --- Bundle Identifier ---
@@ -76,7 +77,11 @@ function createAppConfig(options) {
     : `${ORG_PREFIX}.${slug}${envSuffix}`;
 
   // --- App Name ---
-  const displayName = isProduction ? name : `${name} (${appEnv})`;
+  // production  → "minimal-money"
+  // preview     → "minimal-money (preview)"   ← TestFlight internal
+  // development → "minimal-money (dev)"        ← dev client build
+  const envLabel = { production: '', preview: ' (preview)', development: ' (dev)' }[appEnv] ?? ` (${appEnv})`;
+  const displayName = `${name}${envLabel}`;
 
   // --- Build config ---
   const config = {
