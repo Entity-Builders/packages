@@ -22,3 +22,4 @@ export * from './hooks/useAuth';
 export * from './hooks/useFavorites';
 export * from './hooks/useMiniGameEngine';
 export * from './mmSharingService';
+export * from './env';
