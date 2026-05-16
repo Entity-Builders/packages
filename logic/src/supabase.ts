@@ -62,7 +62,16 @@ const SafeStorage = {
 
 const supabaseSchema = process.env.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.VITE_SUPABASE_SCHEMA || 'public';
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+let finalUrl = supabaseUrl;
+try {
+  // Validate URL to prevent Uncaught Error that breaks the app
+  new URL(finalUrl);
+} catch (e) {
+  console.error(`[SharedPackage] CRITICAL: Invalid supabaseUrl detected! Value was: '${finalUrl}'. Falling back to local URL.`);
+  finalUrl = LOCAL_URL;
+}
+
+export const supabase = createClient(finalUrl, supabaseAnonKey, {
   auth: {
     storage: SafeStorage,
     autoRefreshToken: true,
