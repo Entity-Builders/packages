@@ -60,16 +60,17 @@ function createAppConfig(options) {
   // --- Bundle Identifier ---
   // If the app provides a custom bundleIdentifier (legacy apps), use that.
   // Otherwise, generate from the standard org prefix.
-  const envSuffix = isProduction ? '' : `.${appEnv}`;
+  const useBaseBundleId = process.env.USE_BASE_BUNDLE_ID === 'true';
+  const envSuffix = (isProduction || useBaseBundleId) ? '' : `.${appEnv}`;
 
   const iosBundleIdentifier = customBundleId?.ios
-    ? isProduction
+    ? (isProduction || useBaseBundleId)
       ? customBundleId.ios
       : `${customBundleId.ios}.${appEnv}`
     : `${ORG_PREFIX}.${slug}${envSuffix}`;
 
   const androidPackage = customBundleId?.android
-    ? isProduction
+    ? (isProduction || useBaseBundleId)
       ? customBundleId.android
       : `${customBundleId.android}.${appEnv}`
     : `${ORG_PREFIX}.${slug}${envSuffix}`;
