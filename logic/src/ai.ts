@@ -161,3 +161,17 @@ function capitalize(str: string): string {
   if (!str) return '';
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+export async function generateBudgetIcon(name: string): Promise<string> {
+  try {
+    const { data: { session } } = await supabase.auth.getSession();
+    const { data, error } = await supabase.functions.invoke('generate-budget-icon', {
+      body: { name },
+      headers: session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : undefined,
+    });
+    if (error) throw error;
+    return data.icon || '📌';
+  } catch (error) {
+    console.error('Error generating budget icon:', error);
+    return '📌';
+  }
+}
