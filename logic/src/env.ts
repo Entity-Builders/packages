@@ -17,12 +17,24 @@ export const getValidEnv = (val: string | undefined | null): string | undefined 
   return val;
 };
 
+let expoExtra: any = {};
+const isReactNative = typeof navigator !== 'undefined' && navigator.product === 'ReactNative';
+if (isReactNative) {
+  try {
+    // @ts-ignore
+    const Constants = require('expo-constants').default;
+    expoExtra = Constants?.expoConfig?.extra || {};
+  } catch (e) {
+    console.warn('[SharedPackage] Failed to load expo-constants for env extraction', e);
+  }
+}
+
 /**
  * Determines the current environment based on EXPO_PUBLIC_APP_ENV,
  * falling back to React Native's __DEV__ or standard NODE_ENV.
  */
 export const getAppEnv = (): AppEnvironment => {
-  const explicitEnv = getValidEnv(process.env.EXPO_PUBLIC_APP_ENV) as AppEnvironment;
+  const explicitEnv = getValidEnv(expoExtra.EXPO_PUBLIC_APP_ENV) || getValidEnv(process.env.EXPO_PUBLIC_APP_ENV) as AppEnvironment;
   if (explicitEnv === 'production') return 'production';
   if (explicitEnv === 'preview') return 'preview';
   if (explicitEnv === 'development') return 'development';
@@ -51,3 +63,4 @@ export const isProdEnv = (): boolean => {
 export const isDevEnv = (): boolean => {
   return getAppEnv() === 'development';
 };
+
