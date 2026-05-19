@@ -8,7 +8,7 @@ const EB_CORE_ANON_KEY = 'REDACTED_SUPABASE_PROD_ANON_KEY';
 
 // ── Local Dev Configuration ──
 const LOCAL_URL = 'http://localhost:54321';
-const LOCAL_ANON_KEY = 'your-anon-key-placeholder'; // Usually overridden by .env.local
+const LOCAL_ANON_KEY = 'sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH'; // Usually overridden by .env.local
 
 const isProd = isProdEnv();
 const defaultUrl = isProd ? EB_CORE_URL : LOCAL_URL;
@@ -86,7 +86,7 @@ const SafeStorage = {
   },
 };
 
-const supabaseSchema = expoExtra.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.VITE_SUPABASE_SCHEMA || 'public';
+export const supabaseSchema = expoExtra.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.VITE_SUPABASE_SCHEMA || 'public';
 
 console.log(`[SharedPackage] Resolved Supabase Schema: '${supabaseSchema}' (AppEnv: '${getAppEnv()}')`);
 let finalUrl = supabaseUrl;
