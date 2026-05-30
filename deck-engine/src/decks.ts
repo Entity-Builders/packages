@@ -10,6 +10,7 @@ import rawBarajaConEjerciciosParaAprenderIngles from './content/baraja-con-ejerc
 import rawBarometro from './content/barometro.json';
 import rawCableATierra from './content/cable-a-tierra.json';
 import rawJuegoDeCartasParaJugarEntreAmigosEnUnaJuntada from './content/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada.json';
+import rawMazoDeIntrospecciNYAutoconocimiento from './content/mazo-de-introspecci-n-y-autoconocimiento.json';
 import rawMazoDeTeamBuildingParaEquiposDeTrabajo from './content/mazo-de-team-building-para-equipos-de-trabajo.json';
 import rawMazoParaRomperElHieloEnLaPrimeraCita from './content/mazo-para-romper-el-hielo-en-la-primera-cita.json';
 import rawMazoSobreFutbolDeArgentina from './content/mazo-sobre-futbol-de-argentina.json';
@@ -21,6 +22,7 @@ export const DECKS = {
   'barometro': resolveDeck(rawBarometro as unknown as RawDeckContent),
   'cable-a-tierra': resolveDeck(rawCableATierra as unknown as RawDeckContent),
   'juego-de-cartas-para-jugar-entre-amigos-en-una-juntada': resolveDeck(rawJuegoDeCartasParaJugarEntreAmigosEnUnaJuntada as unknown as RawDeckContent),
+  'mazo-de-introspecci-n-y-autoconocimiento': resolveDeck(rawMazoDeIntrospecciNYAutoconocimiento as unknown as RawDeckContent),
   'mazo-de-team-building-para-equipos-de-trabajo': resolveDeck(rawMazoDeTeamBuildingParaEquiposDeTrabajo as unknown as RawDeckContent),
   'mazo-para-romper-el-hielo-en-la-primera-cita': resolveDeck(rawMazoParaRomperElHieloEnLaPrimeraCita as unknown as RawDeckContent),
   'mazo-sobre-futbol-de-argentina': resolveDeck(rawMazoSobreFutbolDeArgentina as unknown as RawDeckContent),

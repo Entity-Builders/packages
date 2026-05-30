@@ -12,7 +12,9 @@ const OUTPUT_FILE = path.resolve(__dirname, '../decks.ts');
 const SUPABASE_URL = 'http://127.0.0.1:54321';
 const SUPABASE_SERVICE_KEY = 'REDACTED_SUPABASE_SERVICE_KEY';
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
+  db: { schema: 'baraja' },
+});
 
 function kebabToCamel(str: string): string {
   return str.replace(/-./g, x => x[1].toUpperCase());
@@ -23,7 +25,7 @@ async function seedIfMissing(rawContent: any): Promise<void> {
 
   // Check if edition already exists in the DB
   const { data: existing } = await supabase
-    .from('baraja_editions')
+    .from('editions')
     .select('slug')
     .eq('slug', slug)
     .maybeSingle();
@@ -35,7 +37,7 @@ async function seedIfMissing(rawContent: any): Promise<void> {
 
   // Insert the edition
   const { error: editionError } = await supabase
-    .from('baraja_editions')
+    .from('editions')
     .insert({
       slug,
       name: rawContent.name,
@@ -63,7 +65,7 @@ async function seedIfMissing(rawContent: any): Promise<void> {
 
   if (cardsToInsert.length > 0) {
     const { error: cardsError } = await supabase
-      .from('baraja_cards')
+      .from('cards')
       .insert(cardsToInsert);
 
     if (cardsError) {

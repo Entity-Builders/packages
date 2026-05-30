@@ -1,15 +1,15 @@
 {
   "id": "mazo-para-romper-el-hielo-en-la-primera-cita-v1",
   "edition": "mazo-para-romper-el-hielo-en-la-primera-cita",
-  "name": "Charla No Tan Barata",
+  "name": "Primera Impresión",
   "slug": "mazo-para-romper-el-hielo-en-la-primera-cita",
-  "description": "Un mazo de cartas para la primera cita. Diseñado para saltarse las preguntas obvias, evitar el silencio incómodo y descubrir si hay química de verdad o si es mejor ir pidiendo la cuenta.",
+  "description": "Un mazo de 10 cartas diseñado para romper el hielo en una primera cita. Olvidate de las preguntas incómodas. Estas son para revelar personalidad, no para hacer una entrevista de trabajo. Divertido, directo y sin vueltas.",
   "language": "es",
   "card_count": 10,
   "metadata": {
-    "topic": "Romper el hielo en una primera cita",
-    "tone": "Divertido, directo, revelador",
-    "target_audience": "Personas en una primera cita que odian las conversaciones forzadas",
+    "topic": "Romper el hielo en la primera cita",
+    "tone": "Descontracturado, divertido, revelador",
+    "target_audience": "Personas en una primera cita",
     "player_count": "2"
   },
   "print_spec_id": "baraja-standard",
@@ -20,182 +20,224 @@
   },
   "cards": [
     {
-      "id": "cntb-01",
+      "id": "pi-01",
       "front": {
-        "title": "La Banda Sonora",
+        "title": "El Soundtrack",
         "number": 1,
-        "art_prompt": "Hyper-realistic still life of a worn-out TDK cassette tape, a faded concert ticket for Soda Stereo at Estadio Obras Sanitarias, and a vinyl record spinning on a vintage turntable. Warm, nostalgic lighting, with abstract, colorful soundwaves subtly emanating from the record. Moody, intimate atmosphere."
+        "art_prompt": "Abstract oil painting of colorful soundwaves flowing from left to right, transforming into a textured, emotional landscape. The colors should represent a complex mood: a mix of deep blues for introspection, bright yellows for energy, and soft pinks for nostalgia. No instruments or people visible.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-01.jpg?v=1779636734127",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-01_v2026-05-24T15-32-14.jpg"
+        ]
       },
       "back": {
-        "phrase": "La música dice mucho. O no dice nada.",
-        "when_to_use": "Para cuando querés saber qué suena en su cabeza.",
-        "instruction": "Nombrá tres canciones que definan tu último año. La otra persona tiene que adivinar qué momento o sentimiento representa cada una."
+        "phrase": "Toda etapa tiene su propia música.",
+        "when_to_use": "Para empezar a entender el momento actual del otro.",
+        "instruction": "Cada uno, por turnos, responda: Si tu vida en este preciso momento fuera una película, ¿qué canción estaría sonando ahora mismo? No tiene que ser tu canción favorita, sino la que describe el 'mood' de tu presente."
       },
       "tags": [
         "pregunta",
-        "música",
-        "rompehielos"
+        "icebreaker",
+        "música"
       ]
     },
     {
-      "id": "cntb-02",
+      "id": "pi-02",
       "front": {
         "title": "El Superpoder Inútil",
         "number": 2,
-        "art_prompt": "Pop art illustration in the style of Roy Lichtenstein. A person with a frustrated expression, wearing a 1960s outfit, is staring intently at a piece of toast on a plate. A small thought bubble above them says '...casi!'. The toast remains stubbornly un-buttered. Bold colors, Ben-Day dots."
+        "art_prompt": "Expressionist painting of a figure in a heroic pose on a city rooftop. However, the superpower being demonstrated is comically useless: they are perfectly peeling a banana with their mind. The focus is on the intense concentration on their face versus the mundane task. Dramatic, chiaroscuro lighting.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-02.jpg?v=1779636738512",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-02_v2026-05-24T15-32-18.jpg"
+        ]
       },
       "back": {
-        "phrase": "Los grandes poderes no siempre vienen con grandes responsabilidades.",
-        "when_to_use": "Para medir el nivel de creatividad y humor.",
-        "instruction": "Si pudieras tener un superpoder completamente inútil, ¿cuál sería? Describí en qué situación específica lo usarías para salvar el día (o para complicarlo más)."
+        "phrase": "El verdadero poder está en no tomarse todo tan en serio.",
+        "when_to_use": "Para medir el sentido del humor y la creatividad.",
+        "instruction": "Si pudieras tener un superpoder completamente inútil, ¿cuál sería? Por ejemplo: 'poder hablar con las plantas, pero solo para quejarme del clima'. El que tenga la idea más original y divertida gana un punto imaginario."
       },
       "tags": [
         "creativo",
         "absurdo",
-        "hipotético"
-      ]
-    },
-    {
-      "id": "cntb-03",
-      "front": {
-        "title": "El Retrato Robot",
-        "number": 3,
-        "art_prompt": "Expressionist charcoal drawing on a stained paper coffee napkin. The portrait is a chaotic, energetic sketch of a person's face, capturing a feeling rather than a likeness. The napkin sits next to a half-empty glass of red wine on a dark wooden table."
-      },
-      "back": {
-        "phrase": "Todos somos artistas frustrados.",
-        "when_to_use": "Para cuando las palabras no alcanzan y hay que pasar a la acción.",
-        "instruction": "Tenés 60 segundos para dibujar a la otra persona en una servilleta. No se juzga la habilidad, se juzga la intención. Al final, cada uno explica su 'obra'."
-      },
-      "tags": [
-        "desafío",
-        "creativo",
-        "acción"
-      ]
-    },
-    {
-      "id": "cntb-04",
-      "front": {
-        "title": "La Teoría de Conspiración",
-        "number": 4,
-        "art_prompt": "A grainy, black and white, 1950s-style photograph of a blurry light formation in the night sky over Capilla del Monte, Córdoba. The photo is pinned to a corkboard. Red yarn connects the photo to newspaper clippings about avistamientos OVNI. Film noir aesthetic with deep shadows."
-      },
-      "back": {
-        "phrase": "Hay verdades que no quieren que sepas. Y otras que te inventás vos.",
-        "when_to_use": "Para descubrir qué tan lejos llega su imaginación.",
-        "instruction": "Contá la teoría de conspiración más ridícula en la que creíste (o en la que te gustaría creer) por un segundo."
-      },
-      "tags": [
-        "pregunta",
-        "humor",
-        "insólito"
-      ]
-    },
-    {
-      "id": "cntb-05",
-      "front": {
-        "title": "El Menú Final",
-        "number": 5,
-        "art_prompt": "Digital painting in the style of a Dutch Golden Age still life. A single, ornate silver platter sits on a dark, draped table. On the platter is an absurd meal: a milanesa a la napolitana con papas fritas, a side of sushi, and a champagne glass filled with fernet con coca. Dramatic chiaroscuro lighting."
-      },
-      "back": {
-        "phrase": "La última cena es la que importa.",
-        "when_to_use": "Para conocer sus verdaderas prioridades.",
-        "instruction": "Es tu última comida en la Tierra. ¿Cuál sería el menú completo? Sé específico con la entrada, el plato principal, el postre y la bebida."
-      },
-      "tags": [
-        "hipotético",
-        "comida",
-        "pregunta"
-      ]
-    },
-    {
-      "id": "cntb-06",
-      "front": {
-        "title": "El Traductor de Emojis",
-        "number": 6,
-        "art_prompt": "Macro 3D render of a glossy, yellow 'thinking face' emoji (🤔) floating in the center. In the background, dozens of other emojis (like a briefcase 💼, a stethoscope 🩺, a paintbrush 🎨) are blurred and out of focus, creating a strong depth of field. Clean, modern aesthetic."
-      },
-      "back": {
-        "phrase": "Un emoji vale más que mil palabras mal escritas.",
-        "when_to_use": "Para descifrar el código no verbal.",
-        "instruction": "Describí tu trabajo o a qué te dedicás usando solo tres emojis. La otra persona tiene que adivinar."
-      },
-      "tags": [
-        "desafío",
-        "adivinanza",
-        "trabajo"
-      ]
-    },
-    {
-      "id": "cntb-07",
-      "front": {
-        "title": "La Compra Impulsiva",
-        "number": 7,
-        "art_prompt": "A clean, minimalist product photograph. A single, absurd object—a mate con forma de unicornio—sits in the center of a solid, pastel blue background. The lighting is flat and even, inspired by modern e-commerce aesthetics, highlighting the object's strange charm."
-      },
-      "back": {
-        "phrase": "El dinero no da la felicidad, pero paga cada impulso.",
-        "when_to_use": "Para hablar de plata sin hablar de plata.",
-        "instruction": "¿Cuál fue la compra más inútil, rara o impulsiva que hiciste en el último año? Mostrá una foto si la tenés a mano."
-      },
-      "tags": [
-        "pregunta",
-        "anécdota",
-        "dinero"
-      ]
-    },
-    {
-      "id": "cntb-08",
-      "front": {
-        "title": "El Invitado Soñado",
-        "number": 8,
-        "art_prompt": "Surrealist oil painting inspired by René Magritte. A formally set dinner table for four in a room with walls that look like the sky in 'El Imperio de las Luces'. Three chairs are occupied by symbolic objects: one holds a balón de fútbol de 1986, another a philosophical text by Borges, and the third a Fender Stratocaster guitar."
-      },
-      "back": {
-        "phrase": "Elegí bien a quién sentás en tu mesa.",
-        "when_to_use": "Para descubrir quiénes son sus héroes.",
-        "instruction": "Podés invitar a cenar a tres personas (vivas o muertas, reales o ficticias). ¿A quiénes elegís y por qué?"
-      },
-      "tags": [
-        "hipotético",
-        "pregunta",
-        "profundo"
-      ]
-    },
-    {
-      "id": "cntb-09",
-      "front": {
-        "title": "La Imitación",
-        "number": 9,
-        "art_prompt": "Andy Warhol-style screenprint with four panels. Each panel shows a slightly different, brightly colored, pop-art version of a person mimicking Ricardo Darín's iconic gesture from 'Nueve Reinas' when he says '¿quién se ha tomado todo el vino?'. The repetition and bold colors emphasize the iconic nature of the scene."
-      },
-      "back": {
-        "phrase": "Copiar es un arte. O al menos, un intento.",
-        "when_to_use": "Para cuando hay que romper el hielo con el cuerpo.",
-        "instruction": "Hacé tu mejor imitación de un personaje famoso, un familiar o un meme viral. La otra persona tiene 3 intentos para adivinar."
-      },
-      "tags": [
-        "desafío",
-        "acción",
         "humor"
       ]
     },
     {
-      "id": "cntb-10",
+      "id": "pi-03",
       "front": {
-        "title": "La Pequeña Alegría",
-        "number": 10,
-        "art_prompt": "A quiet, intimate, photographic macro shot. Sunlight streams through a window, hitting a glass of soda where the bubbles are rising. The focus is sharp on the effervescence. The background is a blurry Buenos Aires afternoon scene. The overall color palette is warm and golden."
+        "title": "La Imitación",
+        "number": 3,
+        "art_prompt": "A cubist, Picasso-style portrait of a face, showing multiple expressions at once. One eye is winking, the mouth is the crying-laughing emoji smile, and an eyebrow is raised in suspicion. Fragmented geometric shapes in bold, primary colors.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-03.jpg?v=1779636741703",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-03_v2026-05-24T15-32-21.jpg"
+        ]
       },
       "back": {
-        "phrase": "No todo es épico. Y está bien.",
-        "when_to_use": "Para terminar la cita (o la baraja) con una buena sensación.",
-        "instruction": "Contá algo simple, casi insignificante, que te haya hecho genuinamente feliz esta semana."
+        "phrase": "Un gesto vale más que mil chats.",
+        "when_to_use": "Para romper la tensión física y reírse un poco.",
+        "instruction": "Mirá tu celular. El tercer emoji en tu lista de 'usados recientemente'. Tenés cinco segundos para imitarlo solo con tu cara, sin sonidos. Tu cita tiene que adivinar cuál es. Después, cambian los roles."
+      },
+      "tags": [
+        "desafío",
+        "interactivo",
+        "no-verbal"
+      ]
+    },
+    {
+      "id": "pi-04",
+      "front": {
+        "title": "La Máquina del Tiempo",
+        "number": 4,
+        "art_prompt": "A swirling, dreamlike collage. In the center, a faded polaroid of a teenager is visible. Surrounding it are abstract clock hands, fragments of handwritten letters, and textured layers of sepia and soft blues, creating a sense of memory and time passing.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-04.jpg?v=1779636745422",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-04_v2026-05-24T15-32-25.jpg",
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-04_v2026-05-24T15-21-48.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Lo que sabés ahora es lo que te costó aprender.",
+        "when_to_use": "Para una pregunta un poco más profunda, pero sin pasarse de la raya.",
+        "instruction": "Viajás al pasado y te encontrás con tu versión de 18 años. Solo podés darle un consejo, en una sola oración. ¿Qué le decís? Compartan su frase, sin necesidad de dar más explicaciones."
       },
       "tags": [
         "pregunta",
         "reflexión",
+        "valores"
+      ]
+    },
+    {
+      "id": "pi-05",
+      "front": {
+        "title": "El Objeto Maldito",
+        "number": 5,
+        "art_prompt": "A dark, moody still life painting of a mundane object, like a worn-out coffee mug, sitting on a wooden table. The mug has a faint, ethereal glow emanating from within, casting long, strange shadows. The atmosphere is ominous yet slightly absurd. Style of a Dutch master painting.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-05.jpg?v=1779636749491",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-05_v2026-05-24T15-32-29.jpg",
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-05_v2026-05-24T15-21-51.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Toda ventaja tiene su letra chica.",
+        "when_to_use": "Para desatar la imaginación y contar una mini historia.",
+        "instruction": "Inventá un objeto maldito. Te da una ventaja increíble (ej: siempre encontrás lugar para estacionar) pero tiene un efecto secundario ridículo (ej: cada vez que lo hacés, te crece un bigote de colores por 5 minutos). Describí tu objeto, su poder y su maldición."
+      },
+      "tags": [
+        "creativo",
+        "storytelling",
+        "absurdo"
+      ]
+    },
+    {
+      "id": "pi-06",
+      "front": {
+        "title": "El Placer Culpable",
+        "number": 6,
+        "art_prompt": "Digital art in the style of Edward Hopper. A single figure sits in a dimly lit room, their face illuminated by the glow of a screen. On the screen is a bright, almost kitsch, pop music video. The person wears a neutral, stoic mask, hiding their genuine enjoyment. A sense of private, hidden joy.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-06.jpg?v=1779636753274",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-06_v2026-05-24T15-32-33.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Lo que te gusta cuando nadie te ve, también sos vos.",
+        "when_to_use": "Para compartir una vulnerabilidad divertida.",
+        "instruction": "Confesá una película, serie o canción que públicamente criticarías o dirías que no te gusta, pero que en secreto disfrutás mucho. Sin juzgar. Es zona segura."
+      },
+      "tags": [
+        "pregunta",
+        "confesión",
+        "cultura pop"
+      ]
+    },
+    {
+      "id": "pi-07",
+      "front": {
+        "title": "El Detective",
+        "number": 7,
+        "art_prompt": "A film noir inspired close-up of a human eye. Reflected in the iris is not a scene, but a collection of abstract clues: a swatch of a specific fabric texture, a musical G-clef, the silhouette of a strange tool. High contrast black and white, with the reflected clues in subtle color.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-07.jpg?v=1779636756875",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-07_v2026-05-24T15-32-36.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Los detalles nunca mienten.",
+        "when_to_use": "Para demostrar que estás prestando atención.",
+        "instruction": "Basándote únicamente en lo que observaste de la otra persona hasta ahora (ropa, forma de hablar, accesorios), arriesgá una teoría sobre un hobby o interés que creés que tiene. No importa si acertás, el juego es justificar tu teoría."
+      },
+      "tags": [
+        "desafío",
+        "interactivo",
+        "observación"
+      ]
+    },
+    {
+      "id": "pi-08",
+      "front": {
+        "title": "La Conspiración Personal",
+        "number": 8,
+        "art_prompt": "A detailed drawing in the style of Da Vinci's sketchbooks. It's a technical diagram of a simple toaster, but covered in annotations, red strings, and complex equations, as if proving a grand conspiracy. The notes point to things like 'planned obsolescence coil' and 'crumb distribution algorithm'.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-08.jpg?v=1779636760880",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-08_v2026-05-24T15-32-40.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Hay cosas que no cierran, y está bien admitirlo.",
+        "when_to_use": "Para compartir una idea rara y ver si el otro se suma.",
+        "instruction": "Contá una pequeña teoría de conspiración personal que tengas. No sobre política o cosas serias, sino sobre la vida cotidiana. Ejemplo: 'Creo que cada supermercado tiene un solo changuito que funciona bien, y los empleados lo esconden para usarlo ellos'."
+      },
+      "tags": [
+        "pregunta",
+        "humor",
+        "absurdo"
+      ]
+    },
+    {
+      "id": "pi-09",
+      "front": {
+        "title": "El Titular",
+        "number": 9,
+        "art_prompt": "An old-fashioned newspaper printing press, rendered in a charcoal and ink style. Instead of printing text, the main roller is emitting a vibrant, abstract beam of colorful light that illuminates the dark room. It represents printing a future headline that is hopeful and unwritten.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-09.jpg?v=1779636764451",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-09_v2026-05-24T15-32-44.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Escribí la noticia que querés leer.",
+        "when_to_use": "Para hablar de aspiraciones de una forma original.",
+        "instruction": "Si un diario pudiera publicar un titular sobre tu vida dentro de cinco años, ¿cuál te gustaría que fuera? No tiene que ser realista, sino lo que desearías leer. Compartan su titular."
+      },
+      "tags": [
+        "pregunta",
+        "aspiracional",
+        "reflexión"
+      ]
+    },
+    {
+      "id": "pi-10",
+      "front": {
+        "title": "El Brindis Inventado",
+        "number": 10,
+        "art_prompt": "Abstract digital painting of two wine glasses clinking. At the point of impact, they don't splash wine, but create a vibrant firework-like explosion of thick, textured paint in unexpected colors like teal, magenta, and gold. The background is dark and simple, focusing on the colorful splash.",
+        "art_url": "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-10.jpg?v=1779636768145",
+        "art_versions": [
+          "/assets/editions/mazo-para-romper-el-hielo-en-la-primera-cita/pi-10_v2026-05-24T15-32-48.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "A veces, hay que celebrar lo que nadie más celebra.",
+        "when_to_use": "Para cerrar el juego y la cita con una buena nota.",
+        "instruction": "Es hora de un brindis (con lo que sea que estén tomando). Por turnos, propongan un brindis por algo completamente ridículo o inesperado. Por ejemplo: 'Por la persona que inventó los bolsillos' o 'Por el silencio incómodo que no tuvimos'. ¡Salud!"
+      },
+      "tags": [
+        "desafío",
+        "interactivo",
         "cierre"
       ]
     }

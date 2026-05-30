@@ -1,0 +1,210 @@
+{
+  "id": "mazo-de-introspecci-n-y-autoconocimiento-v1",
+  "edition": "mazo-de-introspecci-n-y-autoconocimiento",
+  "name": "Pausa Obligatoria",
+  "slug": "mazo-de-introspecci-n-y-autoconocimiento",
+  "description": "Un mazo de 10 cartas para cortar con la inercia. No son para 'sentirte mejor', son para sentir lo que hay, sin filtro. Herramientas directas para momentos de ruido, parálisis o desconexión.",
+  "language": "es",
+  "card_count": 10,
+  "metadata": {
+    "topic": "Mazo de introspección y autoconocimiento",
+    "tone": "Directo, clínico, sin adornos",
+    "target_audience": "Adultos que necesitan una herramienta práctica para detenerse y pensar.",
+    "player_count": "1"
+  },
+  "print_spec_id": "baraja-standard",
+  "design_template_id": "dark-minimal-01",
+  "pricing": {
+    "amount": 1500000,
+    "currency": "ars"
+  },
+  "cards": [
+    {
+      "id": "pausa-obligatoria-01",
+      "front": {
+        "title": "El Ruido",
+        "number": 1,
+        "art_prompt": "Abstract expressionism. Chaotic, overlapping lines of charcoal and black ink on a textured, off-white canvas. A single, small, clear circle of gold leaf sits slightly off-center, untouched by the chaos. The texture of the canvas should be palpable, almost like rough handmade paper.",
+        "art_url": "/assets/editions/mazo-de-introspecci-n-y-autoconocimiento/pausa-obligatoria-01.jpg?v=1779637412154"
+      },
+      "back": {
+        "phrase": "Tu mente no es vos. Es una radio mal sintonizada.",
+        "when_to_use": "Para cuando los pensamientos van a mil por hora y no podés parar.",
+        "instruction": "Sentate en una silla, con la espalda recta. Cerrá los ojos. Durante 3 minutos, solo contá tus respiraciones, del 1 al 10, y volvé a empezar. Si un pensamiento aparece, etiquetalo mentalmente como 'pensamiento' y volvé a tu respiración. No lo pelees, solo observalo pasar."
+      },
+      "tags": [
+        "test"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-02",
+      "front": {
+        "title": "La Parálisis",
+        "number": 2,
+        "art_prompt": "A hyper-realistic sculpture of a human figure made of cracked concrete, frozen mid-stride. The figure is sinking slightly into a smooth, black floor, as if it were quicksand. The lighting is stark, coming from a single source above, creating long, dramatic shadows."
+      },
+      "back": {
+        "phrase": "El análisis no es acción. Es el ensayo de la acción.",
+        "when_to_use": "Para cuando tenés tantas opciones que no elegís ninguna.",
+        "instruction": "Escribí en un papel la decisión más pequeña y ridícula que puedas tomar ahora mismo para avanzar. No 'terminar el reporte', sino 'abrir el documento'. No 'llamar al cliente', sino 'buscar su número'. Hacé solo eso. Y ya."
+      },
+      "tags": [
+        "ACT",
+        "activación conductual",
+        "procrastinación"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-03",
+      "front": {
+        "title": "El Cuerpo",
+        "number": 3,
+        "art_prompt": "A close-up, fine art photograph of a human hand holding a single, perfectly clear ice cube. The skin is detailed, showing pores and lines. The ice cube is starting to melt, with a single drop of water about to fall. The background is a dark, out-of-focus texture, like rough wood.",
+        "art_url": "/assets/editions/mazo-de-introspecci-n-y-autoconocimiento/pausa-obligatoria-03_v2026-05-24T15-40-43.jpg",
+        "art_versions": [
+          "/assets/editions/mazo-de-introspecci-n-y-autoconocimiento/pausa-obligatoria-03.jpg?v=1779637250837",
+          "/assets/editions/mazo-de-introspecci-n-y-autoconocimiento/pausa-obligatoria-03_v2026-05-24T15-40-50.jpg"
+        ]
+      },
+      "back": {
+        "phrase": "Tu cuerpo no miente. La cabeza, todo el tiempo.",
+        "when_to_use": "Para cuando estás desconectado de lo que sentís físicamente, atrapado en tu mente.",
+        "instruction": "Agarrá un hielo con la mano y sostenelo hasta que se vuelva incómodo. Concentrate únicamente en la sensación del frío, la humedad, el dolor agudo. No juzgues la sensación, solo sentila. Esto es estar acá, ahora."
+      },
+      "tags": [
+        "DBT",
+        "tolerancia al malestar",
+        "grounding"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-04",
+      "front": {
+        "title": "La Rabia",
+        "number": 4,
+        "art_prompt": "A large canvas painted with a single, explosive splash of thick, crimson red oil paint. The texture of the paint is heavy and visceral, with drips and splatters radiating outwards against a stark white background. The energy is palpable and uncontrolled."
+      },
+      "back": {
+        "phrase": "La bronca es energía. Usala o te usa a vos.",
+        "when_to_use": "Para cuando sentís una furia que te quema por dentro y no sabés qué hacer con ella.",
+        "instruction": "Poné una alarma de 5 minutos. Durante ese tiempo, escribí sin parar todo lo que te genera esa rabia, sin filtro, sin gramática, sin juzgar. Cuando suene la alarma, agarrá el papel, rompelo en pedazos muy pequeños y tiralos. La energía se movió."
+      },
+      "tags": [
+        "gestión emocional",
+        "catarsis",
+        "energía"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-05",
+      "front": {
+        "title": "La Tarea Pendiente",
+        "number": 5,
+        "art_prompt": "A minimalist photograph of a single, unmade bed in an empty, sunlit room. The sheets are tangled and messy, contrasting with the clean, hard lines of the room's architecture. The light from the window casts a long, rectangular shape on the wooden floor."
+      },
+      "back": {
+        "phrase": "Lo que pesa no es la tarea. Es cargar con la decisión de no haberla hecho.",
+        "when_to_use": "Para cuando una tarea pendiente te consume más energía que la tarea en sí.",
+        "instruction": "Aplicá la regla de los 2 minutos. Si la tarea lleva menos de 2 minutos, hacela ahora mismo. No mañana, no en un rato. Ahora. Si lleva más, hacé solo los primeros 2 minutos de esa tarea (ej: solo abrir el documento y escribir el título)."
+      },
+      "tags": [
+        "productividad",
+        "GTD",
+        "procrastinación"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-06",
+      "front": {
+        "title": "La Comparación",
+        "number": 6,
+        "art_prompt": "Two identical, simple wooden chairs facing opposite directions in an otherwise empty, white room. One chair is bathed in a warm, golden light. The other sits in a cool, blue shadow. The composition is perfectly symmetrical yet emotionally divided."
+      },
+      "back": {
+        "phrase": "Estás comparando tu detrás de escena con el show principal de otro.",
+        "when_to_use": "Para cuando te sentís menos que los demás mirando sus vidas en redes sociales o en la vida.",
+        "instruction": "Abrí tu anotador. Escribí tres cosas concretas que vos hiciste hoy, por más chicas que sean ('Hice el café', 'Respondí un mail difícil', 'Regué una planta'). Son tus logros, de tu propia medida. No necesitás validación externa."
+      },
+      "tags": [
+        "autoestima",
+        "redes sociales",
+        "validación"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-07",
+      "front": {
+        "title": "El Vacío",
+        "number": 7,
+        "art_prompt": "A stark, black and white architectural photograph of a vast, empty concrete hall, like a brutalist museum gallery. A single person, very small in the frame, stands in the center, looking up at the high ceiling where a sliver of light enters. The sense of scale and loneliness is immense."
+      },
+      "back": {
+        "phrase": "El aburrimiento no es un problema a resolver. Es un espacio a habitar.",
+        "when_to_use": "Para cuando sentís un vacío o aburrimiento y tu primer impulso es llenarlo con cualquier cosa.",
+        "instruction": "Poné una alarma por 10 minutos. Sentate en el piso, sin celular, sin música, sin libros. No hagas nada. Solo observá la habitación. Observá la luz. Si te sentís incómodo, observá esa incomodidad. No escapes."
+      },
+      "tags": [
+        "mindfulness",
+        "aburrimiento",
+        "espacio interior"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-08",
+      "front": {
+        "title": "La Culpa",
+        "number": 8,
+        "art_prompt": "A close-up shot of hands trying to piece together fragments of a broken ceramic plate on a dark wooden table. The cracks are filled with gold, in the style of Kintsugi, but the hands are hesitant, as if unsure if the pieces can be mended.",
+        "art_url": "/assets/editions/mazo-de-introspecci-n-y-autoconocimiento/pausa-obligatoria-08.jpg?v=1779637216869"
+      },
+      "back": {
+        "phrase": "La culpa mira al pasado, un lugar al que no podés volver. La responsabilidad mira al presente.",
+        "when_to_use": "Para cuando un error del pasado te sigue atormentando en el presente.",
+        "instruction": "Escribí en un papel: '¿Qué puedo hacer AHORA para reparar o aprender de esto?'. Enfocate en la acción más pequeña y constructiva que podés tomar hoy. Si no hay nada que hacer, escribí: 'Acepto que esto pasó y me permito seguir'."
+      },
+      "tags": [
+        "TEPC",
+        "aceptación",
+        "culpa",
+        "responsabilidad"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-09",
+      "front": {
+        "title": "La Expectativa",
+        "number": 9,
+        "art_prompt": "A detailed drawing in the style of an old botanical illustration. It shows a plant with intricate roots, a strong stem, but instead of a flower, a perfectly geometric, heavy iron cube sits at the top, weighing the plant down."
+      },
+      "back": {
+        "phrase": "Soltar la expectativa no es rendirse. Es dejar de pelear con lo que es.",
+        "when_to_use": "Para cuando la realidad no coincide con lo que esperabas y eso te genera frustración.",
+        "instruction": "Decí en voz alta: 'Esto es lo que está pasando ahora'. Describí la situación de forma objetiva, como si fueras un periodista, sin juicios de valor. Ejemplo: 'No recibí el llamado' en vez de 'Qué desastre, no me llamaron y ahora todo está perdido'. Aterrizá en los hechos."
+      },
+      "tags": [
+        "ACT",
+        "aceptación",
+        "realidad",
+        "frustración"
+      ]
+    },
+    {
+      "id": "pausa-obligatoria-10",
+      "front": {
+        "title": "El Refugio",
+        "number": 10,
+        "art_prompt": "A warm, softly lit interior scene. A comfortable, worn armchair sits next to a window. Outside, a storm is visible through the window pane, with rain streaking down the glass. Inside, a steaming mug sits on a small table next to the chair. The feeling is one of safety and warmth amidst chaos."
+      },
+      "back": {
+        "phrase": "No tenés que ser fuerte todo el tiempo. Tenés que saber dónde recargar.",
+        "when_to_use": "Para cuando estás agotado y sentís que no podés más.",
+        "instruction": "Creá un 'anclaje sensorial'. Elegí un objeto (una piedra suave), un olor (un aceite esencial) o un sonido (una canción específica). Cerrá los ojos y concentrate en ese estímulo por 2 minutos. Este es tu refugio portátil. Usalo cuando necesites volver a tu centro."
+      },
+      "tags": [
+        "autocuidado",
+        "grounding",
+        "regulación emocional"
+      ]
+    }
+  ]
+}
