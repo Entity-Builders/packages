@@ -1,12 +1,15 @@
 import { describe, expect, it } from 'vitest';
+import type { StudyArticle, StudyArticleResponseMetadata } from './index';
 import {
   canSpendEstimatedTokens,
   createPairHash,
   createRequestHash,
+  getTranslationPreset,
   getMonthlyResetAt,
   getRemainingUsage,
   getUsageState,
   selectRecentUniqueActiveTranslations,
+  TRANSLATION_PRESETS,
 } from './index';
 
 describe('dedupe helpers', () => {
@@ -20,10 +23,37 @@ describe('dedupe helpers', () => {
     );
   });
 
+  it('keeps natural preset compatible and separates styled presets', async () => {
+    await expect(
+      createRequestHash('hola mundo', 'es', 'en', 'natural'),
+    ).resolves.toBe(await createRequestHash('hola mundo', 'es', 'en'));
+
+    await expect(
+      createRequestHash('hola mundo', 'es', 'en', 'casual'),
+    ).resolves.not.toBe(
+      await createRequestHash('hola mundo', 'es', 'en', 'natural'),
+    );
+  });
+
   it('keeps pair hashes sensitive to translated output', async () => {
     await expect(
       createPairHash('hola', 'hello', 'es', 'en'),
     ).resolves.not.toBe(await createPairHash('hola', 'hi', 'es', 'en'));
+  });
+});
+
+describe('preset contracts', () => {
+  it('exposes a closed set of product presets', () => {
+    expect(TRANSLATION_PRESETS.map((preset) => preset.id)).toEqual([
+      'natural',
+      'professional',
+      'casual',
+      'concise',
+      'warm',
+      'direct',
+      'shorten',
+    ]);
+    expect(getTranslationPreset('shorten').instruction).toContain('Shorten');
   });
 });
 
@@ -76,5 +106,35 @@ describe('practice helpers', () => {
     ]);
 
     expect(selected.map((record) => record.id)).toEqual(['new-duplicate']);
+  });
+});
+
+describe('study article contracts', () => {
+  it('uses markdown articles as the primary learning contract', () => {
+    const article: StudyArticle = {
+      translationRecordId: 'record-1',
+      sourceLanguage: 'es',
+      targetLanguage: 'en',
+      sourceText: 'Yo quiero aprender ingles',
+      translatedText: 'I want to learn English',
+      title: 'I want to learn English',
+      summary: 'A personal English lesson.',
+      articleVersion: 'markdown-v3',
+      markdown:
+        '# I want to learn English\n\n## Syntax map\n\n| Part | Role |\n| --- | --- |\n| I | Subject |',
+      lessonFocus: ['syntax', 'tense'],
+      estimatedReadingMinutes: 3,
+    };
+
+    const metadata: StudyArticleResponseMetadata = {
+      cached: true,
+      generatedAt: '2026-06-05T19:30:00.000Z',
+    };
+
+    expect(article.articleVersion).toBe('markdown-v3');
+    expect(article.markdown).toContain('## Syntax map');
+    expect(article.segments).toBeUndefined();
+    expect('roleplay' in article).toBe(false);
+    expect(metadata.cached).toBe(true);
   });
 });

@@ -39,5 +39,18 @@ describe('direction helpers', () => {
         latestSourceText: 'hello',
       }),
     ).toBe(false);
+
+    expect(
+      canApplyTranslationResponse({
+        requestSequence: 2,
+        latestSequence: 2,
+        requestSourceLanguage: 'en',
+        latestSourceLanguage: 'en',
+        requestSourceText: 'hello',
+        latestSourceText: 'hello',
+        requestPresetId: 'professional',
+        latestPresetId: 'casual',
+      }),
+    ).toBe(false);
   });
 });

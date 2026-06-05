@@ -1,4 +1,9 @@
-import type { LanguageCode, PanelId, TranslationDirection } from './types';
+import type {
+  LanguageCode,
+  PanelId,
+  TranslationDirection,
+  TranslationPresetId,
+} from './types';
 
 export const LANGUAGE_LABELS: Record<LanguageCode, string> = {
   es: 'Spanish',
@@ -30,6 +35,8 @@ export type ResponseGuard = {
   latestSourceLanguage: LanguageCode;
   requestSourceText: string;
   latestSourceText: string;
+  requestPresetId?: TranslationPresetId;
+  latestPresetId?: TranslationPresetId;
 };
 
 export const canApplyTranslationResponse = ({
@@ -39,7 +46,10 @@ export const canApplyTranslationResponse = ({
   latestSourceLanguage,
   requestSourceText,
   latestSourceText,
+  requestPresetId,
+  latestPresetId,
 }: ResponseGuard) =>
   requestSequence === latestSequence &&
   requestSourceLanguage === latestSourceLanguage &&
-  requestSourceText === latestSourceText;
+  requestSourceText === latestSourceText &&
+  (!requestPresetId || !latestPresetId || requestPresetId === latestPresetId);

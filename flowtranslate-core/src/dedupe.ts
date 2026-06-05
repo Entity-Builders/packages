@@ -1,4 +1,5 @@
-import type { LanguageCode } from './types';
+import { DEFAULT_TRANSLATION_PRESET_ID } from './presets';
+import type { LanguageCode, TranslationPresetId } from './types';
 
 const encoder = new TextEncoder();
 
@@ -14,13 +15,36 @@ export const buildRequestFingerprint = (
   sourceText: string,
   sourceLanguage: LanguageCode,
   targetLanguage: LanguageCode,
-) =>
-  [
+) => {
+  const parts = [
     'flowtranslate:v1:request',
     sourceLanguage,
     targetLanguage,
     normalizeTranslationText(sourceText),
-  ].join('\n');
+  ];
+
+  return parts.join('\n');
+};
+
+export const buildPresetRequestFingerprint = (
+  sourceText: string,
+  sourceLanguage: LanguageCode,
+  targetLanguage: LanguageCode,
+  presetId: TranslationPresetId = DEFAULT_TRANSLATION_PRESET_ID,
+) => {
+  const parts = [
+    'flowtranslate:v1:request',
+    sourceLanguage,
+    targetLanguage,
+    normalizeTranslationText(sourceText),
+  ];
+
+  if (presetId !== DEFAULT_TRANSLATION_PRESET_ID) {
+    parts.push(`preset:${presetId}`);
+  }
+
+  return parts.join('\n');
+};
 
 export const buildPairFingerprint = (
   sourceText: string,
@@ -45,7 +69,16 @@ export const createRequestHash = (
   sourceText: string,
   sourceLanguage: LanguageCode,
   targetLanguage: LanguageCode,
-) => sha256Hex(buildRequestFingerprint(sourceText, sourceLanguage, targetLanguage));
+  presetId: TranslationPresetId = DEFAULT_TRANSLATION_PRESET_ID,
+) =>
+  sha256Hex(
+    buildPresetRequestFingerprint(
+      sourceText,
+      sourceLanguage,
+      targetLanguage,
+      presetId,
+    ),
+  );
 
 export const createPairHash = (
   sourceText: string,
