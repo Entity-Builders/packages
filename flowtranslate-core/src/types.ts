@@ -16,6 +16,20 @@ export type TranslationDirection = {
   targetLanguage: LanguageCode;
 };
 
+export type ExpressionMode =
+  | 'translate_to_english'
+  | 'improve_english'
+  | 'translate_to_spanish';
+
+export type IntentDetectionConfidence = 'high' | 'medium' | 'low';
+
+export type IntentDetectionResult = {
+  mode: ExpressionMode;
+  confidence: IntentDetectionConfidence;
+  reason: 'spanish' | 'english' | 'mixed' | 'ambiguous' | 'manual';
+  automatic: boolean;
+};
+
 export type TranslationPresetId =
   | 'natural'
   | 'professional'
@@ -36,6 +50,8 @@ export type TranslationRecord = TranslationDirection & {
   id: string;
   sourceText: string;
   translatedText: string;
+  mode?: ExpressionMode;
+  breakdown?: ExpressionBreakdown | null;
   requestHash?: string;
   pairHash?: string;
   createdAt: string;
@@ -52,6 +68,67 @@ export type UsageSnapshot = {
 };
 
 export type UsageState = 'available' | 'exhausted' | 'charged';
+
+export type ExpressionConfidence = 'high' | 'medium' | 'low';
+
+export type ExpressionAlternative = {
+  label: string;
+  text: string;
+  note: string;
+};
+
+export type ExpressionStructurePart = {
+  text: string;
+  role: 'subject' | 'verb' | 'object' | 'complement' | 'modifier' | 'connector' | 'other';
+  note: string;
+};
+
+export type ExpressionBreakdown = {
+  changed: boolean;
+  confidence: ExpressionConfidence;
+  feedback: string[];
+  tense?: string;
+  structure?: ExpressionStructurePart[];
+  commonMistake?: string;
+  whyThisWorks?: string;
+  alternatives?: ExpressionAlternative[];
+};
+
+export type BreakdownChatMessage = {
+  role: 'user' | 'assistant';
+  content: string;
+};
+
+export type ExpressionOutput = TranslationDirection & {
+  mode: ExpressionMode;
+  sourceText: string;
+  resultText: string;
+  breakdown: ExpressionBreakdown;
+};
+
+export type LearningInsightItem = {
+  title: string;
+  expression: string;
+  explanation: string;
+  example?: string;
+  sourceRecordIds?: string[];
+};
+
+export type LearningInsight = {
+  insightVersion: string;
+  historySnapshotHash: string;
+  generatedAt: string;
+  summary?: string;
+  writingItems: LearningInsightItem[];
+  conversationItems: LearningInsightItem[];
+  sourceRecordIds: string[];
+};
+
+export type LearningInsightResponseMetadata = {
+  cached: boolean;
+  generatedAt?: string;
+  refreshAvailable?: boolean;
+};
 
 export type PracticeType =
   | 'vocabulary_recall'
@@ -148,8 +225,10 @@ export type StudyArticleResponseMetadata = {
 
 export type StudyArticle = TranslationDirection & {
   translationRecordId: string;
+  mode?: ExpressionMode;
   sourceText: string;
   translatedText: string;
+  breakdown?: ExpressionBreakdown | null;
   title: string;
   summary: string;
   articleVersion: StudyArticleVersion;

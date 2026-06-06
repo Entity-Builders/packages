@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import type { StudyArticle, StudyArticleResponseMetadata } from './index';
 import {
+  createExpressionPairHash,
+  createExpressionRequestHash,
   canSpendEstimatedTokens,
   createPairHash,
   createRequestHash,
@@ -39,6 +41,24 @@ describe('dedupe helpers', () => {
     await expect(
       createPairHash('hola', 'hello', 'es', 'en'),
     ).resolves.not.toBe(await createPairHash('hola', 'hi', 'es', 'en'));
+  });
+
+  it('includes expression mode in new request and pair hashes', async () => {
+    await expect(
+      createExpressionRequestHash('I need help', 'improve_english'),
+    ).resolves.not.toBe(
+      await createExpressionRequestHash('I need help', 'translate_to_spanish'),
+    );
+
+    await expect(
+      createExpressionPairHash('I need help', 'I need some help.', 'improve_english'),
+    ).resolves.not.toBe(
+      await createExpressionPairHash(
+        'I need help',
+        'Necesito ayuda',
+        'translate_to_spanish',
+      ),
+    );
   });
 });
 
@@ -117,6 +137,7 @@ describe('study article contracts', () => {
       targetLanguage: 'en',
       sourceText: 'Yo quiero aprender ingles',
       translatedText: 'I want to learn English',
+      mode: 'translate_to_english',
       title: 'I want to learn English',
       summary: 'A personal English lesson.',
       articleVersion: 'markdown-v3',
@@ -132,6 +153,7 @@ describe('study article contracts', () => {
     };
 
     expect(article.articleVersion).toBe('markdown-v3');
+    expect(article.mode).toBe('translate_to_english');
     expect(article.markdown).toContain('## Syntax map');
     expect(article.segments).toBeUndefined();
     expect('roleplay' in article).toBe(false);
