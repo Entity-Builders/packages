@@ -83,11 +83,19 @@ export type ExpressionStructurePart = {
   note: string;
 };
 
+export type ExpressionTenseNote = {
+  label: string;
+  text: string;
+  note: string;
+};
+
 export type ExpressionBreakdown = {
   changed: boolean;
   confidence: ExpressionConfidence;
   feedback: string[];
+  /** Legacy compact summary. Prefer `tenses` when clause-level tense notes are available. */
   tense?: string;
+  tenses?: ExpressionTenseNote[];
   structure?: ExpressionStructurePart[];
   commonMistake?: string;
   whyThisWorks?: string;
