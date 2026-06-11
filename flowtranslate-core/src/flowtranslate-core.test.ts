@@ -47,6 +47,12 @@ describe('dedupe helpers', () => {
     await expect(
       createExpressionRequestHash('I need help', 'improve_english'),
     ).resolves.not.toBe(
+      await createRequestHash('I need help', 'en', 'en', 'natural', 'improve_english'),
+    );
+
+    await expect(
+      createExpressionRequestHash('I need help', 'improve_english'),
+    ).resolves.not.toBe(
       await createExpressionRequestHash('I need help', 'translate_to_spanish'),
     );
 

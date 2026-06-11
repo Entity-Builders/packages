@@ -70,6 +70,9 @@ export const sha256Hex = async (value: string) => {
   return bytesToHex(digest);
 };
 
+export const EXPRESSION_REQUEST_HASH_VERSION =
+  'flowtranslate:v3:fast_expression_request';
+
 export const createRequestHash = (
   sourceText: string,
   sourceLanguage: LanguageCode,
@@ -110,13 +113,19 @@ export const createExpressionRequestHash = (
   presetId: TranslationPresetId = DEFAULT_TRANSLATION_PRESET_ID,
 ) => {
   const direction = createExpressionDirection(mode);
-  return createRequestHash(
-    sourceText,
+  const parts = [
+    EXPRESSION_REQUEST_HASH_VERSION,
+    `mode:${mode}`,
     direction.sourceLanguage,
     direction.targetLanguage,
-    presetId,
-    mode,
-  );
+    normalizeTranslationText(sourceText),
+  ];
+
+  if (presetId !== DEFAULT_TRANSLATION_PRESET_ID) {
+    parts.push(`preset:${presetId}`);
+  }
+
+  return sha256Hex(parts.join('\n'));
 };
 
 export const createExpressionPairHash = (
