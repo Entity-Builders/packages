@@ -15,14 +15,14 @@ export const TRANSLATION_PRESETS: TranslationPreset[] = [
     label: 'Professional',
     description: 'Polished for work.',
     instruction:
-      'Use a polished professional tone suitable for email, documents, and work chat.',
+      'Rewrite with a polished professional tone suitable for email, documents, and work chat.',
   },
   {
     id: 'casual',
     label: 'Casual',
     description: 'Relaxed and conversational.',
     instruction:
-      'Use a relaxed conversational tone that sounds natural in everyday chat.',
+      'Rewrite with a relaxed conversational tone that sounds natural in everyday chat.',
   },
   {
     id: 'concise',
@@ -36,14 +36,14 @@ export const TRANSLATION_PRESETS: TranslationPreset[] = [
     label: 'Warm',
     description: 'Friendly and human.',
     instruction:
-      'Make the translation friendly, warm, and human while staying faithful.',
+      'Rewrite the translation so it feels friendly, warm, and human while staying faithful.',
   },
   {
     id: 'direct',
     label: 'Direct',
     description: 'Plain and straightforward.',
     instruction:
-      'Use a direct, plain style with minimal softening and no extra flourish.',
+      'Rewrite with a direct, plain style with minimal softening and no extra flourish.',
   },
   {
     id: 'shorten',
