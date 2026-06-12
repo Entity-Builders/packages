@@ -66,6 +66,19 @@ describe('dedupe helpers', () => {
       ),
     );
   });
+
+  it('separates expression requests by work context without changing the source text', async () => {
+    await expect(
+      createExpressionRequestHash('hoy no puedo ir', 'translate_to_english'),
+    ).resolves.not.toBe(
+      await createExpressionRequestHash(
+        'hoy no puedo ir',
+        'translate_to_english',
+        'natural',
+        'Cliente Sarah, reunion de avance',
+      ),
+    );
+  });
 });
 
 describe('preset contracts', () => {

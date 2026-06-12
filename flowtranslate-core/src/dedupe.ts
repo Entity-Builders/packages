@@ -71,7 +71,7 @@ export const sha256Hex = async (value: string) => {
 };
 
 export const EXPRESSION_REQUEST_HASH_VERSION =
-  'flowtranslate:v3:fast_expression_request';
+  'flowtranslate:v4:fast_expression_request';
 
 export const createRequestHash = (
   sourceText: string,
@@ -111,10 +111,13 @@ export const createExpressionRequestHash = (
   sourceText: string,
   mode: ExpressionMode,
   presetId: TranslationPresetId = DEFAULT_TRANSLATION_PRESET_ID,
+  contextText = '',
 ) => {
   const direction = createExpressionDirection(mode);
   const parts = [
-    EXPRESSION_REQUEST_HASH_VERSION,
+    contextText.trim()
+      ? 'flowtranslate:v5:fast_expression_request_with_context'
+      : EXPRESSION_REQUEST_HASH_VERSION,
     `mode:${mode}`,
     direction.sourceLanguage,
     direction.targetLanguage,
@@ -123,6 +126,10 @@ export const createExpressionRequestHash = (
 
   if (presetId !== DEFAULT_TRANSLATION_PRESET_ID) {
     parts.push(`preset:${presetId}`);
+  }
+
+  if (contextText.trim()) {
+    parts.push(`context:${normalizeTranslationText(contextText)}`);
   }
 
   return sha256Hex(parts.join('\n'));

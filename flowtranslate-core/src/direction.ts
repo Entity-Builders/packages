@@ -251,6 +251,8 @@ export type ResponseGuard = {
   latestSourceText: string;
   requestPresetId?: TranslationPresetId;
   latestPresetId?: TranslationPresetId;
+  requestContextText?: string;
+  latestContextText?: string;
 };
 
 export const canApplyTranslationResponse = ({
@@ -264,6 +266,8 @@ export const canApplyTranslationResponse = ({
   latestSourceText,
   requestPresetId,
   latestPresetId,
+  requestContextText,
+  latestContextText,
 }: ResponseGuard) =>
   requestSequence === latestSequence &&
   (!requestSourceLanguage ||
@@ -271,4 +275,5 @@ export const canApplyTranslationResponse = ({
     requestSourceLanguage === latestSourceLanguage) &&
   (!requestMode || !latestMode || requestMode === latestMode) &&
   requestSourceText === latestSourceText &&
-  (!requestPresetId || !latestPresetId || requestPresetId === latestPresetId);
+  (!requestPresetId || !latestPresetId || requestPresetId === latestPresetId) &&
+  (requestContextText ?? '') === (latestContextText ?? '');
