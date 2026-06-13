@@ -166,7 +166,7 @@ const BASE_FLAGS: Record<
   paid_pending: {
     hasPaidAccess: false,
     canUsePaidQuota: false,
-    canRetryCheckout: false,
+    canRetryCheckout: true,
     shouldWaitForProvider: true,
     requiresSupport: false,
   },

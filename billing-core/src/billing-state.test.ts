@@ -64,6 +64,13 @@ describe('Entity Billing shared state helpers', () => {
       'paid_failed',
       'paid_cancelled',
     ]);
+    expect(states[2]).toMatchObject({
+      hasPaidAccess: false,
+      canUsePaidQuota: false,
+      canRetryCheckout: true,
+      shouldWaitForProvider: true,
+      requiresSupport: false,
+    });
     expect(states[3]).toMatchObject({
       hasPaidAccess: true,
       canUsePaidQuota: true,

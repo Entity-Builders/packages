@@ -72,6 +72,13 @@ describe('FlowTranslate billing state helpers', () => {
       'billing.pro_failed',
       'billing.pro_cancelled',
     ]);
+    expect(states[2]).toMatchObject({
+      hasProAccess: false,
+      canUseProQuota: false,
+      canRetryCheckout: true,
+      shouldWaitForProvider: true,
+      requiresSupport: false,
+    });
     expect(states[3]).toMatchObject({
       hasProAccess: true,
       canUseProQuota: true,
