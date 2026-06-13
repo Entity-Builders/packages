@@ -1,14 +1,11 @@
 {
-  "name": "@eb-packages/flowtranslate-core",
+  "name": "@eb-packages/billing-core",
   "version": "0.1.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
     "test": "vitest run",
     "build": "tsc"
-  },
-  "dependencies": {
-    "@eb-packages/billing-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
