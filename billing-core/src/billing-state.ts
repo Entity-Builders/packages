@@ -96,7 +96,7 @@ export type EntityBillingProviderLookupKind =
   | 'subscription'
   | 'authorized_payment';
 
-export type EntityBillingProviderLookupInput = {
+export type EntityBillingProviderLookupDetails = {
   kind: EntityBillingProviderLookupKind;
   status?: string | null;
   accountKind?: EntityBillingAccountKind;
@@ -104,11 +104,18 @@ export type EntityBillingProviderLookupInput = {
   hasVerifiedEntitlementWindow?: boolean;
 };
 
+export type EntityBillingProviderLookupInput = Omit<
+  EntityBillingProviderLookupDetails,
+  'accountKind'
+> & {
+  accountKind: EntityBillingAccountKind;
+};
+
 export type ResolveEntityBillingStateInput = {
   accountKind: EntityBillingAccountKind;
   entitlement?: EntityBillingEntitlementRow | null;
   subscription?: EntityBillingSubscriptionRow | null;
-  providerLookup?: EntityBillingProviderLookupInput | null;
+  providerLookup?: EntityBillingProviderLookupDetails | null;
   now?: EntityBillingDate;
 };
 
@@ -384,7 +391,17 @@ export function mapEntitySubscriptionToBillingState(
 export function mapMercadoPagoProviderLookupToBillingState(
   providerLookup: EntityBillingProviderLookupInput,
 ): EntityBillingState {
-  const accountKind = providerLookup.accountKind ?? 'permanent';
+  if (!providerLookup.accountKind) {
+    return createState(
+      'paid_cancelled',
+      'none',
+      'provider_lookup',
+      'no_session',
+      { requiresSupport: true },
+    );
+  }
+
+  const accountKind = providerLookup.accountKind;
   const status = normalizeStatus(providerLookup.status);
 
   if (providerLookup.kind === 'payment') {
@@ -559,6 +576,16 @@ function mapProviderApprovedStatus(
   providerLookup: EntityBillingProviderLookupInput,
   accountKind: EntityBillingAccountKind,
 ): EntityBillingState {
+  if (accountKind !== 'permanent') {
+    return createState(
+      'paid_cancelled',
+      accountKind,
+      'provider_lookup',
+      accountKind === 'none' ? 'no_session' : 'guest_account',
+      { requiresSupport: true },
+    );
+  }
+
   if (!providerLookup.linkedToExpectedSubscription) {
     return createState(
       'paid_cancelled',

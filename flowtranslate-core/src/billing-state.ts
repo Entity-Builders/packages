@@ -8,6 +8,7 @@ import {
   type EntityBillingDate,
   type EntityBillingEntitlementRow,
   type EntityBillingEntitlementStatus,
+  type EntityBillingProviderLookupDetails,
   type EntityBillingProviderLookupInput,
   type EntityBillingProviderLookupKind,
   type EntityBillingState,
@@ -60,6 +61,7 @@ export type FlowtranslateBillingDate = EntityBillingDate;
 export type FlowtranslateEntitlementRow = EntityBillingEntitlementRow;
 export type FlowtranslateSubscriptionRow = EntityBillingSubscriptionRow;
 export type FlowtranslateProviderLookupKind = EntityBillingProviderLookupKind;
+export type FlowtranslateProviderLookupDetails = EntityBillingProviderLookupDetails;
 export type FlowtranslateProviderLookupInput = EntityBillingProviderLookupInput;
 export type ResolveFlowtranslateBillingStateInput = ResolveEntityBillingStateInput;
 

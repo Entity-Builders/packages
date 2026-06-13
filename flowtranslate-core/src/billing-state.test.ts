@@ -5,11 +5,21 @@ import {
   mapMercadoPagoProviderLookupToBillingState,
   resolveFlowtranslateBillingState,
 } from './billing-state';
+import type { FlowtranslateProviderLookupDetails } from './billing-state';
 
 const NOW = '2026-06-13T15:00:00.000Z';
 const START = '2026-06-01T00:00:00.000Z';
 const END = '2026-07-01T00:00:00.000Z';
 const VERIFIED = '2026-06-13T14:59:00.000Z';
+
+function mapPermanentMercadoPagoProviderLookupToBillingState(
+  providerLookup: FlowtranslateProviderLookupDetails,
+) {
+  return mapMercadoPagoProviderLookupToBillingState({
+    accountKind: 'permanent',
+    ...providerLookup,
+  });
+}
 
 describe('FlowTranslate billing state helpers', () => {
   it('returns the six canonical states with safe quota/action metadata', () => {
@@ -228,7 +238,7 @@ describe('FlowTranslate billing state helpers', () => {
 
   it('collapses Mercado Pago payment lookup statuses without silently granting Pro', () => {
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'payment',
         status: 'approved',
         linkedToExpectedSubscription: true,
@@ -242,7 +252,7 @@ describe('FlowTranslate billing state helpers', () => {
 
     expect(
       ['approved', 'accredited'].map((status) =>
-        mapMercadoPagoProviderLookupToBillingState({
+        mapPermanentMercadoPagoProviderLookupToBillingState({
           kind: 'payment',
           status,
           linkedToExpectedSubscription: true,
@@ -263,7 +273,7 @@ describe('FlowTranslate billing state helpers', () => {
     ]);
 
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'payment',
         status: 'approved',
         linkedToExpectedSubscription: false,
@@ -278,12 +288,12 @@ describe('FlowTranslate billing state helpers', () => {
 
     expect(
       ['pending', 'in_process'].map((status) =>
-        mapMercadoPagoProviderLookupToBillingState({ kind: 'payment', status }).id,
+        mapPermanentMercadoPagoProviderLookupToBillingState({ kind: 'payment', status }).id,
       ),
     ).toEqual(['pro_pending', 'pro_pending']);
 
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'payment',
         status: 'rejected',
       }).id,
@@ -292,7 +302,7 @@ describe('FlowTranslate billing state helpers', () => {
     expect(
       ['cancelled', 'refunded', 'charged_back', 'in_mediation', 'mystery'].map(
         (status) =>
-          mapMercadoPagoProviderLookupToBillingState({
+          mapPermanentMercadoPagoProviderLookupToBillingState({
             kind: 'payment',
             status,
           }),
@@ -320,7 +330,7 @@ describe('FlowTranslate billing state helpers', () => {
 
   it('normalizes subscription and authorized-payment provider states through the shared contract', () => {
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'subscription',
         status: 'authorized',
         linkedToExpectedSubscription: true,
@@ -330,7 +340,7 @@ describe('FlowTranslate billing state helpers', () => {
 
     expect(
       ['pending', 'paused', 'cancelled', 'unknown'].map((status) =>
-        mapMercadoPagoProviderLookupToBillingState({
+        mapPermanentMercadoPagoProviderLookupToBillingState({
           kind: 'subscription',
           status,
         }),
@@ -347,7 +357,7 @@ describe('FlowTranslate billing state helpers', () => {
     ]);
 
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'authorized_payment',
         status: 'processed',
         linkedToExpectedSubscription: true,
@@ -356,7 +366,7 @@ describe('FlowTranslate billing state helpers', () => {
     ).toBe('pro_active');
 
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'authorized_payment',
         status: 'processed',
         linkedToExpectedSubscription: true,
@@ -370,7 +380,7 @@ describe('FlowTranslate billing state helpers', () => {
 
     expect(
       ['waiting for gateway', 'recycling'].map((status) =>
-        mapMercadoPagoProviderLookupToBillingState({
+        mapPermanentMercadoPagoProviderLookupToBillingState({
           kind: 'authorized_payment',
           status,
         }).id,
@@ -378,8 +388,41 @@ describe('FlowTranslate billing state helpers', () => {
     ).toEqual(['pro_pending', 'pro_pending']);
   });
 
+  it('does not turn provider lookup into Pro without permanent account context', () => {
+    expect(
+      mapMercadoPagoProviderLookupToBillingState({
+        kind: 'payment',
+        status: 'approved',
+        linkedToExpectedSubscription: true,
+        hasVerifiedEntitlementWindow: true,
+      } as Parameters<typeof mapMercadoPagoProviderLookupToBillingState>[0]),
+    ).toMatchObject({
+      id: 'pro_cancelled',
+      accountKind: 'none',
+      hasProAccess: false,
+      requiresSupport: true,
+      reason: 'no_session',
+    });
+
+    expect(
+      mapMercadoPagoProviderLookupToBillingState({
+        accountKind: 'guest',
+        kind: 'payment',
+        status: 'approved',
+        linkedToExpectedSubscription: true,
+        hasVerifiedEntitlementWindow: true,
+      }),
+    ).toMatchObject({
+      id: 'pro_cancelled',
+      accountKind: 'guest',
+      hasProAccess: false,
+      requiresSupport: true,
+      reason: 'guest_account',
+    });
+  });
+
   it('returns privacy-safe metadata only', () => {
-    const state = mapMercadoPagoProviderLookupToBillingState({
+    const state = mapPermanentMercadoPagoProviderLookupToBillingState({
       kind: 'payment',
       status: 'charged_back',
     });

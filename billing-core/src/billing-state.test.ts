@@ -5,11 +5,21 @@ import {
   mapMercadoPagoProviderLookupToBillingState,
   resolveEntityBillingState,
 } from './billing-state';
+import type { EntityBillingProviderLookupDetails } from './billing-state';
 
 const NOW = '2026-06-13T15:00:00.000Z';
 const START = '2026-06-01T00:00:00.000Z';
 const END = '2026-07-01T00:00:00.000Z';
 const VERIFIED = '2026-06-13T14:59:00.000Z';
+
+function mapPermanentMercadoPagoProviderLookupToBillingState(
+  providerLookup: EntityBillingProviderLookupDetails,
+) {
+  return mapMercadoPagoProviderLookupToBillingState({
+    accountKind: 'permanent',
+    ...providerLookup,
+  });
+}
 
 describe('Entity Billing shared state helpers', () => {
   it('returns reusable paid-state ids for every canonical billing state', () => {
@@ -187,7 +197,7 @@ describe('Entity Billing shared state helpers', () => {
 
   it('normalizes Mercado Pago provider statuses without silently granting access', () => {
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'payment',
         status: 'approved',
         linkedToExpectedSubscription: true,
@@ -200,7 +210,7 @@ describe('Entity Billing shared state helpers', () => {
     });
 
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'payment',
         status: 'approved',
         linkedToExpectedSubscription: true,
@@ -213,7 +223,7 @@ describe('Entity Billing shared state helpers', () => {
     });
 
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'payment',
         status: 'approved',
         linkedToExpectedSubscription: false,
@@ -229,7 +239,7 @@ describe('Entity Billing shared state helpers', () => {
     expect(
       ['pending', 'in_process', 'rejected', 'refunded', 'charged_back'].map(
         (status) =>
-          mapMercadoPagoProviderLookupToBillingState({
+          mapPermanentMercadoPagoProviderLookupToBillingState({
             kind: 'payment',
             status,
           }).id,
@@ -243,9 +253,42 @@ describe('Entity Billing shared state helpers', () => {
     ]);
   });
 
-  it('keeps provider installment states in pending unless verified by the app', () => {
+  it('fails closed when provider lookup lacks permanent account context', () => {
     expect(
       mapMercadoPagoProviderLookupToBillingState({
+        kind: 'payment',
+        status: 'approved',
+        linkedToExpectedSubscription: true,
+        hasVerifiedEntitlementWindow: true,
+      } as Parameters<typeof mapMercadoPagoProviderLookupToBillingState>[0]),
+    ).toMatchObject({
+      id: 'paid_cancelled',
+      accountKind: 'none',
+      hasPaidAccess: false,
+      requiresSupport: true,
+      reason: 'no_session',
+    });
+
+    expect(
+      mapMercadoPagoProviderLookupToBillingState({
+        accountKind: 'guest',
+        kind: 'payment',
+        status: 'approved',
+        linkedToExpectedSubscription: true,
+        hasVerifiedEntitlementWindow: true,
+      }),
+    ).toMatchObject({
+      id: 'paid_cancelled',
+      accountKind: 'guest',
+      hasPaidAccess: false,
+      requiresSupport: true,
+      reason: 'guest_account',
+    });
+  });
+
+  it('keeps provider installment states in pending unless verified by the app', () => {
+    expect(
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'authorized_payment',
         status: 'processed',
         linkedToExpectedSubscription: true,
@@ -254,7 +297,7 @@ describe('Entity Billing shared state helpers', () => {
     ).toBe('paid_active');
 
     expect(
-      mapMercadoPagoProviderLookupToBillingState({
+      mapPermanentMercadoPagoProviderLookupToBillingState({
         kind: 'authorized_payment',
         status: 'processed',
         linkedToExpectedSubscription: true,
@@ -268,7 +311,7 @@ describe('Entity Billing shared state helpers', () => {
 
     expect(
       ['waiting for gateway', 'recycling', 'scheduled'].map((status) =>
-        mapMercadoPagoProviderLookupToBillingState({
+        mapPermanentMercadoPagoProviderLookupToBillingState({
           kind: 'authorized_payment',
           status,
         }).id,
@@ -277,7 +320,7 @@ describe('Entity Billing shared state helpers', () => {
   });
 
   it('returns privacy-safe metadata only', () => {
-    const state = mapMercadoPagoProviderLookupToBillingState({
+    const state = mapPermanentMercadoPagoProviderLookupToBillingState({
       kind: 'payment',
       status: 'charged_back',
     });
