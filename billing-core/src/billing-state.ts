@@ -276,6 +276,16 @@ export function mapEntityEntitlementToBillingState(
   }
 
   if (status === 'active') {
+    if (!hasActivePaidEntitlementShape(entitlement)) {
+      return createState(
+        'paid_cancelled',
+        options.accountKind,
+        'entitlement',
+        'unverified',
+        { requiresSupport: true },
+      );
+    }
+
     return mapVerifiedWindowToState(
       {
         activeFrom: entitlement.active_from,
@@ -297,6 +307,16 @@ export function mapEntityEntitlementToBillingState(
     'unverified',
     { requiresSupport: true },
   );
+}
+
+function hasActivePaidEntitlementShape(
+  entitlement: EntityBillingEntitlementRow,
+) {
+  const source = normalizeStatus(entitlement.source);
+
+  return normalizeStatus(entitlement.account_kind) === 'pro' &&
+    normalizeStatus(entitlement.plan) === 'pro' &&
+    (source === 'mercado_pago' || source === 'manual');
 }
 
 export function mapEntitySubscriptionToBillingState(

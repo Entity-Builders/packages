@@ -35,6 +35,9 @@ describe('FlowTranslate billing state helpers', () => {
         accountKind: 'permanent',
         entitlement: {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: START,
           active_until: END,
           last_verified_at: VERIFIED,
@@ -88,6 +91,9 @@ describe('FlowTranslate billing state helpers', () => {
       mapFlowtranslateEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: START,
           active_until: END,
           last_verified_at: VERIFIED,
@@ -100,6 +106,9 @@ describe('FlowTranslate billing state helpers', () => {
       mapFlowtranslateEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: START,
           active_until: NOW,
           last_verified_at: VERIFIED,
@@ -112,6 +121,9 @@ describe('FlowTranslate billing state helpers', () => {
       mapFlowtranslateEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'manual',
           active_from: START,
           active_until: null,
           last_verified_at: VERIFIED,
@@ -124,6 +136,9 @@ describe('FlowTranslate billing state helpers', () => {
       mapFlowtranslateEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: '2026-07-01T00:00:00.000Z',
           active_until: null,
           last_verified_at: VERIFIED,
@@ -141,6 +156,9 @@ describe('FlowTranslate billing state helpers', () => {
       mapFlowtranslateEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: '2026-05-01T00:00:00.000Z',
           active_until: '2026-06-01T00:00:00.000Z',
           last_verified_at: VERIFIED,
@@ -157,6 +175,9 @@ describe('FlowTranslate billing state helpers', () => {
       mapFlowtranslateEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: START,
           active_until: END,
           last_verified_at: null,

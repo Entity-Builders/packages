@@ -35,6 +35,9 @@ describe('Entity Billing shared state helpers', () => {
         accountKind: 'permanent',
         entitlement: {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: START,
           active_until: END,
           last_verified_at: VERIFIED,
@@ -75,6 +78,9 @@ describe('Entity Billing shared state helpers', () => {
       mapEntityEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: START,
           active_until: END,
           last_verified_at: VERIFIED,
@@ -87,6 +93,9 @@ describe('Entity Billing shared state helpers', () => {
       mapEntityEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'manual',
           active_from: START,
           active_until: null,
           last_verified_at: VERIFIED,
@@ -99,6 +108,9 @@ describe('Entity Billing shared state helpers', () => {
       mapEntityEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: '2026-07-01T00:00:00.000Z',
           active_until: null,
           last_verified_at: VERIFIED,
@@ -116,6 +128,9 @@ describe('Entity Billing shared state helpers', () => {
       mapEntityEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: '2026-05-01T00:00:00.000Z',
           active_until: '2026-06-01T00:00:00.000Z',
           last_verified_at: VERIFIED,
@@ -132,6 +147,9 @@ describe('Entity Billing shared state helpers', () => {
       mapEntityEntitlementToBillingState(
         {
           status: 'active',
+          account_kind: 'pro',
+          plan: 'pro',
+          source: 'mercado_pago',
           active_from: START,
           active_until: END,
           last_verified_at: null,
@@ -144,6 +162,36 @@ describe('Entity Billing shared state helpers', () => {
       requiresSupport: true,
       reason: 'missing_verification',
     });
+  });
+
+  it('requires active entitlements to have the expected paid shape', () => {
+    const activeWindow = {
+      status: 'active',
+      active_from: START,
+      active_until: END,
+      last_verified_at: VERIFIED,
+    };
+
+    for (const entitlement of [
+      { ...activeWindow, account_kind: 'free', plan: 'pro', source: 'mercado_pago' },
+      { ...activeWindow, account_kind: 'pro', plan: 'free', source: 'mercado_pago' },
+      { ...activeWindow, account_kind: 'pro', plan: 'pro', source: 'free' },
+      { ...activeWindow, account_kind: 'pro', plan: 'pro', source: 'stripe' },
+      { ...activeWindow, account_kind: 'pro', plan: 'pro', source: null },
+    ]) {
+      expect(
+        mapEntityEntitlementToBillingState(entitlement, {
+          accountKind: 'permanent',
+          now: NOW,
+        }),
+      ).toMatchObject({
+        id: 'paid_cancelled',
+        hasPaidAccess: false,
+        canUsePaidQuota: false,
+        requiresSupport: true,
+        reason: 'unverified',
+      });
+    }
   });
 
   it('maps subscription rows conservatively before quota can trust them', () => {
