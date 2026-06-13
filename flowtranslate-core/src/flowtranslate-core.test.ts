@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { StudyArticle, StudyArticleResponseMetadata } from './index';
 import {
+  chooseRecommendedLearningSituation,
   createExpressionPairHash,
   createExpressionRequestHash,
   canSpendEstimatedTokens,
@@ -10,6 +11,9 @@ import {
   getMonthlyResetAt,
   getRemainingUsage,
   getUsageState,
+  rankLearningSituationsFromHistory,
+  selectStarterLearningSituations,
+  STARTER_LEARNING_SITUATIONS,
   selectRecentUniqueActiveTranslations,
   TRANSLATION_PRESETS,
 } from './index';
@@ -92,7 +96,13 @@ describe('preset contracts', () => {
       'direct',
       'shorten',
     ]);
-    expect(getTranslationPreset('shorten').instruction).toContain('Shorten');
+    expect(getTranslationPreset('shorten')).toMatchObject({
+      label: 'Brief',
+      description: 'One-line sendable reply.',
+    });
+    expect(getTranslationPreset('shorten').instruction).toContain(
+      'one short sentence',
+    );
   });
 });
 
@@ -145,6 +155,108 @@ describe('practice helpers', () => {
     ]);
 
     expect(selected.map((record) => record.id)).toEqual(['new-duplicate']);
+  });
+});
+
+describe('learning situation helpers', () => {
+  it('keeps the starter situation catalog stable', () => {
+    expect(STARTER_LEARNING_SITUATIONS.map((situation) => situation.id)).toEqual([
+      'delay-update',
+      'professional-interest',
+      'schedule-call',
+      'polite-rejection',
+      'ask-context',
+      'follow-up',
+      'thank-and-close',
+      'scope-timing',
+    ]);
+
+    expect(
+      STARTER_LEARNING_SITUATIONS.every(
+        (situation) =>
+          situation.catalogVersion === 'flowtranslate:learning-situations:v1',
+      ),
+    ).toBe(true);
+  });
+
+  it('selects the first starter situations when history is thin', () => {
+    const starters = selectStarterLearningSituations(2);
+
+    expect(starters.map((situation) => situation.id)).toEqual([
+      'delay-update',
+      'professional-interest',
+    ]);
+
+    const recommendation = chooseRecommendedLearningSituation([
+      {
+        id: 'record-1',
+        sourceLanguage: 'es',
+        targetLanguage: 'en',
+        mode: 'translate_to_english',
+        sourceText: 'Gracias por escribir',
+        translatedText: 'Thanks for reaching out.',
+        createdAt: '2026-06-01T10:00:00.000Z',
+      },
+    ]);
+
+    expect(recommendation.personalized).toBe(false);
+    expect(recommendation.recommended.id).toBe('delay-update');
+  });
+
+  it('ranks work situations from recent translation history', () => {
+    const ranked = rankLearningSituationsFromHistory([
+      {
+        id: 'record-1',
+        sourceLanguage: 'es',
+        targetLanguage: 'en',
+        mode: 'translate_to_english',
+        sourceText:
+          'Decile a un cliente que el reporte se demora hasta manana.',
+        translatedText:
+          'Tell the client the report is taking longer than expected and I will send it tomorrow.',
+        createdAt: '2026-06-02T10:00:00.000Z',
+      },
+      {
+        id: 'record-2',
+        sourceLanguage: 'es',
+        targetLanguage: 'en',
+        mode: 'translate_to_english',
+        sourceText:
+          'Avisale que la version final demora un poco mas pero ya estamos revisando.',
+        translatedText:
+          'Let them know the final version is taking a bit longer, but we are already reviewing it.',
+        createdAt: '2026-06-02T09:30:00.000Z',
+      },
+      {
+        id: 'record-3',
+        sourceLanguage: 'es',
+        targetLanguage: 'en',
+        mode: 'translate_to_english',
+        sourceText:
+          'Gracias por escribir, me interesa la propuesta y podemos coordinar una llamada.',
+        translatedText:
+          'Thanks for reaching out. The proposal sounds interesting and we can schedule a quick call.',
+        createdAt: '2026-06-02T09:00:00.000Z',
+      },
+      {
+        id: 'deleted-record',
+        sourceLanguage: 'es',
+        targetLanguage: 'en',
+        mode: 'translate_to_english',
+        sourceText: 'Necesito hacer follow up',
+        translatedText: 'I need to follow up.',
+        createdAt: '2026-06-02T08:00:00.000Z',
+        deletedAt: '2026-06-02T08:30:00.000Z',
+      },
+    ]);
+
+    expect(ranked[0].situation.id).toBe('delay-update');
+    expect(ranked[0].sourceRecordIds).toContain('record-1');
+    expect(ranked[0].matchedSignals).toEqual(
+      expect.arrayContaining(['reporte', 'demora', 'tomorrow']),
+    );
+    expect(ranked.some((candidate) => candidate.situation.id === 'follow-up'))
+      .toBe(false);
   });
 });
 

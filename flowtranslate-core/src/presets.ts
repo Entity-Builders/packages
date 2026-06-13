@@ -47,10 +47,10 @@ export const TRANSLATION_PRESETS: TranslationPreset[] = [
   },
   {
     id: 'shorten',
-    label: 'Shorten',
-    description: 'Compress the idea.',
+    label: 'Brief',
+    description: 'One-line sendable reply.',
     instruction:
-      'Shorten the translation as much as possible while preserving the core message.',
+      'Write a brief, sendable version in one short sentence when possible while preserving the core message.',
   },
 ];
 

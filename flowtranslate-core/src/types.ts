@@ -11,6 +11,15 @@ export type PanelStatus =
   | 'error'
   | 'offline';
 
+export type Profile = {
+  user_id: string;
+  email?: string | null;
+  monthly_quota: number;
+  global_context?: string | null;
+  current_streak: number;
+  last_study_date?: string | null;
+};
+
 export type TranslationDirection = {
   sourceLanguage: LanguageCode;
   targetLanguage: LanguageCode;
@@ -46,12 +55,19 @@ export type TranslationPreset = {
   instruction: string;
 };
 
+export type GrammarInsight = {
+  tense: string;
+  structure: string;
+  observation: string;
+};
+
 export type TranslationRecord = TranslationDirection & {
   id: string;
   sourceText: string;
   translatedText: string;
   mode?: ExpressionMode;
   breakdown?: ExpressionBreakdown | null;
+  grammarInsight?: GrammarInsight | null;
   requestHash?: string;
   pairHash?: string;
   createdAt: string;
@@ -112,6 +128,7 @@ export type ExpressionOutput = TranslationDirection & {
   sourceText: string;
   resultText: string;
   breakdown: ExpressionBreakdown;
+  grammarInsight?: GrammarInsight;
 };
 
 export type LearningInsightItem = {
@@ -136,6 +153,108 @@ export type LearningInsightResponseMetadata = {
   cached: boolean;
   generatedAt?: string;
   refreshAvailable?: boolean;
+};
+
+export type LearningSituationId = string;
+
+export type LearningSituationCategory =
+  | 'delay_update'
+  | 'professional_interest'
+  | 'schedule_call'
+  | 'polite_rejection'
+  | 'ask_context'
+  | 'follow_up'
+  | 'thank_and_close'
+  | 'scope_timing';
+
+export type LearningSituation = {
+  id: LearningSituationId;
+  catalogVersion: string;
+  category: LearningSituationCategory;
+  title: string;
+  description: string;
+  outcome: string;
+  samplePhrases: string[];
+  detectionHints: {
+    keywords: string[];
+    modes?: ExpressionMode[];
+  };
+  priority: number;
+};
+
+export type LearningSituationCandidate = {
+  situation: LearningSituation;
+  score: number;
+  sourceRecordIds: string[];
+  matchedSignals: string[];
+};
+
+export type LearningGrammarNote = {
+  label: string;
+  text: string;
+  note: string;
+};
+
+export type LearningBestOptionChoice = {
+  id: string;
+  text: string;
+  preferred: boolean;
+  feedback: string;
+};
+
+export type LearningBestOptionExercise = {
+  prompt: string;
+  choices: LearningBestOptionChoice[];
+};
+
+export type LearningSessionContent = {
+  situationTitle: string;
+  anchorPhrase: string;
+  whyItWorks: string;
+  grammarNotes: LearningGrammarNote[];
+  bestOption: LearningBestOptionExercise;
+  rewritePrompt: string;
+  suggestedPhrases: string[];
+};
+
+export type LearningSessionStatus = 'active' | 'completed' | 'archived';
+
+export type LearningSession = {
+  id: string;
+  situationId: LearningSituationId;
+  catalogVersion: string;
+  status: LearningSessionStatus;
+  content: LearningSessionContent;
+  sourceRecordIds: string[];
+  historySnapshotHash?: string;
+  createdAt: string;
+  completedAt?: string | null;
+};
+
+export type LearningAttemptFeedback = {
+  summary: string;
+  improvedVersion: string;
+  naturalness: 'strong' | 'close' | 'needs_work';
+  notes: LearningGrammarNote[];
+};
+
+export type LearningAttempt = {
+  id: string;
+  sessionId: string;
+  userAnswer: string;
+  feedback: LearningAttemptFeedback;
+  createdAt: string;
+};
+
+export type SavedPhrase = {
+  id: string;
+  text: string;
+  note?: string;
+  situationId?: LearningSituationId | null;
+  sessionId?: string | null;
+  sourceRecordIds: string[];
+  createdAt: string;
+  archivedAt?: string | null;
 };
 
 export type PracticeType =
