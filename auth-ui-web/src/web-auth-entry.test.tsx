@@ -35,7 +35,7 @@ const config = createEntityAuthConfig({
     { type: 'email_otp' },
     { type: 'oauth', provider: 'google' },
     { type: 'oauth', provider: 'github', enabled: false },
-    { type: 'guest', label: 'Iniciar prueba gratis' },
+    { type: 'guest', label: 'Probar sin cuenta' },
   ],
   copy: {
     title: 'Cuenta',
@@ -58,7 +58,7 @@ describe('AccountAccessPanel', () => {
       screen.getByRole('button', { name: /continuar con google/i }),
     ).toBeTruthy();
     expect(
-      screen.getByRole('button', { name: /iniciar prueba gratis/i }),
+      screen.getByRole('button', { name: /probar sin cuenta/i }),
     ).toBeTruthy();
     expect(
       screen.queryByRole('button', { name: /github/i }),
@@ -73,7 +73,7 @@ describe('AccountAccessPanel', () => {
     fireEvent.click(screen.getByRole('button', { name: /continuar con google/i }));
     expect(account.signInWithOAuth).toHaveBeenCalledWith('google');
 
-    fireEvent.click(screen.getByRole('button', { name: /iniciar prueba gratis/i }));
+    fireEvent.click(screen.getByRole('button', { name: /probar sin cuenta/i }));
     expect(account.signInAsGuest).toHaveBeenCalledTimes(1);
   });
 
@@ -81,7 +81,7 @@ describe('AccountAccessPanel', () => {
     const account = createAccount({
       session: { user: { id: 'guest' } },
       isGuest: true,
-      displayName: 'Prueba gratis',
+      displayName: 'Invitado',
     });
 
     render(
@@ -92,7 +92,8 @@ describe('AccountAccessPanel', () => {
       />,
     );
 
-    expect(screen.getAllByText('Prueba gratis')).toHaveLength(2);
+    expect(screen.getByText('Modo invitado')).toBeTruthy();
+    expect(screen.getByText('Invitado')).toBeTruthy();
     expect(screen.getByText('Conserva tu historial')).toBeTruthy();
     expect(
       screen.getByRole('button', { name: /conectar con google/i }),

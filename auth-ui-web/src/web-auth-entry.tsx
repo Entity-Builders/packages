@@ -279,7 +279,7 @@ export const AccountAccessPanel = ({
         <div className='space-y-1'>
           <div className='text-xs font-bold uppercase text-slate-400'>
             {account.isGuest
-              ? copy.guestStateLabel || 'Prueba gratis'
+              ? copy.guestStateLabel || 'Modo invitado'
               : copy.permanentStateLabel || 'Cuenta conectada'}
           </div>
           <div className='truncate text-base font-bold text-slate-950'>
