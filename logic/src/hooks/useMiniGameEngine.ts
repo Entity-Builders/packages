@@ -52,7 +52,7 @@ export function useMiniGameEngine({
     let isMounted = true;
     (async () => {
       const { data, error } = await supabase
-        .from('postalpeek_player_metrics')
+        .from('player_metrics')
         .select('*')
         .eq('user_id', userId)
         .eq('game_type', gameType)
@@ -153,7 +153,7 @@ export function useMiniGameEngine({
     
     // Fetch latest to avoid race conditions easily, then upsert
     const { data: current } = await supabase
-        .from('postalpeek_player_metrics')
+        .from('player_metrics')
         .select('*')
         .eq('user_id', userId)
         .eq('game_type', gameType)
@@ -168,7 +168,7 @@ export function useMiniGameEngine({
     let bestClicks = current?.best_clicks;
     if (isWin) bestClicks = bestClicks == null ? finalMetrics.clicks : Math.min(bestClicks, finalMetrics.clicks);
 
-    await supabase.from('postalpeek_player_metrics').upsert({
+    await supabase.from('player_metrics').upsert({
       user_id: userId,
       game_type: gameType,
       games_played: gamesPlayed,
