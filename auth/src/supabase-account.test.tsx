@@ -95,6 +95,30 @@ describe('useSupabaseAccountAccess', () => {
     expect(result.current.accessToken).toBe('guest-token');
   });
 
+  it('recovers when persisted session restoration fails', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+    const getSession = vi.fn().mockRejectedValueOnce({
+      name: 'AuthApiError',
+      status: 400,
+      message: 'Invalid Refresh Token: Refresh Token Not Found',
+    });
+    const { client, auth } = createClient(null, { getSession });
+
+    const { result } = renderHook(() =>
+      useSupabaseAccountAccess({
+        client,
+        isConfigured: true,
+      }),
+    );
+
+    await waitFor(() => expect(result.current.authLoading).toBe(false));
+
+    expect(result.current.accountKind).toBe('none');
+    expect(result.current.session).toBeNull();
+    expect(auth.signOut).toHaveBeenCalled();
+    warn.mockRestore();
+  });
+
   it('requests and verifies email OTP without tracking the email or code', async () => {
     const { client, auth } = createClient();
     const track = vi.fn();

@@ -254,12 +254,25 @@ export const useSupabaseAccountAccess = ({
 
     let mounted = true;
 
-    client.auth.getSession().then(({ data }) => {
-      if (!mounted) return;
-      setSession(data.session);
-      setEmail(data.session?.user.email || '');
-      setAuthLoading(false);
-    });
+    client.auth
+      .getSession()
+      .then(({ data }) => {
+        if (!mounted) return;
+        setSession(data.session);
+        setEmail(data.session?.user.email || '');
+        setAuthLoading(false);
+      })
+      .catch((error: unknown) => {
+        console.warn(
+          '[useSupabaseAccountAccess] Failed to restore Supabase session',
+          error,
+        );
+        if (!mounted) return;
+        setSession(null);
+        setEmail('');
+        setAuthLoading(false);
+        void client.auth.signOut().catch(() => undefined);
+      });
 
     const {
       data: { subscription },

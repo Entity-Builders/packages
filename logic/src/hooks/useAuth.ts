@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { supabase } from '../supabase';
+import { supabase, supabaseAuthStorageKey } from '../supabase';
 import type { User } from '@supabase/supabase-js';
 
 /**
@@ -29,20 +29,39 @@ export function useAuth() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let mounted = true;
+
     // 1. Check existing session on mount
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      setLoading(false);
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        if (!mounted) return;
+        setUser(session?.user ?? null);
+        setLoading(false);
+      })
+      .catch((error: unknown) => {
+        console.warn('[useAuth] Failed to restore Supabase session', error);
+        if (!mounted) return;
+        setUser(null);
+        setLoading(false);
+
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.removeItem(supabaseAuthStorageKey);
+        }
+      });
 
     // 2. Subscribe to auth changes (login, logout, token refresh)
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
+      setLoading(false);
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
+    };
   }, []);
 
   const isAdmin = ADMIN_EMAILS.includes(user?.email ?? '');

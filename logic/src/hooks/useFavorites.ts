@@ -2,6 +2,59 @@ import { useEffect, useState, useCallback } from 'react';
 import { supabase } from '../supabase';
 import type { User } from '@supabase/supabase-js';
 
+type FavoriteJoinRow = {
+  postcard_id: string;
+  postcards: unknown | null;
+};
+
+type BilingualText = {
+  es: string;
+  en: string;
+};
+
+export type FavoritePostcardItem = {
+  id: string;
+  country: string;
+  city: string;
+  location_name?: string;
+  lat: number;
+  lng: number;
+  original_image_url: string;
+  illustration_url: string;
+  category: string | BilingualText;
+  description: string | BilingualText;
+  created_at: string;
+  [key: string]: unknown;
+};
+
+const isBilingualText = (value: unknown): value is BilingualText => {
+  if (!value || typeof value !== 'object') return false;
+  const record = value as Record<string, unknown>;
+  return typeof record.es === 'string' && typeof record.en === 'string';
+};
+
+const isFavoritePostcardItem = (
+  postcard: unknown,
+): postcard is FavoritePostcardItem => {
+  if (!postcard || typeof postcard !== 'object') return false;
+  const record = postcard as Record<string, unknown>;
+  const category = record.category;
+  const description = record.description;
+
+  return (
+    typeof record.id === 'string' &&
+    typeof record.country === 'string' &&
+    typeof record.city === 'string' &&
+    typeof record.lat === 'number' &&
+    typeof record.lng === 'number' &&
+    typeof record.original_image_url === 'string' &&
+    typeof record.illustration_url === 'string' &&
+    (typeof category === 'string' || isBilingualText(category)) &&
+    (typeof description === 'string' || isBilingualText(description)) &&
+    typeof record.created_at === 'string'
+  );
+};
+
 /**
  * Hook to manage a user's favorited postcards in PostalPeek.
  *
@@ -11,7 +64,9 @@ import type { User } from '@supabase/supabase-js';
  */
 export function useFavorites(user: User | null) {
   const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set());
-  const [favoriteItems, setFavoriteItems] = useState<any[]>([]);
+  const [favoriteItems, setFavoriteItems] = useState<FavoritePostcardItem[]>(
+    [],
+  );
   const [isLoading, setIsLoading] = useState(false);
 
   // Fetch existing favorites (IDs + full postcard data) when user becomes available
@@ -26,17 +81,18 @@ export function useFavorites(user: User | null) {
     setIsLoading(true);
 
     supabase
-      .from('postalpeek_favorites')
-      .select('postcard_id, postalpeek_postcards(*)')
+      .from('favorites')
+      .select('postcard_id, postcards(*)')
       .eq('user_id', user.id)
       .then(({ data, error }) => {
         if (cancelled) return;
         if (!error && data) {
-          setFavoriteIds(new Set(data.map((r) => r.postcard_id)));
+          const rows = data as FavoriteJoinRow[];
+          setFavoriteIds(new Set(rows.map((r) => r.postcard_id)));
           // Extract the joined postcard data
-          const postcards = data
-            .map((r: any) => r.postalpeek_postcards)
-            .filter(Boolean);
+          const postcards = rows
+            .map((r) => r.postcards)
+            .filter(isFavoritePostcardItem);
           setFavoriteItems(postcards);
         }
         setIsLoading(false);
@@ -72,7 +128,7 @@ export function useFavorites(user: User | null) {
       try {
         if (isFav) {
           const { error } = await supabase
-            .from('postalpeek_favorites')
+            .from('favorites')
             .delete()
             .eq('user_id', user.id)
             .eq('postcard_id', postcardId);
@@ -80,19 +136,19 @@ export function useFavorites(user: User | null) {
           if (error) throw error;
         } else {
           const { error } = await supabase
-            .from('postalpeek_favorites')
+            .from('favorites')
             .insert({ user_id: user.id, postcard_id: postcardId });
 
           if (error) throw error;
 
           // Fetch the full postcard data for the newly favorited item
           const { data: postcard } = await supabase
-            .from('postalpeek_postcards')
+            .from('postcards')
             .select('*')
             .eq('id', postcardId)
             .single();
 
-          if (postcard) {
+          if (isFavoritePostcardItem(postcard)) {
             setFavoriteItems((prev) => [postcard, ...prev]);
           }
         }
