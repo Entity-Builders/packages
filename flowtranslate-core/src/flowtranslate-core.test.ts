@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import type { StudyArticle, StudyArticleResponseMetadata } from './index';
 import {
+  buildPresetRequestFingerprint,
   chooseRecommendedLearningSituation,
   createExpressionPairHash,
   createExpressionRequestHash,
   canSpendEstimatedTokens,
+  EXPRESSION_REQUEST_HASH_VERSION,
   createPairHash,
   createRequestHash,
   getTranslationPreset,
@@ -13,8 +15,10 @@ import {
   getUsageState,
   rankLearningSituationsFromHistory,
   selectStarterLearningSituations,
+  sha256Hex,
   STARTER_LEARNING_SITUATIONS,
   selectRecentUniqueActiveTranslations,
+  STYLE_PRESET_REQUEST_CONTRACT_VERSION,
   TRANSLATION_PRESETS,
 } from './index';
 
@@ -39,6 +43,43 @@ describe('dedupe helpers', () => {
     ).resolves.not.toBe(
       await createRequestHash('hola mundo', 'es', 'en', 'natural'),
     );
+
+    expect(
+      buildPresetRequestFingerprint('hola mundo', 'es', 'en', 'natural'),
+    ).not.toContain(STYLE_PRESET_REQUEST_CONTRACT_VERSION);
+    expect(
+      buildPresetRequestFingerprint('hola mundo', 'es', 'en', 'casual'),
+    ).toContain(STYLE_PRESET_REQUEST_CONTRACT_VERSION);
+  });
+
+  it('invalidates stale expression cache for styled presets only', async () => {
+    const sourceText = 'El reporte se demora hasta manana.';
+    const oldStyledHash = await sha256Hex(
+      [
+        EXPRESSION_REQUEST_HASH_VERSION,
+        'mode:translate_to_english',
+        'es',
+        'en',
+        'el reporte se demora hasta manana.',
+        'preset:shorten',
+      ].join('\n'),
+    );
+    const oldNaturalHash = await sha256Hex(
+      [
+        EXPRESSION_REQUEST_HASH_VERSION,
+        'mode:translate_to_english',
+        'es',
+        'en',
+        'el reporte se demora hasta manana.',
+      ].join('\n'),
+    );
+
+    await expect(
+      createExpressionRequestHash(sourceText, 'translate_to_english', 'shorten'),
+    ).resolves.not.toBe(oldStyledHash);
+    await expect(
+      createExpressionRequestHash(sourceText, 'translate_to_english', 'natural'),
+    ).resolves.toBe(oldNaturalHash);
   });
 
   it('keeps pair hashes sensitive to translated output', async () => {
@@ -101,13 +142,13 @@ describe('preset contracts', () => {
       description: 'One-line sendable reply.',
     });
     expect(getTranslationPreset('shorten').instruction).toContain(
-      'one short sentence',
-    );
-    expect(getTranslationPreset('shorten').instruction).toContain(
       'message-style',
     );
     expect(getTranslationPreset('shorten').instruction).toContain(
-      'Remove non-essential filler',
+      'fewest natural words',
+    );
+    expect(getTranslationPreset('shorten').instruction).toContain(
+      'remove non-essential filler',
     );
   });
 });

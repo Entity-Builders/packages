@@ -44,6 +44,7 @@ export const buildPresetRequestFingerprint = (
 
   if (presetId !== DEFAULT_TRANSLATION_PRESET_ID) {
     parts.push(`preset:${presetId}`);
+    parts.push(STYLE_PRESET_REQUEST_CONTRACT_VERSION);
   }
 
   return parts.join('\n');
@@ -72,6 +73,8 @@ export const sha256Hex = async (value: string) => {
 
 export const EXPRESSION_REQUEST_HASH_VERSION =
   'flowtranslate:v4:fast_expression_request';
+export const STYLE_PRESET_REQUEST_CONTRACT_VERSION =
+  'flowtranslate:style-preset-request:v3';
 
 export const createRequestHash = (
   sourceText: string,
@@ -126,6 +129,7 @@ export const createExpressionRequestHash = (
 
   if (presetId !== DEFAULT_TRANSLATION_PRESET_ID) {
     parts.push(`preset:${presetId}`);
+    parts.push(STYLE_PRESET_REQUEST_CONTRACT_VERSION);
   }
 
   if (contextText.trim()) {

@@ -50,7 +50,7 @@ export const TRANSLATION_PRESETS: TranslationPreset[] = [
     label: 'Brief',
     description: 'One-line sendable reply.',
     instruction:
-      'Write a brief, sendable, message-style version in one short sentence when possible. Remove non-essential filler while preserving the core intent and next step.',
+      'Write a brief, sendable, message-style version. Use the fewest natural words possible, remove non-essential filler, and preserve the core intent and next step.',
   },
 ];
 
