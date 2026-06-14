@@ -103,6 +103,12 @@ describe('preset contracts', () => {
     expect(getTranslationPreset('shorten').instruction).toContain(
       'one short sentence',
     );
+    expect(getTranslationPreset('shorten').instruction).toContain(
+      'message-style',
+    );
+    expect(getTranslationPreset('shorten').instruction).toContain(
+      'Remove non-essential filler',
+    );
   });
 });
 
