@@ -20,10 +20,18 @@ surfaces, and app-specific analytics context.
 ## Usage
 
 ```ts
+import { createClient } from '@supabase/supabase-js';
 import {
+  createSupabaseAuthStorageKey,
   useSupabaseAccountAccess,
   type SupabaseAuthAccessClient,
 } from '@eb-packages/auth';
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    storageKey: createSupabaseAuthStorageKey('flowtranslate'),
+  },
+});
 
 const account = useSupabaseAccountAccess({
   client: supabase as unknown as SupabaseAuthAccessClient | null,
@@ -35,6 +43,11 @@ const account = useSupabaseAccountAccess({
   },
 });
 ```
+
+Use an app-specific `storageKey` for every persistent browser or native
+Supabase client. Entity Builders shares Supabase account identity across apps,
+but each product must keep its own persisted session bucket so signing in to one
+app does not implicitly sign the browser into another app.
 
 The hook does not track email addresses, OTP codes, access tokens, refresh
 tokens, source text, generated text, provider payloads, or payment credentials.

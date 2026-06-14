@@ -87,8 +87,37 @@ const SafeStorage = {
 };
 
 export const supabaseSchema = expoExtra.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.EXPO_PUBLIC_SUPABASE_SCHEMA || process.env.VITE_SUPABASE_SCHEMA || 'public';
+const supabaseSchemaAuthScope = supabaseSchema === 'public' ? undefined : supabaseSchema;
+
+const DEFAULT_AUTH_STORAGE_SCOPE = 'entity-builders';
+
+const normalizeSupabaseAuthStorageScope = (
+  appId?: string | null,
+): string => {
+  const normalized = (appId || '')
+    .trim()
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  return normalized || DEFAULT_AUTH_STORAGE_SCOPE;
+};
+
+export const supabaseAuthStorageScope = normalizeSupabaseAuthStorageScope(
+  getValidEnv(expoExtra.EXPO_PUBLIC_ENTITY_BUILDERS_APP_ID) ||
+    getValidEnv(process.env.EXPO_PUBLIC_ENTITY_BUILDERS_APP_ID) ||
+    getValidEnv(process.env.VITE_ENTITY_BUILDERS_APP_ID) ||
+    getValidEnv(expoExtra.EXPO_PUBLIC_APP_ID) ||
+    getValidEnv(process.env.EXPO_PUBLIC_APP_ID) ||
+    getValidEnv(process.env.VITE_APP_ID) ||
+    getValidEnv(supabaseSchemaAuthScope),
+);
+
+export const supabaseAuthStorageKey = `eb:${supabaseAuthStorageScope}:supabase-auth`;
 
 console.log(`[SharedPackage] Resolved Supabase Schema: '${supabaseSchema}' (AppEnv: '${getAppEnv()}')`);
+console.log(`[SharedPackage] Supabase auth storage scope: '${supabaseAuthStorageScope}'`);
 let finalUrl = supabaseUrl;
 try {
   // Validate URL to prevent Uncaught Error that breaks the app
@@ -101,6 +130,7 @@ try {
 export const supabase = createClient(finalUrl, supabaseAnonKey, {
   auth: {
     storage: SafeStorage,
+    storageKey: supabaseAuthStorageKey,
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: false,
@@ -109,4 +139,3 @@ export const supabase = createClient(finalUrl, supabaseAnonKey, {
     schema: supabaseSchema,
   },
 });
-

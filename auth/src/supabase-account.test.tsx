@@ -1,6 +1,10 @@
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
+  createSupabaseAuthStorageKey,
+  normalizeSupabaseAuthStorageScope,
+} from './storage-key';
+import {
   isAnonymousSession,
   useSupabaseAccountAccess,
   type SupabaseAuthAccessClient,
@@ -216,6 +220,29 @@ describe('useSupabaseAccountAccess', () => {
       expect.objectContaining({
         reason: 'supabase_not_configured',
       }),
+    );
+  });
+});
+
+describe('Supabase auth storage keys', () => {
+  it('creates stable app-scoped storage keys', () => {
+    expect(createSupabaseAuthStorageKey('flowtranslate')).toBe(
+      'eb:flowtranslate:supabase-auth',
+    );
+    expect(createSupabaseAuthStorageKey('Minimal Money')).toBe(
+      'eb:minimal-money:supabase-auth',
+    );
+  });
+
+  it('normalizes unsafe app ids and falls back to the platform scope', () => {
+    expect(normalizeSupabaseAuthStorageScope('  FlowTranslate.app  ')).toBe(
+      'flowtranslate-app',
+    );
+    expect(createSupabaseAuthStorageKey('')).toBe(
+      'eb:entity-builders:supabase-auth',
+    );
+    expect(createSupabaseAuthStorageKey(null)).toBe(
+      'eb:entity-builders:supabase-auth',
     );
   });
 });
