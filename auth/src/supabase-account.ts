@@ -1,5 +1,12 @@
 import type { Provider, Session } from '@supabase/supabase-js';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  isEntityAuthMethodEnabled,
+  resolveEntityAuthConfig,
+  type EntityAuthConfig,
+  type EntityAuthConfigInput,
+  type EntityAuthMethodType,
+} from './app-auth-config';
 
 export type EntityBuildersAccountKind = 'none' | 'guest' | 'permanent';
 export type GuestSignInSource = 'automatic' | 'manual';
@@ -16,6 +23,15 @@ export type AuthAnalyticsProperties = Record<
 export type AuthAnalytics = {
   track: (event: string, properties?: AuthAnalyticsProperties) => void;
 };
+
+export type EmailOtpTokenPreparationInput = {
+  email: string;
+  token: string;
+};
+
+export type EmailOtpTokenPreparer = (
+  input: EmailOtpTokenPreparationInput,
+) => string | Promise<string>;
 
 export type AuthErrorLike = {
   name?: string;
@@ -39,6 +55,7 @@ export type AccountAccessMessages = {
   oauthStarted: string;
   oauthFailed: string;
   oauthLinkedIdentityError: string;
+  authMethodUnavailable: string;
 };
 
 export type SupabaseAuthAccessClient = {
@@ -59,7 +76,10 @@ export type SupabaseAuthAccessClient = {
     }>;
     signInWithOtp: (input: {
       email: string;
-      options?: { emailRedirectTo?: string };
+      options?: {
+        emailRedirectTo?: string;
+        data?: Record<string, unknown>;
+      };
     }) => Promise<{ error: AuthErrorLike | null }>;
     verifyOtp: (input: {
       email: string;
@@ -84,9 +104,12 @@ export type SupabaseAuthAccessClient = {
 export type SupabaseAccountAccessOptions = {
   client: SupabaseAuthAccessClient | null;
   isConfigured: boolean;
+  appId?: string;
+  authConfig?: EntityAuthConfig | EntityAuthConfigInput;
   analytics?: AuthAnalytics;
   messages?: Partial<AccountAccessMessages>;
   redirectTo?: string | (() => string);
+  prepareEmailOtpToken?: EmailOtpTokenPreparer;
 };
 
 const OAUTH_LINKED_IDENTITY_ERROR = 'identity_already_exists';
@@ -102,6 +125,7 @@ const DEFAULT_MESSAGES: AccountAccessMessages = {
   oauthFailed: 'Could not finish OAuth sign-in. Try again.',
   oauthLinkedIdentityError:
     'That identity is already connected to another account. You can keep using the current session or sign in with another method.',
+  authMethodUnavailable: 'That sign-in method is not available for this app.',
 };
 
 export const authErrorProperties = (error: AuthErrorLike) => ({
@@ -168,13 +192,47 @@ const resolveRedirectTo = (
   return undefined;
 };
 
+const buildEmailOtpOptions = ({
+  redirectTo,
+  appId,
+}: {
+  redirectTo: SupabaseAccountAccessOptions['redirectTo'];
+  appId?: string;
+}):
+  | {
+      emailRedirectTo?: string;
+      data?: Record<string, unknown>;
+    }
+  | undefined => {
+  const resolvedRedirectTo = resolveRedirectTo(redirectTo);
+  const cleanAppId = appId?.trim();
+  const options: {
+    emailRedirectTo?: string;
+    data?: Record<string, unknown>;
+  } = {};
+
+  if (resolvedRedirectTo) options.emailRedirectTo = resolvedRedirectTo;
+  if (cleanAppId) options.data = { app_name: cleanAppId };
+
+  return Object.keys(options).length > 0 ? options : undefined;
+};
+
 export const useSupabaseAccountAccess = ({
   client,
   isConfigured,
+  appId,
+  authConfig,
   analytics,
   messages,
   redirectTo,
+  prepareEmailOtpToken,
 }: SupabaseAccountAccessOptions) => {
+  const resolvedAuthConfig = useMemo(
+    () => (authConfig ? resolveEntityAuthConfig(authConfig) : null),
+    [authConfig],
+  );
+  const resolvedAppId = appId || resolvedAuthConfig?.appId;
+  const resolvedRedirectTo = redirectTo || resolvedAuthConfig?.redirectTo;
   const copy = useMemo(
     () => ({ ...DEFAULT_MESSAGES, ...messages }),
     [messages],
@@ -253,12 +311,50 @@ export const useSupabaseAccountAccess = ({
 
       analytics?.track(eventName, {
         reason: 'supabase_not_configured',
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
         ...properties,
       });
       setError(copy.supabaseNotConfigured);
       return false;
     },
-    [analytics, client, copy.supabaseNotConfigured, isConfigured],
+    [
+      analytics,
+      client,
+      copy.supabaseNotConfigured,
+      isConfigured,
+      resolvedAppId,
+      resolvedAuthConfig?.analyticsContext,
+    ],
+  );
+
+  const guardAuthMethodEnabled = useCallback(
+    (
+      method: EntityAuthMethodType,
+      provider?: Provider,
+      properties?: AuthAnalyticsProperties,
+    ) => {
+      if (isEntityAuthMethodEnabled(resolvedAuthConfig, method, provider)) {
+        return true;
+      }
+
+      analytics?.track('auth_method_blocked', {
+        reason: 'method_disabled',
+        method,
+        provider: provider || null,
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
+        ...properties,
+      });
+      setError(copy.authMethodUnavailable);
+      return false;
+    },
+    [
+      analytics,
+      copy.authMethodUnavailable,
+      resolvedAppId,
+      resolvedAuthConfig,
+    ],
   );
 
   const requestCode = useCallback(async () => {
@@ -266,11 +362,14 @@ export const useSupabaseAccountAccess = ({
     setMessage('');
 
     if (!guardConfigured('auth_code_request_blocked')) return;
+    if (!guardAuthMethodEnabled('email_otp')) return;
 
     const trimmedEmail = email.trim();
     if (!trimmedEmail) {
       analytics?.track('auth_code_request_blocked', {
         reason: 'missing_email',
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
       });
       setError(copy.missingEmail);
       return;
@@ -279,18 +378,23 @@ export const useSupabaseAccountAccess = ({
     setBusy(true);
     analytics?.track('auth_code_request_submitted', {
       method: 'email_otp',
+      app_id: resolvedAppId || null,
+      ...resolvedAuthConfig?.analyticsContext,
     });
     const { error: signInError } = await client!.auth.signInWithOtp({
       email: trimmedEmail,
-      options: {
-        emailRedirectTo: resolveRedirectTo(redirectTo),
-      },
+      options: buildEmailOtpOptions({
+        redirectTo: resolvedRedirectTo,
+        appId: resolvedAppId,
+      }),
     });
     setBusy(false);
 
     if (signInError) {
       analytics?.track('auth_code_request_failed', {
         method: 'email_otp',
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
         ...authErrorProperties(signInError),
       });
       setError(signInError.message || copy.oauthFailed);
@@ -299,6 +403,8 @@ export const useSupabaseAccountAccess = ({
 
     analytics?.track('auth_code_request_succeeded', {
       method: 'email_otp',
+      app_id: resolvedAppId || null,
+      ...resolvedAuthConfig?.analyticsContext,
     });
     setCodeSent(true);
     setCode('');
@@ -310,8 +416,11 @@ export const useSupabaseAccountAccess = ({
     copy.missingEmail,
     copy.oauthFailed,
     email,
+    guardAuthMethodEnabled,
     guardConfigured,
-    redirectTo,
+    resolvedAppId,
+    resolvedAuthConfig?.analyticsContext,
+    resolvedRedirectTo,
   ]);
 
   const verifyCode = useCallback(async () => {
@@ -319,11 +428,15 @@ export const useSupabaseAccountAccess = ({
     setMessage('');
 
     if (!guardConfigured('auth_code_verification_blocked')) return;
+    if (!guardAuthMethodEnabled('email_otp')) return;
 
+    const trimmedEmail = email.trim();
     const token = code.trim().replace(/\s/g, '');
-    if (!email.trim() || !token) {
+    if (!trimmedEmail || !token) {
       analytics?.track('auth_code_verification_blocked', {
         reason: 'missing_credentials',
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
       });
       setError(copy.missingCredentials);
       return;
@@ -332,10 +445,39 @@ export const useSupabaseAccountAccess = ({
     setBusy(true);
     analytics?.track('auth_code_verification_submitted', {
       method: 'email_otp',
+      app_id: resolvedAppId || null,
+      ...resolvedAuthConfig?.analyticsContext,
     });
+
+    let tokenToVerify = token;
+    if (prepareEmailOtpToken) {
+      try {
+        const preparedToken = await prepareEmailOtpToken({
+          email: trimmedEmail,
+          token,
+        });
+        tokenToVerify = preparedToken.trim().replace(/\s/g, '');
+
+        if (!tokenToVerify) {
+          throw new Error('otp_token_preparation_empty');
+        }
+      } catch {
+        setBusy(false);
+        analytics?.track('auth_code_verification_failed', {
+          method: 'email_otp',
+          app_id: resolvedAppId || null,
+          ...resolvedAuthConfig?.analyticsContext,
+          error_type: 'otp_token_preparation_failed',
+          error_code: null,
+        });
+        setError(copy.oauthFailed);
+        return;
+      }
+    }
+
     const { data, error: verifyError } = await client!.auth.verifyOtp({
-      email: email.trim(),
-      token,
+      email: trimmedEmail,
+      token: tokenToVerify,
       type: 'email',
     });
     setBusy(false);
@@ -343,6 +485,8 @@ export const useSupabaseAccountAccess = ({
     if (verifyError) {
       analytics?.track('auth_code_verification_failed', {
         method: 'email_otp',
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
         ...authErrorProperties(verifyError),
       });
       setError(verifyError.message || copy.oauthFailed);
@@ -351,11 +495,13 @@ export const useSupabaseAccountAccess = ({
 
     if (data?.session) {
       setSession(data.session);
-      setEmail(data.session.user.email || email.trim());
+      setEmail(data.session.user.email || trimmedEmail);
     }
 
     analytics?.track('auth_code_verification_succeeded', {
       method: 'email_otp',
+      app_id: resolvedAppId || null,
+      ...resolvedAuthConfig?.analyticsContext,
     });
     setMessage(copy.connected);
     setCode('');
@@ -368,7 +514,11 @@ export const useSupabaseAccountAccess = ({
     copy.missingCredentials,
     copy.oauthFailed,
     email,
+    guardAuthMethodEnabled,
     guardConfigured,
+    prepareEmailOtpToken,
+    resolvedAppId,
+    resolvedAuthConfig?.analyticsContext,
   ]);
 
   const submit = useCallback(
@@ -385,6 +535,13 @@ export const useSupabaseAccountAccess = ({
     [code, codeSent, requestCode, verifyCode],
   );
 
+  const resetCodeRequest = useCallback(() => {
+    setCode('');
+    setCodeSent(false);
+    setMessage('');
+    setError('');
+  }, []);
+
   const signInAsGuest = useCallback(
     async (options: GuestSignInOptions = {}) => {
       const source = options.source || 'manual';
@@ -392,11 +549,14 @@ export const useSupabaseAccountAccess = ({
       setMessage('');
 
       if (!guardConfigured('auth_guest_blocked', { source })) return;
+      if (!guardAuthMethodEnabled('guest', undefined, { source })) return;
 
       setBusy(true);
       analytics?.track('auth_guest_submitted', {
         method: 'anonymous',
         source,
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
       });
 
       const { data, error: signInError } =
@@ -407,6 +567,8 @@ export const useSupabaseAccountAccess = ({
         analytics?.track('auth_guest_failed', {
           method: 'anonymous',
           source,
+          app_id: resolvedAppId || null,
+          ...resolvedAuthConfig?.analyticsContext,
           ...authErrorProperties(signInError),
         });
         setError(signInError.message || copy.oauthFailed);
@@ -421,12 +583,23 @@ export const useSupabaseAccountAccess = ({
       analytics?.track('auth_guest_succeeded', {
         method: 'anonymous',
         source,
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
       });
       setCode('');
       setCodeSent(false);
       setMessage(source === 'manual' ? copy.guestReady : '');
     },
-    [analytics, client, copy.guestReady, copy.oauthFailed, guardConfigured],
+    [
+      analytics,
+      client,
+      copy.guestReady,
+      copy.oauthFailed,
+      guardAuthMethodEnabled,
+      guardConfigured,
+      resolvedAppId,
+      resolvedAuthConfig?.analyticsContext,
+    ],
   );
 
   const signInWithOAuth = useCallback(
@@ -441,18 +614,21 @@ export const useSupabaseAccountAccess = ({
       ) {
         return;
       }
+      if (!guardAuthMethodEnabled('oauth', provider, { provider })) return;
 
       const method =
         accountKind === 'guest'
           ? `${provider}_oauth_from_guest`
           : `${provider}_oauth`;
-      const nextRedirectTo = resolveRedirectTo(redirectTo);
+      const nextRedirectTo = resolveRedirectTo(resolvedRedirectTo);
 
       setBusy(true);
       analytics?.track('auth_oauth_submitted', {
         provider,
         method,
         account_kind: accountKind,
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
       });
 
       const input = {
@@ -471,6 +647,8 @@ export const useSupabaseAccountAccess = ({
           provider,
           method,
           account_kind: accountKind,
+          app_id: resolvedAppId || null,
+          ...resolvedAuthConfig?.analyticsContext,
           ...authErrorProperties(authResult.error),
         });
         setError(
@@ -485,6 +663,8 @@ export const useSupabaseAccountAccess = ({
         provider,
         method,
         account_kind: accountKind,
+        app_id: resolvedAppId || null,
+        ...resolvedAuthConfig?.analyticsContext,
       });
       setMessage(copy.oauthStarted);
     },
@@ -495,8 +675,11 @@ export const useSupabaseAccountAccess = ({
       copy.oauthFailed,
       copy.oauthLinkedIdentityError,
       copy.oauthStarted,
+      guardAuthMethodEnabled,
       guardConfigured,
-      redirectTo,
+      resolvedAppId,
+      resolvedAuthConfig?.analyticsContext,
+      resolvedRedirectTo,
     ],
   );
 
@@ -505,15 +688,19 @@ export const useSupabaseAccountAccess = ({
     await client?.auth.signOut();
     analytics?.track('auth_signed_out', {
       account_kind: signedOutAccountKind,
+      app_id: resolvedAppId || null,
+      ...resolvedAuthConfig?.analyticsContext,
     });
     setSession(null);
     setCode('');
     setCodeSent(false);
     setMessage('');
     setError('');
-  }, [accountKind, analytics, client]);
+  }, [accountKind, analytics, client, resolvedAppId, resolvedAuthConfig?.analyticsContext]);
 
   return {
+    authConfig: resolvedAuthConfig as EntityAuthConfig | null,
+    authMethods: resolvedAuthConfig?.methods || [],
     session,
     accessToken: session?.access_token || '',
     userEmail: session?.user.email || '',
@@ -535,6 +722,7 @@ export const useSupabaseAccountAccess = ({
     requestCode,
     verifyCode,
     submit,
+    resetCodeRequest,
     signInAsGuest,
     signInWithOAuth,
     signOut,

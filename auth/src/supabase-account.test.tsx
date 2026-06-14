@@ -1,6 +1,13 @@
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
+  createEntityAuthConfig,
+  findEntityAuthMethod,
+  getEnabledEntityAuthMethods,
+  getEntityAuthOAuthProviders,
+  getEntityAuthMethodAvailability,
+} from './app-auth-config';
+import {
   createSupabaseAuthStorageKey,
   normalizeSupabaseAuthStorageScope,
 } from './storage-key';
@@ -131,6 +138,201 @@ describe('useSupabaseAccountAccess', () => {
     expect(JSON.stringify(trackedPayloads)).not.toContain('123456');
   });
 
+  it('prepares email OTP tokens before verification without tracking sensitive values', async () => {
+    const { client, auth } = createClient();
+    const track = vi.fn();
+    const prepareEmailOtpToken = vi
+      .fn()
+      .mockResolvedValue(' 654 321 ');
+
+    const { result } = renderHook(() =>
+      useSupabaseAccountAccess({
+        client,
+        isConfigured: true,
+        appId: 'postalpeek',
+        analytics: { track },
+        prepareEmailOtpToken,
+      }),
+    );
+
+    await waitFor(() => expect(result.current.authLoading).toBe(false));
+
+    act(() => result.current.setEmail('person@example.com'));
+    act(() => result.current.setCode('123456'));
+
+    await act(async () => {
+      await result.current.verifyCode();
+    });
+
+    expect(prepareEmailOtpToken).toHaveBeenCalledWith({
+      email: 'person@example.com',
+      token: '123456',
+    });
+    expect(auth.verifyOtp).toHaveBeenCalledWith({
+      email: 'person@example.com',
+      token: '654321',
+      type: 'email',
+    });
+
+    const trackedPayloads = track.mock.calls.map(([, payload]) => payload);
+    expect(JSON.stringify(trackedPayloads)).not.toContain('person@example.com');
+    expect(JSON.stringify(trackedPayloads)).not.toContain('123456');
+    expect(JSON.stringify(trackedPayloads)).not.toContain('654321');
+  });
+
+  it('does not call verifyOtp when email OTP token preparation fails', async () => {
+    const { client, auth } = createClient();
+    const track = vi.fn();
+    const prepareEmailOtpToken = vi
+      .fn()
+      .mockRejectedValue(new Error('mailpit_unavailable'));
+
+    const { result } = renderHook(() =>
+      useSupabaseAccountAccess({
+        client,
+        isConfigured: true,
+        appId: 'postalpeek',
+        analytics: { track },
+        prepareEmailOtpToken,
+      }),
+    );
+
+    await waitFor(() => expect(result.current.authLoading).toBe(false));
+
+    act(() => result.current.setEmail('person@example.com'));
+    act(() => result.current.setCode('123456'));
+
+    await act(async () => {
+      await result.current.verifyCode();
+    });
+
+    expect(auth.verifyOtp).not.toHaveBeenCalled();
+    expect(result.current.error).toBeTruthy();
+    expect(track).toHaveBeenCalledWith(
+      'auth_code_verification_failed',
+      expect.objectContaining({
+        method: 'email_otp',
+        app_id: 'postalpeek',
+        error_type: 'otp_token_preparation_failed',
+      }),
+    );
+    expect(JSON.stringify(track.mock.calls)).not.toContain('person@example.com');
+    expect(JSON.stringify(track.mock.calls)).not.toContain('123456');
+  });
+
+  it('passes explicit app identity metadata with email OTP requests', async () => {
+    const { client, auth } = createClient();
+
+    const { result } = renderHook(() =>
+      useSupabaseAccountAccess({
+        client,
+        isConfigured: true,
+        appId: 'flowtranslate',
+        redirectTo: 'http://localhost:5173',
+      }),
+    );
+
+    await waitFor(() => expect(result.current.authLoading).toBe(false));
+
+    act(() => result.current.setEmail('person@example.com'));
+    await act(async () => {
+      await result.current.requestCode();
+    });
+
+    expect(auth.signInWithOtp).toHaveBeenCalledWith({
+      email: 'person@example.com',
+      options: {
+        emailRedirectTo: 'http://localhost:5173',
+        data: { app_name: 'flowtranslate' },
+      },
+    });
+  });
+
+  it('uses auth config app identity and analytics context for OTP requests', async () => {
+    const { client, auth } = createClient();
+    const track = vi.fn();
+
+    const { result } = renderHook(() =>
+      useSupabaseAccountAccess({
+        client,
+        isConfigured: true,
+        authConfig: {
+          appId: 'flowtranslate',
+          appName: 'FlowTranslate',
+          redirectTo: 'http://localhost:5173',
+          methods: [{ type: 'email_otp' }],
+          analyticsContext: { surface: 'account_modal' },
+        },
+        analytics: { track },
+      }),
+    );
+
+    await waitFor(() => expect(result.current.authLoading).toBe(false));
+
+    act(() => result.current.setEmail('person@example.com'));
+    await act(async () => {
+      await result.current.requestCode();
+    });
+
+    expect(auth.signInWithOtp).toHaveBeenCalledWith({
+      email: 'person@example.com',
+      options: {
+        emailRedirectTo: 'http://localhost:5173',
+        data: { app_name: 'flowtranslate' },
+      },
+    });
+    expect(track).toHaveBeenCalledWith(
+      'auth_code_request_submitted',
+      expect.objectContaining({
+        method: 'email_otp',
+        app_id: 'flowtranslate',
+        surface: 'account_modal',
+      }),
+    );
+    expect(JSON.stringify(track.mock.calls)).not.toContain('person@example.com');
+  });
+
+  it('blocks auth methods that are disabled by app auth config', async () => {
+    const { client, auth } = createClient();
+    const track = vi.fn();
+
+    const { result } = renderHook(() =>
+      useSupabaseAccountAccess({
+        client,
+        isConfigured: true,
+        authConfig: {
+          appId: 'flowtranslate',
+          appName: 'FlowTranslate',
+          methods: [
+            { type: 'email_otp' },
+            { type: 'oauth', provider: 'google' },
+            { type: 'oauth', provider: 'github', enabled: false },
+          ],
+        },
+        analytics: { track },
+      }),
+    );
+
+    await waitFor(() => expect(result.current.authLoading).toBe(false));
+
+    await act(async () => {
+      await result.current.signInWithOAuth('github');
+    });
+
+    expect(auth.signInWithOAuth).not.toHaveBeenCalled();
+    expect(auth.linkIdentity).not.toHaveBeenCalled();
+    expect(result.current.error).toMatch(/not available/i);
+    expect(track).toHaveBeenCalledWith(
+      'auth_method_blocked',
+      expect.objectContaining({
+        reason: 'method_disabled',
+        method: 'oauth',
+        provider: 'github',
+        app_id: 'flowtranslate',
+      }),
+    );
+  });
+
   it('uses linkIdentity for guest OAuth without signing out first', async () => {
     const { client, auth } = createClient(guestSession);
 
@@ -221,6 +423,94 @@ describe('useSupabaseAccountAccess', () => {
         reason: 'supabase_not_configured',
       }),
     );
+  });
+});
+
+describe('Entity auth app config', () => {
+  it('normalizes configured auth methods into renderable descriptors', () => {
+    const config = createEntityAuthConfig({
+      appId: ' flowtranslate ',
+      appName: ' FlowTranslate ',
+      methods: [
+        { type: 'email_otp' },
+        { type: 'oauth', provider: 'google' },
+        { type: 'oauth', provider: 'github', enabled: false },
+        { type: 'guest', label: 'Probar gratis' },
+      ],
+    });
+
+    expect(config.appId).toBe('flowtranslate');
+    expect(config.appName).toBe('FlowTranslate');
+    expect(config.methods).toEqual([
+      expect.objectContaining({
+        id: 'email_otp',
+        type: 'email_otp',
+        enabled: true,
+        label: 'Codigo por email',
+      }),
+      expect.objectContaining({
+        id: 'oauth:google',
+        type: 'oauth',
+        provider: 'google',
+        enabled: true,
+        label: 'Continuar con Google',
+      }),
+      expect.objectContaining({
+        id: 'oauth:github',
+        type: 'oauth',
+        provider: 'github',
+        enabled: false,
+      }),
+      expect.objectContaining({
+        id: 'guest',
+        type: 'guest',
+        enabled: true,
+        label: 'Probar gratis',
+      }),
+    ]);
+    expect(getEnabledEntityAuthMethods(config).map((method) => method.id)).toEqual([
+      'email_otp',
+      'oauth:google',
+      'guest',
+    ]);
+    expect(getEntityAuthOAuthProviders(config)).toEqual(['google']);
+    expect(findEntityAuthMethod(config, 'oauth', 'github')).toEqual(
+      expect.objectContaining({ enabled: false }),
+    );
+  });
+
+  it('reports method availability without exposing credentials', () => {
+    const config = createEntityAuthConfig({
+      appId: 'flowtranslate',
+      appName: 'FlowTranslate',
+      methods: [
+        {
+          type: 'oauth',
+          provider: 'github',
+          enabled: false,
+          unavailableReason: 'provider_not_configured',
+        },
+      ],
+    });
+
+    expect(
+      getEntityAuthMethodAvailability({
+        method: config.methods[0],
+        isSupabaseConfigured: true,
+      }),
+    ).toEqual({
+      available: false,
+      reason: 'provider_not_configured',
+    });
+    expect(
+      getEntityAuthMethodAvailability({
+        method: { ...config.methods[0], enabled: true },
+        isSupabaseConfigured: false,
+      }),
+    ).toEqual({
+      available: false,
+      reason: 'supabase_not_configured',
+    });
   });
 });
 
