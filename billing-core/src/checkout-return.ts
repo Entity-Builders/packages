@@ -132,7 +132,7 @@ export const readEntityCheckoutReturnFromUrl = (
   options: ReadEntityCheckoutReturnOptions,
 ): EntityCheckoutReturnInfo | null => {
   const returnPath = normalizePathname(options.returnPath);
-  const fallbackOrigin = options.fallbackOrigin || 'https://entitybuilders.io';
+  const fallbackOrigin = options.fallbackOrigin || 'https://entitybuilders.ai';
   const url = toUrl(input, fallbackOrigin);
   if (normalizePathname(url.pathname) !== returnPath) return null;
 

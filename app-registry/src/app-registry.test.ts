@@ -34,11 +34,11 @@ describe('Entity Builders app registry', () => {
 
   it('detects apps from production domains before stale metadata', () => {
     expect(getEntityBuildersApp('entitybuilders')?.urls.canonical).toBe(
-      'https://entitybuilders.io',
+      'https://entitybuilders.ai',
     );
     expect(
       detectEntityBuildersAppId({
-        redirectTo: 'https://entitybuilders.io',
+        redirectTo: 'https://entitybuilders.ai',
         appIdHint: 'flowtranslate',
       }),
     ).toBe('entitybuilders');

@@ -46,8 +46,8 @@ export const ENTITY_BUILDERS_APP_REGISTRY = {
     displayName: 'Entity Builders',
     analyticsAppId: 'entitybuilders',
     urls: {
-      canonical: 'https://entitybuilders.io',
-      productionDomains: ['entitybuilders.io', 'entitybuilders.com'],
+      canonical: 'https://entitybuilders.ai',
+      productionDomains: ['entitybuilders.ai', 'entitybuilders.com'],
     },
     email: {
       templateDir: 'entitybuilders',
