@@ -412,6 +412,10 @@ describe('useSupabaseAccountAccess', () => {
     expect(auth.signOut).not.toHaveBeenCalled();
     expect(result.current.accountKind).toBe('guest');
     expect(result.current.error).toMatch(/connected/i);
+    expect(result.current.oauthRecovery).toEqual({
+      reason: 'identity_already_exists',
+      provider: 'google',
+    });
     expect(track).toHaveBeenCalledWith(
       'auth_oauth_failed',
       expect.objectContaining({
@@ -420,6 +424,31 @@ describe('useSupabaseAccountAccess', () => {
         error_code: 'identity_already_exists',
       }),
     );
+  });
+
+  it('can bypass guest linking and start OAuth sign-in for an existing identity', async () => {
+    const { client, auth } = createClient(guestSession);
+
+    const { result } = renderHook(() =>
+      useSupabaseAccountAccess({
+        client,
+        isConfigured: true,
+        redirectTo: 'http://localhost:5173',
+      }),
+    );
+
+    await waitFor(() => expect(result.current.accountKind).toBe('guest'));
+
+    await act(async () => {
+      await result.current.signInWithOAuth('google', { forceSignIn: true });
+    });
+
+    expect(auth.signOut).toHaveBeenCalledTimes(1);
+    expect(auth.linkIdentity).not.toHaveBeenCalled();
+    expect(auth.signInWithOAuth).toHaveBeenCalledWith({
+      provider: 'google',
+      options: { redirectTo: 'http://localhost:5173' },
+    });
   });
 
   it('reports unavailable Supabase configuration without throwing', async () => {

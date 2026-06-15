@@ -49,6 +49,15 @@ export type OAuthErrorResult = {
   errorDescription: string;
 };
 
+export type OAuthRecoveryState = {
+  reason: 'identity_already_exists';
+  provider: Provider;
+};
+
+export type OAuthSignInOptions = {
+  forceSignIn?: boolean;
+};
+
 export type AccountAccessMessages = {
   supabaseNotConfigured: string;
   missingEmail: string;
@@ -249,6 +258,8 @@ export const useSupabaseAccountAccess = ({
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const [oauthRecovery, setOauthRecovery] =
+    useState<OAuthRecoveryState | null>(null);
 
   useEffect(() => {
     if (!client || !isConfigured) {
@@ -307,10 +318,15 @@ export const useSupabaseAccountAccess = ({
     clearOAuthErrorFromWindow();
 
     if (errorCode === OAUTH_LINKED_IDENTITY_ERROR) {
+      setOauthRecovery({
+        reason: 'identity_already_exists',
+        provider: 'google',
+      });
       setError(copy.oauthLinkedIdentityError);
       return;
     }
 
+    setOauthRecovery(null);
     setError(errorDescription || copy.oauthFailed);
   }, [
     analytics,
@@ -377,6 +393,7 @@ export const useSupabaseAccountAccess = ({
   const requestCode = useCallback(async () => {
     setError('');
     setMessage('');
+    setOauthRecovery(null);
 
     if (!guardConfigured('auth_code_request_blocked')) return;
     if (!guardAuthMethodEnabled('email_otp')) return;
@@ -443,6 +460,7 @@ export const useSupabaseAccountAccess = ({
   const verifyCode = useCallback(async () => {
     setError('');
     setMessage('');
+    setOauthRecovery(null);
 
     if (!guardConfigured('auth_code_verification_blocked')) return;
     if (!guardAuthMethodEnabled('email_otp')) return;
@@ -563,6 +581,7 @@ export const useSupabaseAccountAccess = ({
     setCodeSent(false);
     setMessage('');
     setError('');
+    setOauthRecovery(null);
   }, []);
 
   const signInAsGuest = useCallback(
@@ -570,6 +589,7 @@ export const useSupabaseAccountAccess = ({
       const source = options.source || 'manual';
       setError('');
       setMessage('');
+      setOauthRecovery(null);
 
       if (!guardConfigured('auth_guest_blocked', { source })) return;
       if (!guardAuthMethodEnabled('guest', undefined, { source })) return;
@@ -626,9 +646,10 @@ export const useSupabaseAccountAccess = ({
   );
 
   const signInWithOAuth = useCallback(
-    async (provider: Provider) => {
+    async (provider: Provider, options: OAuthSignInOptions = {}) => {
       setError('');
       setMessage('');
+      setOauthRecovery(null);
 
       if (
         !guardConfigured('auth_oauth_blocked', {
@@ -640,7 +661,9 @@ export const useSupabaseAccountAccess = ({
       if (!guardAuthMethodEnabled('oauth', provider, { provider })) return;
 
       const method =
-        accountKind === 'guest'
+        accountKind === 'guest' && options.forceSignIn
+          ? `${provider}_oauth_existing_identity`
+          : accountKind === 'guest'
           ? `${provider}_oauth_from_guest`
           : `${provider}_oauth`;
       const nextRedirectTo = resolveRedirectTo(resolvedRedirectTo);
@@ -658,8 +681,30 @@ export const useSupabaseAccountAccess = ({
         provider,
         options: nextRedirectTo ? { redirectTo: nextRedirectTo } : undefined,
       };
+
+      if (accountKind === 'guest' && options.forceSignIn) {
+        const { error: signOutError } = await client!.auth.signOut();
+
+        if (signOutError) {
+          setBusy(false);
+          analytics?.track('auth_oauth_failed', {
+            provider,
+            method,
+            account_kind: accountKind,
+            app_id: resolvedAppId || null,
+            ...resolvedAuthConfig?.analyticsContext,
+            ...authErrorProperties(signOutError),
+          });
+          setError(signOutError.message || copy.oauthFailed);
+          return;
+        }
+
+        setSession(null);
+        setEmail('');
+      }
+
       const authResult =
-        accountKind === 'guest' && client!.auth.linkIdentity
+        accountKind === 'guest' && !options.forceSignIn && client!.auth.linkIdentity
           ? await client!.auth.linkIdentity(input)
           : await client!.auth.signInWithOAuth(input);
 
@@ -674,6 +719,12 @@ export const useSupabaseAccountAccess = ({
           ...resolvedAuthConfig?.analyticsContext,
           ...authErrorProperties(authResult.error),
         });
+        if (authResult.error.code === OAUTH_LINKED_IDENTITY_ERROR) {
+          setOauthRecovery({
+            reason: 'identity_already_exists',
+            provider,
+          });
+        }
         setError(
           authResult.error.code === OAUTH_LINKED_IDENTITY_ERROR
             ? copy.oauthLinkedIdentityError
@@ -719,6 +770,7 @@ export const useSupabaseAccountAccess = ({
     setCodeSent(false);
     setMessage('');
     setError('');
+    setOauthRecovery(null);
   }, [accountKind, analytics, client, resolvedAppId, resolvedAuthConfig?.analyticsContext]);
 
   return {
@@ -742,6 +794,7 @@ export const useSupabaseAccountAccess = ({
     busy,
     message,
     error,
+    oauthRecovery,
     requestCode,
     verifyCode,
     submit,

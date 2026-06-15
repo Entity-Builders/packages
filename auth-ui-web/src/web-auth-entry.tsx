@@ -1,6 +1,7 @@
 import type {
   EntityAuthConfig,
   EntityAuthMethodDescriptor,
+  OAuthSignInOptions,
 } from '@eb-packages/auth';
 import { getEntityAuthMethodAvailability } from '@eb-packages/auth';
 import type { Provider } from '@supabase/supabase-js';
@@ -24,7 +25,10 @@ export type WebAuthEntryAccount = {
   submit: (event?: { preventDefault: () => void }) => Promise<void>;
   requestCode: () => Promise<void>;
   signInAsGuest: () => Promise<void>;
-  signInWithOAuth: (provider: Provider) => Promise<void>;
+  signInWithOAuth: (
+    provider: Provider,
+    options?: OAuthSignInOptions,
+  ) => Promise<void>;
   signOut: () => Promise<void>;
 };
 
