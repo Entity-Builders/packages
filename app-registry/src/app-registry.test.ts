@@ -33,6 +33,15 @@ describe('Entity Builders app registry', () => {
   });
 
   it('detects apps from production domains before stale metadata', () => {
+    expect(getEntityBuildersApp('entitybuilders')?.urls.canonical).toBe(
+      'https://entitybuilders.io',
+    );
+    expect(
+      detectEntityBuildersAppId({
+        redirectTo: 'https://entitybuilders.io',
+        appIdHint: 'flowtranslate',
+      }),
+    ).toBe('entitybuilders');
     expect(
       detectEntityBuildersAppId({
         redirectTo: 'https://postalpeek.app/auth',
