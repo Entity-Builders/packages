@@ -22,6 +22,10 @@ export type AuthAnalyticsProperties = Record<
 
 export type AuthAnalytics = {
   track: (event: string, properties?: AuthAnalyticsProperties) => void;
+  captureError?: (
+    error: Error | unknown,
+    context?: AuthAnalyticsProperties,
+  ) => void;
 };
 
 export type EmailOtpTokenPreparationInput = {
@@ -474,8 +478,14 @@ export const useSupabaseAccountAccess = ({
         if (!tokenToVerify) {
           throw new Error('otp_token_preparation_empty');
         }
-      } catch {
+      } catch (error) {
         setBusy(false);
+        analytics?.captureError?.(error, {
+          action: 'prepare_email_otp_token',
+          method: 'email_otp',
+          app_id: resolvedAppId || null,
+          ...resolvedAuthConfig?.analyticsContext,
+        });
         analytics?.track('auth_code_verification_failed', {
           method: 'email_otp',
           app_id: resolvedAppId || null,
