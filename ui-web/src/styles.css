@@ -392,7 +392,9 @@
   align-items: center;
   display: flex;
   flex-shrink: 0;
+  flex-wrap: wrap;
   gap: 0.5rem;
+  min-width: 0;
 }
 
 .eb-stack {
@@ -465,5 +467,6 @@
 
   .eb-status-banner__actions {
     align-self: flex-start;
+    width: 100%;
   }
 }

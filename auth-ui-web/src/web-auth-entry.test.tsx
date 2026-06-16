@@ -60,9 +60,7 @@ describe('AccountAccessPanel', () => {
     expect(
       screen.getByRole('button', { name: /probar sin cuenta/i }),
     ).toBeTruthy();
-    expect(
-      screen.queryByRole('button', { name: /github/i }),
-    ).toBeNull();
+    expect(screen.queryByRole('button', { name: /github/i })).toBeNull();
   });
 
   it('submits configured OAuth and guest actions', () => {
@@ -70,7 +68,9 @@ describe('AccountAccessPanel', () => {
 
     render(<AccountAccessPanel config={config} account={account} />);
 
-    fireEvent.click(screen.getByRole('button', { name: /continuar con google/i }));
+    fireEvent.click(
+      screen.getByRole('button', { name: /continuar con google/i }),
+    );
     expect(account.signInWithOAuth).toHaveBeenCalledWith('google');
 
     fireEvent.click(screen.getByRole('button', { name: /probar sin cuenta/i }));
@@ -99,6 +99,42 @@ describe('AccountAccessPanel', () => {
       screen.getByRole('button', { name: /conectar con google/i }),
     ).toBeTruthy();
     expect(screen.getByLabelText(/email/i)).toBeTruthy();
+  });
+
+  it('lets apps replace guest sign out with a continuation action', () => {
+    const continueAsGuest = vi.fn();
+    const account = createAccount({
+      session: { user: { id: 'guest' } },
+      isGuest: true,
+      displayName: 'Invitado',
+    });
+
+    render(
+      <AccountAccessPanel
+        config={config}
+        account={account}
+        slots={{
+          guestContent: <div>Guarda tus mejores respuestas</div>,
+          guestContinuation: (
+            <button type='button' onClick={continueAsGuest}>
+              Seguir como invitado
+            </button>
+          ),
+        }}
+      />,
+    );
+
+    expect(screen.getByText('Guarda tus mejores respuestas')).toBeTruthy();
+    expect(
+      screen.getByRole('button', { name: /seguir como invitado/i }),
+    ).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /cerrar sesion/i })).toBeNull();
+
+    fireEvent.click(
+      screen.getByRole('button', { name: /seguir como invitado/i }),
+    );
+    expect(continueAsGuest).toHaveBeenCalledTimes(1);
+    expect(account.signOut).not.toHaveBeenCalled();
   });
 
   it('renders permanent account slots and sign out', () => {
@@ -137,14 +173,18 @@ describe('AccountAccessPanel', () => {
     render(<AccountAccessPanel config={config} account={account} />);
 
     expect(
-      (screen.getByRole('button', {
-        name: /continuar con google/i,
-      }) as HTMLButtonElement).disabled,
+      (
+        screen.getByRole('button', {
+          name: /continuar con google/i,
+        }) as HTMLButtonElement
+      ).disabled,
     ).toBe(true);
     expect(
-      (screen.getByRole('button', {
-        name: /revisando/i,
-      }) as HTMLButtonElement).disabled,
+      (
+        screen.getByRole('button', {
+          name: /revisando/i,
+        }) as HTMLButtonElement
+      ).disabled,
     ).toBe(true);
   });
 });

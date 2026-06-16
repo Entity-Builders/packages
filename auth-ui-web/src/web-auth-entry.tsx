@@ -44,6 +44,7 @@ export type WebAuthEntrySlots = {
   accountSummary?: ReactNode;
   accountDetails?: ReactNode;
   guestContent?: ReactNode;
+  guestContinuation?: ReactNode;
   permanentContent?: ReactNode;
   footer?: ReactNode;
 };
@@ -59,8 +60,10 @@ export type AccountAccessModalProps = AccountAccessPanelProps & {
   closeLabel?: string;
 };
 
-const getMethods = (config: EntityAuthConfig, type: EntityAuthMethodDescriptor['type']) =>
-  config.methods.filter((method) => method.type === type && method.enabled);
+const getMethods = (
+  config: EntityAuthConfig,
+  type: EntityAuthMethodDescriptor['type'],
+) => config.methods.filter((method) => method.type === type && method.enabled);
 
 const getEmailMethod = (config: EntityAuthConfig) =>
   getMethods(config, 'email_otp')[0] || null;
@@ -87,13 +90,9 @@ export const AuthFeedback = ({
   message: string;
 }) => (
   <>
-    {error ? (
-      <EbNotice tone='danger'>{error}</EbNotice>
-    ) : null}
+    {error ? <EbNotice tone='danger'>{error}</EbNotice> : null}
 
-    {message ? (
-      <EbNotice tone='success'>{message}</EbNotice>
-    ) : null}
+    {message ? <EbNotice tone='success'>{message}</EbNotice> : null}
   </>
 );
 
@@ -108,12 +107,7 @@ export const AuthMethodButton = ({
   onClick: () => void;
   variant?: 'primary' | 'secondary';
 }) => (
-  <EbButton
-    disabled={disabled}
-    fullWidth
-    onClick={onClick}
-    variant={variant}
-  >
+  <EbButton disabled={disabled} fullWidth onClick={onClick} variant={variant}>
     {children}
   </EbButton>
 );
@@ -258,11 +252,7 @@ export const AccountAccessPanel = ({
   }
 
   if (account.authLoading) {
-    return (
-      <EbNotice tone='neutral'>
-        Revisando cuenta...
-      </EbNotice>
-    );
+    return <EbNotice tone='neutral'>Revisando cuenta...</EbNotice>;
   }
 
   if (account.session) {
@@ -275,9 +265,7 @@ export const AccountAccessPanel = ({
               ? copy.guestStateLabel || 'Modo invitado'
               : copy.permanentStateLabel || 'Cuenta conectada'}
           </div>
-          <div className='eb-auth-display-name'>
-            {account.displayName}
-          </div>
+          <div className='eb-auth-display-name'>{account.displayName}</div>
         </div>
 
         {slots?.accountSummary}
@@ -287,13 +275,16 @@ export const AccountAccessPanel = ({
         <AuthFeedback error={account.error} message={account.message} />
 
         {account.isGuest ? renderPermanentMethods(config, account) : null}
+        {account.isGuest ? slots?.guestContinuation : null}
 
-        <AuthMethodButton
-          disabled={account.busy}
-          onClick={() => void account.signOut()}
-        >
-          {copy.signOutLabel || 'Cerrar sesion'}
-        </AuthMethodButton>
+        {account.isGuest && slots?.guestContinuation ? null : (
+          <AuthMethodButton
+            disabled={account.busy}
+            onClick={() => void account.signOut()}
+          >
+            {copy.signOutLabel || 'Cerrar sesion'}
+          </AuthMethodButton>
+        )}
 
         {slots?.footer}
       </div>
