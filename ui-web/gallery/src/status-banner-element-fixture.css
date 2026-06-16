@@ -1,0 +1,55 @@
+.eb-element-fixture {
+  margin: 0 auto;
+  max-width: 64rem;
+  padding: 2rem 1rem 4rem;
+}
+
+.eb-element-fixture__hero {
+  margin-bottom: 1.5rem;
+}
+
+.eb-element-fixture__hero h1 {
+  font-size: 2rem;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.eb-element-fixture__hero p:last-child {
+  color: var(--eb-color-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 42rem;
+}
+
+.eb-element-fixture__events {
+  background: #ffffff;
+  border: 1px solid var(--eb-color-border);
+  border-radius: var(--eb-radius-lg);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.eb-element-fixture__events h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.eb-element-fixture__events ul {
+  color: var(--eb-color-muted);
+  font-size: 0.875rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 520px) {
+  .eb-element-fixture {
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 1rem 1rem 3rem;
+  }
+
+  .eb-element-fixture__hero h1 {
+    font-size: 1.75rem;
+    overflow-wrap: anywhere;
+  }
+}

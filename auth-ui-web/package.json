@@ -8,7 +8,8 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@eb-packages/auth": "workspace:*"
+    "@eb-packages/auth": "workspace:*",
+    "@eb-packages/ui-web": "workspace:*"
   },
   "peerDependencies": {
     "@supabase/supabase-js": "*",

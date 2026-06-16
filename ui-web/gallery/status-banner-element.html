@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entity Builders Status Banner Element</title>
+  </head>
+  <body>
+    <main class="eb-element-fixture">
+      <section class="eb-element-fixture__hero">
+        <p class="eb-gallery__eyebrow">Web Component Fixture</p>
+        <h1>&lt;eb-status-banner&gt;</h1>
+        <p>
+          Vanilla custom element fixture. No React runtime, no credentials, and
+          no product-specific data fetching.
+        </p>
+      </section>
+
+      <eb-status-banner
+        action-label="Continue"
+        action-value="continue"
+        body="This banner is rendered by a custom element in a plain HTML host."
+        dismiss-label="Dismiss banner"
+        dismissible
+        title="Embeddable status banner"
+        tone="success"
+      ></eb-status-banner>
+
+      <section class="eb-element-fixture__events" aria-live="polite">
+        <h2>Event log</h2>
+        <ul id="event-log">
+          <li>Waiting for interaction.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="/src/status-banner-element-fixture.ts"></script>
+  </body>
+</html>

@@ -4,6 +4,12 @@ import type {
   OAuthSignInOptions,
 } from '@eb-packages/auth';
 import { getEntityAuthMethodAvailability } from '@eb-packages/auth';
+import {
+  EbButton,
+  EbModalShell,
+  EbNotice,
+  EbTextField,
+} from '@eb-packages/ui-web';
 import type { Provider } from '@supabase/supabase-js';
 import type { FormEvent, ReactNode } from 'react';
 
@@ -82,15 +88,11 @@ export const AuthFeedback = ({
 }) => (
   <>
     {error ? (
-      <div className='rounded-md border border-rose-200 bg-rose-50 p-3 text-sm text-rose-700'>
-        {error}
-      </div>
+      <EbNotice tone='danger'>{error}</EbNotice>
     ) : null}
 
     {message ? (
-      <div className='rounded-md border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-700'>
-        {message}
-      </div>
+      <EbNotice tone='success'>{message}</EbNotice>
     ) : null}
   </>
 );
@@ -106,18 +108,14 @@ export const AuthMethodButton = ({
   onClick: () => void;
   variant?: 'primary' | 'secondary';
 }) => (
-  <button
-    type='button'
-    onClick={onClick}
+  <EbButton
     disabled={disabled}
-    className={
-      variant === 'primary'
-        ? 'inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-slate-950 px-3 text-sm font-bold text-white hover:bg-slate-800 disabled:bg-slate-300'
-        : 'inline-flex h-11 w-full items-center justify-center gap-2 rounded-md border border-slate-200 px-3 text-sm font-bold text-slate-700 hover:bg-slate-50 disabled:text-slate-300'
-    }
+    fullWidth
+    onClick={onClick}
+    variant={variant}
   >
     {children}
-  </button>
+  </EbButton>
 );
 
 export const EmailOtpForm = ({
@@ -141,60 +139,51 @@ export const EmailOtpForm = ({
   };
 
   return (
-    <form onSubmit={submit} className='space-y-4 border-t border-slate-200 pt-4'>
-      <div className='text-sm font-black text-slate-900'>{method.label}</div>
+    <form onSubmit={submit} className='eb-auth-form'>
+      <div className='eb-auth-section-title'>{method.label}</div>
 
-      <label className='block'>
-        <span className='mb-2 block text-sm font-bold text-slate-700'>
-          {copy.emailLabel || 'Email'}
-        </span>
-        <input
-          type='email'
-          value={account.email}
-          onChange={(event) => account.setEmail(event.target.value)}
-          disabled={account.busy || !availability.available}
-          className='h-11 w-full rounded-md border border-slate-200 px-3 outline-none focus:border-slate-500 disabled:bg-slate-50'
-          placeholder={copy.emailPlaceholder || 'you@example.com'}
-        />
-      </label>
+      <EbTextField
+        type='email'
+        value={account.email}
+        onChange={(event) => account.setEmail(event.target.value)}
+        disabled={account.busy || !availability.available}
+        label={copy.emailLabel || 'Email'}
+        placeholder={copy.emailPlaceholder || 'you@example.com'}
+      />
 
       {account.codeSent ? (
-        <label className='block'>
-          <span className='mb-2 block text-sm font-bold text-slate-700'>
-            {copy.codeLabel || 'Codigo'}
-          </span>
-          <input
-            inputMode='numeric'
-            value={account.code}
-            onChange={(event) => account.setCode(event.target.value)}
-            disabled={account.busy || !availability.available}
-            className='h-11 w-full rounded-md border border-slate-200 px-3 text-lg font-bold tracking-normal outline-none focus:border-slate-500 disabled:bg-slate-50'
-            placeholder={copy.codePlaceholder || '000000'}
-          />
-        </label>
+        <EbTextField
+          inputMode='numeric'
+          inputClassName='eb-auth-code-input'
+          value={account.code}
+          onChange={(event) => account.setCode(event.target.value)}
+          disabled={account.busy || !availability.available}
+          label={copy.codeLabel || 'Codigo'}
+          placeholder={copy.codePlaceholder || '000000'}
+        />
       ) : null}
 
-      <button
+      <EbButton
         type='submit'
         disabled={account.busy || !availability.available}
-        className='h-11 w-full rounded-md bg-slate-950 text-sm font-bold text-white hover:bg-slate-800 disabled:bg-slate-300'
+        fullWidth
+        variant='primary'
       >
         {account.busy
           ? 'Revisando'
           : account.codeSent
             ? copy.verifyCodeLabel || 'Verificar codigo'
             : copy.requestCodeLabel || 'Enviar codigo'}
-      </button>
+      </EbButton>
 
       {account.codeSent ? (
-        <button
-          type='button'
+        <EbButton
           onClick={() => void account.requestCode()}
           disabled={account.busy || !availability.available}
-          className='h-11 w-full rounded-md border border-slate-200 text-sm font-bold text-slate-700 hover:bg-slate-50 disabled:text-slate-300'
+          fullWidth
         >
           {copy.resendCodeLabel || 'Enviar nuevo codigo'}
-        </button>
+        </EbButton>
       ) : null}
     </form>
   );
@@ -228,13 +217,13 @@ const renderPermanentMethods = (
   const oauthMethods = getOAuthMethods(config);
 
   return (
-    <div className='space-y-4'>
+    <div className='eb-stack'>
       {emailMethod ? (
         <EmailOtpForm config={config} account={account} method={emailMethod} />
       ) : null}
 
       {oauthMethods.length ? (
-        <div className='space-y-2'>
+        <div className='eb-stack' data-gap='tight'>
           {oauthMethods.map((method) => (
             <OAuthProviderButton
               key={method.id}
@@ -258,35 +247,35 @@ export const AccountAccessPanel = ({
 
   if (!account.isSupabaseConfigured) {
     return (
-      <div className='space-y-4'>
+      <div className='eb-stack'>
         {slots?.header}
-        <div className='rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800'>
+        <EbNotice tone='warning'>
           {copy.unavailableLabel ||
             `Faltan variables de Supabase para acceder a ${config.appName}.`}
-        </div>
+        </EbNotice>
       </div>
     );
   }
 
   if (account.authLoading) {
     return (
-      <div className='rounded-md border border-slate-200 bg-slate-50 p-3 text-sm text-slate-600'>
+      <EbNotice tone='neutral'>
         Revisando cuenta...
-      </div>
+      </EbNotice>
     );
   }
 
   if (account.session) {
     return (
-      <div className='space-y-5'>
+      <div className='eb-stack' data-gap='loose'>
         {slots?.header}
-        <div className='space-y-1'>
-          <div className='text-xs font-bold uppercase text-slate-400'>
+        <div className='eb-stack' data-gap='tight'>
+          <div className='eb-auth-kicker'>
             {account.isGuest
               ? copy.guestStateLabel || 'Modo invitado'
               : copy.permanentStateLabel || 'Cuenta conectada'}
           </div>
-          <div className='truncate text-base font-bold text-slate-950'>
+          <div className='eb-auth-display-name'>
             {account.displayName}
           </div>
         </div>
@@ -312,14 +301,14 @@ export const AccountAccessPanel = ({
   }
 
   return (
-    <div className='space-y-4'>
+    <div className='eb-stack'>
       {slots?.header || (
-        <div className='space-y-1'>
-          <h2 className='text-lg font-bold text-slate-950'>
+        <div>
+          <h2 className='eb-auth-heading'>
             {copy.title || `Entrar a ${config.appName}`}
           </h2>
           {copy.subtitle ? (
-            <p className='text-sm leading-5 text-slate-500'>{copy.subtitle}</p>
+            <p className='eb-auth-body'>{copy.subtitle}</p>
           ) : null}
         </div>
       )}
@@ -352,27 +341,16 @@ export const AccountAccessModal = ({
   const panelSlots = { ...slots, header: slots?.header ?? <></> };
 
   return (
-    <div className='fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4'>
-      <div className='max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto rounded-md bg-white p-5 shadow-xl'>
-        <div className='mb-5 flex items-center justify-between gap-4'>
-          <h2 className='text-lg font-bold'>{config.copy?.title || 'Cuenta'}</h2>
-          <button
-            type='button'
-            onClick={onClose}
-            className='rounded-md p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-700'
-            title={closeLabel}
-            aria-label={closeLabel}
-          >
-            x
-          </button>
-        </div>
-
-        <AccountAccessPanel
-          config={config}
-          account={account}
-          slots={panelSlots}
-        />
-      </div>
-    </div>
+    <EbModalShell
+      closeLabel={closeLabel}
+      onClose={onClose}
+      title={config.copy?.title || 'Cuenta'}
+    >
+      <AccountAccessPanel
+        config={config}
+        account={account}
+        slots={panelSlots}
+      />
+    </EbModalShell>
   );
 };
