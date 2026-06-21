@@ -81,9 +81,24 @@ export type UsageSnapshot = {
   remainingThisMonth: number;
   charged: boolean;
   resetAt: string;
+  recovery?: UsageRecoverySnapshot;
 };
 
-export type UsageState = 'available' | 'exhausted' | 'charged';
+export type UsageRecoveryState = 'available' | 'cooldown' | 'monthly_cap';
+
+export type UsageRecoverySnapshot = {
+  state: UsageRecoveryState;
+  stage?: number;
+  cooldownUntil?: string;
+  topUpAvailable?: boolean;
+  monthlyCapReachedAt?: string;
+};
+
+export type UsageRecoveryPolicy = {
+  cooldownMinutes: number[];
+};
+
+export type UsageState = 'available' | 'cooldown' | 'exhausted' | 'charged';
 
 export type ExpressionConfidence = 'high' | 'medium' | 'low';
 

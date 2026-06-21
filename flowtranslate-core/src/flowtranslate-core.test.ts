@@ -2,17 +2,24 @@ import { describe, expect, it } from 'vitest';
 import type { StudyArticle, StudyArticleResponseMetadata } from './index';
 import {
   buildPresetRequestFingerprint,
+  buildCooldownUsageRecovery,
+  buildMonthlyCapUsageRecovery,
   chooseRecommendedLearningSituation,
+  createUsageRecoveryPolicy,
   createExpressionPairHash,
   createExpressionRequestHash,
   canSpendEstimatedTokens,
   EXPRESSION_REQUEST_HASH_VERSION,
   createPairHash,
   createRequestHash,
+  getUsageRecoveryCooldownBucket,
+  getUsageRecoveryCooldownMinutes,
+  getUsageRecoveryCooldownUntil,
   getTranslationPreset,
   getMonthlyResetAt,
   getRemainingUsage,
   getUsageState,
+  parseUsageRecoveryCooldowns,
   rankLearningSituationsFromHistory,
   selectStarterLearningSituations,
   sha256Hex,
@@ -166,6 +173,75 @@ describe('quota helpers', () => {
         charged: false,
       }),
     ).toBe('exhausted');
+  });
+
+  it('parses the tiered free recovery policy safely', () => {
+    expect(parseUsageRecoveryCooldowns()).toEqual([5, 30, 120, 1440]);
+    expect(parseUsageRecoveryCooldowns('5,30,120,1440')).toEqual([
+      5,
+      30,
+      120,
+      1440,
+    ]);
+    expect(parseUsageRecoveryCooldowns(' 2, bad, 0, 60.5, 90 ')).toEqual([
+      2,
+      90,
+    ]);
+    expect(parseUsageRecoveryCooldowns('bad')).toEqual([5, 30, 120, 1440]);
+  });
+
+  it('computes cooldown stages and analytics buckets', () => {
+    const policy = createUsageRecoveryPolicy('5,30,120,1440');
+    const now = new Date('2026-06-21T12:00:00.000Z');
+
+    expect(getUsageRecoveryCooldownMinutes(0, policy)).toBe(5);
+    expect(getUsageRecoveryCooldownMinutes(3, policy)).toBe(1440);
+    expect(getUsageRecoveryCooldownMinutes(99, policy)).toBe(1440);
+    expect(getUsageRecoveryCooldownUntil({ now, stage: 1, policy })).toBe(
+      '2026-06-21T12:30:00.000Z',
+    );
+    expect(
+      getUsageRecoveryCooldownBucket('2026-06-21T12:04:00.000Z', now),
+    ).toBe('lte_5m');
+    expect(
+      getUsageRecoveryCooldownBucket('2026-06-21T14:00:00.000Z', now),
+    ).toBe('lte_2h');
+    expect(
+      getUsageRecoveryCooldownBucket('2026-06-22T12:01:00.000Z', now),
+    ).toBe('gt_24h');
+  });
+
+  it('maps usage state from recovery state before raw quota numbers', () => {
+    expect(
+      getUsageState({
+        remainingThisMonth: 20,
+        charged: false,
+        recovery: buildCooldownUsageRecovery({
+          stage: 1,
+          cooldownUntil: '2026-06-21T12:30:00.000Z',
+        }),
+      }),
+    ).toBe('cooldown');
+    expect(
+      getUsageState({
+        remainingThisMonth: 20,
+        charged: false,
+        recovery: buildMonthlyCapUsageRecovery({
+          monthlyCapReachedAt: '2026-06-21T12:00:00.000Z',
+          topUpAvailable: true,
+        }),
+      }),
+    ).toBe('exhausted');
+    expect(
+      getUsageState({
+        remainingThisMonth: 20,
+        charged: true,
+        recovery: buildCooldownUsageRecovery({
+          stage: 1,
+          cooldownUntil: '2026-06-21T12:30:00.000Z',
+        }),
+      }),
+    ).toBe('charged');
   });
 });
 
