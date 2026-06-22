@@ -1,6 +1,7 @@
 export * from './dedupe';
 export * from './billing-state';
 export * from './direction';
+export * from './grammar-annotations';
 export * from './learning';
 export * from './practice';
 export * from './presets';

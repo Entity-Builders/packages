@@ -151,10 +151,67 @@ const ENGLISH_MARKERS = new Set([
   'you',
 ]);
 
+const AMBIGUOUS_LANGUAGE_MARKERS = new Set(['a', 'me', 'no']);
+
+const SPANGLISH_SPANISH_MARKERS = new Set([
+  ...SPANISH_MARKERS,
+  'ahora',
+  'cliente',
+  'despues',
+  'después',
+  'hoy',
+  'llego',
+  'llamada',
+  'mail',
+  'mañana',
+  'mensaje',
+  'reunion',
+  'reunión',
+  'tiempo',
+]);
+
+const SPANGLISH_ENGLISH_MARKERS = new Set([
+  ...ENGLISH_MARKERS,
+  'call',
+  'make',
+  'meeting',
+  'move',
+  'same',
+  'sorry',
+  'time',
+  'today',
+  'tomorrow',
+]);
+
 const tokenizeForDetection = (text: string) =>
   text
     .toLocaleLowerCase()
     .match(/[a-záéíóúüñ]+(?:'[a-z]+)?/gi) || [];
+
+const countSpecificLanguageSignals = (tokens: string[], markers: Set<string>) =>
+  tokens.filter(
+    (token) =>
+      markers.has(token) && !AMBIGUOUS_LANGUAGE_MARKERS.has(token),
+  ).length;
+
+export const hasMixedSpanishEnglishInput = (text: string) => {
+  const trimmed = text.trim();
+  const tokens = tokenizeForDetection(trimmed);
+  if (tokens.length < 3) return false;
+
+  const spanishSignals =
+    (/[áéíóúüñ¿¡]/i.test(trimmed) ? 1 : 0) +
+    (/\b(a la|al|hoy|mañana|no llego|no puedo|necesito|quiero)\b/i.test(trimmed)
+      ? 1
+      : 0) +
+    countSpecificLanguageSignals(tokens, SPANGLISH_SPANISH_MARKERS);
+  const englishSignals = countSpecificLanguageSignals(
+    tokens,
+    SPANGLISH_ENGLISH_MARKERS,
+  );
+
+  return spanishSignals > 0 && englishSignals > 0;
+};
 
 export const detectExpressionMode = (
   text: string,

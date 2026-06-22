@@ -6,6 +6,7 @@ import {
   detectExpressionMode,
   EXPRESSION_MODE_LABELS,
   getOppositeLanguage,
+  hasMixedSpanishEnglishInput,
   inferExpressionModeFromDirection,
   languageToPanel,
 } from './direction';
@@ -51,6 +52,18 @@ describe('direction helpers', () => {
     const short = detectExpressionMode('ok', 'improve_english');
     expect(short.mode).toBe('improve_english');
     expect(short.confidence).toBe('low');
+  });
+
+  it('detects Spanglish attempts without treating plain English as mixed', () => {
+    expect(
+      hasMixedSpanishEnglishInput(
+        'Sorry, hoy no llego a la call. Can we move it to tomorrow same time?',
+      ),
+    ).toBe(true);
+    expect(hasMixedSpanishEnglishInput('I cannot make it to the call today.')).toBe(
+      false,
+    );
+    expect(hasMixedSpanishEnglishInput('No, I cannot make it today.')).toBe(false);
   });
 
   it('allows only the latest matching response to apply', () => {

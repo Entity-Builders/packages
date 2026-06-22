@@ -124,12 +124,14 @@ export type ExpressionBreakdown = {
   changed: boolean;
   confidence: ExpressionConfidence;
   feedback: string[];
+  whatWentWell?: string;
   /** Legacy compact summary. Prefer `tenses` when clause-level tense notes are available. */
   tense?: string;
   tenses?: ExpressionTenseNote[];
   structure?: ExpressionStructurePart[];
   commonMistake?: string;
   whyThisWorks?: string;
+  reusablePattern?: string;
   alternatives?: ExpressionAlternative[];
 };
 
