@@ -263,5 +263,8 @@
         "Difícil"
       ]
     }
-  ]
+  ],
+  "digital": {
+    "is_published": true
+  }
 }

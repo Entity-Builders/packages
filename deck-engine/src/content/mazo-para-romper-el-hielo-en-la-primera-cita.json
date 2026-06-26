@@ -241,5 +241,8 @@
         "cierre"
       ]
     }
-  ]
+  ],
+  "digital": {
+    "is_published": true
+  }
 }

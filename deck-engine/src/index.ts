@@ -14,6 +14,15 @@ export type {
   PrintSpecs,
   PrintDimensions,
   DeckPricing,
+  CardFieldPlacement,
+  CardFieldPlacementKey,
+  DigitalDeckCategory,
+  DeckAccessScope,
+  DeckPrintableAccess,
+  DeckSessionMode,
+  DigitalDeckConfig,
+  DeckSharingPolicy,
+  PrintableLicenseScope,
   Edition,
   DeckOrder,
   ShippingAddress,
@@ -31,6 +40,22 @@ export type { DesignTemplateId } from './shared/design-templates.js';
 
 // Loader utilities
 export { resolveDeck, validateDeck } from './loader.js';
+
+// Digital deck utilities
+export {
+  DEFAULT_PREVIEW_CARD_COUNT,
+  drawCards,
+  flipCardFace,
+  getDeckSessionModes,
+  getDefaultSessionMode,
+  getPreviewCards,
+  getPrintableAccess,
+  getShareableCardPayload,
+  isCardPreviewable,
+  shouldRenderPrintableQr,
+  shuffleCards,
+} from './digital.js';
+export type { CardFace, DrawCardsOptions, ShareableCardPayload } from './digital.js';
 
 // Repository
 export type { IDeckRepository } from './repository.js';

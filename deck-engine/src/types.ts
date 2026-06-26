@@ -118,9 +118,30 @@ export interface DeckDesign {
   background?: string;
   text_color?: string;
   surface_color?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  layout_config?: any; // Contains pdfme config if populated from DB
+  /** Serialized visual/layout configuration persisted by Baraja authoring tools. */
+  layout_config?: unknown;
+  /** Content fields hidden by the operator in generated card backs or PDFs. */
+  hidden_fields?: Record<string, boolean>;
+  /** Which card face owns each content field in digital/admin renderers. */
+  field_placements?: Partial<Record<CardFieldPlacementKey, CardFieldPlacement>>;
+  /** Legacy shorthand migrated into hidden_fields.player_count by admin tools. */
+  hide_player_count?: boolean;
+  /** Optional QR foreground color for the selected deck template. */
+  qr_color?: string | null;
 }
+
+export type CardFieldPlacement = 'front' | 'back' | 'hidden';
+
+export type CardFieldPlacementKey =
+  | 'number'
+  | 'title'
+  | 'when_to_use'
+  | 'phrase'
+  | 'instruction'
+  | 'answer'
+  | 'fun_fact'
+  | 'qr'
+  | 'brand';
 
 // ── Pricing ───────────────────────────────────────────────────
 
@@ -193,6 +214,64 @@ export interface LandingConfig {
   leadCapture?: LandingLeadCapture;
 }
 
+// ── Digital Deck Experience ───────────────────────────────────
+
+export type DigitalDeckCategory =
+  | 'introspection'
+  | 'emotional-regulation'
+  | 'conversation'
+  | 'trivia'
+  | 'language-learning'
+  | 'team-building'
+  | 'coaching'
+  | 'creative-prompts'
+  | 'other';
+
+export type DeckSessionMode =
+  | 'browse'
+  | 'solo'
+  | 'daily-card'
+  | 'pair'
+  | 'group'
+  | 'facilitator';
+
+export type DeckAccessScope = 'preview' | 'single-deck' | 'bundle' | 'all-access';
+
+export type PrintableLicenseScope =
+  | 'personal_print'
+  | 'business_internal'
+  | 'commercial_resale';
+
+export interface DeckPrintableAccess {
+  enabled: boolean;
+  /** License scopes granted by this deck/SKU. Commercial resale should stay opt-in only. */
+  license_scopes: PrintableLicenseScope[];
+  /** Private storage key for the print-ready PDF, resolved by the consuming app. */
+  file_key?: string;
+  /** Optional companion instructions for local printers or business buyers. */
+  instructions_file_key?: string;
+  version?: string;
+  recommended_use?: string;
+}
+
+export interface DeckSharingPolicy {
+  allow_card_share?: boolean;
+  allow_bulk_export?: boolean;
+}
+
+export interface DigitalDeckConfig {
+  is_published?: boolean;
+  category?: DigitalDeckCategory;
+  tags?: string[];
+  preview_card_ids?: string[];
+  default_session_mode?: DeckSessionMode;
+  session_modes?: DeckSessionMode[];
+  purchase_sku?: string;
+  access_scopes?: DeckAccessScope[];
+  printable?: DeckPrintableAccess;
+  sharing?: DeckSharingPolicy;
+}
+
 export interface RawDeckContent {
   id: string;
   /** Which edition this deck belongs to — e.g. "cable-a-tierra" */
@@ -215,6 +294,9 @@ export interface RawDeckContent {
 
   /** Copy and configuration for the edition's landing page */
   landing_config?: LandingConfig;
+
+  /** Optional metadata used by the digital deck platform experience. */
+  digital?: DigitalDeckConfig;
 
   pricing: DeckPricing;
   cards: Card[];

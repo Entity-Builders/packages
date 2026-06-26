@@ -18,20 +18,60 @@
     "amount": 1500000,
     "currency": "ars"
   },
+  "digital": {
+    "is_published": true,
+    "category": "trivia",
+    "tags": [
+      "trivia",
+      "cine",
+      "comedia-romantica",
+      "grupos"
+    ],
+    "preview_card_ids": [
+      "corazon-de-pelicula-01",
+      "corazon-de-pelicula-02",
+      "corazon-de-pelicula-03"
+    ],
+    "default_session_mode": "group",
+    "session_modes": [
+      "group",
+      "pair",
+      "browse"
+    ],
+    "purchase_sku": "baraja_corazon_de_pelicula_v1",
+    "access_scopes": [
+      "single-deck"
+    ],
+    "printable": {
+      "enabled": true,
+      "version": "v1",
+      "license_scopes": [
+        "personal_print"
+      ],
+      "recommended_use": "Compra personal con derecho a jugar el mazo digital completo y preparar una copia impresa propia cuando el PDF companion esté aprobado."
+    },
+    "sharing": {
+      "allow_card_share": true,
+      "allow_bulk_export": false
+    }
+  },
   "cards": [
     {
       "id": "corazon-de-pelicula-01",
       "front": {
         "title": "El Orgasmo Fingido",
         "number": 1,
-        "art_prompt": "A close-up shot of a pastrami on rye sandwich on a plate in a classic New York deli, Katz's Delicatessen style. The background is slightly blurred, showing the bustling interior of the diner. The lighting is warm and reminiscent of late 80s cinematography. No people are visible, just the iconic sandwich."
+        "art_prompt": "A close-up shot of a pastrami on rye sandwich on a plate in a classic New York deli, Katz's Delicatessen style. The background is slightly blurred, showing the bustling interior of the diner. The lighting is warm and reminiscent of late 80s cinematography. No people are visible, just the iconic sandwich.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-01.jpg?v=1782345781186"
       },
       "back": {
         "phrase": "Algunas cosas no se pueden fingir. Otras, se fingen espectacularmente.",
         "when_to_use": "Para decidir quién paga la cena.",
         "instruction": "En un deli de Nueva York, una mujer le demuestra a su amigo que los hombres no pueden diferenciar un orgasmo real de uno falso, protagonizando una escena inolvidable. ¿Qué película es?",
         "answer": "When Harry Met Sally... (Cuando Harry conoció a Sally)",
-        "fun_fact": "La mujer que dice la famosa frase 'Tomaré lo mismo que ella' fue Estelle Reiner, la madre del director de la película, Rob Reiner."
+        "fun_fact": "La mujer que dice la famosa frase 'Tomaré lo mismo que ella' fue Estelle Reiner, la madre del director de la película, Rob Reiner.",
+        "back_image_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-01-back.png",
+        "back_image_versions": []
       },
       "tags": [
         "comedia romántica",
@@ -45,7 +85,8 @@
       "front": {
         "title": "La Ópera",
         "number": 2,
-        "art_prompt": "A pair of long, elegant white evening gloves resting on a plush red velvet seat inside a classic opera house. Next to them lies a stunning ruby and diamond necklace. The lighting is dim and dramatic, focusing on the luxury and elegance of the items. The style is glamorous, evoking 90s high fashion."
+        "art_prompt": "A pair of long, elegant white evening gloves resting on a plush red velvet seat inside a classic opera house. Next to them lies a stunning ruby and diamond necklace. The lighting is dim and dramatic, focusing on the luxury and elegance of the items. The style is glamorous, evoking 90s high fashion.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-02.jpg?v=1782345945451"
       },
       "back": {
         "phrase": "No importa de dónde vengas, sino cómo te sentís con un vestido de gala.",
@@ -66,7 +107,8 @@
       "front": {
         "title": "La Librería Azul",
         "number": 3,
-        "art_prompt": "A vibrant, slightly worn blue door on a quaint street in London's Notting Hill neighborhood. Next to it, the window of a travel bookshop filled with old maps and leather-bound books. The color palette is soft, with a late 90s film aesthetic. No people visible. Style of a cinematic still life."
+        "art_prompt": "A vibrant, slightly worn blue door on a quaint street in London's Notting Hill neighborhood. Next to it, the window of a travel bookshop filled with old maps and leather-bound books. The color palette is soft, with a late 90s film aesthetic. No people visible. Style of a cinematic still life.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-03.jpg?v=1782355335790"
       },
       "back": {
         "phrase": "A veces, la persona menos esperada entra por la puerta que menos esperás.",
@@ -87,7 +129,8 @@
       "front": {
         "title": "El Jersey de Reno",
         "number": 4,
-        "art_prompt": "A detailed, close-up shot of a thick, knitted, slightly goofy-looking Christmas jumper with a large reindeer head on the front. The jumper is laid out on a bed. The lighting is soft and warm, typical of a cozy English home interior. The style is realistic and textured."
+        "art_prompt": "A detailed, close-up shot of a thick, knitted, slightly goofy-looking Christmas jumper with a large reindeer head on the front. The jumper is laid out on a bed. The lighting is soft and warm, typical of a cozy English home interior. The style is realistic and textured.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-04.jpg?v=1782355096103"
       },
       "back": {
         "phrase": "El amor verdadero te quiere hasta con tu peor ropa.",
@@ -108,7 +151,11 @@
       "front": {
         "title": "El Helecho del Amor",
         "number": 5,
-        "art_prompt": "A slightly wilted potted fern sitting alone on the corner of a poker table in a modern, stylish bachelor pad apartment. Empty beer bottles and poker chips are scattered around it. The lighting is moody, like the end of a long night. The composition feels slightly comedic and sad."
+        "art_prompt": "A slightly wilted potted fern sitting alone on the corner of a poker table in a modern, stylish bachelor pad apartment. Empty beer bottles and poker chips are scattered around it. The lighting is moody, like the end of a long night. The composition feels slightly comedic and sad.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-05_v2026-06-25T23-00-39.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-05.jpg?v=1782428439349"
       },
       "back": {
         "phrase": "Podés matar una planta, pero no dejes que muera el amor.",
@@ -129,7 +176,8 @@
       "front": {
         "title": "La Serenata en las Gradas",
         "number": 6,
-        "art_prompt": "An empty high school football stadium, focusing on the concrete bleachers and a vintage microphone on a stand in the middle of the field. The sky is a clear, bright blue. The shot evokes a feeling of a grand, public gesture. Late 90s high school movie aesthetic."
+        "art_prompt": "An empty high school football stadium, focusing on the concrete bleachers and a vintage microphone on a stand in the middle of the field. The sky is a clear, bright blue. The shot evokes a feeling of a grand, public gesture. Late 90s high school movie aesthetic.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-06.jpg?v=1782356325525"
       },
       "back": {
         "phrase": "A veces, un gesto público lo cambia todo.",
@@ -150,7 +198,11 @@
       "front": {
         "title": "El Sonido del Módem",
         "number": 7,
-        "art_prompt": "A vintage computer monitor from the 90s displaying a simple, text-based email interface. The iconic 'You've Got Mail' notification is visible on screen. The room is dark, lit only by the glow of the CRT screen. Nostalgic, retro-tech vibe."
+        "art_prompt": "A vintage computer monitor from the 90s displaying a simple, text-based email interface. The iconic 'You've Got Mail' notification is visible on screen. The room is dark, lit only by the glow of the CRT screen. Nostalgic, retro-tech vibe.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-07_v2026-06-25T23-00-43.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-07.jpg?v=1782428443298"
       },
       "back": {
         "phrase": "Detrás de un anónimo puede estar la persona que buscabas.",
@@ -171,7 +223,11 @@
       "front": {
         "title": "El Limpiacristales Griego",
         "number": 8,
-        "art_prompt": "A blue bottle of Windex glass cleaner placed prominently on a lace doily on a wooden table, surrounded by Greek pastries like baklava. The setting feels like a warm, traditional family home. The lighting is bright and cheerful."
+        "art_prompt": "A blue bottle of Windex glass cleaner placed prominently on a lace doily on a wooden table, surrounded by Greek pastries like baklava. The setting feels like a warm, traditional family home. The lighting is bright and cheerful.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-08.jpg?v=1782356339240",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-08_v2026-06-25T02-58-59.jpg"
+        ]
       },
       "back": {
         "phrase": "Para cada problema, hay una solución. Y si no, usá esto.",
@@ -192,7 +248,8 @@
       "front": {
         "title": "Los Carteles",
         "number": 9,
-        "art_prompt": "A stack of large, white cue cards and a black marker resting on a snow-dusted doorstep in a charming London mews street. Christmas lights are visible in the background, slightly out of focus. The scene is quiet, intimate, and has a winter holiday feel."
+        "art_prompt": "A stack of large, white cue cards and a black marker resting on a snow-dusted doorstep in a charming London mews street. Christmas lights are visible in the background, slightly out of focus. The scene is quiet, intimate, and has a winter holiday feel.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-09.jpg?v=1782356320849"
       },
       "back": {
         "phrase": "Si no podés decirlo, escribilo.",
@@ -213,7 +270,11 @@
       "front": {
         "title": "El Ascensor de Dirty Dancing",
         "number": 10,
-        "art_prompt": "A stylish, modern backyard at night. A man is attempting to lift a woman over his head, mimicking the iconic dance move from Dirty Dancing. They are near a swimming pool. The lighting is cinematic and warm. The focus is on the clumsy but heartfelt attempt, not their faces."
+        "art_prompt": "A stylish, modern backyard at night. A man is attempting to lift a woman over his head, mimicking the iconic dance move from Dirty Dancing. They are near a swimming pool. The lighting is cinematic and warm. The focus is on the clumsy but heartfelt attempt, not their faces.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-10_v2026-06-25T23-00-46.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-10.jpg?v=1782428446953"
       },
       "back": {
         "phrase": "El movimiento perfecto no existe. La intención, sí.",
@@ -234,7 +295,11 @@
       "front": {
         "title": "El Imperio",
         "number": 11,
-        "art_prompt": "The top of the Empire State Building at dusk, with the lights of New York City starting to twinkle below. The observation deck is empty. The mood is romantic, hopeful, and slightly melancholic. The style is reminiscent of early 90s film cinematography, with a soft focus."
+        "art_prompt": "The top of the Empire State Building at dusk, with the lights of New York City starting to twinkle below. The observation deck is empty. The mood is romantic, hopeful, and slightly melancholic. The style is reminiscent of early 90s film cinematography, with a soft focus.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-11_v2026-06-25T23-00-50.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-11.jpg?v=1782428450442"
       },
       "back": {
         "phrase": "Algunas citas valen la pena la espera, y la altura.",
@@ -255,7 +320,11 @@
       "front": {
         "title": "La Propuesta Falsa",
         "number": 12,
-        "art_prompt": "An aerial view of a stunning, remote Alaskan landscape with snow-capped mountains and pine forests. In the foreground, a luxurious, modern home is visible. The composition highlights the contrast between the wild nature and the isolated luxury. The color palette is cool, with blues and whites."
+        "art_prompt": "An aerial view of a stunning, remote Alaskan landscape with snow-capped mountains and pine forests. In the foreground, a luxurious, modern home is visible. The composition highlights the contrast between the wild nature and the isolated luxury. The color palette is cool, with blues and whites.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-12_v2026-06-25T23-00-54.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-12.jpg?v=1782428454319"
       },
       "back": {
         "phrase": "A veces, una mentira te lleva al lugar donde tenías que estar.",
@@ -276,7 +345,8 @@
       "front": {
         "title": "Expectativa vs. Realidad",
         "number": 13,
-        "art_prompt": "A split-screen image. On the left side, a beautifully decorated, romantic party scene with fairy lights and happy people. On the right side, the same location but stark, empty, and with harsh, cold lighting. The aesthetic is indie film, with a blue and orange color grade."
+        "art_prompt": "A split-screen image. On the left side, a beautifully decorated, romantic party scene with fairy lights and happy people. On the right side, the same location but stark, empty, and with harsh, cold lighting. The aesthetic is indie film, with a blue and orange color grade.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-13.jpg?v=1782356343531"
       },
       "back": {
         "phrase": "Lo que imaginás y lo que es, casi nunca coinciden.",
@@ -297,7 +367,11 @@
       "front": {
         "title": "La Canción en el Restaurante",
         "number": 14,
-        "art_prompt": "A chaotic scene in a fancy restaurant. A large table is set for a rehearsal dinner. A lobster is on a plate. In the background, a man stands on a chair, leading a sing-along. The image is dynamic and full of energy, captured with a slightly grainy, 90s film look."
+        "art_prompt": "A chaotic scene in a fancy restaurant. A large table is set for a rehearsal dinner. A lobster is on a plate. In the background, a man stands on a chair, leading a sing-along. The image is dynamic and full of energy, captured with a slightly grainy, 90s film look.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-14_v2026-06-25T23-00-57.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-14.jpg?v=1782428457707"
       },
       "back": {
         "phrase": "Si no podés detener una boda, al menos arruiná la cena.",
@@ -318,7 +392,8 @@
       "front": {
         "title": "El Gnomo Viajero",
         "number": 15,
-        "art_prompt": "A classic garden gnome with a red hat and white beard, photographed like a tourist in front of the pyramids of Giza. The photo has a slightly faded, vintage postcard look. The composition is whimsical and surreal."
+        "art_prompt": "A classic garden gnome with a red hat and white beard, photographed like a tourist in front of the pyramids of Giza. The photo has a slightly faded, vintage postcard look. The composition is whimsical and surreal.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-15.jpg?v=1782428460835"
       },
       "back": {
         "phrase": "Los pequeños detalles pueden cambiar el mundo de alguien.",
@@ -339,7 +414,8 @@
       "front": {
         "title": "La Boda Bajo la Lluvia",
         "number": 16,
-        "art_prompt": "A beautiful, windswept coastline in Cornwall, England. A large white wedding tent is being battered by heavy rain and wind. Red fabric decorations are flying in the air. The mood is chaotic but strangely beautiful and romantic. Cinematic style with desaturated colors."
+        "art_prompt": "A beautiful, windswept coastline in Cornwall, England. A large white wedding tent is being battered by heavy rain and wind. Red fabric decorations are flying in the air. The mood is chaotic but strangely beautiful and romantic. Cinematic style with desaturated colors.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-16.jpg?v=1782356347520"
       },
       "back": {
         "phrase": "El día perfecto no existe. El momento perfecto, sí.",
@@ -360,7 +436,11 @@
       "front": {
         "title": "La Reacción Alérgica",
         "number": 17,
-        "art_prompt": "A close-up shot of a man's face, but only from the nose down. His cheeks and chin are extremely swollen and red. In the background, a blurry pharmacy interior is visible. The image is brightly lit and focuses on the comedic and painful aspect of the situation."
+        "art_prompt": "A close-up shot of a man's face, but only from the nose down. His cheeks and chin are extremely swollen and red. In the background, a blurry pharmacy interior is visible. The image is brightly lit and focuses on the comedic and painful aspect of the situation.",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-17_v2026-06-25T23-01-04.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-17.jpg?v=1782428464431"
       },
       "back": {
         "phrase": "Hasta el plan más perfecto puede fallar por un simple marisco.",
@@ -381,7 +461,8 @@
       "front": {
         "title": "El Musical de Drácula",
         "number": 18,
-        "art_prompt": "A dimly lit stage with dramatic, gothic set pieces. In the center, a collection of puppets, including a vampire with a large cape, are arranged as if performing an opera. The lighting is theatrical, with deep reds and shadows. The mood is absurdly serious and melodramatic."
+        "art_prompt": "A dimly lit stage with dramatic, gothic set pieces. In the center, a collection of puppets, including a vampire with a large cape, are arranged as if performing an opera. The lighting is theatrical, with deep reds and shadows. The mood is absurdly serious and melodramatic.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18.jpg?v=1782428467470"
       },
       "back": {
         "phrase": "A veces, tu proyecto más ridículo es el que te salva.",
@@ -402,7 +483,11 @@
       "front": {
         "title": "El Intercambio de Casas",
         "number": 19,
-        "art_prompt": "A diptych image. On the left, a cozy, snow-covered English cottage with a warm light glowing from the windows. On the right, a luxurious, modern mansion in sunny Los Angeles with a large swimming pool. The contrast between the two lifestyles is the central theme."
+        "art_prompt": "A diptych image. On the left, a cozy, snow-covered English cottage with a warm light glowing from the windows. On the right, a luxurious, modern mansion in sunny Los Angeles with a large swimming pool. The contrast between the two lifestyles is the central theme.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-19.jpg?v=1782356361187",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-19_v2026-06-25T02-59-21.jpg"
+        ]
       },
       "back": {
         "phrase": "Para encontrarte, a veces tenés que irte al lugar más lejano.",
@@ -423,7 +508,8 @@
       "front": {
         "title": "El Concurso de Baile",
         "number": 20,
-        "art_prompt": "A dimly lit ballroom. A couple is mid-dance, but the focus is on their feet: one pair in formal dance shoes, the other in running sneakers. Confetti litters the floor around them. The image captures a mix of formal competition and raw, unconventional energy."
+        "art_prompt": "A dimly lit ballroom. A couple is mid-dance, but the focus is on their feet: one pair in formal dance shoes, the other in running sneakers. Confetti litters the floor around them. The image captures a mix of formal competition and raw, unconventional energy.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-20.jpg?v=1782428486380"
       },
       "back": {
         "phrase": "Incluso en el caos, se puede encontrar un ritmo compartido.",
@@ -444,7 +530,8 @@
       "front": {
         "title": "El Gel para el Pelo",
         "number": 21,
-        "art_prompt": "A close-up shot of a single strand of hair standing straight up, stiffly styled against a bright blue sky. The texture of the hair is exaggerated, looking almost like a wire. The image is shot in the style of a late 90s comedy, with vibrant, saturated colors and slightly absurd framing."
+        "art_prompt": "A close-up shot of a single strand of hair standing straight up, stiffly styled against a bright blue sky. The texture of the hair is exaggerated, looking almost like a wire. The image is shot in the style of a late 90s comedy, with vibrant, saturated colors and slightly absurd framing.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-21.jpg?v=1782428489778"
       },
       "back": {
         "phrase": "Un malentendido puede llevar a un peinado inolvidable.",
@@ -465,7 +552,8 @@
       "front": {
         "title": "El Circo",
         "number": 22,
-        "art_prompt": "A surreal, colorful image of empty seats in a vast theater, designed for a Cirque du Soleil performance. The stage is elaborate and fantastical. The perspective is from the point of view of someone sitting in the audience, feeling overwhelmed by the scale and strangeness of the show. Saturated colors and wide-angle lens effect."
+        "art_prompt": "A surreal, colorful image of empty seats in a vast theater, designed for a Cirque du Soleil performance. The stage is elaborate and fantastical. The perspective is from the point of view of someone sitting in the audience, feeling overwhelmed by the scale and strangeness of the show. Saturated colors and wide-angle lens effect.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-22.jpg?v=1782428493010"
       },
       "back": {
         "phrase": "A veces, el viaje más extraño es el que te obliga a madurar.",
@@ -486,7 +574,8 @@
       "front": {
         "title": "El Mismo Día",
         "number": 23,
-        "art_prompt": "An inflatable pizza slice pool float drifts lazily in a brightly lit swimming pool in the middle of a desert landscape. The background shows Joshua trees and the stark, modern architecture of a Palm Springs home. The lighting is harsh and sunny, capturing the feeling of an endless summer day. Saturated, vibrant colors reminiscent of indie film cinematography."
+        "art_prompt": "An inflatable pizza slice pool float drifts lazily in a brightly lit swimming pool in the middle of a desert landscape. The background shows Joshua trees and the stark, modern architecture of a Palm Springs home. The lighting is harsh and sunny, capturing the feeling of an endless summer day. Saturated, vibrant colors reminiscent of indie film cinematography.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-23.jpg?v=1782356364681"
       },
       "back": {
         "phrase": "Si tuvieras que repetir un día para siempre, ¿qué harías?",
@@ -507,7 +596,8 @@
       "front": {
         "title": "Borrar Recuerdos",
         "number": 24,
-        "art_prompt": "A business card with a minimalist, slightly clinical design. The company name 'Lacuna, Inc.' is visible, with the tagline 'Remember to forget.' The card is resting on a stark white surface. The aesthetic is clean, cold, and impersonal, like a medical facility."
+        "art_prompt": "A business card with a minimalist, slightly clinical design. The company name 'Lacuna, Inc.' is visible, with the tagline 'Remember to forget.' The card is resting on a stark white surface. The aesthetic is clean, cold, and impersonal, like a medical facility.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-24.jpg?v=1782428498199"
       },
       "back": {
         "phrase": "Incluso si borrás la memoria, el corazón recuerda.",
@@ -528,7 +618,8 @@
       "front": {
         "title": "El Tren a Viena",
         "number": 25,
-        "art_prompt": "The interior of a European train car from the 1990s. Two empty seats face each other next to a large window showing a blurry, green landscape passing by. A book lies open on one of the seats. The atmosphere is intimate and suggests a long conversation."
+        "art_prompt": "The interior of a European train car from the 1990s. Two empty seats face each other next to a large window showing a blurry, green landscape passing by. A book lies open on one of the seats. The atmosphere is intimate and suggests a long conversation.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-25.jpg?v=1782428501331"
       },
       "back": {
         "phrase": "Una noche puede contener una vida entera.",
@@ -549,7 +640,8 @@
       "front": {
         "title": "El Video Diario",
         "number": 26,
-        "art_prompt": "A stack of VHS tapes with handwritten labels like 'Lunes', 'Martes', 'Miércoles'. They are sitting next to an old VCR player. The image has a warm, nostalgic feel of home videos from the early 2000s."
+        "art_prompt": "A stack of VHS tapes with handwritten labels like 'Lunes', 'Martes', 'Miércoles'. They are sitting next to an old VCR player. The image has a warm, nostalgic feel of home videos from the early 2000s.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-26.jpg?v=1782428504596"
       },
       "back": {
         "phrase": "Cada día es una oportunidad para un primer beso.",
@@ -570,7 +662,8 @@
       "front": {
         "title": "La Langosta Fugitiva",
         "number": 27,
-        "art_prompt": "Two live lobsters crawling on the floor of a messy, bohemian-style kitchen. Pots and pans are on the counter. The scene is chaotic and comedic. The style evokes the aesthetic of 1970s New York independent cinema, with natural lighting and a slightly grainy texture."
+        "art_prompt": "Two live lobsters crawling on the floor of a messy, bohemian-style kitchen. Pots and pans are on the counter. The scene is chaotic and comedic. The style evokes the aesthetic of 1970s New York independent cinema, with natural lighting and a slightly grainy texture.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-27.jpg?v=1782428508471"
       },
       "back": {
         "phrase": "El amor es como intentar cocinar una langosta. Complicado y alguien puede salir herido.",
@@ -591,7 +684,8 @@
       "front": {
         "title": "Las Listas Top 5",
         "number": 28,
-        "art_prompt": "A close-up of a vinyl record spinning on a turntable. The focus is on the needle in the groove. The background is a messy room filled with stacks of records and music posters, evoking a well-loved independent record store. The lighting is warm and intimate."
+        "art_prompt": "A close-up of a vinyl record spinning on a turntable. The focus is on the needle in the groove. The background is a messy room filled with stacks of records and music posters, evoking a well-loved independent record store. The lighting is warm and intimate.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-28.jpg?v=1782428511594"
       },
       "back": {
         "phrase": "Somos lo que nos gusta, no lo que somos.",
@@ -612,7 +706,8 @@
       "front": {
         "title": "El Pinot Noir",
         "number": 29,
-        "art_prompt": "A bottle of Pinot Noir wine and a glass, half-full, sitting on a wooden table in a rustic California vineyard tasting room. Sunlight streams through a window, illuminating the deep red of the wine. The mood is contemplative and sophisticated. The style is cinematic with a warm, golden hour color palette."
+        "art_prompt": "A bottle of Pinot Noir wine and a glass, half-full, sitting on a wooden table in a rustic California vineyard tasting room. Sunlight streams through a window, illuminating the deep red of the wine. The mood is contemplative and sophisticated. The style is cinematic with a warm, golden hour color palette.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-29.jpg?v=1782428515044"
       },
       "back": {
         "phrase": "Un buen vino, como una buena relación, es complejo y difícil de cultivar.",
@@ -633,7 +728,8 @@
       "front": {
         "title": "La Primera Boda",
         "number": 30,
-        "art_prompt": "A Scottish bagpiper in full traditional kilt, playing his instrument on a misty green hill. The focus is on the bagpiper, with a blurry view of an old church in the background. The atmosphere is charmingly chaotic and very British. Early 90s film aesthetic."
+        "art_prompt": "A Scottish bagpiper in full traditional kilt, playing his instrument on a misty green hill. The focus is on the bagpiper, with a blurry view of an old church in the background. The atmosphere is charmingly chaotic and very British. Early 90s film aesthetic.",
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-30.jpg?v=1782428518415"
       },
       "back": {
         "phrase": "Siempre la dama de honor, nunca la novia... hasta que dejás de serlo.",

@@ -150,8 +150,6 @@ export function buildArtDirectorMetaPrompt(metadata: BarajaTemplateMetadata): st
     hasFooterZone: metadata.hasFooterDivider ?? false,
   };
   const isBorderless = layout.borderless;
-  const faceLabel = metadata.face === 'front' ? 'FRONT face (illustration)' : 'BACK face (content canvas)';
-
   return `You are an expert Art Director for a modern, premium design studio.
 
 You are designing RAW DIGITAL ARTWORK. 
@@ -212,9 +210,6 @@ export function buildStructuralConstraints(metadata: BarajaTemplateMetadata): st
     hasCentralImageZone: metadata.hasImagePortrait ?? false,
     hasFooterZone: metadata.hasFooterDivider ?? false,
   };
-  const cardType: CardType = metadata.cardType ?? 'custom';
-  const faceLabel = metadata.face === 'back' ? 'back (content) face' : 'front (illustration) face';
-
   const parts: string[] = [];
 
   // 1. Card identity

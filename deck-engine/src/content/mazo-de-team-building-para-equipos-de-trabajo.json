@@ -24,7 +24,8 @@
       "front": {
         "title": "El Talento Oculto",
         "number": 1,
-        "art_prompt": "Abstract expressionist painting with a single, brightly colored thread weaving through a complex, monochrome geometric pattern, representing a hidden skill within a structured system. Textured canvas, impasto technique."
+        "art_prompt": "Abstract expressionist painting with a single, brightly colored thread weaving through a complex, monochrome geometric pattern, representing a hidden skill within a structured system. Textured canvas, impasto technique.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-01.jpg?v=1782424564005"
       },
       "back": {
         "phrase": "Todos servimos para algo que no figura en nuestro CV.",
@@ -41,7 +42,8 @@
       "front": {
         "title": "La Mascota Oficial",
         "number": 2,
-        "art_prompt": "A surrealist collage combining elements of a modern office (a laptop, a coffee mug) with anatomical parts of three different animals, like the head of a capybara, the wings of a quetzal, and the tail of a fox. Vintage paper texture."
+        "art_prompt": "A surrealist collage combining elements of a modern office (a laptop, a coffee mug) with anatomical parts of three different animals, like the head of a capybara, the wings of a quetzal, and the tail of a fox. Vintage paper texture.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-02.jpg?v=1782424566817"
       },
       "back": {
         "phrase": "Si este equipo fuera un animal, ¿cuál sería? Y más importante, ¿por qué?",
@@ -59,7 +61,8 @@
       "front": {
         "title": "El Pitch Imposible",
         "number": 3,
-        "art_prompt": "A minimalist, single-line drawing of a person confidently presenting a diagram of a square wheel to a skeptical audience. The style is reminiscent of a New Yorker cartoon, but without text. Charcoal on off-white paper."
+        "art_prompt": "A minimalist, single-line drawing of a person confidently presenting a diagram of a square wheel to a skeptical audience. The style is reminiscent of a New Yorker cartoon, but without text. Charcoal on off-white paper.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-03.jpg?v=1782424570495"
       },
       "back": {
         "phrase": "Las mejores ideas a veces suenan como las peores.",
@@ -77,7 +80,8 @@
       "front": {
         "title": "La Banda Sonora",
         "number": 4,
-        "art_prompt": "Close-up shot of a vintage cassette tape, with a handwritten label that is slightly blurred. The background is a chaotic but colorful desk. The lighting is warm and nostalgic. Macro photography, shallow depth of field."
+        "art_prompt": "Close-up shot of a vintage cassette tape, with a handwritten label that is slightly blurred. The background is a chaotic but colorful desk. The lighting is warm and nostalgic. Macro photography, shallow depth of field.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-04.jpg?v=1782424574835"
       },
       "back": {
         "phrase": "Hay una canción para cada momento. Incluso para esa reunión de las 8 AM.",
@@ -95,7 +99,8 @@
       "front": {
         "title": "El Eslogan Honesto",
         "number": 5,
-        "art_prompt": "A gritty, urban art style photo of a stenciled graffiti on a brick wall. The graffiti is a parody of a famous corporate logo, but with a brutally honest tagline underneath. High contrast black and white photography."
+        "art_prompt": "A gritty, urban art style photo of a stenciled graffiti on a brick wall. The graffiti is a parody of a famous corporate logo, but with a brutally honest tagline underneath. High contrast black and white photography.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-05.jpg?v=1782424577905"
       },
       "back": {
         "phrase": "Si no pudiéramos mentir en el marketing...",
@@ -113,7 +118,8 @@
       "front": {
         "title": "El Dibujo a Ciegas",
         "number": 6,
-        "art_prompt": "A messy, chaotic but charming charcoal drawing of a cat, clearly drawn by someone without looking at the paper. The lines are uncertain and overlap. The drawing is on a piece of crumpled paper on a wooden table."
+        "art_prompt": "A messy, chaotic but charming charcoal drawing of a cat, clearly drawn by someone without looking at the paper. The lines are uncertain and overlap. The drawing is on a piece of crumpled paper on a wooden table.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-06.jpg?v=1782424581492"
       },
       "back": {
         "phrase": "La comunicación no siempre es visual.",
@@ -131,7 +137,8 @@
       "front": {
         "title": "El Primer Recuerdo",
         "number": 7,
-        "art_prompt": "A grainy, overexposed photograph in the style of the 90s, showing a child's worn-out sneakers next to a puddle. The focus is soft, evoking a distant memory. Lomography aesthetic."
+        "art_prompt": "A grainy, overexposed photograph in the style of the 90s, showing a child's worn-out sneakers next to a puddle. The focus is soft, evoking a distant memory. Lomography aesthetic.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-07.jpg?v=1782424585559"
       },
       "back": {
         "phrase": "Todos empezamos en algún lado.",
@@ -149,7 +156,8 @@
       "front": {
         "title": "La Isla Desierta",
         "number": 8,
-        "art_prompt": "A tidy, aesthetically pleasing 'knolling' arrangement of three seemingly unrelated objects on a plain background: a worn leather-bound book, a durable multi-tool, and a small potted succulent. Top-down flat lay photography."
+        "art_prompt": "A tidy, aesthetically pleasing 'knolling' arrangement of three seemingly unrelated objects on a plain background: a worn leather-bound book, a durable multi-tool, and a small potted succulent. Top-down flat lay photography.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-08.jpg?v=1782424589052"
       },
       "back": {
         "phrase": "La supervivencia depende de la elección.",
@@ -167,7 +175,8 @@
       "front": {
         "title": "El Emoji Humano",
         "number": 9,
-        "art_prompt": "A high-contrast, pop-art style portrait of a person making an exaggerated facial expression, similar to the laughing-crying emoji. The background is a solid, vibrant yellow. Andy Warhol inspired."
+        "art_prompt": "A high-contrast, pop-art style portrait of a person making an exaggerated facial expression, similar to the laughing-crying emoji. The background is a solid, vibrant yellow. Andy Warhol inspired.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-09.jpg?v=1782424592435"
       },
       "back": {
         "phrase": "Una cara vale más que mil palabras en Slack.",
@@ -185,7 +194,8 @@
       "front": {
         "title": "El Placer Culpable",
         "number": 10,
-        "art_prompt": "A dimly lit, cinematic shot of a half-eaten box of cheap pizza on a coffee table in front of a flickering TV screen showing a reality show. The mood is cozy and slightly mischievous."
+        "art_prompt": "A dimly lit, cinematic shot of a half-eaten box of cheap pizza on a coffee table in front of a flickering TV screen showing a reality show. The mood is cozy and slightly mischievous.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-10.jpg?v=1782424596198"
       },
       "back": {
         "phrase": "Lo que hacemos cuando nadie nos ve dice mucho.",
@@ -203,7 +213,8 @@
       "front": {
         "title": "El Nuevo Feriado",
         "number": 11,
-        "art_prompt": "A surrealist painting of a calendar page where a new date is circled in gold leaf. From the circle, small, whimsical objects are floating out: a miniature hammock, a tiny cocktail, a floating piece of cake. Style of Remedios Varo."
+        "art_prompt": "A surrealist painting of a calendar page where a new date is circled in gold leaf. From the circle, small, whimsical objects are floating out: a miniature hammock, a tiny cocktail, a floating piece of cake. Style of Remedios Varo.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-11.jpg?v=1782424600139"
       },
       "back": {
         "phrase": "Siempre hay una buena excusa para no trabajar.",
@@ -221,7 +232,8 @@
       "front": {
         "title": "La Torre de Papel",
         "number": 12,
-        "art_prompt": "Architectural photograph of a fragile, yet surprisingly tall tower made entirely of white office paper, standing on a polished concrete floor. The lighting is dramatic, casting long shadows. Minimalist aesthetic."
+        "art_prompt": "Architectural photograph of a fragile, yet surprisingly tall tower made entirely of white office paper, standing on a polished concrete floor. The lighting is dramatic, casting long shadows. Minimalist aesthetic.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-12.jpg?v=1782424605828"
       },
       "back": {
         "phrase": "Con poco se puede hacer mucho. O un desastre.",
@@ -239,7 +251,8 @@
       "front": {
         "title": "El Peor Consejo",
         "number": 13,
-        "art_prompt": "A vintage, 1950s-style illustration of a person confidently pointing in the wrong direction, while another person looks on, confused. The colors are faded and the texture is like an old magazine print."
+        "art_prompt": "A vintage, 1950s-style illustration of a person confidently pointing in the wrong direction, while another person looks on, confused. The colors are faded and the texture is like an old magazine print.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-13.jpg?v=1782424608877"
       },
       "back": {
         "phrase": "A veces, saber qué no hacer es lo más importante.",
@@ -257,7 +270,8 @@
       "front": {
         "title": "El Manual de Usuario",
         "number": 14,
-        "art_prompt": "A detailed, technical drawing in the style of a vintage IKEA instruction manual, but instead of assembling furniture, it shows diagrams on 'how to interact with a human': how to offer coffee, how to give feedback, etc. Blue and white line art."
+        "art_prompt": "A detailed, technical drawing in the style of a vintage IKEA instruction manual, but instead of assembling furniture, it shows diagrams on 'how to interact with a human': how to offer coffee, how to give feedback, etc. Blue and white line art.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-14.jpg?v=1782424613405"
       },
       "back": {
         "phrase": "Si vinieras con instrucciones, ¿qué dirían?",
@@ -275,7 +289,8 @@
       "front": {
         "title": "La Frase Prohibida",
         "number": 15,
-        "art_prompt": "A stark, minimalist graphic design. A common corporate buzzword like 'synergy' is shown with a thick red 'censored' bar over it. The background is a clean, corporate gray."
+        "art_prompt": "A stark, minimalist graphic design. A common corporate buzzword like 'synergy' is shown with a thick red 'censored' bar over it. The background is a clean, corporate gray.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-15.jpg?v=1782424617252"
       },
       "back": {
         "phrase": "Hay palabras que ya no resisten más.",
@@ -293,7 +308,8 @@
       "front": {
         "title": "El Viaje en el Tiempo",
         "number": 16,
-        "art_prompt": "A double exposure photograph blending the face of a young person looking hopefully towards the future with a distorted, glitch-art image of a futuristic cityscape. The colors are neon and electric."
+        "art_prompt": "A double exposure photograph blending the face of a young person looking hopefully towards the future with a distorted, glitch-art image of a futuristic cityscape. The colors are neon and electric.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-16.jpg?v=1782424620258"
       },
       "back": {
         "phrase": "Tu 'yo' de 15 años no entendería tu trabajo actual.",
@@ -311,7 +327,8 @@
       "front": {
         "title": "El Objeto Parlante",
         "number": 17,
-        "art_prompt": "A still life painting of a mundane office object, like a stapler or a coffee machine, but it has a single, large, photorealistic human eye painted on it, staring directly at the viewer. Oil on canvas, chiaroscuro lighting."
+        "art_prompt": "A still life painting of a mundane office object, like a stapler or a coffee machine, but it has a single, large, photorealistic human eye painted on it, staring directly at the viewer. Oil on canvas, chiaroscuro lighting.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-17.jpg?v=1782424623595"
       },
       "back": {
         "phrase": "Si las paredes de la oficina hablaran...",
@@ -329,7 +346,8 @@
       "front": {
         "title": "Un Minuto de Fama",
         "number": 18,
-        "art_prompt": "A shot from behind a person standing on a small stage, facing a single, bright spotlight in an otherwise dark room. The atmosphere is intimate and slightly nerve-wracking. High contrast, film noir aesthetic."
+        "art_prompt": "A shot from behind a person standing on a small stage, facing a single, bright spotlight in an otherwise dark room. The atmosphere is intimate and slightly nerve-wracking. High contrast, film noir aesthetic.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-18.jpg?v=1782424628354"
       },
       "back": {
         "phrase": "Todos tenemos algo que enseñar.",
@@ -347,7 +365,8 @@
       "front": {
         "title": "La App Innecesaria",
         "number": 19,
-        "art_prompt": "A colorful, flat design illustration of a smartphone screen showing the interface of a ridiculous app, for example, an app that rates pigeons. The design is clean and professional, which contrasts with the uselessness of the concept."
+        "art_prompt": "A colorful, flat design illustration of a smartphone screen showing the interface of a ridiculous app, for example, an app that rates pigeons. The design is clean and professional, which contrasts with the uselessness of the concept.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-19.jpg?v=1782424631579"
       },
       "back": {
         "phrase": "No toda solución necesita un problema.",
@@ -365,7 +384,8 @@
       "front": {
         "title": "El Espíritu Animal",
         "number": 20,
-        "art_prompt": "A composite image in the style of a mythological painting. A programmer is sitting at a desk, but their shadow on the wall is not human, but that of a giant, patient octopus, its tentacles managing multiple keyboards. Dramatic, warm lighting."
+        "art_prompt": "A composite image in the style of a mythological painting. A programmer is sitting at a desk, but their shadow on the wall is not human, but that of a giant, patient octopus, its tentacles managing multiple keyboards. Dramatic, warm lighting.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-20.jpg?v=1782424635255"
       },
       "back": {
         "phrase": "En el fondo, todos somos un poco animales.",
@@ -383,7 +403,8 @@
       "front": {
         "title": "El Idioma Inventado",
         "number": 21,
-        "art_prompt": "An old, yellowed page from a fictional dictionary, filled with nonsensical words and their equally absurd definitions, complete with etymological diagrams. The style mimics a page from the Oxford English Dictionary."
+        "art_prompt": "An old, yellowed page from a fictional dictionary, filled with nonsensical words and their equally absurd definitions, complete with etymological diagrams. The style mimics a page from the Oxford English Dictionary.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-21.jpg?v=1782424638750"
       },
       "back": {
         "phrase": "A veces, ni con palabras nos entendemos.",
@@ -401,7 +422,8 @@
       "front": {
         "title": "La Compra Impulsiva",
         "number": 22,
-        "art_prompt": "A photograph of a ridiculous object, like a banana-shaped phone, sitting on a clean, modern desk next to a sleek laptop. The contrast highlights the absurdity of the purchase. Product photography style."
+        "art_prompt": "A photograph of a ridiculous object, like a banana-shaped phone, sitting on a clean, modern desk next to a sleek laptop. The contrast highlights the absurdity of the purchase. Product photography style.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-22.jpg?v=1782424642315"
       },
       "back": {
         "phrase": "El dinero no compra la felicidad, pero compra cosas raras.",
@@ -419,7 +441,8 @@
       "front": {
         "title": "El Rediseño del Logo",
         "number": 23,
-        "art_prompt": "A deconstructed version of a famous logo, broken into its basic geometric shapes and colors, laid out on a designer's grid. The style is clean, Swiss graphic design."
+        "art_prompt": "A deconstructed version of a famous logo, broken into its basic geometric shapes and colors, laid out on a designer's grid. The style is clean, Swiss graphic design.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-23.jpg?v=1782424646033"
       },
       "back": {
         "phrase": "Toda marca tiene una esencia. A veces, está escondida.",
@@ -437,7 +460,8 @@
       "front": {
         "title": "El Agradecimiento Anónimo",
         "number": 24,
-        "art_prompt": "A close-up photograph of several colorful sticky notes on a bulletin board. One of them, in the center, has a simple, handwritten 'Gracias' on it. The focus is sharp on the note, with the background blurred."
+        "art_prompt": "A close-up photograph of several colorful sticky notes on a bulletin board. One of them, in the center, has a simple, handwritten 'Gracias' on it. The focus is sharp on the note, with the background blurred.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-24.jpg?v=1782424649722"
       },
       "back": {
         "phrase": "Hay cosas que no se dicen lo suficiente.",
@@ -455,7 +479,8 @@
       "front": {
         "title": "El Superpoder de Oficina",
         "number": 25,
-        "art_prompt": "A comic book style illustration of an ordinary office worker who is secretly a superhero. Their superpower is mundane but useful: their coffee cup never gets cold. Dynamic pose, vibrant colors."
+        "art_prompt": "A comic book style illustration of an ordinary office worker who is secretly a superhero. Their superpower is mundane but useful: their coffee cup never gets cold. Dynamic pose, vibrant colors.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-25.jpg?v=1782424653054"
       },
       "back": {
         "phrase": "Si pudieras cambiar algo de la rutina diaria...",
@@ -473,7 +498,8 @@
       "front": {
         "title": "El Título de la Película",
         "number": 26,
-        "art_prompt": "A vintage-style movie poster for a film about your current project. The design is dramatic, with bold typography and stylized illustrations of the team members as action heroes. 1980s blockbuster poster aesthetic."
+        "art_prompt": "A vintage-style movie poster for a film about your current project. The design is dramatic, with bold typography and stylized illustrations of the team members as action heroes. 1980s blockbuster poster aesthetic.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-26.jpg?v=1782424656643"
       },
       "back": {
         "phrase": "Toda historia merece un buen título.",
@@ -491,7 +517,8 @@
       "front": {
         "title": "El Retrato de 30 Segundos",
         "number": 27,
-        "art_prompt": "An abstract, continuous line portrait, drawn quickly and without lifting the pen from the paper. The result is distorted but captures an essence of the person. The drawing is on a napkin next to a coffee stain."
+        "art_prompt": "An abstract, continuous line portrait, drawn quickly and without lifting the pen from the paper. The result is distorted but captures an essence of the person. The drawing is on a napkin next to a coffee stain.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-27.jpg?v=1782424659705"
       },
       "back": {
         "phrase": "La percepción es una forma de arte.",
@@ -509,7 +536,8 @@
       "front": {
         "title": "El Juramento del Equipo",
         "number": 28,
-        "art_prompt": "A photograph of several hands of different people, all placed one on top of the other in the center of a table, as if making a pact. The lighting is warm and emphasizes unity. Documentary photography style."
+        "art_prompt": "A photograph of several hands of different people, all placed one on top of the other in the center of a table, as if making a pact. The lighting is warm and emphasizes unity. Documentary photography style.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-28.jpg?v=1782424663690"
       },
       "back": {
         "phrase": "Las palabras crean realidades.",
@@ -527,7 +555,8 @@
       "front": {
         "title": "La Noticia del Futuro",
         "number": 29,
-        "art_prompt": "The front page of a futuristic newspaper, with a bold headline announcing a great achievement by your company or team. The design is sleek and minimalist, with holographic elements suggested in the layout."
+        "art_prompt": "The front page of a futuristic newspaper, with a bold headline announcing a great achievement by your company or team. The design is sleek and minimalist, with holographic elements suggested in the layout.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-29.jpg?v=1782424668345"
       },
       "back": {
         "phrase": "Imaginar el éxito es el primer paso.",
@@ -545,7 +574,8 @@
       "front": {
         "title": "La Playlist del Proyecto",
         "number": 30,
-        "art_prompt": "A dynamic, abstract visualization of sound waves and musical notes flowing and mixing together. The colors are vibrant and reflect different moods, from intense red to calm blue. Digital art."
+        "art_prompt": "A dynamic, abstract visualization of sound waves and musical notes flowing and mixing together. The colors are vibrant and reflect different moods, from intense red to calm blue. Digital art.",
+        "art_url": "/assets/editions/mazo-de-team-building-para-equipos-de-trabajo/ddo-30.jpg?v=1782424671709"
       },
       "back": {
         "phrase": "Cada proyecto tiene su propio ritmo.",
@@ -558,5 +588,8 @@
         "colaboración"
       ]
     }
-  ]
+  ],
+  "digital": {
+    "is_published": true
+  }
 }

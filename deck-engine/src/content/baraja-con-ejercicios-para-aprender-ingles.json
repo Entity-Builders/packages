@@ -24,7 +24,8 @@
       "front": {
         "title": "The Small Talk",
         "number": 1,
-        "art_prompt": "Abstract expressionist painting. Two distinct, complex shapes are separated by a void. A thin, delicate, golden thread begins to form a bridge between them. The background is a muted, textured gray, suggesting a neutral space like an elevator or a waiting room."
+        "art_prompt": "Abstract expressionist painting. Two distinct, complex shapes are separated by a void. A thin, delicate, golden thread begins to form a bridge between them. The background is a muted, textured gray, suggesting a neutral space like an elevator or a waiting room.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-01.jpg?v=1782406547690"
       },
       "back": {
         "phrase": "Hablar del clima no es estúpido. Es un puente.",
@@ -44,7 +45,8 @@
       "front": {
         "title": "The False Friend",
         "number": 2,
-        "art_prompt": "Surrealist digital art. Two figures that look identical from a distance. Up close, one is made of solid marble and the other of crumbling sand. The lighting is dramatic, highlighting the textural difference. The background is a disorienting, repeating pattern."
+        "art_prompt": "Surrealist digital art. Two figures that look identical from a distance. Up close, one is made of solid marble and the other of crumbling sand. The lighting is dramatic, highlighting the textural difference. The background is a disorienting, repeating pattern.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-02.jpg?v=1782406551182"
       },
       "back": {
         "phrase": "Confiarte de tu idioma es el primer error.",
@@ -64,7 +66,8 @@
       "front": {
         "title": "The Phrasal Verb",
         "number": 3,
-        "art_prompt": "Textured mixed media art. A common object, like a key, is visually breaking apart and reassembling into something completely new and unexpected, like a bird. The action is captured mid-transformation. Colors are earthy and grounded."
+        "art_prompt": "Textured mixed media art. A common object, like a key, is visually breaking apart and reassembling into something completely new and unexpected, like a bird. The action is captured mid-transformation. Colors are earthy and grounded.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-03.jpg?v=1782406554905"
       },
       "back": {
         "phrase": "Son dos palabras. Juntas, son otra cosa.",
@@ -84,7 +87,8 @@
       "front": {
         "title": "The Filler Word",
         "number": 4,
-        "art_prompt": "Minimalist ink wash painting. A clean, straight line representing a sentence is interrupted by a soft, blurred inkblot. The blot isn't a mistake, it's an integrated part of the line's texture, giving it character."
+        "art_prompt": "Minimalist ink wash painting. A clean, straight line representing a sentence is interrupted by a soft, blurred inkblot. The blot isn't a mistake, it's an integrated part of the line's texture, giving it character.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-04.jpg?v=1782406558445"
       },
       "back": {
         "phrase": "El silencio es más incómodo para vos que para ellos.",
@@ -104,7 +108,8 @@
       "front": {
         "title": "The Contraction",
         "number": 5,
-        "art_prompt": "Graphic design style. Two bold, blocky words ('DO' and 'NOT') are shown being forcefully compressed into one smaller, more efficient shape ('DON'T'). The visual implies pressure and synthesis. Stark black and white."
+        "art_prompt": "Graphic design style. Two bold, blocky words ('DO' and 'NOT') are shown being forcefully compressed into one smaller, more efficient shape ('DON'T'). The visual implies pressure and synthesis. Stark black and white.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-05.jpg?v=1782406561730"
       },
       "back": {
         "phrase": "Hablar perfecto es hablar raro.",
@@ -124,7 +129,8 @@
       "front": {
         "title": "The Polite Request",
         "number": 6,
-        "art_prompt": "Soft, pastel watercolor illustration. A hand is shown gently offering a key, rather than pushing it forward. The gesture is open and non-demanding. The background is clean and uncluttered."
+        "art_prompt": "Soft, pastel watercolor illustration. A hand is shown gently offering a key, rather than pushing it forward. The gesture is open and non-demanding. The background is clean and uncluttered.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-06.jpg?v=1782406565352"
       },
       "back": {
         "phrase": "Pedir no es exigir.",
@@ -144,7 +150,8 @@
       "front": {
         "title": "The Disagreement",
         "number": 7,
-        "art_prompt": "Abstract art with two strong, opposing diagonal lines in red and blue. They don't crash, but instead, a third, softer line in purple runs between them, showing a path of mediation. Textured, thick paint."
+        "art_prompt": "Abstract art with two strong, opposing diagonal lines in red and blue. They don't crash, but instead, a third, softer line in purple runs between them, showing a path of mediation. Textured, thick paint.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-07.jpg?v=1782406569933"
       },
       "back": {
         "phrase": "No estar de acuerdo no es pelear.",
@@ -164,7 +171,8 @@
       "front": {
         "title": "The Idiom",
         "number": 8,
-        "art_prompt": "Surrealist photography. A person is literally biting down on a glowing, metal bullet. The expression is not of pain, but of intense determination. The background is dark and moody. High contrast, cinematic lighting."
+        "art_prompt": "Surrealist photography. A person is literally biting down on a glowing, metal bullet. The expression is not of pain, but of intense determination. The background is dark and moody. High contrast, cinematic lighting.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-08.jpg?v=1782406573406"
       },
       "back": {
         "phrase": "Nadie habla como un libro de texto.",
@@ -184,7 +192,8 @@
       "front": {
         "title": "The Confirmation",
         "number": 9,
-        "art_prompt": "A digital illustration of a sound wave being perfectly mirrored by another, creating a symmetrical, harmonious pattern. The colors are clear and bright, like blue and white, suggesting clarity and understanding."
+        "art_prompt": "A digital illustration of a sound wave being perfectly mirrored by another, creating a symmetrical, harmonious pattern. The colors are clear and bright, like blue and white, suggesting clarity and understanding.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-09.jpg?v=1782406577714"
       },
       "back": {
         "phrase": "Asumir es el camino más rápido al error.",
@@ -204,7 +213,8 @@
       "front": {
         "title": "The Apology",
         "number": 10,
-        "art_prompt": "A kintsugi-style artwork. A ceramic bowl is shown broken, but the cracks are being repaired with shimmering gold lacquer, making the object more beautiful and interesting than before. It represents a mistake that is acknowledged and repaired."
+        "art_prompt": "A kintsugi-style artwork. A ceramic bowl is shown broken, but the cracks are being repaired with shimmering gold lacquer, making the object more beautiful and interesting than before. It represents a mistake that is acknowledged and repaired.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-10.jpg?v=1782406581147"
       },
       "back": {
         "phrase": "Un 'sorry' no siempre alcanza.",
@@ -224,7 +234,8 @@
       "front": {
         "title": "The Follow-up",
         "number": 11,
-        "art_prompt": "Geometric abstract art. A sequence of dots leads to a larger circle. A single, arcing line connects back to one of the earlier dots, creating a loop of feedback. Clean lines, corporate blue and gray palette."
+        "art_prompt": "Geometric abstract art. A sequence of dots leads to a larger circle. A single, arcing line connects back to one of the earlier dots, creating a loop of feedback. Clean lines, corporate blue and gray palette.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-11.jpg?v=1782406584310"
       },
       "back": {
         "phrase": "La conversación no termina cuando colgás el teléfono.",
@@ -244,7 +255,8 @@
       "front": {
         "title": "The Interruption",
         "number": 12,
-        "art_prompt": "Abstract painting. A smooth, flowing river of color is cleanly cut by a sharp, thin, vertical line of a contrasting bright color. The interruption is precise and intentional, not chaotic. It splits the flow but doesn't destroy it."
+        "art_prompt": "Abstract painting. A smooth, flowing river of color is cleanly cut by a sharp, thin, vertical line of a contrasting bright color. The interruption is precise and intentional, not chaotic. It splits the flow but doesn't destroy it.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-12.jpg?v=1782406587747"
       },
       "back": {
         "phrase": "Quedarte con la duda es tu responsabilidad.",
@@ -264,7 +276,8 @@
       "front": {
         "title": "The Vague 'Yes'",
         "number": 13,
-        "art_prompt": "A photograph of a path covered in thick fog. You can see the path continues, but not where it leads. The feeling is uncertain and mysterious. Muted colors, soft focus."
+        "art_prompt": "A photograph of a path covered in thick fog. You can see the path continues, but not where it leads. The feeling is uncertain and mysterious. Muted colors, soft focus.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-13.jpg?v=1782406591070"
       },
       "back": {
         "phrase": "Ser positivo no es ser concreto.",
@@ -284,7 +297,8 @@
       "front": {
         "title": "The Sounding Board",
         "number": 14,
-        "art_prompt": "Minimalist illustration of a large, solid wall. A series of sound waves are shown hitting the wall and bouncing back, slightly altered and more organized. The colors are calm and analytical, like teal and charcoal."
+        "art_prompt": "Minimalist illustration of a large, solid wall. A series of sound waves are shown hitting the wall and bouncing back, slightly altered and more organized. The colors are calm and analytical, like teal and charcoal.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-14.jpg?v=1782406594431"
       },
       "back": {
         "phrase": "A veces, solo necesitás decirlo en voz alta.",
@@ -324,7 +338,8 @@
       "front": {
         "title": "The 'How are you?'",
         "number": 16,
-        "art_prompt": "Pop art style illustration. A speech bubble with 'How are you?' inside. A smaller, identical speech bubble with 'Fine, thanks. And you?' is shown immediately bouncing back, like a ping-pong ball. Bright, primary colors."
+        "art_prompt": "Pop art style illustration. A speech bubble with 'How are you?' inside. A smaller, identical speech bubble with 'Fine, thanks. And you?' is shown immediately bouncing back, like a ping-pong ball. Bright, primary colors.",
+        "art_url": "/assets/editions/baraja-con-ejercicios-para-aprender-ingles/isf-16.jpg?v=1782406598088"
       },
       "back": {
         "phrase": "No siempre es una pregunta real.",

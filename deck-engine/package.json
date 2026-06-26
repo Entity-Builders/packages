@@ -7,6 +7,7 @@
   "types": "src/index.ts",
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "test:digital": "npx tsx src/scripts/check-digital.ts",
     "sync": "npx tsx src/scripts/sync-decks.ts",
     "generate": "npx tsx src/scripts/create-edition.ts && npm run sync",
     "art": "npx tsx src/scripts/generate-art.ts",
