@@ -57,14 +57,14 @@ export interface CardFront {
 }
 
 // ── Card Back ────────────────────────────────────────────────
-// The content face: phrase + context + instruction.
+// The content face: context + editorial hook + primary instruction.
 
 export interface CardBack {
-  /** The main affirmation or phrase */
+  /** Short editorial hook or mood line; secondary to the instruction in playable decks */
   phrase: string;
   /** One-line context for when to use this card */
   when_to_use: string;
-  /** Actionable instruction or exercise */
+  /** Primary playable instruction, question, exercise, or mechanic */
   instruction: string;
   /** For trivia cards: The answer to the question */
   answer?: string;
@@ -227,6 +227,59 @@ export type DigitalDeckCategory =
   | 'creative-prompts'
   | 'other';
 
+export type DeckCatalogCollectionId =
+  | 'self-work'
+  | 'social-games'
+  | 'couples-dating'
+  | 'team-tools'
+  | 'trivia-games'
+  | 'learning'
+  | 'other';
+
+export type DeckCatalogCategoryId =
+  | 'emotional-regulation'
+  | 'introspection'
+  | 'grounding'
+  | 'anxiety-pause'
+  | 'journaling'
+  | 'boundaries'
+  | 'decision-clarity'
+  | 'between-friends'
+  | 'dinner-table'
+  | 'party'
+  | 'family'
+  | 'dates'
+  | 'first-date'
+  | 'couple-reconnection'
+  | 'playful-intimacy'
+  | 'hard-conversations'
+  | 'conversation'
+  | 'confessions'
+  | 'office'
+  | 'facilitation'
+  | 'retrospectives'
+  | 'feedback'
+  | 'onboarding'
+  | 'values'
+  | 'conflict'
+  | 'argentine-cinema'
+  | 'romantic-comedy'
+  | 'pop-culture'
+  | 'music'
+  | 'argentina-latam'
+  | 'language-practice'
+  | 'classroom-conversation'
+  | 'writing-prompts'
+  | 'debate'
+  | 'creativity'
+  | 'football'
+  | 'other';
+
+export interface DeckCatalogPlacement {
+  collection: DeckCatalogCollectionId;
+  category: DeckCatalogCategoryId;
+}
+
 export type DeckSessionMode =
   | 'browse'
   | 'solo'
@@ -259,10 +312,23 @@ export interface DeckSharingPolicy {
   allow_bulk_export?: boolean;
 }
 
+export interface DigitalDeckLandingCopy {
+  /** Primary public deck promise for the pre-purchase hero. */
+  hero_promise?: string;
+  /** Supporting copy that clarifies who the deck is for or how it helps. */
+  hero_supporting_copy?: string;
+  /** Copy shown above the public preview cards. */
+  preview_intro?: string;
+  /** Copy shown near the locked/full-access purchase band. */
+  unlock_summary?: string;
+}
+
 export interface DigitalDeckConfig {
   is_published?: boolean;
   category?: DigitalDeckCategory;
   tags?: string[];
+  catalog?: DeckCatalogPlacement;
+  landing?: DigitalDeckLandingCopy;
   preview_card_ids?: string[];
   default_session_mode?: DeckSessionMode;
   session_modes?: DeckSessionMode[];

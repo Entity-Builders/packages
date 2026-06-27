@@ -17,10 +17,14 @@ export type {
   CardFieldPlacement,
   CardFieldPlacementKey,
   DigitalDeckCategory,
+  DeckCatalogCategoryId,
+  DeckCatalogCollectionId,
+  DeckCatalogPlacement,
   DeckAccessScope,
   DeckPrintableAccess,
   DeckSessionMode,
   DigitalDeckConfig,
+  DigitalDeckLandingCopy,
   DeckSharingPolicy,
   PrintableLicenseScope,
   Edition,
@@ -56,6 +60,21 @@ export {
   shuffleCards,
 } from './digital.js';
 export type { CardFace, DrawCardsOptions, ShareableCardPayload } from './digital.js';
+
+// Catalog taxonomy
+export {
+  DECK_CATALOG_CATEGORIES,
+  DECK_CATALOG_COLLECTIONS,
+  getDeckCatalogBreadcrumb,
+  getDeckCatalogFacet,
+  getDeckCatalogValidationErrors,
+} from './catalog.js';
+export type {
+  DeckCatalogBreadcrumbItem,
+  DeckCatalogCategoryDefinition,
+  DeckCatalogCollectionDefinition,
+  DeckCatalogFacet,
+} from './catalog.js';
 
 // Repository
 export type { IDeckRepository } from './repository.js';

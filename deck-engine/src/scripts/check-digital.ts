@@ -3,6 +3,9 @@ import {
   DECKS,
   drawCards,
   flipCardFace,
+  getDeckCatalogBreadcrumb,
+  getDeckCatalogFacet,
+  getDeckCatalogValidationErrors,
   getDeckSessionModes,
   getDefaultSessionMode,
   getPreviewCards,
@@ -16,6 +19,11 @@ const barometro = DECKS.barometro;
 
 assert.equal(barometro.id, 'barometro-v1');
 assert.equal(barometro.digital?.category, 'emotional-regulation');
+assert.deepEqual(getDeckCatalogValidationErrors(barometro), []);
+
+const barometroFacet = getDeckCatalogFacet(barometro);
+assert.equal(barometroFacet.collectionId, 'self-work');
+assert.equal(barometroFacet.categoryId, 'emotional-regulation');
 
 const previewCards = getPreviewCards(barometro);
 assert.deepEqual(
@@ -52,5 +60,18 @@ assert.equal(shouldRenderPrintableQr({ digital: { printable: { enabled: false, l
 const shareable = getShareableCardPayload(barometro, 'barometro-01');
 assert.equal(shareable?.phrase, barometro.cards[0]?.back.phrase);
 assert.equal(shareable?.previewable, true);
+
+const sobremesa = DECKS['juego-de-cartas-para-jugar-entre-amigos-en-una-juntada'];
+assert.deepEqual(getDeckCatalogValidationErrors(sobremesa), []);
+assert.deepEqual(
+  getDeckCatalogBreadcrumb(sobremesa).map((item) => item.label),
+  ['Juegos sociales', 'Entre amigos', sobremesa.name]
+);
+
+for (const deck of Object.values(DECKS)) {
+  if (deck.digital?.is_published === true) {
+    assert.deepEqual(getDeckCatalogValidationErrors(deck), []);
+  }
+}
 
 console.log('[deck-engine] digital helpers OK');
