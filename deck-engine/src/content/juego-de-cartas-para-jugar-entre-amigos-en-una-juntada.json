@@ -1,15 +1,15 @@
 {
   "id": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada-v1",
   "edition": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada",
-  "name": "Sobremesa",
+  "name": "Sobremesa Larga",
   "slug": "juego-de-cartas-para-jugar-entre-amigos-en-una-juntada",
-  "description": "Un juego de cartas para estirar la noche. 40 preguntas, retos y disparadores absurdos para cuando la conversación pide un empujón y los lazos se pueden apretar un poco más. No es para ganar, es para conectar.",
+  "description": "Para cuando se terminan los temas de siempre pero no las ganas de estar juntos. Un mazo con disparadores para estirar la noche, compartir una risa y conocerse un poco mejor. No es para competir, es para conectar.",
   "language": "es",
-  "card_count": 40,
+  "card_count": 10,
   "metadata": {
-    "topic": "Juego de cartas para fiestas y juntadas",
-    "tone": "Descontracturado, divertido, absurdo",
-    "target_audience": "Amigos buscando romper el hielo y conectar",
+    "topic": "Juego social para fiestas",
+    "tone": "Divertido, descontracturado, íntimo",
+    "target_audience": "Amigos en una juntada",
     "player_count": "3 o más jugadores"
   },
   "print_spec_id": "baraja-standard",
@@ -18,769 +18,222 @@
     "amount": 1500000,
     "currency": "ars"
   },
+  "digital": {
+    "is_published": false,
+    "category": "conversation",
+    "catalog": {
+      "collection": "social-games",
+      "category": "between-friends"
+    },
+    "tags": [
+      "social-games",
+      "between-friends",
+      "entre-amigos"
+    ],
+    "landing": {
+      "hero_promise": "Un mazo para estirar la noche cuando la mesa ya está lista para hablar de otra cosa.",
+      "hero_supporting_copy": "Momento: Amigos en una juntada necesitan salir de los temas de siempre sin ponerse solemnes. Comprador: Necesito algo para que la noche no muera y la conversación se ponga mejor.",
+      "preview_intro": "Mostrar humor, confesión liviana y conversación de grupo.",
+      "unlock_summary": "El acceso completo desbloquea la sesión digital, las cartas del mazo y el paquete imprimible si esta edición lo incluye. Se guarda como draft de Juegos sociales."
+    },
+    "preview_card_ids": [
+      "sl-01",
+      "sl-02",
+      "sl-03"
+    ],
+    "default_session_mode": "group",
+    "session_modes": [
+      "group",
+      "browse"
+    ],
+    "access_scopes": [
+      "single-deck"
+    ],
+    "sharing": {
+      "allow_card_share": true,
+      "allow_bulk_export": false
+    }
+  },
   "cards": [
     {
-      "id": "sobremesa-01",
+      "id": "sl-01",
       "front": {
-        "title": "La Primera Impresión",
+        "title": "El Primer Recuerdo",
         "number": 1,
-        "art_prompt": "Abstract fine art painting of overlapping, translucent silhouettes meeting for the first time. Chiaroscuro lighting highlights anxious energy and curiosity. Thick, impasto texture suggests the weight of initial judgments.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-01.jpg?v=1782428685675"
+        "art_prompt": "Fotografía de ensueño, soft-focus, de un único juguete de madera antiguo (un trompo o un auto) sobre un piso de parqué gastado. La luz es la del atardecer entrando por una ventana, creando sombras largas y una atmósfera nostálgica y cálida. Estilo de película independiente."
       },
       "back": {
-        "phrase": "Nunca hay una segunda oportunidad. O sí.",
-        "when_to_use": "Para romper el hielo con honestidad brutal (y cariño).",
-        "instruction": "Empezando por quien sacó la carta y siguiendo por la derecha, cada uno debe confesar cuál fue su primera, primerísima impresión de la persona que tiene a su izquierda. Sin filtro."
+        "phrase": "Hay cosas que no se borran.",
+        "when_to_use": "Para empezar a conectar de verdad.",
+        "instruction": "El que saca la carta comparte el primer recuerdo que tiene de su vida, con el mayor detalle posible. El resto escucha sin interrumpir."
       },
       "tags": [
         "pregunta",
-        "icebreaker",
-        "honestidad"
+        "recuerdo",
+        "rompehielos"
       ]
     },
     {
-      "id": "sobremesa-02",
-      "front": {
-        "title": "El Placer Culposo",
-        "number": 2,
-        "art_prompt": "Expressionist artwork depicting a single, bright, almost glowing object in a dark, muted room. The texture is a mix of smooth, seductive impasto for the object and rough, scratchy strokes for the background, evoking a secret indulgence.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-02.jpg?v=1782409933028"
-      },
-      "back": {
-        "phrase": "Lo que hacés cuando nadie te ve, te define.",
-        "when_to_use": "Para revelar los gustos que no publican en Instagram.",
-        "instruction": "Quien sacó la carta confiesa su mayor placer culposo (una canción, una película, una comida, un hábito). El resto del grupo vota en silencio si es realmente 'culposo' o perfectamente normal."
-      },
-      "tags": [
-        "pregunta",
-        "confesion",
-        "icebreaker"
-      ]
-    },
-    {
-      "id": "sobremesa-03",
-      "front": {
-        "title": "La Banda Sonora",
-        "number": 3,
-        "art_prompt": "Abstract fine art representation of sound waves turning into colors. Heavy impasto textures create a sense of rhythm and vibration, with a dark chiaroscuro background making the colors pop, like music in a dark room.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-03.jpg?v=1782409936073"
-      },
-      "back": {
-        "phrase": "Hay una canción para cada momento. Especialmente para este.",
-        "when_to_use": "Para cambiar la energía del ambiente.",
-        "instruction": "Quien sacó la carta se convierte en el DJ. Tiene 30 segundos para encontrar y poner una canción que, según él o ella, defina el mood exacto de la juntada en este preciso instante."
-      },
-      "tags": [
-        "reto",
-        "musica",
-        "creativo"
-      ]
-    },
-    {
-      "id": "sobremesa-04",
+      "id": "sl-02",
       "front": {
         "title": "El Superpoder Inútil",
-        "number": 4,
-        "art_prompt": "Expressionist painting of a heroic figure posing dramatically, but they are just glowing slightly. The impasto is thick on the figure, but the effect they are producing is comically small. Chiaroscuro emphasizes the anticlimax.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-04.jpg?v=1782409941094"
+        "number": 2,
+        "art_prompt": "Ilustración estilo cómic pop-art. Un superhéroe con capa y antifaz posa heroicamente, pero en lugar de lanzar rayos, está usando su poder para que el semáforo de peatones siempre se ponga en verde para él. Colores brillantes y saturados, con puntos de benday visibles."
       },
       "back": {
-        "phrase": "Un gran poder conlleva una nula responsabilidad.",
-        "when_to_use": "Para cuando la conversación se pone demasiado seria.",
-        "instruction": "Cada jugador, en ronda, describe el superpoder más inútil que le gustaría tener. Ejemplo: 'poder saber la temperatura exacta del café con solo mirarlo'. El grupo vota por el más creativamente inútil."
+        "phrase": "No todos los dones sirven para salvar el mundo.",
+        "when_to_use": "Cuando la conversación se puso demasiado seria.",
+        "instruction": "Por turnos, cada uno describe el superpoder más inútil que se le ocurra. El grupo vota por el más creativo y ridículo. El ganador se salva del siguiente reto."
       },
       "tags": [
-        "pregunta",
+        "creatividad",
         "absurdo",
-        "creatividad"
+        "votación"
       ]
     },
     {
-      "id": "sobremesa-05",
-      "front": {
-        "title": "La Conspiración",
-        "number": 5,
-        "art_prompt": "Abstract chiaroscuro artwork with intersecting lines and hidden shapes in deep shadows. A single point of light illuminates swirling, textured paint, suggesting a secret being revealed. Heavy, paranoid impasto strokes.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-05.jpg?v=1782409944884"
-      },
-      "back": {
-        "phrase": "No creas todo lo que te dicen. Ni siquiera esto.",
-        "when_to_use": "Para descubrir quién es el más crédulo del grupo.",
-        "instruction": "Quien sacó la carta debe inventar una teoría conspirativa completamente ridícula pero contarla con la mayor seriedad posible. El objetivo es convencer a al menos una persona del grupo."
-      },
-      "tags": [
-        "creativo",
-        "absurdo",
-        "actuacion"
-      ]
-    },
-    {
-      "id": "sobremesa-06",
-      "front": {
-        "title": "El Orador",
-        "number": 6,
-        "art_prompt": "Expressionist painting of a mouth, open, with vibrant, textured colors exploding outwards. The background is dark and indistinct, focusing all energy on the act of speaking. Impasto builds up around the lips, giving them weight.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-06.jpg?v=1782409947999"
-      },
-      "back": {
-        "phrase": "Cualquier cosa puede ser importante si la decís con ganas.",
-        "when_to_use": "Para practicar el arte de la convicción.",
-        "instruction": "La persona a la derecha de quien sacó la carta elige un objeto mundano a la vista (ej: un salero). Quien sacó la carta tiene 60 segundos para dar un discurso épico y apasionado sobre su importancia para la humanidad."
-      },
-      "tags": [
-        "reto",
-        "actuacion",
-        "creatividad"
-      ]
-    },
-    {
-      "id": "sobremesa-07",
-      "front": {
-        "title": "La Peor Cita",
-        "number": 7,
-        "art_prompt": "Abstract artwork of two shapes sitting opposite each other, separated by a vast, empty space made of rough, dark impasto. Chiaroscuro lighting creates a sense of awkwardness and distance. The textures are jagged and uncomfortable.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-07.jpg?v=1782409951736"
-      },
-      "back": {
-        "phrase": "De las malas experiencias salen las buenas anécdotas.",
-        "when_to_use": "Para agradecer no estar en esa cita ahora mismo.",
-        "instruction": "En ronda, cada persona comparte la anécdota de su peor cita (o una inventada, si no tienen). El grupo vota cuál fue la más desastrosa y entretenida. No hay ganador, solo un sobreviviente honorífico."
-      },
-      "tags": [
-        "pregunta",
-        "anecdota",
-        "icebreaker"
-      ]
-    },
-    {
-      "id": "sobremesa-08",
+      "id": "sl-03",
       "front": {
         "title": "El Imitador",
+        "number": 3,
+        "art_prompt": "Una sola máscara de teatro griega, pero hecha de un material reflectante como el mercurio líquido, distorsionando y reflejando múltiples caras del entorno. Fondo oscuro y dramático, iluminación cenital. Abstracto y minimalista."
+      },
+      "back": {
+        "phrase": "Todos tenemos un personaje adentro.",
+        "when_to_use": "Para romper la tensión y reírse un poco.",
+        "instruction": "El que saca la carta elige en secreto a otra persona de la mesa y tiene un minuto para imitar sus gestos y manías (sin hablar). El primero en adivinar a quién imita, se lleva un punto imaginario."
+      },
+      "tags": [
+        "reto",
+        "imitación",
+        "juego"
+      ]
+    },
+    {
+      "id": "sl-04",
+      "front": {
+        "title": "La Canción Ancla",
+        "number": 4,
+        "art_prompt": "Un primer plano de un cassette de audio antiguo, con la cinta magnética desenrollada formando la silueta de un paisaje montañoso. El fondo es un degradado de colores cálidos, como un atardecer. Estética retro de los 80, con un ligero grano de película."
+      },
+      "back": {
+        "phrase": "Hay melodías que son máquinas del tiempo.",
+        "when_to_use": "Para compartir algo más personal.",
+        "instruction": "Quien saca la carta debe nombrar una canción que lo transporte instantáneamente a un momento específico de su vida y explicar por qué. Si se anima, la puede buscar y ponerla para que todos la escuchen."
+      },
+      "tags": [
+        "pregunta",
+        "música",
+        "confesión"
+      ]
+    },
+    {
+      "id": "sl-05",
+      "front": {
+        "title": "La Conspiración Absurda",
+        "number": 5,
+        "art_prompt": "Un tablero de corcho de detective, estilo cine negro. Hilos rojos conectan fotos inconexas: un gato bostezando, un ticket de supermercado, la antena de un edificio y un brócoli. Iluminación de alto contraste, con humo de cigarrillo en el aire."
+      },
+      "back": {
+        "phrase": "La verdad está ahí afuera. Y es ridícula.",
+        "when_to_use": "Para desatar la imaginación del grupo.",
+        "instruction": "El que saca la carta empieza una teoría de conspiración con una frase (ej: \"Los pájaros son en realidad drones del gobierno...\"). La persona a su derecha debe continuarla con una frase más. Siguen así hasta que la historia llegue a un final delirante."
+      },
+      "tags": [
+        "creatividad",
+        "historia",
+        "grupo"
+      ]
+    },
+    {
+      "id": "sl-06",
+      "front": {
+        "title": "El Mensaje Prohibido",
+        "number": 6,
+        "art_prompt": "Macro fotografía de la pantalla de un smartphone en un cuarto oscuro. Se ven las burbujas de 'escribiendo...' en una app de chat. El reflejo en la pantalla muestra un rostro ansioso. La única luz proviene del propio teléfono."
+      },
+      "back": {
+        "phrase": "Hay borradores que es mejor no enviar.",
+        "when_to_use": "Cuando ya hay confianza en la mesa.",
+        "instruction": "El que saca la carta debe mostrar la última foto que guardó en su celular y explicar el contexto. Si se niega, debe leer en voz alta el último mensaje de WhatsApp que envió."
+      },
+      "tags": [
+        "reto",
+        "confesión",
+        "picante"
+      ]
+    },
+    {
+      "id": "sl-07",
+      "front": {
+        "title": "La Cena Imposible",
+        "number": 7,
+        "art_prompt": "Pintura al óleo digital al estilo de 'La última cena' de Da Vinci, pero los comensales son una mezcla ecléctica: se puede ver a Freddie Mercury, a Albert Einstein y a un personaje de animé sentados juntos en una larga mesa. La ambientación es surrealista y grandiosa."
+      },
+      "back": {
+        "phrase": "La compañía define el banquete.",
+        "when_to_use": "Para descubrir las aspiraciones y gustos de los demás.",
+        "instruction": "Si pudieras organizar una cena con tres personas (vivas o muertas, reales o ficticias), ¿a quiénes invitarías y por qué? Cada uno en la mesa responde."
+      },
+      "tags": [
+        "pregunta",
+        "hipotético",
+        "conversación"
+      ]
+    },
+    {
+      "id": "sl-08",
+      "front": {
+        "title": "La Peor Startup",
         "number": 8,
-        "art_prompt": "Expressionist piece showing a face that is a blur of different features, as if trying to settle on one. Textured impasto creates a mask-like quality. Chiaroscuro highlights the shifting identity.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-08.jpg?v=1782409956885"
+        "art_prompt": "Fotografía de una pizarra blanca de oficina, completamente llena de diagramas de flujo sin sentido, post-its con palabras como 'blockchain' y 'disruptir', y dibujos absurdos. La luz es de tubo fluorescente, dura y corporativa. Estilo de comedia de oficina."
       },
       "back": {
-        "phrase": "Todos somos un poco los demás.",
-        "when_to_use": "Para cuando se conocen tan bien que ya es peligroso.",
-        "instruction": "Quien sacó la carta debe elegir a otra persona del grupo e imitarla (su forma de hablar, un gesto, una frase típica) hasta que el resto adivine de quién se trata. Prohibido decir el nombre."
+        "phrase": "Las buenas ideas son raras. Las malas, abundan.",
+        "when_to_use": "Para una dosis de humor cínico y creatividad en equipo.",
+        "instruction": "En grupo, tienen 5 minutos para inventar el concepto de la peor startup posible. Deben definir el nombre, el producto inútil que vende y su eslogan. Luego, uno del grupo debe 'venderle' la idea al resto con total seriedad."
       },
       "tags": [
-        "reto",
-        "actuacion",
-        "grupo"
+        "creatividad",
+        "humor",
+        "equipo"
       ]
     },
     {
-      "id": "sobremesa-09",
+      "id": "sl-09",
       "front": {
-        "title": "El Nuevo Feriado",
+        "title": "El Discurso Solemne",
         "number": 9,
-        "art_prompt": "Abstract fine art piece with explosive, celebratory colors and textures. Thick impasto suggests confetti and parades, while a central, calm shape represents the reason for the holiday. Chiaroscuro gives it a sense of official importance.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-09.jpg?v=1782409960837"
+        "art_prompt": "Un único salero de vidrio sobre un pedestal de madera, iluminado por un solo haz de luz desde arriba, como si fuera una pieza de museo invaluable. El fondo es completamente negro, creando una atmósfera de importancia y ridículo."
       },
       "back": {
-        "phrase": "La vida necesita más excusas para celebrar.",
-        "when_to_use": "Para solucionar la falta de fines de semana largos.",
-        "instruction": "El grupo entero debe inventar un nuevo feriado nacional. Tienen que decidir el nombre, la fecha, el motivo de la celebración y cómo se festeja. La propuesta más creativa se anota en un papel como 'ley'."
-      },
-      "tags": [
-        "creativo",
-        "absurdo",
-        "grupo"
-      ]
-    },
-    {
-      "id": "sobremesa-10",
-      "front": {
-        "title": "El Juicio",
-        "number": 10,
-        "art_prompt": "An abstract composition resembling scales of justice, but unbalanced. One side has heavy, dark impasto, the other has light, frantic brushstrokes. Chiaroscuro creates a dramatic courtroom atmosphere.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-10.jpg?v=1782409964128"
-      },
-      "back": {
-        "phrase": "Hay que tomarse las cosas triviales muy en serio.",
-        "when_to_use": "Para debatir lo que verdaderamente importa.",
-        "instruction": "Se pone a 'juicio' un debate clásico (ej: la pizza con ananá, el mate dulce vs amargo). Quien sacó la carta es el juez. Se eligen dos abogados. El resto es el jurado. Que comience el juicio."
-      },
-      "tags": [
-        "creativo",
-        "grupo",
-        "debate"
-      ]
-    },
-    {
-      "id": "sobremesa-11",
-      "front": {
-        "title": "El Mensaje Borrado",
-        "number": 11,
-        "art_prompt": "Expressionist artwork of a phone screen with a notification bubble that is smudged and erased. The impasto texture is thick over the erased message, conveying regret and mystery. Chiaroscuro highlights the glowing screen in the dark.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-11.jpg?v=1782409966984"
-      },
-      "back": {
-        "phrase": "Lo que no se envió a veces grita más fuerte.",
-        "when_to_use": "Para especular sobre las balas que esquivamos.",
-        "instruction": "Cada persona debe contar (o inventar) la historia del último mensaje de texto importante que escribió y borró sin enviar. ¿A quién era? ¿Qué decía? ¿Por qué se arrepintió?"
-      },
-      "tags": [
-        "pregunta",
-        "confesion",
-        "anecdota"
-      ]
-    },
-    {
-      "id": "sobremesa-12",
-      "front": {
-        "title": "El Talento Oculto",
-        "number": 12,
-        "art_prompt": "Abstract painting with a dark, uniform surface that has a crack in it, revealing brilliant, textured colors underneath. Heavy impasto marks the crack. Chiaroscuro emphasizes the contrast between the hidden and the revealed.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-12.jpg?v=1782409970693"
-      },
-      "back": {
-        "phrase": "Todos saben hacer algo raro. Es hora de mostrarlo.",
-        "when_to_use": "Para descubrir habilidades que no figuran en LinkedIn.",
-        "instruction": "Quien sacó la carta debe demostrar un talento oculto, por más pequeño o extraño que sea. Si no se anima, debe nominar a alguien que sepa que tiene uno para que lo demuestre."
+        "phrase": "Cualquier cosa puede ser importante si la decís con la entonación correcta.",
+        "when_to_use": "Para cuando necesiten una explosión de risa.",
+        "instruction": "El que saca la carta debe elegir un objeto mundano de la mesa (una cuchara, una llave). Luego, debe ponerse de pie y dar un discurso de 30 segundos, muy solemne y emocional, agradeciéndole a ese objeto por sus servicios."
       },
       "tags": [
         "reto",
-        "icebreaker",
-        "habilidad"
-      ]
-    },
-    {
-      "id": "sobremesa-13",
-      "front": {
-        "title": "El Contacto Cero",
-        "number": 13,
-        "art_prompt": "An abstract piece dominated by a central black shape with heavy, absorbing impasto texture, representing a phone. Ghostly, translucent shapes of hands float around it, unable to touch. Chiaroscuro lighting makes the phone a void.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-13.jpg?v=1782409974416"
-      },
-      "back": {
-        "phrase": "A ver si te acordás cómo era el mundo antes.",
-        "when_to_use": "Para una desintoxicación digital express.",
-        "instruction": "Quien sacó la carta debe dejar su celular boca abajo en el centro de la mesa. No puede tocarlo por ningún motivo hasta que le toque su turno de nuevo. Si lo hace, debe servirle la bebida al resto por una ronda."
-      },
-      "tags": [
-        "reto",
-        "castigo",
-        "digitaldetox"
-      ]
-    },
-    {
-      "id": "sobremesa-14",
-      "front": {
-        "title": "El Poeta Instantáneo",
-        "number": 14,
-        "art_prompt": "Expressionist art showing fragmented words and letters floating in a chaotic, textured space. A single, clear line of color cuts through the mess, representing the structure of a poem. Chiaroscuro adds a touch of dramatic inspiration.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-14.jpg?v=1782409979974"
-      },
-      "back": {
-        "phrase": "La inspiración es para amateurs. Lo nuestro es la presión.",
-        "when_to_use": "Para encontrar la belleza en la incomodidad.",
-        "instruction": "Quien sacó la carta debe componer en 30 segundos un haiku (poema de 5, 7 y 5 sílabas) sobre la persona que tiene en frente. Debe leerlo en voz alta con la mayor solemnidad posible."
-      },
-      "tags": [
-        "reto",
-        "creativo",
-        "rapidez"
-      ]
-    },
-    {
-      "id": "sobremesa-15",
-      "front": {
-        "title": "La Startup Absurda",
-        "number": 15,
-        "art_prompt": "Abstract representation of a hockey stick growth chart, but the line goes in loops and spirals. Thick, optimistic impasto on the line contrasts with a dark, skeptical background. Chiaroscuro gives it a 'Shark Tank' vibe.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-15.jpg?v=1782409983646"
-      },
-      "back": {
-        "phrase": "Las mejores ideas suenan como un chiste al principio.",
-        "when_to_use": "Para el emprendedor que todos llevamos dentro.",
-        "instruction": "Quien sacó la carta tiene 1 minuto para 'pitchear' una idea de startup que solucione un problema ridículamente pequeño. El resto del grupo son los inversores y deciden si 'invierten' o no."
-      },
-      "tags": [
-        "creativo",
-        "absurdo",
-        "actuacion"
-      ]
-    },
-    {
-      "id": "sobremesa-16",
-      "front": {
-        "title": "El Legado",
-        "number": 16,
-        "art_prompt": "A minimalist abstract painting. A single, decisive brushstroke of thick impasto cuts across a dark, textured canvas. The stroke represents a life's summary. Chiaroscuro emphasizes the finality and importance of this single mark.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-16.jpg?v=1782409987050"
-      },
-      "back": {
-        "phrase": "Al final, todo se resume en una frase.",
-        "when_to_use": "Para una dosis de existencialismo de sobremesa.",
-        "instruction": "Cada jugador escribe en un papel la frase que le gustaría que aparezca en su lápida o en su obituario. Se mezclan los papeles y se leen en voz alta. El grupo debe adivinar quién escribió cada frase."
-      },
-      "tags": [
-        "pregunta",
-        "profundo",
-        "grupo"
-      ]
-    },
-    {
-      "id": "sobremesa-17",
-      "front": {
-        "title": "El Animal Espiritual",
-        "number": 17,
-        "art_prompt": "Expressionist artwork showing a human silhouette overlaid with the chaotic, wild textures and colors of an animal. Impasto is used to create fur-like or scale-like textures. Chiaroscuro suggests a primal, inner nature.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-17.jpg?v=1782409990144"
-      },
-      "back": {
-        "phrase": "Juzgá a tus amigos por el animal que les asignas.",
-        "when_to_use": "Para repartir identidades y ver quién se ofende.",
-        "instruction": "Quien sacó la carta debe asignarle un 'animal espiritual' a cada persona en la mesa, justificando brevemente su elección. Las justificaciones no pueden ser obvias."
-      },
-      "tags": [
-        "creativo",
-        "grupo",
-        "percepcion"
-      ]
-    },
-    {
-      "id": "sobremesa-18",
-      "front": {
-        "title": "El Objeto Parlante",
-        "number": 18,
-        "art_prompt": "Abstract fine art of an inanimate object, like a chair, with sound waves made of thick impasto emanating from it. Chiaroscuro lighting gives the object a mysterious and sentient presence.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-18.jpg?v=1782409993809"
-      },
-      "back": {
-        "phrase": "Si las paredes hablaran... o al menos la silla.",
-        "when_to_use": "Para darle voz a los que no la tienen.",
-        "instruction": "El grupo elige un objeto inanimado en la habitación. Quien sacó la carta debe ser la voz de ese objeto por 60 segundos, contando lo que ha visto y oído desde su perspectiva."
-      },
-      "tags": [
-        "creativo",
-        "actuacion",
-        "absurdo"
-      ]
-    },
-    {
-      "id": "sobremesa-19",
-      "front": {
-        "title": "La Estatua",
-        "number": 19,
-        "art_prompt": "An abstract painting of a human form frozen mid-motion. The impasto is thick and heavy, like stone or bronze, giving a sense of immobility. Chiaroscuro lighting casts long, dramatic shadows.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-19.jpg?v=1782409996539"
-      },
-      "back": {
-        "phrase": "El autocontrol es un músculo. A ver cómo está el tuyo.",
-        "when_to_use": "Para poner a prueba la paciencia de alguien.",
-        "instruction": "Quien sacó la carta debe congelarse en la posición exacta en la que está. No puede moverse ni hablar hasta que el jugador a su derecha saque una nueva carta. El resto puede intentar hacerlo reír."
-      },
-      "tags": [
-        "reto",
-        "castigo",
-        "autocontrol"
-      ]
-    },
-    {
-      "id": "sobremesa-20",
-      "front": {
-        "title": "El Idioma Inventado",
-        "number": 20,
-        "art_prompt": "Expressionist chaos of symbols, glyphs, and letters from no known alphabet. The textures are sharp and confusing, but there's a faint rhythm in their placement. Chiaroscuro suggests the difficulty and frustration of non-communication.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-20.jpg?v=1782410000076"
-      },
-      "back": {
-        "phrase": "El 90% de la comunicación es no verbal. A comprobarlo.",
-        "when_to_use": "Para cuando las palabras ya no alcanzan.",
-        "instruction": "Quien sacó la carta elige a otra persona. Ambos deben mantener una conversación de 30 segundos usando un idioma completamente inventado. Deben intentar que el resto del grupo entienda el tema de la conversación."
-      },
-      "tags": [
-        "reto",
-        "absurdo",
-        "actuacion"
-      ]
-    },
-    {
-      "id": "sobremesa-21",
-      "front": {
-        "title": "El Final Alternativo",
-        "number": 21,
-        "art_prompt": "Abstract art depicting a film reel unraveling into two different paths. One path is smooth and bright, the other is chaotic and dark, with heavy, discordant impasto. Chiaroscuro highlights the point of divergence.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-21.jpg?v=1782410004096"
-      },
-      "back": {
-        "phrase": "Ninguna historia está escrita en piedra.",
-        "when_to_use": "Para arreglar esas películas que te arruinaron el día.",
-        "instruction": "Quien sacó la carta nombra una película o serie muy conocida. Empezando por la persona a su derecha, cada uno tiene 15 segundos para proponer un final alternativo. Se vota por el mejor."
-      },
-      "tags": [
-        "creativo",
-        "grupo",
-        "cine"
-      ]
-    },
-    {
-      "id": "sobremesa-22",
-      "front": {
-        "title": "La Compra Impulsiva",
-        "number": 22,
-        "art_prompt": "Expressionist painting of a credit card swiping, leaving a trail of chaotic, colorful, and heavily textured impasto. The background is dark, emphasizing the singular, bright moment of the transaction.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-22.jpg?v=1782410007253"
-      },
-      "back": {
-        "phrase": "El dinero no compra la felicidad, pero sí buenas historias.",
-        "when_to_use": "Para compartir arrepentimientos financieros.",
-        "instruction": "Cada jugador confiesa la compra más inútil o impulsiva que ha hecho en su vida. No hay ganadores, solo un entendimiento mutuo del mal manejo del dinero."
-      },
-      "tags": [
-        "pregunta",
-        "anecdota",
-        "confesion"
-      ]
-    },
-    {
-      "id": "sobremesa-23",
-      "front": {
-        "title": "El Manifiesto",
-        "number": 23,
-        "art_prompt": "Abstract artwork resembling a revolutionary poster. Bold, declarative strokes of thick impasto form powerful, abstract shapes. Chiaroscuro gives it a clandestine, urgent feeling.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-23.jpg?v=1782410010537"
-      },
-      "back": {
-        "phrase": "Toda juntada necesita sus propias reglas.",
-        "when_to_use": "Para darle un propósito a la anarquía.",
-        "instruction": "El grupo entero debe escribir un 'Manifiesto de la Noche'. Debe contener 3 reglas o principios que gobernarán la juntada desde este momento hasta el final. Debe ser firmado por todos."
-      },
-      "tags": [
-        "creativo",
-        "grupo",
-        "reglas"
-      ]
-    },
-    {
-      "id": "sobremesa-24",
-      "front": {
-        "title": "El Dios Menor",
-        "number": 24,
-        "art_prompt": "Abstract fine art. A small, glowing point of light surrounded by vast, textured darkness. The light is made of intricate, delicate impasto, representing a small but specific domain of power. Chiaroscuro emphasizes its minor status.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-24.jpg?v=1782410014989"
-      },
-      "back": {
-        "phrase": "No todos pueden ser Zeus. Alguien tiene que ocuparse de las cosas pequeñas.",
-        "when_to_use": "Para encontrar lo divino en lo mundano.",
-        "instruction": "En ronda, cada jugador se declara el 'dios menor' de algo muy específico y trivial. Ejemplo: 'Soy el dios de los tuppers sin tapa' o 'la diosa de las canciones que se te pegan'. Deben explicar sus deberes divinos."
-      },
-      "tags": [
-        "pregunta",
-        "absurdo",
-        "creatividad"
-      ]
-    },
-    {
-      "id": "sobremesa-25",
-      "front": {
-        "title": "El Titular",
-        "number": 25,
-        "art_prompt": "Expressionist painting resembling a newspaper front page, but the text is replaced by chaotic, urgent brushstrokes. A single, bold shape made of thick impasto dominates the composition, like a shocking headline. Chiaroscuro adds drama.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-25.jpg?v=1782410019212"
-      },
-      "back": {
-        "phrase": "La realidad es aburrida. Hay que saber venderla.",
-        "when_to_use": "Para encontrarle el drama a un día cualquiera.",
-        "instruction": "Quien sacó la carta debe pensar en el evento más aburrido que le pasó hoy y convertirlo en un titular de noticia clickbait y sensacionalista. Ejemplo: 'Lo que encontré en mi heladera te sorprenderá'."
-      },
-      "tags": [
-        "creativo",
-        "absurdo",
+        "actuación",
         "humor"
       ]
     },
     {
-      "id": "sobremesa-26",
+      "id": "sl-10",
       "front": {
-        "title": "El Sommelier de Agua",
-        "number": 26,
-        "art_prompt": "Abstract art of three glasses filled with clear liquid, but the light passing through them creates different, subtle color refractions. The impasto texture around the glasses is delicate, suggesting a refined palate. Chiaroscuro enhances the subtle differences.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-26.jpg?v=1782410022212"
+        "title": "El Titular del Futuro",
+        "number": 10,
+        "art_prompt": "Ilustración de una persona mirando por la ventana a una ciudad futurista. En el vidrio se refleja un titular de periódico brillante y holográfico que dice: 'Finalmente sucedió lo inesperado'. Estética de ciencia ficción optimista, con tonos azules y violetas."
       },
       "back": {
-        "phrase": "La sofisticación está en los detalles.",
-        "when_to_use": "Para cuando se creen muy distinguidos.",
-        "instruction": "Se sirven tres vasos de agua (de la canilla, mineral, con gas, etc.). Quien sacó la carta debe catarlos a ciegas y describirlos con la mayor sofisticación posible, como si fuera un vino caro. Debe adivinar cuál es cuál."
+        "phrase": "Escribir algo es el primer paso para que ocurra.",
+        "when_to_use": "Para cerrar la noche con una reflexión grupal.",
+        "instruction": "Cada persona escribe en un papel un titular de noticia que le gustaría leer sobre sí mismo dentro de cinco años. Se mezclan los papeles y se leen en voz alta. El grupo intenta adivinar a quién pertenece cada titular."
       },
       "tags": [
-        "reto",
-        "absurdo",
-        "actuacion"
-      ]
-    },
-    {
-      "id": "sobremesa-27",
-      "front": {
-        "title": "El Texto Valiente",
-        "number": 27,
-        "art_prompt": "Expressionist artwork of a thumb hovering over the 'send' button on a phone. The button glows with a dangerous energy, created with thick, vibrant impasto. The rest of the screen is dark and full of shadows, representing doubt.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-27.jpg?v=1782410026055"
-      },
-      "back": {
-        "phrase": "Un pequeño toque para vos, un gran salto para la conversación.",
-        "when_to_use": "Para generar una anécdota en tiempo real.",
-        "instruction": "Quien sacó la carta debe mandarle un mensaje de texto a la última persona con la que habló que no esté en la habitación. El mensaje es: 'Estaba pensando en la última vez que nos vimos y...'. No puede aclarar que es un juego hasta que le respondan."
-      },
-      "tags": [
-        "reto",
-        "valiente",
-        "tension"
-      ]
-    },
-    {
-      "id": "sobremesa-28",
-      "front": {
-        "title": "La Secta",
-        "number": 28,
-        "art_prompt": "Abstract fine art piece with a central, mundane object (like a spoon) painted with glowing, reverential light. Concentric circles of textured impasto radiate outwards, like followers. The chiaroscuro gives it a ritualistic, cult-like atmosphere.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-28.jpg?v=1782410029849"
-      },
-      "back": {
-        "phrase": "Todo puede ser un objeto de culto si hay suficiente gente de acuerdo.",
-        "when_to_use": "Para fundar una nueva religión que dure hasta el postre.",
-        "instruction": "El grupo elige un objeto común de la mesa. Todos juntos deben crear las bases de una secta que adore a ese objeto: nombre del culto, un mandamiento principal y un gesto de saludo secreto. Deben usar el saludo por el resto de la ronda."
-      },
-      "tags": [
-        "creativo",
-        "grupo",
-        "absurdo"
-      ]
-    },
-    {
-      "id": "sobremesa-29",
-      "front": {
-        "title": "El Famoso en la Agenda",
-        "number": 29,
-        "art_prompt": "Abstract painting of a phone contacts list, but one name is rendered in glowing, gold impasto. The other names are muted, dark textures. Chiaroscuro highlights this single, important connection.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-29.jpg?v=1782410032962"
-      },
-      "back": {
-        "phrase": "Todos estamos a seis grados de separación... o a uno.",
-        "when_to_use": "Para que alguien se sincere sobre sus contactos.",
-        "instruction": "En ronda, cada jugador dice cuál es la persona más 'famosa' o 'interesante' que tiene en su agenda de contactos del celular. Deben contar la historia de cómo consiguieron el número."
-      },
-      "tags": [
-        "pregunta",
-        "anecdota",
-        "icebreaker"
-      ]
-    },
-    {
-      "id": "sobremesa-30",
-      "front": {
-        "title": "El Himno",
-        "number": 30,
-        "art_prompt": "Expressionist artwork of sound waves coalescing into a single, unified form. The impasto textures are layered and harmonious, representing different voices coming together. Chiaroscuro adds a sense of solemnity and importance.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-30.jpg?v=1782410035999"
-      },
-      "back": {
-        "phrase": "Un grupo de amigos sin himno es solo un grupo de gente.",
-        "when_to_use": "Para inmortalizar al grupo en una canción.",
-        "instruction": "En conjunto, el grupo debe componer un breve himno para su amistad. Debe tener al menos un coro pegadizo y mencionar una anécdota interna. Deben cantarlo todos juntos al menos una vez."
-      },
-      "tags": [
-        "creativo",
-        "grupo",
-        "musica"
-      ]
-    },
-    {
-      "id": "sobremesa-31",
-      "front": {
-        "title": "El Apodo Secreto",
-        "number": 31,
-        "art_prompt": "Abstract portrait where the face is obscured by a single, bold, textured word or symbol painted in thick impasto. The real features are lost in shadow, dominated by this new identity. Chiaroscuro emphasizes the secret nature of the name.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-31.jpg?v=1782410039388"
-      },
-      "back": {
-        "phrase": "El nombre que te ponen es una cosa. El que te ganás, otra.",
-        "when_to_use": "Para descubrir cómo te ven realmente.",
-        "instruction": "Cada jugador escribe en un papel el apodo que secretamente le tiene a la persona de su derecha. Se mezclan los papeles y se leen en voz alta. Hay que adivinar qué apodo es para quién y quién lo escribió."
-      },
-      "tags": [
-        "pregunta",
-        "secreto",
-        "percepcion"
-      ]
-    },
-    {
-      "id": "sobremesa-32",
-      "front": {
-        "title": "La Cápsula del Tiempo",
-        "number": 32,
-        "art_prompt": "Abstract representation of a box being buried. The box glows with a faint light, made of delicate impasto, containing memories. The surrounding earth is dark, heavy, and textured. Chiaroscuro highlights the act of preservation.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-32.jpg?v=1782410042782"
-      },
-      "back": {
-        "phrase": "El 'yo' del futuro necesita saber cómo era esto.",
-        "when_to_use": "Para el final de la noche, cuando ya hay algo que recordar.",
-        "instruction": "Quien sacó la carta es el curador. Debe elegir tres objetos físicos que estén en la mesa o en la habitación para meter en una 'cápsula del tiempo' imaginaria que represente esta juntada. Debe justificar cada elección."
-      },
-      "tags": [
-        "creativo",
-        "grupo",
-        "reflexion"
-      ]
-    },
-    {
-      "id": "sobremesa-33",
-      "front": {
-        "title": "El Rediseño",
-        "number": 33,
-        "art_prompt": "Abstract fine art piece showing a familiar shape, like a national flag, being deconstructed and reassembled with new colors and textures. The impasto is thick and rebellious. Chiaroscuro creates drama around the new design.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-33.jpg?v=1782428689267"
-      },
-      "back": {
-        "phrase": "Los símbolos solo tienen el poder que les damos.",
-        "when_to_use": "Para un ataque de creatividad patriótica.",
-        "instruction": "Quien sacó la carta debe rediseñar la bandera de su país. Tiene 1 minuto para dibujarla en una servilleta y explicar el simbolismo de los nuevos colores y formas. El grupo vota si aprueba el cambio."
-      },
-      "tags": [
-        "creativo",
-        "absurdo",
-        "diseño"
-      ]
-    },
-    {
-      "id": "sobremesa-34",
-      "front": {
-        "title": "El Escultor",
-        "number": 34,
-        "art_prompt": "Expressionist artwork of hands molding abstract human forms. The forms are made of soft, pliable impasto, suggesting they are being shaped. The sculptor's hands are dark and shadowy, while the sculpture is illuminated, in a classic chiaroscuro style.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-34.jpg?v=1782428692471"
-      },
-      "back": {
-        "phrase": "El cuerpo es el lienzo más obediente.",
-        "when_to_use": "Para cuando la confianza es alta y el ridículo no importa.",
-        "instruction": "Quien sacó la carta es el escultor. Elige a dos o tres personas como 'arcilla'. Debe mover sus cuerpos y extremidades para crear una escultura viviente que represente un concepto. Ejemplo: 'La Procrastinación'."
-      },
-      "tags": [
-        "reto",
-        "creativo",
-        "grupo"
-      ]
-    },
-    {
-      "id": "sobremesa-35",
-      "front": {
-        "title": "El Recuerdo Desbloqueado",
-        "number": 35,
-        "art_prompt": "Abstract painting of a key turning in a lock. Light, made of vibrant impasto, pours out of the keyhole into a dark, textured space, representing a forgotten memory flooding back. Strong chiaroscuro effect.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-35.jpg?v=1782410047186"
-      },
-      "back": {
-        "phrase": "La memoria es un archivo desordenado.",
-        "when_to_use": "Para buscar en el fondo del disco duro.",
-        "instruction": "Quien sacó la carta dice una palabra al azar (ej: 'bicicleta'). La primera persona del grupo que conecte esa palabra con un recuerdo personal, lo cuenta. Luego esa persona dice una nueva palabra, y así sucesivamente por 3 rondas."
-      },
-      "tags": [
-        "pregunta",
-        "anecdota",
-        "icebreaker"
-      ]
-    },
-    {
-      "id": "sobremesa-36",
-      "front": {
-        "title": "El Apocalipsis Ridículo",
-        "number": 36,
-        "art_prompt": "Expressionist artwork of a world ending not in fire, but in something absurd, like a rain of rubber chickens. The impasto textures are bizarre and comical, contrasting with the dramatic, dark sky of a typical apocalypse scene.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-36.jpg?v=1782410050631"
-      },
-      "back": {
-        "phrase": "El fin del mundo no tiene por qué ser elegante.",
-        "when_to_use": "Para planificar la supervivencia en el peor de los peores escenarios.",
-        "instruction": "Quien sacó la carta describe una forma ridícula en que el mundo se está acabando (ej: 'una invasión de caracoles gigantes lentísimos'). Cada jugador, en ronda, dice qué haría para sobrevivir."
-      },
-      "tags": [
-        "creativo",
-        "absurdo",
-        "grupo"
-      ]
-    },
-    {
-      "id": "sobremesa-37",
-      "front": {
-        "title": "El Mensajero del Futuro",
-        "number": 37,
-        "art_prompt": "Abstract art of a figure emerging from a portal of swirling, chaotic impasto. The figure is sleek and dark, while the portal is violently bright. Chiaroscuro emphasizes the dramatic entrance from another time.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-37.jpg?v=1782410054447"
-      },
-      "back": {
-        "phrase": "Vengo de un tiempo donde todo esto tendrá sentido. O no.",
-        "when_to_use": "Para agregarle un poco de ciencia ficción a la noche.",
-        "instruction": "Quien sacó la carta acaba de llegar del futuro (del próximo martes, para ser exactos). Debe darle una advertencia muy seria y críptica al grupo sobre algo que va a pasar. Debe mantener el personaje hasta la siguiente ronda."
-      },
-      "tags": [
-        "reto",
-        "actuacion",
-        "absurdo"
-      ]
-    },
-    {
-      "id": "sobremesa-38",
-      "front": {
-        "title": "La Fusión",
-        "number": 38,
-        "art_prompt": "An expressionist painting of two distinct animal forms merging into one another. The textures of fur and scales, created with thick impasto, clash and blend in the middle. Chiaroscuro highlights the monstrous and beautiful nature of the new creature.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-38.jpg?v=1782410058005"
-      },
-      "back": {
-        "phrase": "La naturaleza se equivocó. Nosotros la vamos a corregir.",
-        "when_to_use": "Para jugar a ser un científico loco.",
-        "instruction": "Quien sacó la carta nombra dos animales. La persona a su derecha debe describir la criatura que resultaría de su fusión: su nombre, su hábitat, su dieta y su sonido característico. Debe hacer el sonido."
-      },
-      "tags": [
-        "creativo",
-        "absurdo",
-        "sonidos"
-      ]
-    },
-    {
-      "id": "sobremesa-39",
-      "front": {
-        "title": "El Barman",
-        "number": 39,
-        "art_prompt": "Abstract fine art of liquids being poured and mixed. Vibrant colors splash and swirl with energetic impasto textures against a dark background, capturing the chaotic art of cocktail making. Chiaroscuro gives it a speakeasy feel.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-39.jpg?v=1782410061085"
-      },
-      "back": {
-        "phrase": "Cualquier líquido se puede mejorar.",
-        "when_to_use": "Para el que siempre critica los tragos.",
-        "instruction": "Quien sacó la carta debe ir a la cocina y, usando al menos tres ingredientes líquidos (no alcohólicos) que encuentre, crear un 'trago de autor'. Debe ponerle un nombre y servírselo a la persona de su elección para que lo critique."
-      },
-      "tags": [
-        "reto",
-        "creativo",
-        "bebidas"
-      ]
-    },
-    {
-      "id": "sobremesa-40",
-      "front": {
-        "title": "La Última Palabra",
-        "number": 40,
-        "art_prompt": "Minimalist abstract painting. A dark, heavily textured canvas representing the end of the night. In the center, a single, small, bright mark made of impasto—the last word. Chiaroscuro gives a sense of finality and quiet reflection.",
-        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sobremesa-40.jpg?v=1782410064711"
-      },
-      "back": {
-        "phrase": "Todo termina. Lo importante es cómo.",
-        "when_to_use": "Para cerrar la noche o el juego.",
-        "instruction": "Esta es la última carta. Empezando por quien la sacó, cada persona describe la juntada o el juego en una sola palabra. Sin explicaciones. Es el resumen final de la experiencia."
-      },
-      "tags": [
-        "reflexion",
-        "cierre",
-        "grupo"
+        "creatividad",
+        "futuro",
+        "reflexión"
       ]
     }
-  ],
-  "digital": {
-    "is_published": true
-  }
+  ]
 }

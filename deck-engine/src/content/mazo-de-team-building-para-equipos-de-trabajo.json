@@ -590,6 +590,34 @@
     }
   ],
   "digital": {
-    "is_published": true
+    "is_published": true,
+    "category": "team-building",
+    "catalog": {
+      "collection": "team-tools",
+      "category": "office"
+    },
+    "landing": {
+      "hero_promise": "Dinámicas breves para que un equipo deje de ser solo una cadena de mails.",
+      "hero_supporting_copy": "Un mazo para abrir reuniones, cortar rutina y generar conversación real sin team building forzado.",
+      "preview_intro": "Estas cartas muestran dinámicas rápidas que un facilitador puede usar sin preparar una sesión entera.",
+      "unlock_summary": "El acceso completo desbloquea el modo grupo/facilitador y el paquete imprimible personal. El uso con clientes o talleres pagos requiere licencia profesional."
+    },
+    "tags": [
+      "equipos",
+      "oficina",
+      "team-building",
+      "facilitacion"
+    ],
+    "preview_card_ids": [
+      "ddo-01",
+      "ddo-02",
+      "ddo-03"
+    ],
+    "default_session_mode": "facilitator",
+    "session_modes": [
+      "group",
+      "facilitator",
+      "browse"
+    ]
   }
 }

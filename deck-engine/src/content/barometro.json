@@ -21,6 +21,16 @@
   "digital": {
     "is_published": true,
     "category": "emotional-regulation",
+    "catalog": {
+      "collection": "self-work",
+      "category": "emotional-regulation"
+    },
+    "landing": {
+      "hero_promise": "Una carta concreta para cuando la emoción es más grande que tu capacidad de ordenarla.",
+      "hero_supporting_copy": "Barómetro es una herramienta de regulación: cada carta propone una acción breve para volver al cuerpo y atravesar el momento sin frases vacías.",
+      "preview_intro": "Estas cartas muestran el tipo de intervención: simple, directa y accionable, sin revelar todo el mazo.",
+      "unlock_summary": "El acceso completo desbloquea la sesión digital, favoritos locales y el paquete imprimible personal. El uso profesional requiere licencia adecuada."
+    },
     "tags": [
       "regulacion-emocional",
       "introspeccion",

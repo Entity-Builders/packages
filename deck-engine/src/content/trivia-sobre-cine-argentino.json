@@ -265,6 +265,34 @@
     }
   ],
   "digital": {
-    "is_published": true
+    "is_published": true,
+    "category": "trivia",
+    "catalog": {
+      "collection": "trivia-games",
+      "category": "argentine-cinema"
+    },
+    "landing": {
+      "hero_promise": "Trivia de cine argentino para jugar y terminar discutiendo escenas.",
+      "hero_supporting_copy": "Rollo Argento no va solo por el dato: trae momentos, películas y memoria cultural para medir quién realmente vio cine nacional.",
+      "preview_intro": "La muestra deja ver el tipo de pregunta: reconocible, conversable y con sabor local.",
+      "unlock_summary": "El acceso completo desbloquea todas las preguntas, modo grupo y el PDF imprimible personal para jugar en mesa."
+    },
+    "tags": [
+      "trivia",
+      "cine",
+      "cine-argentino",
+      "nacionales",
+      "grupos"
+    ],
+    "preview_card_ids": [
+      "rollo-argento-01",
+      "rollo-argento-02",
+      "rollo-argento-03"
+    ],
+    "default_session_mode": "group",
+    "session_modes": [
+      "group",
+      "browse"
+    ]
   }
 }

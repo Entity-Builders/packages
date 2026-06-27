@@ -564,5 +564,36 @@
         "claridad"
       ]
     }
-  ]
+  ],
+  "digital": {
+    "is_published": false,
+    "category": "emotional-regulation",
+    "catalog": {
+      "collection": "self-work",
+      "category": "grounding"
+    },
+    "landing": {
+      "hero_promise": "Una carta por día para volver a vos sin frases vacías.",
+      "hero_supporting_copy": "Cable a Tierra es un ritual breve para bajar un cambio, recuperar piso y elegir un siguiente paso pequeño.",
+      "preview_intro": "La muestra enseña el tono del mazo: honesto, calmo y terrenal.",
+      "unlock_summary": "El acceso completo desbloquea carta diaria, sesión digital y el PDF imprimible personal."
+    },
+    "tags": [
+      "grounding",
+      "autocuidado",
+      "ansiedad",
+      "diario"
+    ],
+    "preview_card_ids": [
+      "cat-01",
+      "cat-02",
+      "cat-06"
+    ],
+    "default_session_mode": "daily-card",
+    "session_modes": [
+      "solo",
+      "daily-card",
+      "browse"
+    ]
+  }
 }

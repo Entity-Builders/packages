@@ -12,9 +12,9 @@ export const CardFrontSchema = z.object({
 });
 
 export const CardBackSchema = z.object({
-  phrase: z.string().describe('The main, hard-hitting phrase. Direct, visceral, no self-help clichés.'),
+  phrase: z.string().describe('A short editorial hook or mood line. It supports the card tone but is secondary to the instruction for social, trivia, team, and learning decks.'),
   when_to_use: z.string().describe('One-line context for when the user might pull or need this card.'),
-  instruction: z.string().describe('Actionable instruction or reflection. Something grounding and simple to do. If it is a trivia or question, provide the question here.'),
+  instruction: z.string().describe('The primary playable payload: the action, question, mechanic, or reflection the user should actually do. If it is a trivia or question, provide the question here.'),
   answer: z.string().optional().describe('For trivia cards ONLY: The concise answer to the trivia question.'),
 });
 

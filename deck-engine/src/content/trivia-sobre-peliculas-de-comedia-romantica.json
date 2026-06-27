@@ -21,6 +21,16 @@
   "digital": {
     "is_published": true,
     "category": "trivia",
+    "catalog": {
+      "collection": "trivia-games",
+      "category": "romantic-comedy"
+    },
+    "landing": {
+      "hero_promise": "Trivia de comedias románticas para jugar con nostalgia, risa y un poco de competencia.",
+      "hero_supporting_copy": "Corazón de Película celebra esas escenas que todos recuerdan, incluso cuando dicen que no les importan las rom-coms.",
+      "preview_intro": "La muestra combina recuerdos icónicos, pistas jugables y placer culpable cinematográfico.",
+      "unlock_summary": "El acceso completo desbloquea todas las preguntas, modo grupo o pareja y el PDF imprimible personal."
+    },
     "tags": [
       "trivia",
       "cine",

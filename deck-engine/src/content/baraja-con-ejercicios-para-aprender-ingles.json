@@ -635,5 +635,36 @@
         "aprendizaje"
       ]
     }
-  ]
+  ],
+  "digital": {
+    "is_published": false,
+    "category": "language-learning",
+    "catalog": {
+      "collection": "learning",
+      "category": "language-practice"
+    },
+    "landing": {
+      "hero_promise": "Ejercicios en cartas para practicar el inglés que realmente se usa.",
+      "hero_supporting_copy": "Inglés Sin Filtro entrena situaciones reales: small talk, desacuerdos, pedidos, autocorrección y frases que no suenan a libro.",
+      "preview_intro": "La muestra combina conversación, comunicación profesional y práctica en voz alta.",
+      "unlock_summary": "El acceso completo desbloquea todos los ejercicios, modo solo o grupo y el PDF imprimible personal. Uso docente o taller requiere licencia profesional."
+    },
+    "tags": [
+      "ingles",
+      "idiomas",
+      "fluidez",
+      "practica"
+    ],
+    "preview_card_ids": [
+      "isf-01",
+      "isf-07",
+      "isf-30"
+    ],
+    "default_session_mode": "solo",
+    "session_modes": [
+      "solo",
+      "group",
+      "browse"
+    ]
+  }
 }

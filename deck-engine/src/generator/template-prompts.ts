@@ -25,11 +25,11 @@ export interface CardLayout {
   borderless: boolean;
   /** Top strip (~top 15%): small header text — category, "cuándo usarla", etc. */
   hasHeaderZone: boolean;
-  /** Central body (~15%–72%): main content area — the phrase, question, title */
+  /** Central body (~15%–72%): main content area — the primary hook, question, instruction, or title */
   hasBodyZone: boolean;
   /** Portrait zone (~25%–70%): reserved circular/rectangular image space */
   hasCentralImageZone: boolean;
-  /** Footer strip (~bottom 18%): secondary text — answer, instruction, variant */
+  /** Footer strip (~bottom 18%): supporting text — answer, hook, instruction, variant */
   hasFooterZone: boolean;
 }
 

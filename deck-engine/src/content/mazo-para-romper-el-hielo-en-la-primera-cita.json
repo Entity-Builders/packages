@@ -243,6 +243,33 @@
     }
   ],
   "digital": {
-    "is_published": true
+    "is_published": true,
+    "category": "conversation",
+    "catalog": {
+      "collection": "couples-dating",
+      "category": "first-date"
+    },
+    "landing": {
+      "hero_promise": "Preguntas para romper el hielo sin convertir la cita en una entrevista.",
+      "hero_supporting_copy": "Primera Impresión revela humor, personalidad y pequeñas señales de compatibilidad sin ir demasiado lejos demasiado pronto.",
+      "preview_intro": "La muestra mezcla mood, humor creativo y un gesto interactivo para mostrar el tono sin quemar la cita.",
+      "unlock_summary": "El acceso completo desbloquea el modo pareja, todas las cartas y el PDF imprimible personal para usarlo en una cita real."
+    },
+    "tags": [
+      "conversacion",
+      "citas",
+      "romper-el-hielo",
+      "parejas"
+    ],
+    "preview_card_ids": [
+      "pi-01",
+      "pi-02",
+      "pi-03"
+    ],
+    "default_session_mode": "pair",
+    "session_modes": [
+      "pair",
+      "browse"
+    ]
   }
 }

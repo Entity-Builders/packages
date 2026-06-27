@@ -16,15 +16,21 @@ Your job is to generate a complete, coherent deck edition.
 A "Baraja Edition" is a physical deck of cards designed to provoke thought, ground the user, or break the ice. They are not cheap games; they are beautifully crafted introspective tools.
 
 # THE CARDS
-Each card has a Front (visual art + title) and a Back (phrase + instruction).
+Each card has a Front (visual art + title) and a Back (when_to_use + phrase hook + instruction).
 
 ## Copywriting Rules (CRITICAL)
 - **NO clichés:** Never use words like "transform", "journey", "synergy", "find your true self", "magic", "empower".
 - **Tone:** Direct, visceral, honest. Talk to the user like a close friend telling them the hard truth over coffee. No sugarcoating, no toxic positivity.
 - **Titles (Front):** Should be conceptual and punchy. "El Miedo" (The Fear), "La Pausa" (The Pause), "La Decisión" (The Decision).
-- **Phrases (Back):** Must be hard-hitting and undeniable. Example: "No tenés que empezar bien. Tenés que empezar." (You don't have to start well. You have to start.)
-- **Instructions (Back):** Grounding and actionable exercises. NOT abstract. Bad: "Think about your life." Good: "Write down the two options. Read them out loud. Your body already knows which one."
+- **Phrases (Back):** Short editorial hooks, not the main payload. They set mood, create curiosity, or name the emotional angle. Keep them concise and avoid generic aphorisms.
+- **Instructions (Back):** The primary playable payload. Grounding and actionable exercises, questions, mechanics, or prompts. NOT abstract. Bad: "Think about your life." Good: "Write down the two options. Read them out loud. Your body already knows which one."
 - **When to Use:** A quick context indicator. Example: "Para cuando el miedo te paraliza." (For when fear paralyzes you.)
+
+## Back Field Hierarchy (CRITICAL)
+- The user must understand what to DO from the \`instruction\` field alone.
+- For trivia, social, couple, team, facilitation, language-learning, and party decks, \`instruction\` is more important than \`phrase\`.
+- For those action-oriented decks, \`phrase\` should be a secondary hook of roughly 4-14 words. It must not replace the question, challenge, or mechanic.
+- For introspection or emotional-regulation decks, \`phrase\` may be stronger and more reflective, but the \`instruction\` still needs to give a concrete action.
 
 ## Art Prompts (Front) — CRITICAL: CONTEXTUAL ENRICHMENT
 Instead of producing actual images, you produce highly detailed AI image prompts that will be used to generate illustrations via Gemini/DALL-E.
@@ -173,7 +179,8 @@ function buildTriviaSection(opts: BuildDeckOptions): string {
 - FOCUS ON THE NARRATIVE: Create situational questions based on the Plot and Deep Lore. Make the player read a scene or a premise and guess the movie, or guess "what happens next", or identify a character's iconic action.
 - Examples of GOOD questions: "En esta escena, un hombre planea una venganza usando un auto y una soga. ¿De qué película hablamos?" or "¿Qué objeto utiliza Ricardo Darín para romper el vidrio en Relatos Salvajes?"
 - DO NOT invent facts. Use only the provided plot summaries and lore.
-- The \`instruction\` field contains the trivia question.`);
+- The \`instruction\` field contains the trivia question.
+- The \`phrase\` field is only a short, spoiler-free mood hook. It must not be the thing the player answers.`);
 
   // Enriched data injection
   if (opts.enrichedData && opts.enrichedData.length > 0) {
@@ -220,6 +227,7 @@ function buildIntrospectionSection(opts: BuildDeckOptions): string {
 - Every card must provide an ACTIONABLE exercise, not just a thought.
 - Instructions must be specific and physical: "Write down...", "Stand up and...", "Hold ice in your hand..."
 - Avoid abstract self-help language. Be clinical, direct, and grounding.
+- The \`phrase\` field can be emotionally strong, but never let it become a self-help quote that replaces the exercise.
 - Tags should reference therapeutic modalities when applicable (DBT, ACT, TEPC, mindfulness).
 - The \`when_to_use\` field must describe a specific emotional state, not a vague situation.
 ${opts.additionalContext ? `\n### Additional Instructions\n${opts.additionalContext}` : ''}`;
@@ -234,6 +242,7 @@ function buildPartySection(opts: BuildDeckOptions): string {
 - Tone: descontracturado, fun, but never mean-spirited or exclusionary.
 - Include mix of intensity levels: some soft/warm-up, some spicy, some wild.
 - The \`instruction\` field should clearly describe the mechanic (who reads, who acts, how to score, etc.)
+- The \`phrase\` field should only add flavor or tension. It should be short enough to read in one breath and secondary to the mechanic.
 ${opts.additionalContext ? `\n### Additional Instructions\n${opts.additionalContext}` : ''}`;
 }
 
@@ -242,6 +251,7 @@ ${opts.additionalContext ? `\n### Additional Instructions\n${opts.additionalCont
 const JSON_SCHEMA_BLOCK = `
 Please fill out the metadata, give it a compelling (but not cringey) name and description, and generate the exact number of cards requested following the Baraja strict copywriting rules.
 If additional instructions were provided, prioritize them for the tone, intent, and type of exercises.
+Field meaning reminder: \`instruction\` is the primary playable payload; \`phrase\` is a short editorial hook, especially in social, trivia, team, and learning decks.
 
 Your response MUST be a raw JSON object (no markdown formatting, no \`\`\`json) exactly matching this structure:
 

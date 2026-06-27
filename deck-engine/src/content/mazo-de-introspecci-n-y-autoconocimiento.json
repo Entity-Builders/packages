@@ -206,5 +206,36 @@
         "regulación emocional"
       ]
     }
-  ]
+  ],
+  "digital": {
+    "is_published": false,
+    "category": "introspection",
+    "catalog": {
+      "collection": "self-work",
+      "category": "introspection"
+    },
+    "landing": {
+      "hero_promise": "Cartas para cortar la inercia y mirar lo que está pasando sin anestesia.",
+      "hero_supporting_copy": "Pausa Obligatoria ayuda a detener ruido, reacción automática o desconexión para nombrar lo que hay y elegir una acción mínima.",
+      "preview_intro": "La muestra deja ver su filo: introspección directa con una salida concreta.",
+      "unlock_summary": "El acceso completo desbloquea el mazo digital, carta diaria y el PDF imprimible personal."
+    },
+    "tags": [
+      "introspeccion",
+      "autoconocimiento",
+      "regulacion-emocional",
+      "pausa"
+    ],
+    "preview_card_ids": [
+      "pausa-obligatoria-01",
+      "pausa-obligatoria-04",
+      "pausa-obligatoria-10"
+    ],
+    "default_session_mode": "solo",
+    "session_modes": [
+      "solo",
+      "daily-card",
+      "browse"
+    ]
+  }
 }

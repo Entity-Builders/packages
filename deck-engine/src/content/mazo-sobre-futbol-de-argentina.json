@@ -680,5 +680,35 @@
       "unit": "mm"
     }
   },
-  "design_template_overrides": {}
+  "design_template_overrides": {},
+  "digital": {
+    "is_published": false,
+    "category": "trivia",
+    "catalog": {
+      "collection": "trivia-games",
+      "category": "football"
+    },
+    "landing": {
+      "hero_promise": "Trivia futbolera para cortar la discusión o prenderla de una vez.",
+      "hero_supporting_copy": "La Redonda Sagrada trae memoria, chicana y potrero para que el que dice que sabe tenga que demostrar.",
+      "preview_intro": "La muestra mezcla mito, final histórica y potrero sin revelar el mazo completo.",
+      "unlock_summary": "El acceso completo desbloquea todas las preguntas, modo grupo y el PDF imprimible personal. Uso en bares o eventos requiere licencia futura."
+    },
+    "tags": [
+      "trivia",
+      "futbol",
+      "argentina",
+      "grupos"
+    ],
+    "preview_card_ids": [
+      "lrs-01",
+      "lrs-05",
+      "lrs-30"
+    ],
+    "default_session_mode": "group",
+    "session_modes": [
+      "group",
+      "browse"
+    ]
+  }
 }
