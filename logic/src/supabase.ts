@@ -19,11 +19,14 @@ const isReactNative = typeof navigator !== 'undefined' && navigator.product === 
 let expoExtra: any = {};
 if (isReactNative) {
   try {
+    const dynamicRequire = (0, eval)('require') as (
+      moduleName: string,
+    ) => { default?: { expoConfig?: { extra?: Record<string, unknown> } } };
     // Metro doesn't inline EXPO_PUBLIC_ vars in workspace packages automatically.
     // However, app.config.js spreads process.env into extra.
     // We use a dynamic require so Vite doesn't break when compiling web apps.
     // @ts-ignore
-    const Constants = require('expo-constants').default;
+    const Constants = dynamicRequire('expo-constants').default;
     expoExtra = Constants?.expoConfig?.extra || {};
   } catch (e) {
     console.warn('[SharedPackage] Failed to load expo-constants', e);
@@ -51,8 +54,11 @@ let AsyncStorage: any = null;
 
 if (isReactNative) {
   try {
+    const dynamicRequire = (0, eval)('require') as (
+      moduleName: string,
+    ) => { default?: unknown };
     // Only require in React Native environment
-    AsyncStorage = require('@react-native-async-storage/async-storage').default;
+    AsyncStorage = dynamicRequire('@react-native-async-storage/async-storage').default;
   } catch (error) {
     console.warn('[SharedPackage] Failed to load AsyncStorage', error);
   }

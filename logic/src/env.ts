@@ -21,8 +21,11 @@ let expoExtra: any = {};
 const isReactNative = typeof navigator !== 'undefined' && navigator.product === 'ReactNative';
 if (isReactNative) {
   try {
+    const dynamicRequire = (0, eval)('require') as (
+      moduleName: string,
+    ) => { default?: { expoConfig?: { extra?: Record<string, unknown> } } };
     // @ts-ignore
-    const Constants = require('expo-constants').default;
+    const Constants = dynamicRequire('expo-constants').default;
     expoExtra = Constants?.expoConfig?.extra || {};
   } catch (e) {
     console.warn('[SharedPackage] Failed to load expo-constants for env extraction', e);
@@ -63,4 +66,3 @@ export const isProdEnv = (): boolean => {
 export const isDevEnv = (): boolean => {
   return getAppEnv() === 'development';
 };
-
