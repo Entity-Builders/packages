@@ -86,7 +86,7 @@ export * from './generator/template-prompts.js';
 // Pre-resolved deck objects ready to consume.
 // Add new editions here as they are created.
 
-export { DECKS } from './decks.js';
+export { DECKS, RAW_DECKS } from './decks.js';
 export type { DeckId } from './decks.js';
 
 // QR URL generation

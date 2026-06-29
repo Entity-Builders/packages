@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -9,18 +9,34 @@ const CONTENT_DIR = path.resolve(__dirname, '../content');
 const OUTPUT_FILE = path.resolve(__dirname, '../decks.ts');
 
 // Local Supabase instance (from `npx supabase status` in eb-infra)
-const SUPABASE_URL = 'http://127.0.0.1:54321';
-const SUPABASE_SERVICE_KEY = 'REDACTED_SUPABASE_SERVICE_KEY';
+const SUPABASE_URL = process.env.BARAJA_SUPABASE_URL ?? process.env.SUPABASE_URL ?? 'http://127.0.0.1:54321';
+const SUPABASE_SERVICE_KEY =
+  process.env.BARAJA_SUPABASE_SERVICE_KEY ??
+  process.env.SUPABASE_SERVICE_ROLE_KEY ??
+  process.env.SUPABASE_SERVICE_KEY;
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
-  db: { schema: 'baraja' },
-});
+type BarajaSupabaseClient = SupabaseClient<any, any, 'baraja', any, any>;
+
+let supabaseClient: BarajaSupabaseClient | undefined;
+
+function getSupabaseClient() {
+  if (!SUPABASE_SERVICE_KEY) return undefined;
+
+  supabaseClient ??= createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
+    db: { schema: 'baraja' },
+  });
+
+  return supabaseClient;
+}
 
 function kebabToCamel(str: string): string {
   return str.replace(/-./g, x => x[1].toUpperCase());
 }
 
-async function seedIfMissing(rawContent: any): Promise<void> {
+async function seedIfMissing(
+  supabase: BarajaSupabaseClient,
+  rawContent: any,
+): Promise<void> {
   const { slug } = rawContent;
 
   // Check if edition already exists in the DB
@@ -90,15 +106,18 @@ async function main() {
 
   // ── 1. Regenerate decks.ts ────────────────────────────────────
   let imports = `import { resolveDeck } from './loader.js';\nimport type { RawDeckContent } from './types.js';\n\n`;
+  let rawExports = `export const RAW_DECKS = {\n`;
   let exports = `export const DECKS = {\n`;
 
   for (const file of jsonFiles) {
     const defaultExportName = 'raw' + kebabToCamel(file.replace('.json', '')).replace(/^./, x => x.toUpperCase());
     imports += `import ${defaultExportName} from './content/${file}';\n`;
     const key = file.replace('.json', '');
-    exports += `  '${key}': resolveDeck(${defaultExportName} as unknown as RawDeckContent),\n`;
+    rawExports += `  '${key}': ${defaultExportName} as unknown as RawDeckContent,\n`;
+    exports += `  '${key}': resolveDeck(RAW_DECKS['${key}']),\n`;
   }
 
+  rawExports += `} as const;\n\n`;
   exports += `} as const;\n\nexport type DeckId = keyof typeof DECKS;\n`;
 
   const finalContent =
@@ -106,16 +125,24 @@ async function main() {
     `// AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.\n` +
     `// Run \`yarn workspace @eb-packages/deck-engine sync\` to update.\n` +
     `// ==================================================================\n\n` +
-    `${imports}\n${exports}`;
+    `${imports}\n${rawExports}${exports}`;
 
   await fs.writeFile(OUTPUT_FILE, finalContent, 'utf-8');
   console.log(`✅ decks.ts regenerated (${jsonFiles.length} decks)\n`);
 
   // ── 2. Seed any missing editions into Supabase ────────────────
+  const supabase = getSupabaseClient();
+  if (!supabase) {
+    console.warn(
+      '⚠️  Skipping Supabase seed. Set BARAJA_SUPABASE_SERVICE_KEY, SUPABASE_SERVICE_ROLE_KEY, or SUPABASE_SERVICE_KEY to enable it.',
+    );
+    return;
+  }
+
   console.log('🌱 Seeding missing editions into Supabase...');
   for (const file of jsonFiles) {
     const rawContent = JSON.parse(await fs.readFile(path.join(CONTENT_DIR, file), 'utf-8'));
-    await seedIfMissing(rawContent);
+    await seedIfMissing(supabase, rawContent);
   }
 
   console.log('\n🏁 Sync complete.');
