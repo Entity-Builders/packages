@@ -3,8 +3,8 @@
 React-first shared web UI primitives for Entity Builders web/PWA apps.
 
 This package owns reusable visual behavior: buttons, notices, form fields,
-modal shells, status banners, shared CSS variables, accessibility defaults, and
-local gallery examples.
+modal shells, status banners, WhatsApp contact buttons, shared CSS variables,
+accessibility defaults, and local gallery examples.
 
 Apps still own:
 
@@ -27,6 +27,17 @@ Then import React primitives:
 
 ```tsx
 import { EbButton, EbNotice } from '@eb-packages/ui-web';
+```
+
+For shared WhatsApp contact CTAs, build the `href` from app-owned or
+registry-owned contact metadata and pass it to the shared button:
+
+```tsx
+import { EbWhatsAppButton } from '@eb-packages/ui-web';
+
+<EbWhatsAppButton href="https://wa.me/5491123946828?text=Hola">
+  Hablar por WhatsApp
+</EbWhatsAppButton>
 ```
 
 ## Token Contract

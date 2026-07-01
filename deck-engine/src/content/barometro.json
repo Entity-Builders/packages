@@ -14,6 +14,176 @@
   },
   "print_spec_id": "baraja-landscape",
   "design_template_id": "dark-minimal-01",
+  "design_template_overrides": {
+    "reverse_model": "editable-layout",
+    "reverse_migration_status": "review",
+    "legacy_full_back_references": [
+      {
+        "card_id": "barometro-01",
+        "card_number": 1,
+        "back_image_url": "/assets/editions/barometro/barometro-01-back.png",
+        "back_image_versions": [
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png",
+          "/assets/editions/barometro/barometro-01-back.png"
+        ]
+      },
+      {
+        "card_id": "barometro-02",
+        "card_number": 2,
+        "back_image_url": "/assets/editions/barometro/barometro-02-back.png",
+        "back_image_versions": [
+          "/assets/editions/barometro/barometro-02-back.png"
+        ]
+      },
+      {
+        "card_id": "barometro-03",
+        "card_number": 3,
+        "back_image_url": "/assets/editions/barometro/barometro-03-back.png",
+        "back_image_versions": [
+          "/assets/editions/barometro/barometro-03-back.png",
+          "/assets/editions/barometro/barometro-03-back.png"
+        ]
+      },
+      {
+        "card_id": "barometro-04",
+        "card_number": 4,
+        "back_image_url": "/assets/editions/barometro/barometro-04-back.png"
+      },
+      {
+        "card_id": "barometro-05",
+        "card_number": 5,
+        "back_image_url": "/assets/editions/barometro/barometro-05-back.png"
+      },
+      {
+        "card_id": "barometro-06",
+        "card_number": 6,
+        "back_image_url": "/assets/editions/barometro/barometro-06-back.png"
+      },
+      {
+        "card_id": "barometro-07",
+        "card_number": 7,
+        "back_image_url": "/assets/editions/barometro/barometro-07-back.png"
+      },
+      {
+        "card_id": "barometro-08",
+        "card_number": 8,
+        "back_image_url": "/assets/editions/barometro/barometro-08-back.png"
+      },
+      {
+        "card_id": "barometro-09",
+        "card_number": 9,
+        "back_image_url": "/assets/editions/barometro/barometro-09-back.png"
+      },
+      {
+        "card_id": "barometro-10",
+        "card_number": 10,
+        "back_image_url": "/assets/editions/barometro/barometro-10-back.png"
+      },
+      {
+        "card_id": "barometro-11",
+        "card_number": 11,
+        "back_image_url": "/assets/editions/barometro/barometro-11-back.png"
+      },
+      {
+        "card_id": "barometro-12",
+        "card_number": 12,
+        "back_image_url": "/assets/editions/barometro/barometro-12-back.png"
+      },
+      {
+        "card_id": "barometro-13",
+        "card_number": 13,
+        "back_image_url": "/assets/editions/barometro/barometro-13-back.png"
+      },
+      {
+        "card_id": "barometro-14",
+        "card_number": 14,
+        "back_image_url": "/assets/editions/barometro/barometro-14-back.png"
+      },
+      {
+        "card_id": "barometro-15",
+        "card_number": 15,
+        "back_image_url": "/assets/editions/barometro/barometro-15-back.png"
+      },
+      {
+        "card_id": "barometro-16",
+        "card_number": 16,
+        "back_image_url": "/assets/editions/barometro/barometro-16-back.png"
+      },
+      {
+        "card_id": "barometro-17",
+        "card_number": 17,
+        "back_image_url": "/assets/editions/barometro/barometro-17-back.png"
+      },
+      {
+        "card_id": "barometro-18",
+        "card_number": 18,
+        "back_image_url": "/assets/editions/barometro/barometro-18-back.png"
+      },
+      {
+        "card_id": "barometro-19",
+        "card_number": 19,
+        "back_image_url": "/assets/editions/barometro/barometro-19-back.png"
+      },
+      {
+        "card_id": "barometro-20",
+        "card_number": 20,
+        "back_image_url": "/assets/editions/barometro/barometro-20-back.png"
+      },
+      {
+        "card_id": "barometro-21",
+        "card_number": 21,
+        "back_image_url": "/assets/editions/barometro/barometro-21-back.png"
+      },
+      {
+        "card_id": "barometro-22",
+        "card_number": 22,
+        "back_image_url": "/assets/editions/barometro/barometro-22-back.png"
+      },
+      {
+        "card_id": "barometro-23",
+        "card_number": 23,
+        "back_image_url": "/assets/editions/barometro/barometro-23-back.png"
+      },
+      {
+        "card_id": "barometro-24",
+        "card_number": 24,
+        "back_image_url": "/assets/editions/barometro/barometro-24-back.png"
+      },
+      {
+        "card_id": "barometro-25",
+        "card_number": 25,
+        "back_image_url": "/assets/editions/barometro/barometro-25-back.png"
+      },
+      {
+        "card_id": "barometro-26",
+        "card_number": 26,
+        "back_image_url": "/assets/editions/barometro/barometro-26-back.png"
+      },
+      {
+        "card_id": "barometro-27",
+        "card_number": 27,
+        "back_image_url": "/assets/editions/barometro/barometro-27-back.png"
+      },
+      {
+        "card_id": "barometro-28",
+        "card_number": 28,
+        "back_image_url": "/assets/editions/barometro/barometro-28-back.png"
+      },
+      {
+        "card_id": "barometro-29",
+        "card_number": 29,
+        "back_image_url": "/assets/editions/barometro/barometro-29-back.png"
+      },
+      {
+        "card_id": "barometro-30",
+        "card_number": 30,
+        "back_image_url": "/assets/editions/barometro/barometro-30-back.png"
+      }
+    ]
+  },
   "pricing": {
     "amount": 1500000,
     "currency": "ars"

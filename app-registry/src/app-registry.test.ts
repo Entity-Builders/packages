@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import {
   buildEntityBuildersAuthRedirectUrl,
+  buildEntityBuildersWhatsappUrl,
   detectEntityBuildersAppId,
   detectEntityBuildersAppIdOrFallback,
   getEntityBuildersApp,
   getEntityBuildersAppOrFallback,
+  getEntityBuildersAppWhatsappOrFallback,
   normalizeEntityBuildersAppId,
 } from './index';
 
@@ -17,6 +19,9 @@ describe('Entity Builders app registry', () => {
       'minimal-money',
     );
     expect(getEntityBuildersApp('PostalPeek')?.displayName).toBe('PostalPeek');
+    expect(getEntityBuildersApp('baraja')?.urls.canonical).toBe(
+      'https://baraja.cards',
+    );
     expect(getEntityBuildersApp('missing')).toBeNull();
     expect(getEntityBuildersAppOrFallback('missing').appId).toBe(
       'entitybuilders',
@@ -60,6 +65,33 @@ describe('Entity Builders app registry', () => {
         appIdHint: 'entitybuilders',
       }),
     ).toBe('zigzag');
+    expect(
+      detectEntityBuildersAppId({
+        redirectTo: 'https://anecdotia.entitybuilders.com/obrach',
+        appIdHint: 'flowtranslate',
+      }),
+    ).toBe('anecdotia');
+    expect(
+      detectEntityBuildersAppId({
+        redirectTo: 'https://barometro.baraja.cards',
+        appIdHint: 'entitybuilders',
+      }),
+    ).toBe('baraja');
+  });
+
+  it('builds shared WhatsApp contact links', () => {
+    const barajaWhatsapp = getEntityBuildersAppWhatsappOrFallback('baraja');
+
+    expect(barajaWhatsapp.phoneNumberE164).toBe('+5491123946828');
+    expect(barajaWhatsapp.displayNumber).toBe('+54 9 11 2394-6828');
+    expect(
+      buildEntityBuildersWhatsappUrl(
+        barajaWhatsapp.phoneNumberE164,
+        'Hola, quiero consultar por Baraja.',
+      ),
+    ).toBe(
+      'https://wa.me/5491123946828?text=Hola%2C%20quiero%20consultar%20por%20Baraja.',
+    );
   });
 
   it('uses metadata to disambiguate localhost before port fallback', () => {
@@ -83,6 +115,11 @@ describe('Entity Builders app registry', () => {
         redirectTo: 'http://localhost:5173',
       }),
     ).toBe('flowtranslate');
+    expect(
+      detectEntityBuildersAppId({
+        redirectTo: 'http://localhost:5178/obrach',
+      }),
+    ).toBe('anecdotia');
     expect(
       detectEntityBuildersAppId({
         redirectTo: 'http://localhost:3002',

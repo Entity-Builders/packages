@@ -4,7 +4,7 @@ Canonical Entity Builders app identity registry.
 
 Use this package when shared code needs app ids, display names, canonical URLs,
 production domains, localhost port fallbacks, auth redirect paths, analytics
-ids, or auth email template metadata.
+ids, auth email template metadata, or shared public contact channels.
 
 ## Add An App
 
@@ -18,6 +18,7 @@ ids, or auth email template metadata.
    - `urls.productionDomains`
    - `email.templateDir`
    - `email.fromName`
+   - `contact.whatsapp` when the app uses the shared public WhatsApp contact
 4. Add local dev ports only as fallbacks. Current safe app metadata should
    disambiguate localhost when a dev server moves ports.
 5. Update app auth config to import identity and redirect helpers from this

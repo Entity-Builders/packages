@@ -11,6 +11,8 @@ export type {
   RawDeckContent,
   DeckMetadata,
   DeckDesign,
+  DeckLegacyFullBackReference,
+  DeckReverseModel,
   PrintSpecs,
   PrintDimensions,
   DeckPricing,

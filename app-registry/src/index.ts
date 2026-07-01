@@ -2,12 +2,14 @@ export const ENTITY_BUILDERS_DEFAULT_APP_ID = 'entitybuilders';
 
 export const ENTITY_BUILDERS_APP_IDS = [
   'entitybuilders',
+  'baraja',
   'flowtranslate',
   'postalpeek',
   'tablia',
   'zigzag',
   'minimal-money',
   'shrinkle',
+  'anecdotia',
 ] as const;
 
 export type EntityBuildersAppId = (typeof ENTITY_BUILDERS_APP_IDS)[number];
@@ -22,6 +24,16 @@ export type EntityBuildersAppAuthConfig = {
   redirectPath?: string;
 };
 
+export type EntityBuildersAppWhatsappConfig = {
+  defaultMessage?: string;
+  displayNumber: string;
+  phoneNumberE164: string;
+};
+
+export type EntityBuildersAppContactConfig = {
+  whatsapp?: EntityBuildersAppWhatsappConfig;
+};
+
 export type EntityBuildersAppDefinition = {
   appId: EntityBuildersAppId;
   displayName: string;
@@ -32,6 +44,7 @@ export type EntityBuildersAppDefinition = {
     localPorts?: readonly string[];
   };
   auth?: EntityBuildersAppAuthConfig;
+  contact?: EntityBuildersAppContactConfig;
   email: EntityBuildersAppEmailConfig;
 };
 
@@ -39,6 +52,14 @@ export type DetectEntityBuildersAppInput = {
   redirectTo?: string | null;
   appIdHint?: string | null;
 };
+
+const ENTITY_BUILDERS_SHARED_WHATSAPP = {
+  displayNumber: '+54 9 11 2394-6828',
+  phoneNumberE164: '+5491123946828',
+} as const satisfies Pick<
+  EntityBuildersAppWhatsappConfig,
+  'displayNumber' | 'phoneNumberE164'
+>;
 
 export const ENTITY_BUILDERS_APP_REGISTRY = {
   entitybuilders: {
@@ -49,9 +70,34 @@ export const ENTITY_BUILDERS_APP_REGISTRY = {
       canonical: 'https://entitybuilders.ai',
       productionDomains: ['entitybuilders.ai', 'entitybuilders.com'],
     },
+    contact: {
+      whatsapp: {
+        ...ENTITY_BUILDERS_SHARED_WHATSAPP,
+        defaultMessage: 'Hola, quiero consultar por Entity Builders.',
+      },
+    },
     email: {
       templateDir: 'entitybuilders',
       fromName: 'Entity Builders',
+    },
+  },
+  baraja: {
+    appId: 'baraja',
+    displayName: 'Baraja',
+    analyticsAppId: 'baraja',
+    urls: {
+      canonical: 'https://baraja.cards',
+      productionDomains: ['baraja.cards'],
+    },
+    contact: {
+      whatsapp: {
+        ...ENTITY_BUILDERS_SHARED_WHATSAPP,
+        defaultMessage: 'Hola, quiero consultar por Baraja.',
+      },
+    },
+    email: {
+      templateDir: 'entitybuilders',
+      fromName: 'Baraja',
     },
   },
   flowtranslate: {
@@ -153,6 +199,20 @@ export const ENTITY_BUILDERS_APP_REGISTRY = {
       fromName: 'Shrinkle',
     },
   },
+  anecdotia: {
+    appId: 'anecdotia',
+    displayName: 'Anecdotia',
+    analyticsAppId: 'anecdotia',
+    urls: {
+      canonical: 'https://anecdotia.entitybuilders.com',
+      productionDomains: ['anecdotia.entitybuilders.com'],
+      localPorts: ['5178'],
+    },
+    email: {
+      templateDir: 'entitybuilders',
+      fromName: 'Anecdotia',
+    },
+  },
 } as const satisfies Record<EntityBuildersAppId, EntityBuildersAppDefinition>;
 
 const ENTITY_BUILDERS_APPS = Object.values(
@@ -193,6 +253,37 @@ export const buildEntityBuildersAuthRedirectUrl = (
 
   return `${cleanOrigin}${redirectPath}`;
 };
+
+const getWhatsappDigits = (phoneNumberE164: string): string =>
+  phoneNumberE164.replace(/\D/g, '');
+
+export const buildEntityBuildersWhatsappUrl = (
+  phoneNumberE164: string,
+  message?: string,
+): string => {
+  const baseUrl = `https://wa.me/${getWhatsappDigits(phoneNumberE164)}`;
+  const cleanMessage = message?.trim();
+
+  return cleanMessage
+    ? `${baseUrl}?text=${encodeURIComponent(cleanMessage)}`
+    : baseUrl;
+};
+
+export const getEntityBuildersAppWhatsapp = (
+  appId: string | null | undefined,
+): EntityBuildersAppWhatsappConfig | null =>
+  getEntityBuildersApp(appId)?.contact?.whatsapp ?? null;
+
+export const getEntityBuildersAppWhatsappOrFallback = (
+  appId: string | null | undefined,
+): EntityBuildersAppWhatsappConfig =>
+  getEntityBuildersAppWhatsapp(appId) ||
+  ENTITY_BUILDERS_APP_REGISTRY[ENTITY_BUILDERS_DEFAULT_APP_ID].contact
+    ?.whatsapp ||
+  {
+    ...ENTITY_BUILDERS_SHARED_WHATSAPP,
+    defaultMessage: 'Hola, quiero consultar por Entity Builders.',
+  };
 
 const getHostnameAppId = (hostname: string): EntityBuildersAppId | null => {
   const cleanHostname = hostname.toLowerCase();

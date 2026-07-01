@@ -60,7 +60,8 @@
       "front": {
         "title": "El Primer Recuerdo",
         "number": 1,
-        "art_prompt": "Fotografía de ensueño, soft-focus, de un único juguete de madera antiguo (un trompo o un auto) sobre un piso de parqué gastado. La luz es la del atardecer entrando por una ventana, creando sombras largas y una atmósfera nostálgica y cálida. Estilo de película independiente."
+        "art_prompt": "Fotografía de ensueño, soft-focus, de un único juguete de madera antiguo (un trompo o un auto) sobre un piso de parqué gastado. La luz es la del atardecer entrando por una ventana, creando sombras largas y una atmósfera nostálgica y cálida. Estilo de película independiente.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-01.jpg?v=1782572829760"
       },
       "back": {
         "phrase": "Hay cosas que no se borran.",
@@ -78,7 +79,8 @@
       "front": {
         "title": "El Superpoder Inútil",
         "number": 2,
-        "art_prompt": "Ilustración estilo cómic pop-art. Un superhéroe con capa y antifaz posa heroicamente, pero en lugar de lanzar rayos, está usando su poder para que el semáforo de peatones siempre se ponga en verde para él. Colores brillantes y saturados, con puntos de benday visibles."
+        "art_prompt": "Ilustración estilo cómic pop-art. Un superhéroe con capa y antifaz posa heroicamente, pero en lugar de lanzar rayos, está usando su poder para que el semáforo de peatones siempre se ponga en verde para él. Colores brillantes y saturados, con puntos de benday visibles.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-02.jpg?v=1782572835219"
       },
       "back": {
         "phrase": "No todos los dones sirven para salvar el mundo.",
@@ -96,7 +98,8 @@
       "front": {
         "title": "El Imitador",
         "number": 3,
-        "art_prompt": "Una sola máscara de teatro griega, pero hecha de un material reflectante como el mercurio líquido, distorsionando y reflejando múltiples caras del entorno. Fondo oscuro y dramático, iluminación cenital. Abstracto y minimalista."
+        "art_prompt": "Una sola máscara de teatro griega, pero hecha de un material reflectante como el mercurio líquido, distorsionando y reflejando múltiples caras del entorno. Fondo oscuro y dramático, iluminación cenital. Abstracto y minimalista.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-03.jpg?v=1782572839313"
       },
       "back": {
         "phrase": "Todos tenemos un personaje adentro.",
@@ -114,7 +117,8 @@
       "front": {
         "title": "La Canción Ancla",
         "number": 4,
-        "art_prompt": "Un primer plano de un cassette de audio antiguo, con la cinta magnética desenrollada formando la silueta de un paisaje montañoso. El fondo es un degradado de colores cálidos, como un atardecer. Estética retro de los 80, con un ligero grano de película."
+        "art_prompt": "Un primer plano de un cassette de audio antiguo, con la cinta magnética desenrollada formando la silueta de un paisaje montañoso. El fondo es un degradado de colores cálidos, como un atardecer. Estética retro de los 80, con un ligero grano de película.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-04.jpg?v=1782572843291"
       },
       "back": {
         "phrase": "Hay melodías que son máquinas del tiempo.",
@@ -132,7 +136,8 @@
       "front": {
         "title": "La Conspiración Absurda",
         "number": 5,
-        "art_prompt": "Un tablero de corcho de detective, estilo cine negro. Hilos rojos conectan fotos inconexas: un gato bostezando, un ticket de supermercado, la antena de un edificio y un brócoli. Iluminación de alto contraste, con humo de cigarrillo en el aire."
+        "art_prompt": "Un tablero de corcho de detective, estilo cine negro. Hilos rojos conectan fotos inconexas: un gato bostezando, un ticket de supermercado, la antena de un edificio y un brócoli. Iluminación de alto contraste, con humo de cigarrillo en el aire.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-05.jpg?v=1782572847350"
       },
       "back": {
         "phrase": "La verdad está ahí afuera. Y es ridícula.",
@@ -150,7 +155,8 @@
       "front": {
         "title": "El Mensaje Prohibido",
         "number": 6,
-        "art_prompt": "Macro fotografía de la pantalla de un smartphone en un cuarto oscuro. Se ven las burbujas de 'escribiendo...' en una app de chat. El reflejo en la pantalla muestra un rostro ansioso. La única luz proviene del propio teléfono."
+        "art_prompt": "Macro fotografía de la pantalla de un smartphone en un cuarto oscuro. Se ven las burbujas de 'escribiendo...' en una app de chat. El reflejo en la pantalla muestra un rostro ansioso. La única luz proviene del propio teléfono.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-06.jpg?v=1782572851747"
       },
       "back": {
         "phrase": "Hay borradores que es mejor no enviar.",
@@ -168,7 +174,8 @@
       "front": {
         "title": "La Cena Imposible",
         "number": 7,
-        "art_prompt": "Pintura al óleo digital al estilo de 'La última cena' de Da Vinci, pero los comensales son una mezcla ecléctica: se puede ver a Freddie Mercury, a Albert Einstein y a un personaje de animé sentados juntos en una larga mesa. La ambientación es surrealista y grandiosa."
+        "art_prompt": "Pintura al óleo digital al estilo de 'La última cena' de Da Vinci, pero los comensales son una mezcla ecléctica: se puede ver a Freddie Mercury, a Albert Einstein y a un personaje de animé sentados juntos en una larga mesa. La ambientación es surrealista y grandiosa.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-07.jpg?v=1782572856138"
       },
       "back": {
         "phrase": "La compañía define el banquete.",
@@ -186,7 +193,8 @@
       "front": {
         "title": "La Peor Startup",
         "number": 8,
-        "art_prompt": "Fotografía de una pizarra blanca de oficina, completamente llena de diagramas de flujo sin sentido, post-its con palabras como 'blockchain' y 'disruptir', y dibujos absurdos. La luz es de tubo fluorescente, dura y corporativa. Estilo de comedia de oficina."
+        "art_prompt": "Fotografía de una pizarra blanca de oficina, completamente llena de diagramas de flujo sin sentido, post-its con palabras como 'blockchain' y 'disruptir', y dibujos absurdos. La luz es de tubo fluorescente, dura y corporativa. Estilo de comedia de oficina.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-08.jpg?v=1782572859865"
       },
       "back": {
         "phrase": "Las buenas ideas son raras. Las malas, abundan.",
@@ -204,7 +212,8 @@
       "front": {
         "title": "El Discurso Solemne",
         "number": 9,
-        "art_prompt": "Un único salero de vidrio sobre un pedestal de madera, iluminado por un solo haz de luz desde arriba, como si fuera una pieza de museo invaluable. El fondo es completamente negro, creando una atmósfera de importancia y ridículo."
+        "art_prompt": "Un único salero de vidrio sobre un pedestal de madera, iluminado por un solo haz de luz desde arriba, como si fuera una pieza de museo invaluable. El fondo es completamente negro, creando una atmósfera de importancia y ridículo.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-09.jpg?v=1782572864018"
       },
       "back": {
         "phrase": "Cualquier cosa puede ser importante si la decís con la entonación correcta.",
@@ -222,7 +231,8 @@
       "front": {
         "title": "El Titular del Futuro",
         "number": 10,
-        "art_prompt": "Ilustración de una persona mirando por la ventana a una ciudad futurista. En el vidrio se refleja un titular de periódico brillante y holográfico que dice: 'Finalmente sucedió lo inesperado'. Estética de ciencia ficción optimista, con tonos azules y violetas."
+        "art_prompt": "Ilustración de una persona mirando por la ventana a una ciudad futurista. En el vidrio se refleja un titular de periódico brillante y holográfico que dice: 'Finalmente sucedió lo inesperado'. Estética de ciencia ficción optimista, con tonos azules y violetas.",
+        "art_url": "/assets/editions/juego-de-cartas-para-jugar-entre-amigos-en-una-juntada/sl-10.jpg?v=1782572868428"
       },
       "back": {
         "phrase": "Escribir algo es el primer paso para que ocurra.",

@@ -1,4 +1,11 @@
-import { EbButton, EbModalShell, EbNotice, EbStatusBanner, EbTextField } from './primitives';
+import {
+  EbButton,
+  EbModalShell,
+  EbNotice,
+  EbStatusBanner,
+  EbTextField,
+  EbWhatsAppButton,
+} from './primitives';
 
 export const SharedWebUiGallery = () => (
   <main className="eb-gallery">
@@ -18,6 +25,9 @@ export const SharedWebUiGallery = () => (
         <EbButton>Secondary action</EbButton>
         <EbButton variant="ghost">Ghost action</EbButton>
         <EbButton variant="danger">Danger action</EbButton>
+        <EbWhatsAppButton href="https://wa.me/5491123946828?text=Hola">
+          WhatsApp
+        </EbWhatsAppButton>
         <EbButton disabled>Disabled</EbButton>
       </div>
     </section>

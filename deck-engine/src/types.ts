@@ -128,6 +128,21 @@ export interface DeckDesign {
   hide_player_count?: boolean;
   /** Optional QR foreground color for the selected deck template. */
   qr_color?: string | null;
+  /** Active reverse-card authoring model used by Studio and production renderers. */
+  reverse_model?: DeckReverseModel;
+  /** Operator review state for full-back-image to editable-layout migration. */
+  reverse_migration_status?: 'not_started' | 'review' | 'approved';
+  /** Preserved AI full-back images kept as migration references. */
+  legacy_full_back_references?: DeckLegacyFullBackReference[];
+}
+
+export type DeckReverseModel = 'editable-layout' | 'legacy-full-back' | 'mixed';
+
+export interface DeckLegacyFullBackReference {
+  card_id: string;
+  card_number: number;
+  back_image_url: string;
+  back_image_versions?: string[];
 }
 
 export type CardFieldPlacement = 'front' | 'back' | 'hidden';

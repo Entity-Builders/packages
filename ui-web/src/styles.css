@@ -142,6 +142,63 @@
   text-overflow: ellipsis;
 }
 
+.eb-whatsapp-button {
+  align-items: center;
+  background: #25d366;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  box-shadow:
+    0 10px 22px rgb(37 211 102 / 24%),
+    inset 0 1px 0 rgb(255 255 255 / 28%);
+  color: #072c15;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 900;
+  gap: 0.55rem;
+  justify-content: center;
+  line-height: 1;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+  white-space: nowrap;
+}
+
+.eb-whatsapp-button:hover {
+  background: #1ebe5d;
+  box-shadow:
+    0 12px 26px rgb(37 211 102 / 30%),
+    inset 0 1px 0 rgb(255 255 255 / 34%);
+  transform: translateY(-1px);
+}
+
+.eb-whatsapp-button:focus-visible {
+  box-shadow: var(--eb-focus-ring);
+  outline: none;
+}
+
+.eb-whatsapp-button[data-full-width="true"] {
+  width: 100%;
+}
+
+.eb-whatsapp-button__icon {
+  flex-shrink: 0;
+  height: 1.35em;
+  width: 1.35em;
+}
+
+.eb-whatsapp-button__label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .eb-notice {
   align-items: flex-start;
   border: 1px solid var(--eb-color-border);

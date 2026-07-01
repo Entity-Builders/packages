@@ -163,9 +163,10 @@
         "number": 5,
         "art_prompt": "A slightly wilted potted fern sitting alone on the corner of a poker table in a modern, stylish bachelor pad apartment. Empty beer bottles and poker chips are scattered around it. The lighting is moody, like the end of a long night. The composition feels slightly comedic and sad.",
         "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-05_v2026-06-28T16-38-50.jpg",
           "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-05_v2026-06-25T23-00-39.jpg"
         ],
-        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-05.jpg?v=1782428439349"
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-05.jpg?v=1782664730350"
       },
       "back": {
         "phrase": "Podés matar una planta, pero no dejes que muera el amor.",
@@ -307,9 +308,10 @@
         "number": 11,
         "art_prompt": "The top of the Empire State Building at dusk, with the lights of New York City starting to twinkle below. The observation deck is empty. The mood is romantic, hopeful, and slightly melancholic. The style is reminiscent of early 90s film cinematography, with a soft focus.",
         "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-11_v2026-06-28T17-41-24.jpg",
           "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-11_v2026-06-25T23-00-50.jpg"
         ],
-        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-11.jpg?v=1782428450442"
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-11.jpg?v=1782668484671"
       },
       "back": {
         "phrase": "Algunas citas valen la pena la espera, y la altura.",
@@ -403,7 +405,10 @@
         "title": "El Gnomo Viajero",
         "number": 15,
         "art_prompt": "A classic garden gnome with a red hat and white beard, photographed like a tourist in front of the pyramids of Giza. The photo has a slightly faded, vintage postcard look. The composition is whimsical and surreal.",
-        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-15.jpg?v=1782428460835"
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-15.jpg?v=1782668508794",
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-15_v2026-06-28T17-41-48.jpg"
+        ]
       },
       "back": {
         "phrase": "Los pequeños detalles pueden cambiar el mundo de alguien.",
@@ -472,7 +477,15 @@
         "title": "El Musical de Drácula",
         "number": 18,
         "art_prompt": "A dimly lit stage with dramatic, gothic set pieces. In the center, a collection of puppets, including a vampire with a large cape, are arranged as if performing an opera. The lighting is theatrical, with deep reds and shadows. The mood is absurdly serious and melodramatic.",
-        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18.jpg?v=1782428467470"
+        "art_versions": [
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18_v2026-06-28T17-36-04.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18_v2026-06-28T17-14-47.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18_v2026-06-28T17-11-01.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18_v2026-06-28T17-10-28.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18_v2026-06-28T17-06-30.jpg",
+          "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18_v2026-06-28T16-59-46.jpg"
+        ],
+        "art_url": "/assets/editions/trivia-sobre-peliculas-de-comedia-romantica/corazon-de-pelicula-18.jpg?v=1782668164243"
       },
       "back": {
         "phrase": "A veces, tu proyecto más ridículo es el que te salva.",
