@@ -93,3 +93,6 @@ export type { DeckId } from './decks.js';
 
 // QR URL generation
 export { getCardQrUrl } from './qr.js';
+
+// Playable product catalog
+export * from './products/index.js';
