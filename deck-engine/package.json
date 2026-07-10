@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "test:digital": "npx tsx src/scripts/check-digital.ts",
     "test:music-bingo": "npx tsx src/scripts/check-music-bingo.ts",
+    "test:music-bingo-pricing": "npx tsx src/scripts/check-music-bingo-pricing.ts",
     "test:music-bingo-pack": "npx tsx src/scripts/check-music-bingo-pack.ts",
     "check-products": "npx tsx src/scripts/check-products.ts",
     "sync": "npx tsx src/scripts/sync-decks.ts",

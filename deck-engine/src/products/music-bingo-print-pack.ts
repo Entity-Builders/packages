@@ -1,10 +1,13 @@
 import type { MusicBingoSong, UseContext } from './types.js';
 import {
   generateMusicBingoCards,
+  getRecommendedMusicBingoEventRuleProfile,
   validateMusicBingoDraftSongs,
   type GeneratedMusicBingoCard,
   type MusicBingoBoardSize,
+  type MusicBingoEventRuleProfile,
   type MusicBingoFairnessReport,
+  type MusicBingoPlaylistFitReport,
   type MusicBingoPlaylistReference,
 } from './music-bingo-creator.js';
 import { MUSIC_BINGO_PRODUCT } from './music-bingo.js';
@@ -47,6 +50,8 @@ export interface MusicBingoPrintPack {
   playlist?: MusicBingoPlaylistReference;
   cards: GeneratedMusicBingoCard[];
   controlSheet: MusicBingoControlSheetRow[];
+  playlistFit: MusicBingoPlaylistFitReport;
+  eventRuleProfile: MusicBingoEventRuleProfile;
   fairnessReport?: MusicBingoFairnessReport;
   setupSteps: string[];
   playRules: string[];
@@ -63,7 +68,10 @@ export function buildMusicBingoPrintPack(
   input: MusicBingoPrintPackInput
 ): MusicBingoPrintPack {
   const boardSize = input.boardSize ?? 5;
-  const validation = validateMusicBingoDraftSongs(input.songs, input.freeSpace, boardSize);
+  const validation = validateMusicBingoDraftSongs(input.songs, input.freeSpace, boardSize, {
+    cardCount: input.cardCount,
+  });
+  const eventRuleProfile = getRecommendedMusicBingoEventRuleProfile(input.cardCount);
   const generated = validation.canPreview
     ? generateMusicBingoCards({
         title: input.title,
@@ -93,13 +101,15 @@ export function buildMusicBingoPrintPack(
       artist: song.artist,
       title: song.title,
     })),
+    playlistFit: validation.playlistFit,
+    eventRuleProfile,
     fairnessReport: generated?.fairnessReport,
     setupSteps: [
       'Imprimi los cartones necesarios y separa una copia de la hoja de control para quien conduce.',
       input.playlist
         ? `Abri la playlist sugerida "${input.playlist.title}" o prepara tu propia fuente de reproduccion autorizada.`
         : 'Prepara la playlist o fuente de reproduccion desde la plataforma y permisos del organizador.',
-      'Defini premios simples antes de empezar: linea, doble linea, carton completo o desempate.',
+      `Dinamica sugerida: ${eventRuleProfile.label}. ${eventRuleProfile.pacingNotes[0]}`,
       'Explica que cada persona marca una casilla cuando reconoce la cancion, artista o consigna.',
     ],
     playRules: [
@@ -122,6 +132,7 @@ export function buildMusicBingoPrintPack(
     ],
     printGuide: [
       'Imprimir en A4, escala 100%, sin ajustar al area imprimible si el navegador lo permite.',
+      'El PDF agrupa la mayor cantidad legible de cartones por hoja para reducir gasto de papel.',
       'Usar papel comun para pruebas y papel de mayor gramaje para evento.',
       'Cortar o repartir las hojas completas segun la dinamica del lugar.',
       'Guardar este archivo como PDF desde el dialogo de impresion si necesitas reenviarlo.',

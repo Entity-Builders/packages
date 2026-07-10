@@ -10,6 +10,8 @@ export interface AnalyticsProvider {
   reset(): void;
   /** Read a feature flag value. Returns undefined if not loaded yet. */
   getFeatureFlag(key: string): string | boolean | undefined;
+  /** Read the provider's current anonymous or identified analytics id when available. */
+  getDistinctId?(): string | undefined;
   /** Register a callback for when feature flags are loaded. */
   onFeatureFlagsLoaded(callback: () => void): void;
   /** Capture an exception for error tracking (e.g., PostHog Error Tracking). */

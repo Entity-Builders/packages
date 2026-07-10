@@ -3,7 +3,14 @@ import {
   MUSIC_BINGO_DEMO_SONGS,
   MUSIC_BINGO_PRODUCT_ID,
 } from './music-bingo.js';
+import {
+  getMusicBingoSelfServePriceQuote,
+  type MusicBingoPriceMode,
+} from './music-bingo-pricing.js';
 import { applyMusicBingoSongArtworkCache } from './music-bingo-song-cache.js';
+
+export { MUSIC_BINGO_CARD_COUNT_OPTIONS } from './music-bingo-pricing.js';
+export type { MusicBingoCardCountOption, MusicBingoPriceMode } from './music-bingo-pricing.js';
 
 export type MusicBingoCreatorSongSource = 'baraja_theme' | 'manual';
 
@@ -20,6 +27,20 @@ export interface MusicBingoPlaylistReference {
   coverImageUrl?: string;
 }
 
+export type MusicBingoCatalogCategoryId = 'rock' | 'cumbia' | 'pop';
+
+export interface MusicBingoThemeCatalogMetadata {
+  categoryId: MusicBingoCatalogCategoryId;
+  categoryLabel: string;
+  genreLabel: string;
+  occasionLabels: string[];
+  energyLabel: string;
+  decadeLabel?: string;
+  supportedBoardSizes: MusicBingoBoardSize[];
+  useCaseLabel: string;
+  searchTerms: string[];
+}
+
 export interface MusicBingoTheme {
   id: string;
   offeringId: string;
@@ -27,18 +48,12 @@ export interface MusicBingoTheme {
   summary: string;
   suggestedGameName: string;
   tags: string[];
+  catalog: MusicBingoThemeCatalogMetadata;
   songs: MusicBingoSong[];
   playlist?: MusicBingoPlaylistReference;
 }
 
-export interface MusicBingoCardCountOption {
-  cardCount: number;
-  label: string;
-  summary: string;
-  founderPriceARS: number;
-}
-
-export type MusicBingoBoardSize = 3 | 4 | 5;
+export type MusicBingoBoardSize = 3 | 4 | 5 | 6;
 
 export interface MusicBingoBoardSizeOption {
   boardSize: MusicBingoBoardSize;
@@ -49,8 +64,101 @@ export interface MusicBingoBoardSizeOption {
 export interface MusicBingoPriceQuote {
   cardCount: number;
   label: string;
-  mode: 'founder_private' | 'proposal';
+  mode: MusicBingoPriceMode | 'proposal';
   summary: string;
+}
+
+export type MusicBingoEventScaleBandId =
+  | 'small'
+  | 'normal'
+  | 'medium'
+  | 'large'
+  | 'extra_large';
+
+export interface MusicBingoEventScaleBand {
+  id: MusicBingoEventScaleBandId;
+  label: string;
+  minCardCount: number;
+  maxCardCount?: number;
+  multiplier: number;
+}
+
+export type MusicBingoPlaylistFitSeverity =
+  | 'blocked'
+  | 'scale_warning'
+  | 'scenario_ready';
+
+export interface MusicBingoPlaylistFitInput {
+  usableSongCount: number;
+  songSlotsPerCard: number;
+  cardCount?: number;
+  participantCount?: number;
+}
+
+export interface MusicBingoPlaylistFitReport {
+  severity: MusicBingoPlaylistFitSeverity;
+  scaleBand: MusicBingoEventScaleBandId;
+  scaleBandLabel: string;
+  selectedCardCount: number;
+  participantCount?: number;
+  songSlotsPerCard: number;
+  usableSongCount: number;
+  hardMinimum: number;
+  scenarioMinimum: number;
+  multiplier: number;
+  expectedSharedSongs: number | null;
+  songsNeededForScenario: number;
+  canFillCard: boolean;
+  scenarioReady: boolean;
+  summary: string;
+  recommendations: string[];
+}
+
+export type MusicBingoCollectionTargetStatus =
+  | 'prototype'
+  | 'publishable_floor'
+  | 'standard_official'
+  | 'broad_commercial';
+
+export interface MusicBingoCollectionTargetReport {
+  status: MusicBingoCollectionTargetStatus;
+  label: string;
+  minSongCount: number;
+  maxSongCount?: number;
+  summary: string;
+}
+
+export type MusicBingoLinePattern =
+  | 'single_line'
+  | 'double_line'
+  | 'four_corners'
+  | 'x'
+  | 'frame'
+  | 'full_card';
+
+export type MusicBingoEventRuleProfileVisibility =
+  | 'public_recommended'
+  | 'proposal_only';
+
+export interface MusicBingoEventRuleProfile {
+  id: string;
+  label: string;
+  audienceLabel: string;
+  recommendedForScaleBands: MusicBingoEventScaleBandId[];
+  boardSize: MusicBingoBoardSize;
+  freeSpace: boolean;
+  linePatterns: MusicBingoLinePattern[];
+  lineWinnerCount: number;
+  bingoWinnerCount: number;
+  roundCount: number;
+  winnersContinue: boolean;
+  visibility: MusicBingoEventRuleProfileVisibility;
+  pacingNotes: string[];
+}
+
+export interface MusicBingoDraftValidationOptions {
+  cardCount?: number;
+  participantCount?: number;
 }
 
 export interface MusicBingoValidationResult {
@@ -59,6 +167,7 @@ export interface MusicBingoValidationResult {
   requiredSongCount: number;
   usableSongs: MusicBingoSong[];
   duplicateCount: number;
+  playlistFit: MusicBingoPlaylistFitReport;
   errors: string[];
   warnings: string[];
 }
@@ -104,6 +213,7 @@ export interface MusicBingoPlaybackOrderRow {
 export interface MusicBingoGenerateCardsResult {
   cards: GeneratedMusicBingoCard[];
   requiredSongCount: number;
+  playlistFit: MusicBingoPlaylistFitReport;
   warnings: string[];
   fairnessReport?: MusicBingoFairnessReport;
   playbackOrder: MusicBingoPlaybackOrderRow[];
@@ -112,6 +222,11 @@ export interface MusicBingoGenerateCardsResult {
 export interface MusicBingoManualParseResult {
   songs: MusicBingoSong[];
   ignoredLineCount: number;
+}
+
+export interface MusicBingoUsableSongPool {
+  usableSongs: MusicBingoSong[];
+  duplicateCount: number;
 }
 
 export const MUSIC_BINGO_BOARD_SIZE = 5;
@@ -136,54 +251,115 @@ export const MUSIC_BINGO_BOARD_SIZE_OPTIONS: MusicBingoBoardSizeOption[] = [
   },
 ];
 
-export const MUSIC_BINGO_CARD_COUNT_OPTIONS: MusicBingoCardCountOption[] = [
+export const MUSIC_BINGO_EVENT_SCALE_BANDS: MusicBingoEventScaleBand[] = [
   {
-    cardCount: 15,
-    label: '15 cartones',
-    summary: 'Para probar la dinamica en casa o mesa chica.',
-    founderPriceARS: 4900,
+    id: 'small',
+    label: 'Juego chico',
+    minCardCount: 1,
+    maxCardCount: 10,
+    multiplier: 3,
   },
   {
-    cardCount: 30,
-    label: '30 cartones',
-    summary: 'Para cumples, juntadas y mesas chicas.',
-    founderPriceARS: 7900,
+    id: 'normal',
+    label: 'Fiesta normal',
+    minCardCount: 11,
+    maxCardCount: 30,
+    multiplier: 4,
   },
   {
-    cardCount: 50,
-    label: '50 cartones',
-    summary: 'Para juntadas grandes o salon chico.',
-    founderPriceARS: 10900,
+    id: 'medium',
+    label: 'Evento mediano',
+    minCardCount: 31,
+    maxCardCount: 75,
+    multiplier: 5,
   },
   {
-    cardCount: 70,
-    label: '70 cartones',
-    summary: 'Para eventos medianos con mas rotacion.',
-    founderPriceARS: 13900,
+    id: 'large',
+    label: 'Evento grande',
+    minCardCount: 76,
+    maxCardCount: 150,
+    multiplier: 6,
   },
   {
-    cardCount: 100,
-    label: '100 cartones',
-    summary: 'Para fiestas grandes o varias rondas.',
-    founderPriceARS: 17900,
+    id: 'extra_large',
+    label: 'Evento extra grande',
+    minCardCount: 151,
+    multiplier: 8,
+  },
+];
+
+export const MUSIC_BINGO_EVENT_RULE_PROFILES: MusicBingoEventRuleProfile[] = [
+  {
+    id: 'small-private-fast',
+    label: 'Mesa chica rapida',
+    audienceLabel: '2-10 personas',
+    recommendedForScaleBands: ['small'],
+    boardSize: 4,
+    freeSpace: false,
+    linePatterns: ['single_line', 'full_card'],
+    lineWinnerCount: 1,
+    bingoWinnerCount: 1,
+    roundCount: 1,
+    winnersContinue: true,
+    visibility: 'public_recommended',
+    pacingNotes: [
+      'Usar una linea simple como premio rapido y carton lleno como cierre.',
+      'Funciona bien cuando hay pocas personas y se quiere explicar la dinamica rapido.',
+    ],
   },
   {
-    cardCount: 150,
-    label: '150 cartones',
-    summary: 'Para bares chicos, colegios o doble tanda.',
-    founderPriceARS: 24900,
+    id: 'normal-party-classic',
+    label: 'Fiesta clasica',
+    audienceLabel: '11-30 personas',
+    recommendedForScaleBands: ['normal'],
+    boardSize: 5,
+    freeSpace: true,
+    linePatterns: ['single_line', 'full_card'],
+    lineWinnerCount: 2,
+    bingoWinnerCount: 1,
+    roundCount: 1,
+    winnersContinue: true,
+    visibility: 'public_recommended',
+    pacingNotes: [
+      'Entregar premios para las primeras lineas y reservar el premio fuerte para bingo.',
+      'Mantiene la tension sin convertir cada cancion en un desempate.',
+    ],
   },
   {
-    cardCount: 200,
-    label: '200 cartones',
-    summary: 'Para convocatorias grandes con margen de invitados.',
-    founderPriceARS: 31900,
+    id: 'medium-event-rotation',
+    label: 'Evento mediano con rotacion',
+    audienceLabel: '31-75 personas',
+    recommendedForScaleBands: ['medium'],
+    boardSize: 5,
+    freeSpace: true,
+    linePatterns: ['double_line', 'full_card'],
+    lineWinnerCount: 3,
+    bingoWinnerCount: 2,
+    roundCount: 2,
+    winnersContinue: false,
+    visibility: 'proposal_only',
+    pacingNotes: [
+      'Usar doble linea para que no aparezcan ganadores demasiado temprano.',
+      'Separar premios por ronda ayuda a sostener eventos con mesas grandes.',
+    ],
   },
   {
-    cardCount: 250,
-    label: '250 cartones',
-    summary: 'Para eventos grandes antes de pasar a propuesta.',
-    founderPriceARS: 39900,
+    id: 'large-venue-proposal',
+    label: 'Evento grande con propuesta',
+    audienceLabel: '76+ personas',
+    recommendedForScaleBands: ['large', 'extra_large'],
+    boardSize: 5,
+    freeSpace: true,
+    linePatterns: ['double_line', 'four_corners', 'frame', 'full_card'],
+    lineWinnerCount: 5,
+    bingoWinnerCount: 3,
+    roundCount: 2,
+    winnersContinue: false,
+    visibility: 'proposal_only',
+    pacingNotes: [
+      'Definir varios premios y reglas de continuidad antes de imprimir.',
+      'Conviene coordinar conduccion, tiempos y validacion con Baraja antes del evento.',
+    ],
   },
 ];
 
@@ -440,6 +616,26 @@ export const MUSIC_BINGO_MVP_THEMES: MusicBingoTheme[] = [
     summary: 'Clasicos reconocibles para cantar, marcar y discutir en la mesa.',
     suggestedGameName: 'Noche Rock Argentino',
     tags: ['Rock nacional', 'Juntadas', 'Bares'],
+    catalog: {
+      categoryId: 'rock',
+      categoryLabel: 'Rock nacional',
+      genreLabel: 'Rock argentino',
+      occasionLabels: ['Juntadas', 'Bares', 'Peñas'],
+      energyLabel: 'Para cantar',
+      decadeLabel: 'Clasicos 80/90/00',
+      supportedBoardSizes: [3, 4, 5],
+      useCaseLabel: 'Ideal para grupos que conocen himnos y disfrutan discutir versiones.',
+      searchTerms: [
+        'rock',
+        'rock nacional',
+        'rock argentino',
+        'bares',
+        'juntadas',
+        'clasicos',
+        'soda stereo',
+        'redondos',
+      ],
+    },
     songs: MUSIC_BINGO_DEMO_SONGS,
     playlist: {
       provider: 'spotify',
@@ -456,6 +652,25 @@ export const MUSIC_BINGO_MVP_THEMES: MusicBingoTheme[] = [
     summary: 'Popular, directa y facil de conducir cuando la fiesta ya arranco.',
     suggestedGameName: 'Bingo Cumbia Retro',
     tags: ['Fiesta', 'Cumples', 'Baile'],
+    catalog: {
+      categoryId: 'cumbia',
+      categoryLabel: 'Fiesta',
+      genreLabel: 'Cumbia retro',
+      occasionLabels: ['Cumples', 'Fiestas', 'Baile'],
+      energyLabel: 'Bailable',
+      decadeLabel: 'Retro popular',
+      supportedBoardSizes: [3, 4, 5],
+      useCaseLabel: 'Funciona cuando queres reglas simples y canciones que levantan la ronda.',
+      searchTerms: [
+        'cumbia',
+        'cumbia retro',
+        'fiesta',
+        'cumples',
+        'baile',
+        'popular',
+        'bailable',
+      ],
+    },
     songs: CUMBIA_RETRO_SONGS,
     playlist: {
       provider: 'spotify',
@@ -472,6 +687,26 @@ export const MUSIC_BINGO_MVP_THEMES: MusicBingoTheme[] = [
     summary: 'Nostalgia pop para grupos mixtos y momentos de memoria compartida.',
     suggestedGameName: 'Bingo Hits 2000',
     tags: ['Pop', 'Nostalgia', 'Eventos'],
+    catalog: {
+      categoryId: 'pop',
+      categoryLabel: 'Pop nostalgia',
+      genreLabel: 'Hits 2000',
+      occasionLabels: ['Eventos', 'Cumples', 'Grupos mixtos'],
+      energyLabel: 'Nostalgia',
+      decadeLabel: '2000s',
+      supportedBoardSizes: [3, 4, 5],
+      useCaseLabel: 'Buen punto medio para edades y gustos mezclados.',
+      searchTerms: [
+        'pop',
+        'hits',
+        '2000',
+        '2000s',
+        'nostalgia',
+        'eventos',
+        'cumples',
+        'grupos mixtos',
+      ],
+    },
     songs: HITS_2000_SONGS,
     playlist: {
       provider: 'spotify',
@@ -528,17 +763,180 @@ export function hasMusicBingoFreeSpace(
   return freeSpace && boardSize % 2 === 1;
 }
 
+export function getMusicBingoEventScaleBand(
+  cardOrParticipantCount: number
+): MusicBingoEventScaleBand {
+  const selectedCount = Math.max(1, Math.ceil(cardOrParticipantCount));
+  return (
+    MUSIC_BINGO_EVENT_SCALE_BANDS.find((band) => {
+      const belowMax = band.maxCardCount === undefined || selectedCount <= band.maxCardCount;
+      return selectedCount >= band.minCardCount && belowMax;
+    }) ?? MUSIC_BINGO_EVENT_SCALE_BANDS[MUSIC_BINGO_EVENT_SCALE_BANDS.length - 1]
+  );
+}
+
+export function calculateMusicBingoPlaylistFit(
+  input: MusicBingoPlaylistFitInput
+): MusicBingoPlaylistFitReport {
+  const usableSongCount = Math.max(0, Math.floor(input.usableSongCount));
+  const songSlotsPerCard = Math.max(1, Math.floor(input.songSlotsPerCard));
+  const cardCount = Math.max(1, Math.ceil(input.cardCount ?? 1));
+  const participantCount = input.participantCount === undefined
+    ? undefined
+    : Math.max(1, Math.ceil(input.participantCount));
+  const selectedCardCount = Math.max(cardCount, participantCount ?? 1);
+  const scaleBand = getMusicBingoEventScaleBand(selectedCardCount);
+  const hardMinimum = songSlotsPerCard;
+  const scenarioMinimum = Math.ceil(songSlotsPerCard * scaleBand.multiplier);
+  const canFillCard = usableSongCount >= hardMinimum;
+  const scenarioReady = canFillCard && usableSongCount >= scenarioMinimum;
+  const severity: MusicBingoPlaylistFitSeverity = !canFillCard
+    ? 'blocked'
+    : scenarioReady
+      ? 'scenario_ready'
+      : 'scale_warning';
+  const expectedSharedSongs = usableSongCount > 0
+    ? roundToOneDecimal((songSlotsPerCard * songSlotsPerCard) / usableSongCount)
+    : null;
+  const songsNeededForScenario = Math.max(0, scenarioMinimum - usableSongCount);
+
+  return {
+    severity,
+    scaleBand: scaleBand.id,
+    scaleBandLabel: scaleBand.label,
+    selectedCardCount,
+    participantCount,
+    songSlotsPerCard,
+    usableSongCount,
+    hardMinimum,
+    scenarioMinimum,
+    multiplier: scaleBand.multiplier,
+    expectedSharedSongs,
+    songsNeededForScenario,
+    canFillCard,
+    scenarioReady,
+    summary: getPlaylistFitSummary({
+      severity,
+      usableSongCount,
+      scenarioMinimum,
+      selectedCardCount,
+      scaleBandLabel: scaleBand.label,
+    }),
+    recommendations: getPlaylistFitRecommendations({
+      severity,
+      songsNeededForScenario,
+      selectedCardCount,
+      songSlotsPerCard,
+    }),
+  };
+}
+
+export function getMusicBingoCollectionTarget(
+  usableSongCount: number
+): MusicBingoCollectionTargetReport {
+  if (usableSongCount >= 150) {
+    return {
+      status: 'broad_commercial',
+      label: 'Coleccion comercial amplia',
+      minSongCount: 150,
+      maxSongCount: 200,
+      summary: 'Apta para temas amplios, eventos grandes y reutilizacion comercial.',
+    };
+  }
+
+  if (usableSongCount >= 100) {
+    return {
+      status: 'standard_official',
+      label: 'Coleccion oficial estandar',
+      minSongCount: 100,
+      maxSongCount: 150,
+      summary: 'Apta como coleccion oficial para juegos comunes de 5 x 5.',
+    };
+  }
+
+  if (usableSongCount >= 80) {
+    return {
+      status: 'publishable_floor',
+      label: 'Piso publicable',
+      minSongCount: 80,
+      maxSongCount: 99,
+      summary: 'Puede publicarse con cuidado, pero no deberia venderse como lista amplia.',
+    };
+  }
+
+  return {
+    status: 'prototype',
+    label: 'Demo o prototipo',
+    minSongCount: 0,
+    maxSongCount: 79,
+    summary: 'Sirve para demos, temas chicos o pruebas, no para coleccion oficial estandar.',
+  };
+}
+
+export function getRecommendedMusicBingoEventRuleProfile(
+  cardOrParticipantCount: number
+): MusicBingoEventRuleProfile {
+  const scaleBand = getMusicBingoEventScaleBand(cardOrParticipantCount);
+  return (
+    MUSIC_BINGO_EVENT_RULE_PROFILES.find((profile) =>
+      profile.recommendedForScaleBands.includes(scaleBand.id)
+    ) ?? MUSIC_BINGO_EVENT_RULE_PROFILES[0]
+  );
+}
+
+export function validateMusicBingoCatalogThemes(
+  themes: MusicBingoTheme[] = MUSIC_BINGO_MVP_THEMES
+): string[] {
+  const errors: string[] = [];
+
+  themes.forEach((theme) => {
+    const prefix = `theme "${theme.id}"`;
+    const catalog = theme.catalog;
+
+    if (!catalog.categoryId) errors.push(`${prefix} is missing catalog category`);
+    if (!catalog.categoryLabel.trim()) errors.push(`${prefix} is missing catalog category label`);
+    if (!catalog.genreLabel.trim()) errors.push(`${prefix} is missing catalog genre label`);
+    if (!catalog.energyLabel.trim()) errors.push(`${prefix} is missing catalog energy label`);
+    if (!catalog.useCaseLabel.trim()) errors.push(`${prefix} is missing catalog use case label`);
+    if (catalog.occasionLabels.length === 0) errors.push(`${prefix} is missing catalog occasions`);
+    if (catalog.searchTerms.length === 0) errors.push(`${prefix} is missing catalog search terms`);
+    if (catalog.supportedBoardSizes.length === 0) {
+      errors.push(`${prefix} is missing supported board sizes`);
+    }
+
+    catalog.supportedBoardSizes.forEach((boardSize) => {
+      const requiredSongCount = getMusicBingoRequiredSongCountForBoard(boardSize, true);
+      const uniqueSongCount = getMusicBingoUsableSongPool(theme.songs).usableSongs.length;
+
+      if (uniqueSongCount < requiredSongCount) {
+        errors.push(
+          `${prefix} declares ${boardSize}x${boardSize} support but only has ${uniqueSongCount} unique songs`
+        );
+      }
+    });
+  });
+
+  return errors;
+}
+
 export function validateMusicBingoDraftSongs(
   songs: MusicBingoSong[],
   freeSpace: boolean,
-  boardSize: MusicBingoBoardSize = MUSIC_BINGO_BOARD_SIZE
+  boardSize: MusicBingoBoardSize = MUSIC_BINGO_BOARD_SIZE,
+  options: MusicBingoDraftValidationOptions = {}
 ): MusicBingoValidationResult {
   const requiredSongCount = getMusicBingoRequiredSongCountForBoard(boardSize, freeSpace);
-  const { uniqueSongs, duplicateCount } = uniqueMusicBingoSongs(songs);
+  const { usableSongs, duplicateCount } = getMusicBingoUsableSongPool(songs);
+  const playlistFit = calculateMusicBingoPlaylistFit({
+    usableSongCount: usableSongs.length,
+    songSlotsPerCard: requiredSongCount,
+    cardCount: options.cardCount,
+    participantCount: options.participantCount,
+  });
   const errors: string[] = [];
   const warnings: string[] = [];
 
-  if (uniqueSongs.length < requiredSongCount) {
+  if (usableSongs.length < requiredSongCount) {
     errors.push(
       `Necesitas al menos ${requiredSongCount} canciones distintas para este formato.`
     );
@@ -550,10 +948,14 @@ export function validateMusicBingoDraftSongs(
     );
   }
 
-  if (uniqueSongs.length === requiredSongCount) {
+  if (usableSongs.length === requiredSongCount) {
     warnings.push(
       'Con el minimo exacto de canciones, los cartones cambian el orden pero comparten el mismo repertorio.'
     );
+  }
+
+  if (playlistFit.severity === 'scale_warning') {
+    warnings.push(playlistFit.summary);
   }
 
   if (freeSpace && !hasMusicBingoFreeSpace(boardSize, freeSpace)) {
@@ -564,8 +966,9 @@ export function validateMusicBingoDraftSongs(
     canPreview: errors.length === 0,
     boardSize,
     requiredSongCount,
-    usableSongs: uniqueSongs,
+    usableSongs,
     duplicateCount,
+    playlistFit,
     errors,
     warnings,
   };
@@ -575,12 +978,15 @@ export function generateMusicBingoCards(
   input: MusicBingoGenerateCardsInput
 ): MusicBingoGenerateCardsResult {
   const boardSize = input.boardSize ?? MUSIC_BINGO_BOARD_SIZE;
-  const validation = validateMusicBingoDraftSongs(input.songs, input.freeSpace, boardSize);
+  const validation = validateMusicBingoDraftSongs(input.songs, input.freeSpace, boardSize, {
+    cardCount: input.cardCount,
+  });
 
   if (!validation.canPreview) {
     return {
       cards: [],
       requiredSongCount: validation.requiredSongCount,
+      playlistFit: validation.playlistFit,
       warnings: validation.errors,
       playbackOrder: [],
     };
@@ -597,6 +1003,7 @@ export function generateMusicBingoCards(
   return {
     cards,
     requiredSongCount: validation.requiredSongCount,
+    playlistFit: validation.playlistFit,
     warnings: validation.warnings,
     fairnessReport,
     playbackOrder,
@@ -605,7 +1012,8 @@ export function generateMusicBingoCards(
 
 export function getMusicBingoPriceQuote(
   cardCount: number,
-  useContext: MusicBingoCreatorUseContext
+  useContext: MusicBingoCreatorUseContext,
+  songSource: MusicBingoCreatorSongSource = 'baraja_theme'
 ): MusicBingoPriceQuote {
   if (useContext === 'venue_event' || useContext === 'professional_facilitation') {
     return {
@@ -617,20 +1025,69 @@ export function getMusicBingoPriceQuote(
     };
   }
 
-  const tier = MUSIC_BINGO_CARD_COUNT_OPTIONS.find((option) => option.cardCount === cardCount);
+  const priceMode = songSource === 'baraja_theme' ? 'prebuilt' : 'playlist_own';
+  const quote = getMusicBingoSelfServePriceQuote(cardCount, priceMode);
 
   return {
     cardCount,
-    label: tier ? formatArgentineFounderPrice(tier.founderPriceARS) : `${cardCount} cartones - consultar`,
-    mode: 'founder_private',
-    summary: tier
-      ? `Precio fundador Argentina para ${tier.label}. Incluye PDF imprimible, hoja de control, reglas y guia de dinamica.`
+    label: quote ? quote.label : `${cardCount} cartones - consultar`,
+    mode: priceMode,
+    summary: quote
+      ? `${
+          priceMode === 'prebuilt'
+            ? 'Bingo Musical prearmado'
+            : 'Bingo Musical con tu playlist'
+        }. Incluye PDF imprimible, hoja de control, reglas y guia de dinamica.`
       : 'Pago y entrega se confirman por WhatsApp en este MVP.',
   };
 }
 
-function formatArgentineFounderPrice(priceARS: number): string {
-  return `$${priceARS.toLocaleString('es-AR')} ARS`;
+function getPlaylistFitSummary(input: {
+  severity: MusicBingoPlaylistFitSeverity;
+  usableSongCount: number;
+  scenarioMinimum: number;
+  selectedCardCount: number;
+  scaleBandLabel: string;
+}): string {
+  if (input.severity === 'blocked') {
+    return 'Faltan canciones para completar el formato elegido.';
+  }
+
+  if (input.severity === 'scenario_ready') {
+    return `${input.usableSongCount} canciones cubren ${input.selectedCardCount} cartones (${input.scaleBandLabel}).`;
+  }
+
+  return `Para ${input.selectedCardCount} cartones (${input.scaleBandLabel}), Baraja recomienda ${input.scenarioMinimum} canciones distintas. Tenes ${input.usableSongCount}; sirve para preview, pero no para pedido listo.`;
+}
+
+function getPlaylistFitRecommendations(input: {
+  severity: MusicBingoPlaylistFitSeverity;
+  songsNeededForScenario: number;
+  selectedCardCount: number;
+  songSlotsPerCard: number;
+}): string[] {
+  if (input.severity === 'scenario_ready') {
+    return [
+      'Mantene la playlist revisada y evita versiones live, remixes o covers no intencionales.',
+      'Para eventos grandes, defini de antemano cuantas lineas y bingos se premian.',
+    ];
+  }
+
+  if (input.severity === 'blocked') {
+    return [
+      `Agrega canciones hasta cubrir al menos ${input.songSlotsPerCard} casillas.`,
+      'Tambien podes elegir un carton mas chico o una coleccion Baraja.',
+    ];
+  }
+
+  return [
+    `Agrega ${input.songsNeededForScenario} canciones para cubrir este escenario.`,
+    'Tambien podes bajar la cantidad de cartones, usar 3 x 3 / 4 x 4 o elegir una coleccion Baraja.',
+  ];
+}
+
+function roundToOneDecimal(value: number): number {
+  return Math.round(value * 10) / 10;
 }
 
 function splitSongLine(line: string): { artist: string; title: string } {
@@ -654,12 +1111,11 @@ function splitSongLine(line: string): { artist: string; title: string } {
   };
 }
 
-function uniqueMusicBingoSongs(songs: MusicBingoSong[]): {
-  uniqueSongs: MusicBingoSong[];
-  duplicateCount: number;
-} {
+export function getMusicBingoUsableSongPool(
+  songs: MusicBingoSong[]
+): MusicBingoUsableSongPool {
   const seen = new Set<string>();
-  const uniqueSongs: MusicBingoSong[] = [];
+  const usableSongs: MusicBingoSong[] = [];
   let duplicateCount = 0;
 
   songs.forEach((song) => {
@@ -674,7 +1130,7 @@ function uniqueMusicBingoSongs(songs: MusicBingoSong[]): {
     }
 
     seen.add(key);
-    uniqueSongs.push({
+    usableSongs.push({
       ...song,
       id: song.id,
       artist,
@@ -682,7 +1138,7 @@ function uniqueMusicBingoSongs(songs: MusicBingoSong[]): {
     });
   });
 
-  return { uniqueSongs, duplicateCount };
+  return { usableSongs, duplicateCount };
 }
 
 function buildCardCells(

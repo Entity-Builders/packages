@@ -62,6 +62,11 @@ export class PostHogProvider implements AnalyticsProvider {
     return posthog.getFeatureFlag(key);
   }
 
+  getDistinctId(): string | undefined {
+    if (!this.initialized || this.disabled) return undefined;
+    return posthog.get_distinct_id() || undefined;
+  }
+
   onFeatureFlagsLoaded(callback: () => void): void {
     if (!this.initialized || this.disabled) return;
     posthog.onFeatureFlags(callback);

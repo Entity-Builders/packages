@@ -118,6 +118,14 @@ export class Analytics {
   }
 
   /**
+   * Read the provider's current analytics identity without identifying a user.
+   * Callers must validate and scope this value before persisting it.
+   */
+  getDistinctId(): string | undefined {
+    return this.provider.getDistinctId?.();
+  }
+
+  /**
    * Register a callback for when feature flags finish loading.
    */
   onFeatureFlagsLoaded(callback: () => void): void {
