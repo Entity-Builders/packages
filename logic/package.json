@@ -4,13 +4,13 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
+    "@entity-builders/garden": "^1.0.0",
     "@google/genai": "^1.45.0",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "@supabase/supabase-js": "^2.93.3",
     "date-fns": "^2.30.0",
     "hashids": "^2.3.0",
-    "react-native-url-polyfill": "^3.0.0",
-    "@entity-builders/garden": "^1.0.0"
+    "react-native-url-polyfill": "^3.0.0"
   },
   "peerDependencies": {
     "expo-file-system": "*",

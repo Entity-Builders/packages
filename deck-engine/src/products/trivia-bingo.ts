@@ -8,7 +8,7 @@ import type {
   ProductOffering,
   TriviaBingoAnswer,
   TriviaBingoEditionContent,
-} from './types';
+} from './types.js';
 
 export const TRIVIA_BINGO_PRODUCT_ID = 'trivia-bingo';
 export const TRIVIA_BINGO_TEMPLATE_ID = 'trivia-bingo-standard';

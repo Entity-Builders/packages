@@ -3,7 +3,7 @@ import type {
   TriviaBingoControlSheetRow,
   TriviaBingoFairnessReport,
   TriviaBingoPrintPack,
-} from './types';
+} from './types.js';
 
 export type TriviaBingoProjectionSlideKind = 'opening' | 'question' | 'reveal' | 'closing';
 

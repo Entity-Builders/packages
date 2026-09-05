@@ -3,12 +3,12 @@ import type {
   TriviaBingoEditionContent,
   TriviaBingoFairnessCheckpoint,
   TriviaBingoPrintPack,
-} from './types';
+} from './types.js';
 import {
   TRIVIA_BINGO_PILOT_GRID_SIZE,
   TRIVIA_BINGO_PILOT_QUESTION_COUNT,
   TRIVIA_BINGO_PILOT_TABLE_COUNT,
-} from './trivia-bingo-pricing';
+} from './trivia-bingo-pricing.js';
 
 export function validateTriviaBingoEditionContent(content: TriviaBingoEditionContent): string[] {
   const errors: string[] = [];

@@ -2,7 +2,7 @@ import type {
   TriviaBingoHostSession,
   TriviaBingoHostSessionRound,
   TriviaBingoPrintPack,
-} from './types';
+} from './types.js';
 
 export function buildTriviaBingoHostSession(pack: TriviaBingoPrintPack): TriviaBingoHostSession {
   const rounds: TriviaBingoHostSessionRound[] = pack.controlSheet.map((row) => ({

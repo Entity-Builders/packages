@@ -1,9 +1,9 @@
 {
   "name": "@entity-builders/deck-engine",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test:digital": "npx tsx src/scripts/check-digital.ts",
@@ -15,7 +15,8 @@
     "sync": "npx tsx src/scripts/sync-decks.ts",
     "generate": "npx tsx src/scripts/create-edition.ts && npm run sync",
     "art": "npx tsx src/scripts/generate-art.ts",
-    "frame": "npx tsx src/scripts/generate-frame.ts"
+    "frame": "npx tsx src/scripts/generate-frame.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "dotenv": "^17.4.0",
@@ -28,5 +29,8 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "restricted"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

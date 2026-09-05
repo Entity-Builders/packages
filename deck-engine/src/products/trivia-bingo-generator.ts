@@ -7,13 +7,13 @@ import type {
   TriviaBingoFairnessCheckpoint,
   TriviaBingoPrintPack,
   TriviaBingoQuestion,
-} from './types';
+} from './types.js';
 import {
   TRIVIA_BINGO_PILOT_GRID_SIZE,
   TRIVIA_BINGO_PILOT_QUESTION_COUNT,
   TRIVIA_BINGO_PILOT_TABLE_COUNT,
-} from './trivia-bingo-pricing';
-import { validateTriviaBingoPrintPack } from './trivia-bingo-validation';
+} from './trivia-bingo-pricing.js';
+import { validateTriviaBingoPrintPack } from './trivia-bingo-validation.js';
 
 export interface TriviaBingoGeneratePackInput {
   edition: GameEdition;
