@@ -1,0 +1,11 @@
+{
+  "name": "entity-builders-packages",
+  "private": true,
+  "packageManager": "yarn@4.13.0",
+  "workspaces": [
+    "*"
+  ],
+  "scripts": {
+    "publish:all": "yarn workspaces foreach --all --no-private npm publish --tolerate-republish"
+  }
+}

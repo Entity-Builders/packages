@@ -1,0 +1,25 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Yarn 4 (Berry) - node-modules linker
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Testing
+coverage
+
+# Build output
+build
+dist
+
+# Misc
+.DS_Store
+.env
+.env*
+!.env.template
+!.env*.template
