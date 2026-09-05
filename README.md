@@ -32,8 +32,15 @@ preserved via `git filter-repo`.
 ```bash
 cd <package>
 yarn version <patch|minor|major>
+yarn build          # only if the package has a "build" script (ui-web, auth-ui-web)
 GITHUB_PACKAGES_TOKEN=<token with write:packages> yarn npm publish
 ```
+
+`ui-web` and `auth-ui-web` ship compiled `dist/` output (not raw `.tsx`) so
+consumers get a proper React JSX transform regardless of their own bundler
+config — publishing raw source from `node_modules` broke at runtime for
+apps that don't treat this package as project source. Every other package
+still publishes raw TypeScript directly.
 
 `GITHUB_PACKAGES_TOKEN` needs `read:packages` to install and `write:packages` to
 publish. Consuming apps read the same scope config (see `.yarnrc.yml`) to install
