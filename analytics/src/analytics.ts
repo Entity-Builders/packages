@@ -5,7 +5,7 @@ import type { AnalyticsProvider, AnalyticsConfig } from './types';
  *
  * Usage (React Native):
  * ```ts
- * import { Analytics, PostHogRNProvider } from '@eb-packages/analytics';
+ * import { Analytics, PostHogRNProvider } from '@entity-builders/analytics';
  *
  * const analytics = new Analytics(new PostHogRNProvider());
  * analytics.init({ apiKey: process.env.EXPO_PUBLIC_POSTHOG_API_KEY! });

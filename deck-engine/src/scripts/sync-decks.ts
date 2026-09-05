@@ -123,7 +123,7 @@ async function main() {
   const finalContent =
     `// ==================================================================\n` +
     `// AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.\n` +
-    `// Run \`yarn workspace @eb-packages/deck-engine sync\` to update.\n` +
+    `// Run \`yarn workspace @entity-builders/deck-engine sync\` to update.\n` +
     `// ==================================================================\n\n` +
     `${imports}\n${rawExports}${exports}`;
 

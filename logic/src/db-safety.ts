@@ -6,7 +6,7 @@
  * validated against it before hitting the database.
  *
  * Usage:
- *   import { createScopedClient } from '@eb-packages/logic';
+ *   import { createScopedClient } from '@entity-builders/logic';
  *   const db = createScopedClient(supabase, 'tablia_');
  *   db.from('tablia_venues')  // ✅ works
  *   db.from('postalpeek_postcards')  // 🚨 throws Error

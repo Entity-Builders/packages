@@ -1,5 +1,5 @@
 import { supabase } from './supabase';
-import type { PotDiagnosisLog } from '@eb-packages/garden';
+import type { PotDiagnosisLog } from '@entity-builders/garden';
 
 export async function diagnosePlant(params: {
   potId: string;

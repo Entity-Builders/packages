@@ -1,4 +1,4 @@
-import type { PotFormData } from '@eb-packages/garden';
+import type { PotFormData } from '@entity-builders/garden';
 
 import { supabase } from './supabase';
 

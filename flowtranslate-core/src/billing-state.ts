@@ -17,7 +17,7 @@ import {
   type EntityBillingSubscriptionNormalizedStatus,
   type EntityBillingSubscriptionRow,
   type ResolveEntityBillingStateInput,
-} from '@eb-packages/billing-core';
+} from '@entity-builders/billing-core';
 
 export type FlowtranslateAccountKind = EntityBillingAccountKind;
 

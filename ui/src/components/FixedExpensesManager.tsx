@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { styled } from 'nativewind';
 import { useExpenses } from '../context/ExpensesContext';
-import { FixedExpense } from '@eb-packages/logic';
+import { FixedExpense } from '@entity-builders/logic';
 
 const StyledView = styled(View);
 const StyledText = styled(Text);

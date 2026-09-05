@@ -47,7 +47,7 @@ async function main() {
   }
 
   if (!topic) {
-    console.error('Usage: yarn workspace @eb-packages/deck-engine generate "Your topic string" [--cards N] [--context "Additional instructions"]');
+    console.error('Usage: yarn workspace @entity-builders/deck-engine generate "Your topic string" [--cards N] [--context "Additional instructions"]');
     process.exit(1);
   }
 

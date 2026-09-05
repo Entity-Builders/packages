@@ -1,5 +1,5 @@
 {
-  "name": "@eb-packages/ui-web",
+  "name": "@entity-builders/ui-web",
   "version": "0.1.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -46,5 +46,9 @@
     "react-dom": "^18.2.0",
     "typescript": "^5.9.3",
     "vite": "^5.3.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   }
 }

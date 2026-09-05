@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, StyleSheet, View } from 'react-native';
-import { supabase } from '@eb-packages/logic';
+import { supabase } from '@entity-builders/logic';
 import { Auth } from './Auth';
 
 export interface AuthScreenProps {

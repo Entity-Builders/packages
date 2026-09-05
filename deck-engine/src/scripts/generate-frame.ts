@@ -4,7 +4,7 @@
  * Baraja AI Frame Generator
  * 
  * Usage:
- * yarn workspace @eb-packages/deck-engine frame "dark minimalist luxury geometric card frame, glowing dark background, blank center"
+ * yarn workspace @entity-builders/deck-engine frame "dark minimalist luxury geometric card frame, glowing dark background, blank center"
  */
 
 import { GoogleGenAI } from '@google/genai';
@@ -25,7 +25,7 @@ async function main() {
   const promptArg = args[0];
 
   if (!promptArg || promptArg.startsWith('--')) {
-    console.error('Usage: yarn workspace @eb-packages/deck-engine frame "<prompt>"');
+    console.error('Usage: yarn workspace @entity-builders/deck-engine frame "<prompt>"');
     process.exit(1);
   }
 

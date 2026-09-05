@@ -1,5 +1,9 @@
 {
-  "name": "@eb-packages/expo-config",
+  "name": "@entity-builders/expo-config",
   "version": "1.0.0",
-  "main": "createAppConfig.js"
+  "main": "createAppConfig.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  }
 }

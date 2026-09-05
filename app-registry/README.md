@@ -1,4 +1,4 @@
-# @eb-packages/app-registry
+# @entity-builders/app-registry
 
 Canonical Entity Builders app identity registry.
 

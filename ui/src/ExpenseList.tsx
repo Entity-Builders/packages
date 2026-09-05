@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
 import { styled } from 'nativewind';
-import { convertArsToUsd } from '@eb-packages/logic';
+import { convertArsToUsd } from '@entity-builders/logic';
 import { useCurrency } from './context/CurrencyContext';
 
 const StyledView = styled(View);

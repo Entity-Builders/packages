@@ -4,7 +4,7 @@
  * Baraja AI Art Generator
  * 
  * Usage:
- * yarn workspace @eb-packages/deck-engine art "barometro"
+ * yarn workspace @entity-builders/deck-engine art "barometro"
  */
 
 import { GoogleGenAI } from '@google/genai';
@@ -28,7 +28,7 @@ async function main() {
   const slug = args[0];
 
   if (!slug || slug.startsWith('--')) {
-    console.error('Usage: yarn workspace @eb-packages/deck-engine art <edition-slug>');
+    console.error('Usage: yarn workspace @entity-builders/deck-engine art <edition-slug>');
     process.exit(1);
   }
 

@@ -1,4 +1,4 @@
-# @eb-packages/ui-web
+# @entity-builders/ui-web
 
 React-first shared web UI primitives for Entity Builders web/PWA apps.
 
@@ -20,20 +20,20 @@ Apps still own:
 Import the shared CSS once near the app entrypoint:
 
 ```css
-@import '@eb-packages/ui-web/styles.css';
+@import '@entity-builders/ui-web/styles.css';
 ```
 
 Then import React primitives:
 
 ```tsx
-import { EbButton, EbNotice } from '@eb-packages/ui-web';
+import { EbButton, EbNotice } from '@entity-builders/ui-web';
 ```
 
 For shared WhatsApp contact CTAs, build the `href` from app-owned or
 registry-owned contact metadata and pass it to the shared button:
 
 ```tsx
-import { EbWhatsAppButton } from '@eb-packages/ui-web';
+import { EbWhatsAppButton } from '@entity-builders/ui-web';
 
 <EbWhatsAppButton href="https://wa.me/5491123946828?text=Hola">
   Hablar por WhatsApp
@@ -49,7 +49,7 @@ The source of truth for shared web UI tokens is code:
 - Consumers and tooling may import token metadata without importing React:
 
 ```ts
-import { ebWebTokenList, ebWebTokens } from '@eb-packages/ui-web/tokens';
+import { ebWebTokenList, ebWebTokens } from '@entity-builders/ui-web/tokens';
 ```
 
 Figma may mirror these values as variables or swatches, but Figma is not the
@@ -62,13 +62,13 @@ relevant OpenSpec notes before relying on it in an app.
 Run the package gallery:
 
 ```bash
-yarn workspace @eb-packages/ui-web gallery:dev
+yarn workspace @entity-builders/ui-web gallery:dev
 ```
 
 Build the gallery:
 
 ```bash
-yarn workspace @eb-packages/ui-web gallery:build
+yarn workspace @entity-builders/ui-web gallery:build
 ```
 
 The gallery is intentionally lightweight for this first slice. It can graduate
@@ -81,7 +81,7 @@ element that uses the same `eb-*` CSS classes and does not require React.
 
 ```html
 <script type="module">
-  import { defineEbStatusBannerElement } from '@eb-packages/ui-web/elements';
+  import { defineEbStatusBannerElement } from '@entity-builders/ui-web/elements';
 
   defineEbStatusBannerElement();
 </script>
@@ -104,7 +104,7 @@ Events:
 Run the non-React fixture through the gallery dev server:
 
 ```bash
-yarn workspace @eb-packages/ui-web gallery:dev
+yarn workspace @entity-builders/ui-web gallery:dev
 ```
 
 Then open `/status-banner-element.html`.

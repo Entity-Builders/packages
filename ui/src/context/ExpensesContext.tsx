@@ -12,7 +12,7 @@ import {
   updateFixedExpense,
   deleteFixedExpense,
   supabase,
-} from '@eb-packages/logic';
+} from '@entity-builders/logic';
 
 interface ExpensesContextType {
   expenses: FixedExpense[];

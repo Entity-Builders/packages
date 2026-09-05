@@ -1,6 +1,6 @@
 // ==================================================================
 // AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.
-// Run `yarn workspace @eb-packages/deck-engine sync` to update.
+// Run `yarn workspace @entity-builders/deck-engine sync` to update.
 // ==================================================================
 
 import { resolveDeck } from './loader.js';

@@ -2,14 +2,14 @@ import type {
   EntityAuthConfig,
   EntityAuthMethodDescriptor,
   OAuthSignInOptions,
-} from '@eb-packages/auth';
-import { getEntityAuthMethodAvailability } from '@eb-packages/auth';
+} from '@entity-builders/auth';
+import { getEntityAuthMethodAvailability } from '@entity-builders/auth';
 import {
   EbButton,
   EbModalShell,
   EbNotice,
   EbTextField,
-} from '@eb-packages/ui-web';
+} from '@entity-builders/ui-web';
 import type { Provider } from '@supabase/supabase-js';
 import type { FormEvent, ReactNode } from 'react';
 

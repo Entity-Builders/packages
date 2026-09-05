@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { styled } from 'nativewind';
 import { useCurrency } from './context/CurrencyContext';
-import { convertArsToUsd } from '@eb-packages/logic';
+import { convertArsToUsd } from '@entity-builders/logic';
 
 const StyledView = styled(View);
 const StyledText = styled(Text);

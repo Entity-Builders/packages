@@ -1,11 +1,11 @@
-// Example: How to use @eb-packages/ai-services in your app
+// Example: How to use @entity-builders/ai-services in your app
 // This file demonstrates the proper way to import and use the AI services
 
 import {
   extractPotMetadata,
   type PotMetadata,
   GeminiAPIError,
-} from '@eb-packages/ai-services';
+} from '@entity-builders/ai-services';
 
 // Example usage in a React component or service
 async function handleTranscript(transcript: string, apiKey: string) {

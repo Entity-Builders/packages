@@ -4,7 +4,7 @@
     "jsx": "react-native",
     "outDir": "./dist",
     "paths": {
-      "@eb-packages/logic": ["../logic/src/index.ts"]
+      "@entity-builders/logic": ["../logic/src/index.ts"]
     },
     "types": ["nativewind/types", "node"],
     "esModuleInterop": true

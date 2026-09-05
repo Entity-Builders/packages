@@ -5,7 +5,7 @@ import type {
   CareLogInput,
   CareScheduleInput,
   SpeciesCareGuide,
-} from '@eb-packages/garden';
+} from '@entity-builders/garden';
 import { uploadPotPhoto } from './pots';
 
 /**

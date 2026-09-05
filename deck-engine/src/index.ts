@@ -1,5 +1,5 @@
 // ============================================================
-// @eb-packages/deck-engine — Public API
+// @entity-builders/deck-engine — Public API
 // ============================================================
 
 // Core types

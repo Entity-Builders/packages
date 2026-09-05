@@ -1,5 +1,5 @@
 {
-  "name": "@eb-packages/analytics",
+  "name": "@entity-builders/analytics",
   "version": "1.0.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -8,5 +8,9 @@
   },
   "devDependencies": {
     "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   }
 }

@@ -1,4 +1,4 @@
-import { createEntityAuthConfig } from '@eb-packages/auth';
+import { createEntityAuthConfig } from '@entity-builders/auth';
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { AccountAccessPanel, type WebAuthEntryAccount } from './web-auth-entry';

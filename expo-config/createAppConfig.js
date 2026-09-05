@@ -1,5 +1,5 @@
 /**
- * @eb-packages/expo-config — Shared Expo config factory
+ * @entity-builders/expo-config — Shared Expo config factory
  *
  * Standardizes app.config.js across all Expo apps in the monorepo.
  * Each app only provides its unique values; the factory handles:

@@ -1,4 +1,4 @@
-# `@eb-packages/billing-core`
+# `@entity-builders/billing-core`
 
 Shared billing state helpers for Entity Builders apps.
 
@@ -38,7 +38,7 @@ keep parity tests passing.
 Apps should keep product semantics in their own package or app layer:
 
 ```ts
-import { resolveEntityBillingState } from '@eb-packages/billing-core';
+import { resolveEntityBillingState } from '@entity-builders/billing-core';
 
 const state = resolveEntityBillingState({
   accountKind: 'permanent',

@@ -4,7 +4,7 @@ import { styled } from 'nativewind';
 import Svg, { Circle, G } from 'react-native-svg';
 
 import { useCurrency } from '../context/CurrencyContext';
-import { convertArsToUsd } from '@eb-packages/logic';
+import { convertArsToUsd } from '@entity-builders/logic';
 
 const StyledView = styled(View);
 const StyledText = styled(Text);

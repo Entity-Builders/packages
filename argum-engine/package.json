@@ -1,7 +1,6 @@
 {
   "name": "@entity-builders/argum-engine",
   "version": "1.0.0",
-  "private": true,
   "main": "src/index.ts",
   "scripts": {
     "test-run": "npx tsx scripts/test-run.ts"
@@ -11,5 +10,9 @@
     "dotenv": "^17.3.1",
     "zod": "^3.23.0",
     "zod-to-json-schema": "^3.25.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@eb-packages/auth-ui-web",
+  "name": "@entity-builders/auth-ui-web",
   "version": "0.1.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -8,8 +8,8 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@eb-packages/auth": "workspace:*",
-    "@eb-packages/ui-web": "workspace:*"
+    "@entity-builders/auth": "workspace:*",
+    "@entity-builders/ui-web": "workspace:*"
   },
   "peerDependencies": {
     "@supabase/supabase-js": "*",
@@ -26,5 +26,9 @@
     "react-dom": "^18.2.0",
     "typescript": "^5.9.3",
     "vitest": "^2.1.9"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   }
 }

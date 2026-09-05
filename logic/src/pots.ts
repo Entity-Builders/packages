@@ -1,5 +1,5 @@
 import { supabase } from './supabase';
-import type { Pot, PotFormData } from '@eb-packages/garden';
+import type { Pot, PotFormData } from '@entity-builders/garden';
 import { getCurrentLocation } from './location';
 import { getCurrentWeather } from './weather';
 import { getLinkedAccounts } from './accountLinking';

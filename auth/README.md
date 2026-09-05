@@ -1,4 +1,4 @@
-# @eb-packages/auth
+# @entity-builders/auth
 
 Shared Supabase account access helpers for Entity Builders apps.
 
@@ -26,7 +26,7 @@ import {
   createSupabaseAuthStorageKey,
   useSupabaseAccountAccess,
   type SupabaseAuthAccessClient,
-} from '@eb-packages/auth';
+} from '@entity-builders/auth';
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
