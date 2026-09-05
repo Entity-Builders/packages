@@ -6,6 +6,7 @@
     "*"
   ],
   "scripts": {
-    "publish:all": "yarn workspaces foreach --all --no-private npm publish --tolerate-republish"
+    "build:all": "yarn workspaces foreach --all --topological -p run build",
+    "publish:all": "yarn workspaces foreach --all --topological --no-private npm publish --tolerate-republish"
   }
 }
