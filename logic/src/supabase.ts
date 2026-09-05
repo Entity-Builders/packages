@@ -2,9 +2,11 @@ import { createClient } from '@supabase/supabase-js';
 import { getValidEnv, isProdEnv, getAppEnv } from './env';
 
 // ── Shared eb-core Database Configuration ──
-// Used as the default production fallback for all apps sharing the core monolithic DB
+// Used as the default production fallback for all apps sharing the core monolithic DB.
+// The anon key is safe to expose (RLS-protected) but still comes from an env var so it
+// isn't hardcoded in a published package — set EB_CORE_SUPABASE_ANON_KEY at build/runtime.
 const EB_CORE_URL = 'https://xfcvuzcxvdpzkqpnahyx.supabase.co';
-const EB_CORE_ANON_KEY = 'REDACTED_SUPABASE_PROD_ANON_KEY';
+const EB_CORE_ANON_KEY = process.env.EB_CORE_SUPABASE_ANON_KEY ?? '';
 
 // ── Local Dev Configuration ──
 const LOCAL_URL = 'http://localhost:54321';
