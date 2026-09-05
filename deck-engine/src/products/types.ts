@@ -1,6 +1,7 @@
 export type GameKind =
   | 'card_deck'
   | 'music_bingo'
+  | 'trivia_bingo'
   | 'bingo'
   | 'trivia'
   | 'football_bar_game'
@@ -34,6 +35,7 @@ export type PricingMode = 'hidden' | 'from_price' | 'fixed' | 'proposal';
 
 export type PrintableAssetKind =
   | 'cards_pdf'
+  | 'projection_pdf'
   | 'control_sheet'
   | 'rules_guide'
   | 'song_list'
@@ -115,8 +117,100 @@ export interface MusicBingoEditionContent {
   guideSteps: string[];
 }
 
+export interface TriviaBingoAnswer {
+  id: string;
+  label: string;
+}
+
+export interface TriviaBingoQuestion {
+  id: string;
+  prompt: string;
+  correctAnswerId: string;
+  revealCopy: string;
+  originalVisualDescription?: string;
+  editorialSourceReference?: string;
+}
+
+export interface TriviaBingoEditionContent {
+  contentVersion: string;
+  answers: TriviaBingoAnswer[];
+  questions: TriviaBingoQuestion[];
+  guideSteps: string[];
+  printInstructions: string[];
+  legalSummary: string;
+}
+
+export interface TriviaBingoCardCell {
+  id: string;
+  answerId: string;
+  label: string;
+}
+
+export interface TriviaBingoCard {
+  id: string;
+  cardNumber: number;
+  title: string;
+  gridSize: 3;
+  cells: TriviaBingoCardCell[];
+}
+
+export interface TriviaBingoControlSheetRow {
+  revealNumber: number;
+  questionId: string;
+  prompt: string;
+  correctAnswerId: string;
+  correctAnswerLabel: string;
+  revealCopy: string;
+}
+
+export interface TriviaBingoFairnessCheckpoint {
+  revealNumber: number;
+  completedCardIds: string[];
+}
+
+export interface TriviaBingoFairnessReport {
+  winnerCardId: string;
+  checkpoints: TriviaBingoFairnessCheckpoint[];
+  completedCardIdsBeforeFinalReveal: string[];
+  completedCardIdsAtFinalReveal: string[];
+}
+
+export interface TriviaBingoPrintPack {
+  productId: string;
+  editionId: string;
+  editionTitle: string;
+  contentVersion: string;
+  seed: string;
+  tableCount: number;
+  gridSize: 3;
+  questions: TriviaBingoQuestion[];
+  cards: TriviaBingoCard[];
+  controlSheet: TriviaBingoControlSheetRow[];
+  hostGuideSteps: string[];
+  printInstructions: string[];
+  legalSummary: string;
+  fairnessReport: TriviaBingoFairnessReport;
+}
+
+export interface TriviaBingoHostSessionRound {
+  id: string;
+  revealNumber: number;
+  prompt: string;
+  answerLabel: string;
+  revealCopy: string;
+}
+
+export interface TriviaBingoHostSession {
+  editionId: string;
+  editionTitle: string;
+  contentVersion: string;
+  roundCount: number;
+  rounds: TriviaBingoHostSessionRound[];
+}
+
 export interface GameEditionContent {
   musicBingo?: MusicBingoEditionContent;
+  triviaBingo?: TriviaBingoEditionContent;
 }
 
 export interface GameEdition {

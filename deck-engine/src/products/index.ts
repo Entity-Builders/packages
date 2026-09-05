@@ -30,6 +30,17 @@ export type {
   ProductMode,
   ProductOffering,
   SalesMode,
+  TriviaBingoAnswer,
+  TriviaBingoCard,
+  TriviaBingoCardCell,
+  TriviaBingoControlSheetRow,
+  TriviaBingoEditionContent,
+  TriviaBingoFairnessCheckpoint,
+  TriviaBingoFairnessReport,
+  TriviaBingoHostSession,
+  TriviaBingoHostSessionRound,
+  TriviaBingoPrintPack,
+  TriviaBingoQuestion,
   UseContext,
 } from './types.js';
 
@@ -117,6 +128,59 @@ export type {
   MusicBingoPrintPackInput,
   MusicBingoPrintPackUseContext,
 } from './music-bingo-print-pack.js';
+
+export { generateTriviaBingoPrintPack } from './trivia-bingo-generator.js';
+
+export type {
+  TriviaBingoGeneratePackInput,
+  TriviaBingoGeneratePackResult,
+} from './trivia-bingo-generator.js';
+
+export { buildTriviaBingoPrintableKit } from './trivia-bingo-print-pack.js';
+
+export { buildTriviaBingoHostSession } from './trivia-bingo-host-session.js';
+
+export type {
+  TriviaBingoHostGuide,
+  TriviaBingoPrintableKit,
+  TriviaBingoProjectionSlide,
+  TriviaBingoProjectionSlideKind,
+} from './trivia-bingo-print-pack.js';
+
+export {
+  TRIVIA_BINGO_PILOT_GRID_SIZE,
+  TRIVIA_BINGO_PILOT_OFFER,
+  TRIVIA_BINGO_PILOT_QUESTION_COUNT,
+  TRIVIA_BINGO_PILOT_TABLE_COUNT,
+  formatTriviaBingoPriceARS,
+  resolveTriviaBingoPilotOffer,
+} from './trivia-bingo-pricing.js';
+
+export type {
+  TriviaBingoPilotOffer,
+  TriviaBingoPriceQuote,
+} from './trivia-bingo-pricing.js';
+
+export {
+  TRIVIA_BINGO_ESTO_ES_MUY_ARGENTINO_ANSWERS,
+  TRIVIA_BINGO_ESTO_ES_MUY_ARGENTINO_CONTENT,
+  TRIVIA_BINGO_ESTO_ES_MUY_ARGENTINO_EDITION,
+  TRIVIA_BINGO_ESTO_ES_MUY_ARGENTINO_EDITION_ID,
+  TRIVIA_BINGO_ESTO_ES_MUY_ARGENTINO_HOST_COMPANION,
+  TRIVIA_BINGO_ESTO_ES_MUY_ARGENTINO_OFFERING_ID,
+  TRIVIA_BINGO_ESTO_ES_MUY_ARGENTINO_PRINTABLE_PACK,
+  TRIVIA_BINGO_OFFERINGS,
+  TRIVIA_BINGO_PRODUCT,
+  TRIVIA_BINGO_PRODUCT_CATALOG,
+  TRIVIA_BINGO_PRODUCT_ID,
+  TRIVIA_BINGO_TEMPLATE,
+  TRIVIA_BINGO_TEMPLATE_ID,
+} from './trivia-bingo.js';
+
+export {
+  validateTriviaBingoEditionContent,
+  validateTriviaBingoPrintPack,
+} from './trivia-bingo-validation.js';
 
 export {
   MUSIC_BINGO_BAR_EVENT_OFFERING,

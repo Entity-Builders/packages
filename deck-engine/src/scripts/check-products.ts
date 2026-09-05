@@ -1,9 +1,12 @@
 import {
   MUSIC_BINGO_PRODUCT_CATALOG,
+  TRIVIA_BINGO_PRODUCT_CATALOG,
   validateBarajaProductCatalog,
 } from '../products/index.js';
 
-const errors = validateBarajaProductCatalog(MUSIC_BINGO_PRODUCT_CATALOG);
+const errors = [MUSIC_BINGO_PRODUCT_CATALOG, TRIVIA_BINGO_PRODUCT_CATALOG].flatMap(
+  (catalog) => validateBarajaProductCatalog(catalog)
+);
 
 if (errors.length > 0) {
   console.error('Baraja playable product catalog is invalid:');
